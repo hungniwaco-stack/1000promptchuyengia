@@ -417,14 +417,14 @@
             <label for="email">Email nhận file</label>
             <input id="email" name="email" type="email" required />
           </div>
-          <div class="transfer">Vui lòng chuyển khoản vào STK XXX - Ngân hàng YYY với nội dung: [Số Điện Thoại] + Tên Gói</div>
+          <div class="transfer">Vui lòng chuyển khoản vào STK 201482319 - Ngân hàng ACB (NGUYEN HUU HUNG) với nội dung: [Số Điện Thoại] + Tên Gói</div>
           <div style="margin-top: 14px;">
             <button type="submit" class="btn btn-primary" style="width:100%;">Xác Nhận Đã Chuyển Khoản</button>
           </div>
         </form>
         <div>
           <div class="qr">
-            <img src="https://via.placeholder.com/280x280?text=QR+Thanh+Toan" alt="Mã QR thanh toán" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" />
+            <img src="/public/images/qr-acb.png" alt="Mã QR thanh toán" style="width:100%;height:100%;object-fit:cover;border-radius:8px;" />
           </div>
         </div>
       </div>
@@ -455,7 +455,7 @@
       const card = document.createElement("article");
       card.className = "card";
       card.innerHTML = `
-        <div class="ph"><img src="https://via.placeholder.com/640x360?text=PACK+${i + 1}" alt="Hình minh họa ${p.title}" style="width:100%;height:100%;object-fit:cover;" /></div>
+        <div class="ph"><img src="/public/images/packs/pack-${String(i + 1).padStart(2, "0")}.png" alt="Hình minh họa ${p.title}" style="width:100%;height:100%;object-fit:cover;" /></div>
         <div class="card-body">
           <h3>${p.title}</h3>
           <p>${p.desc}</p>
