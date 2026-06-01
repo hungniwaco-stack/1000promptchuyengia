@@ -235,7 +235,7 @@ export default function Page() {
               <img
                 src="/images/qr-acb.png"
                 alt="Mã QR thanh toán"
-                className="aspect-square w-full rounded-lg border border-slate-300 object-cover"
+                className="h-auto w-full rounded-lg border border-slate-300 object-contain"
               />
             </form>
           </div>
