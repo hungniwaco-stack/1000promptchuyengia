@@ -81,13 +81,20 @@ export default function Page() {
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
+  const [formSuccess, setFormSuccess] = useState("");
 
   const openModal = (pkgName: string) => {
     setSelectedPackage(pkgName);
+    setFormError("");
+    setFormSuccess("");
     setOpen(true);
   };
 
   const getAmount = (pkgName: string) => (pkgName === comboName ? 499000 : 99000);
+  const normalizePhone = (input: string) => input.replace(/\s+/g, "").replace(/^\+84/, "0");
+  const isValidPhone = (input: string) => /^(0[3|5|7|8|9])[0-9]{8}$/.test(input);
+  const isValidEmail = (input: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
 
   return (
     <main className="bg-white text-slate-800">
@@ -188,31 +195,47 @@ export default function Page() {
               className="mt-4 grid gap-5 md:grid-cols-[1fr_280px]"
               onSubmit={async (e) => {
                 e.preventDefault();
+                setFormError("");
+                setFormSuccess("");
+                const normalizedPhone = normalizePhone(phone);
+                if (name.trim().length < 2) {
+                  setFormError("Vui lòng nhập họ tên hợp lệ (tối thiểu 2 ký tự).");
+                  return;
+                }
+                if (!isValidPhone(normalizedPhone)) {
+                  setFormError("Số điện thoại không hợp lệ. Ví dụ: 09xxxxxxxx.");
+                  return;
+                }
+                if (!isValidEmail(email.trim().toLowerCase())) {
+                  setFormError("Email không hợp lệ.");
+                  return;
+                }
                 setSubmitting(true);
                 try {
                   const res = await fetch("/api/order", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                      name,
-                      phone,
-                      email,
+                      name: name.trim(),
+                      phone: normalizedPhone,
+                      email: email.trim().toLowerCase(),
                       packageName: selectedPackage,
                       amount: getAmount(selectedPackage),
                     }),
                   });
                   const data = await res.json();
                   if (!res.ok || !data.ok) {
-                    alert("Gửi đơn thất bại. Vui lòng thử lại.");
+                    setFormError(data.message || "Gửi đơn thất bại. Vui lòng thử lại.");
                     return;
                   }
-                  alert(`Cảm ơn bạn! Đơn ${data.orderId} đã được ghi nhận. Chúng tôi sẽ liên hệ sớm qua số điện thoại hoặc email bạn đã cung cấp.`);
+                  setFormSuccess(
+                    `Cảm ơn bạn! Đơn ${data.orderId} đã được ghi nhận. Chúng tôi sẽ liên hệ sớm.`,
+                  );
                   setName("");
                   setPhone("");
                   setEmail("");
-                  setOpen(false);
                 } catch {
-                  alert("Có lỗi kết nối. Vui lòng thử lại sau.");
+                  setFormError("Có lỗi kết nối. Vui lòng thử lại sau.");
                 } finally {
                   setSubmitting(false);
                 }
@@ -228,6 +251,16 @@ export default function Page() {
                 <div className="mt-3 rounded-lg border border-dashed border-slate-400 bg-slate-50 p-3 text-sm">
                   Vui lòng chuyển khoản vào STK 201482319 - Ngân hàng ACB (NGUYEN HUU HUNG) với nội dung: [Số Điện Thoại] + Tên Gói
                 </div>
+                {formError && (
+                  <p className="mt-3 rounded-md border border-red-200 bg-red-50 p-2 text-sm text-red-700">
+                    {formError}
+                  </p>
+                )}
+                {formSuccess && (
+                  <p className="mt-3 rounded-md border border-emerald-200 bg-emerald-50 p-2 text-sm text-emerald-700">
+                    {formSuccess}
+                  </p>
+                )}
                 <button type="submit" disabled={submitting} className="btn btn-primary mt-4 w-full disabled:opacity-60">
                   {submitting ? "Đang gửi..." : "Xác Nhận Đã Chuyển Khoản"}
                 </button>

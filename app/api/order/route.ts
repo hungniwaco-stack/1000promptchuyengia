@@ -19,6 +19,18 @@ function buildOrderId() {
   return `ORD-${stamp}`;
 }
 
+function isValidEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function normalizePhone(phone: string) {
+  return phone.replace(/\s+/g, "").replace(/^\+84/, "0");
+}
+
+function isValidPhone(phone: string) {
+  return /^(0[3|5|7|8|9])[0-9]{8}$/.test(phone);
+}
+
 export async function POST(req: Request) {
   try {
     const notionApiKey = process.env.NOTION_API_KEY;
@@ -33,14 +45,25 @@ export async function POST(req: Request) {
 
     const body = (await req.json()) as Partial<OrderPayload>;
     const name = body.name?.trim() ?? "";
-    const phone = body.phone?.trim() ?? "";
-    const email = body.email?.trim() ?? "";
+    const phone = normalizePhone(body.phone?.trim() ?? "");
+    const email = body.email?.trim().toLowerCase() ?? "";
     const packageName = body.packageName?.trim() ?? "";
     const amount = Number(body.amount ?? 0);
 
-    if (!name || !phone || !email || !packageName || !amount) {
+    if (!name || !phone || !email || !packageName || amount <= 0) {
       return NextResponse.json(
         { ok: false, message: "Thiếu dữ liệu bắt buộc." },
+        { status: 400 },
+      );
+    }
+
+    if (!isValidEmail(email)) {
+      return NextResponse.json({ ok: false, message: "Email không hợp lệ." }, { status: 400 });
+    }
+
+    if (!isValidPhone(phone)) {
+      return NextResponse.json(
+        { ok: false, message: "Số điện thoại không hợp lệ." },
         { status: 400 },
       );
     }
@@ -95,9 +118,6 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true, orderId });
   } catch {
-    return NextResponse.json(
-      { ok: false, message: "Đã xảy ra lỗi khi tạo đơn." },
-      { status: 500 },
-    );
+    return NextResponse.json({ ok: false, message: "Đã xảy ra lỗi khi tạo đơn." }, { status: 500 });
   }
 }
