@@ -226,14 +226,14 @@ export default function Page() {
                 <label className="label">Email nhận file</label>
                 <input className="input" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
                 <div className="mt-3 rounded-lg border border-dashed border-slate-400 bg-slate-50 p-3 text-sm">
-                  Vui lòng chuyển khoản vào STK XXX - Ngân hàng YYY với nội dung: [Số Điện Thoại] + Tên Gói
+                  Vui lòng chuyển khoản vào STK 201482319 - Ngân hàng ACB (NGUYEN HUU HUNG) với nội dung: [Số Điện Thoại] + Tên Gói
                 </div>
                 <button type="submit" disabled={submitting} className="btn btn-primary mt-4 w-full disabled:opacity-60">
                   {submitting ? "Đang gửi..." : "Xác Nhận Đã Chuyển Khoản"}
                 </button>
               </div>
               <img
-                src="https://via.placeholder.com/280x280?text=QR+Thanh+Toan"
+                src="/images/qr-acb.png"
                 alt="Mã QR thanh toán"
                 className="aspect-square w-full rounded-lg border border-slate-300 object-cover"
               />
