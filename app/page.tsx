@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Product = {
   title: string;
@@ -90,6 +90,12 @@ export default function Page() {
     setFormSuccess("");
     setOpen(true);
   };
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   const getAmount = (pkgName: string) => (pkgName === comboName ? 499000 : 99000);
   const normalizePhone = (input: string) => input.replace(/\s+/g, "").replace(/^\+84/, "0");
@@ -140,6 +146,8 @@ export default function Page() {
                   className="aspect-video w-full object-cover"
                   src={p.image}
                   alt={`Hình minh họa ${p.title}`}
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="flex h-full flex-col p-4">
                   <h3 className="mb-2 text-base font-bold">{p.title}</h3>
@@ -169,8 +177,8 @@ export default function Page() {
         <div className="mx-auto w-[92%] max-w-6xl">
           <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Liên Hệ Hữu Hùng AI</h2>
           <div className="grid gap-4 md:grid-cols-3">
-            <div className="contact-item"><strong>Hotline:</strong><br />0944 851719</div>
-            <div className="contact-item"><strong>Email:</strong><br />hatmuadem@gmail.com</div>
+            <div className="contact-item"><strong>Hotline:</strong><br /><a href="tel:0944851719">0944 851719</a></div>
+            <div className="contact-item"><strong>Email:</strong><br /><a href="mailto:hatmuadem@gmail.com">hatmuadem@gmail.com</a></div>
             <div className="contact-item"><strong>Địa chỉ:</strong><br />Phan Rang - Khánh Hòa</div>
           </div>
         </div>
@@ -188,7 +196,7 @@ export default function Page() {
       {open && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/55 p-4" onClick={() => setOpen(false)}>
           <div className="relative max-h-[90vh] w-full max-w-4xl overflow-auto rounded-lg bg-white p-5 shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <button type="button" className="absolute right-4 top-2 text-3xl text-slate-500" onClick={() => setOpen(false)}>×</button>
+            <button type="button" aria-label="Đóng form" className="absolute right-3 top-2 h-11 w-11 rounded-full text-3xl text-slate-500" onClick={() => setOpen(false)}>×</button>
             <h3 className="text-xl font-extrabold">Form Thanh Toán</h3>
             <p className="mt-1 font-bold text-blue-900">Gói đã chọn: {selectedPackage}</p>
             <form
@@ -243,11 +251,11 @@ export default function Page() {
             >
               <div>
                 <label className="label">Họ và Tên</label>
-                <input className="input" required value={name} onChange={(e) => setName(e.target.value)} />
+                <input className="input" required autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} />
                 <label className="label">Số điện thoại</label>
-                <input className="input" required value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <input className="input" required autoComplete="tel" inputMode="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
                 <label className="label">Email nhận file</label>
-                <input className="input" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input className="input" type="email" required autoComplete="email" inputMode="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 <div className="mt-3 rounded-lg border border-dashed border-slate-400 bg-slate-50 p-3 text-sm">
                   Vui lòng chuyển khoản vào STK 201482319 - Ngân hàng ACB (NGUYEN HUU HUNG) với nội dung: [Số Điện Thoại] + Tên Gói
                 </div>
