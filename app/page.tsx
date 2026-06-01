@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 
@@ -66,11 +66,17 @@ const comboName = "Combo Toàn Diện: 1000 Prompt Hữu Hùng AI";
 export default function Page() {
   const [selectedPackage, setSelectedPackage] = useState<string>("");
   const [open, setOpen] = useState(false);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const openModal = (name: string) => {
-    setSelectedPackage(name);
+  const openModal = (pkgName: string) => {
+    setSelectedPackage(pkgName);
     setOpen(true);
   };
+
+  const getAmount = (pkgName: string) => (pkgName === comboName ? 499000 : 99000);
 
   return (
     <main className="bg-white text-slate-800">
@@ -169,23 +175,51 @@ export default function Page() {
             <p className="mt-1 font-bold text-blue-900">Gói đã chọn: {selectedPackage}</p>
             <form
               className="mt-4 grid gap-5 md:grid-cols-[1fr_280px]"
-              onSubmit={(e) => {
+              onSubmit={async (e) => {
                 e.preventDefault();
-                alert("Cảm ơn bạn! Hệ thống đã ghi nhận xác nhận chuyển khoản. Chúng tôi sẽ liên hệ sớm qua số điện thoại hoặc email bạn đã cung cấp.");
-                setOpen(false);
+                setSubmitting(true);
+                try {
+                  const res = await fetch("/api/order", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name,
+                      phone,
+                      email,
+                      packageName: selectedPackage,
+                      amount: getAmount(selectedPackage),
+                    }),
+                  });
+                  const data = await res.json();
+                  if (!res.ok || !data.ok) {
+                    alert("Gửi đơn thất bại. Vui lòng thử lại.");
+                    return;
+                  }
+                  alert(`Cảm ơn bạn! Đơn ${data.orderId} đã được ghi nhận. Chúng tôi sẽ liên hệ sớm qua số điện thoại hoặc email bạn đã cung cấp.`);
+                  setName("");
+                  setPhone("");
+                  setEmail("");
+                  setOpen(false);
+                } catch {
+                  alert("Có lỗi kết nối. Vui lòng thử lại sau.");
+                } finally {
+                  setSubmitting(false);
+                }
               }}
             >
               <div>
                 <label className="label">Họ và Tên</label>
-                <input className="input" required />
+                <input className="input" required value={name} onChange={(e) => setName(e.target.value)} />
                 <label className="label">Số điện thoại</label>
-                <input className="input" required />
+                <input className="input" required value={phone} onChange={(e) => setPhone(e.target.value)} />
                 <label className="label">Email nhận file</label>
-                <input className="input" type="email" required />
+                <input className="input" type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
                 <div className="mt-3 rounded-lg border border-dashed border-slate-400 bg-slate-50 p-3 text-sm">
                   Vui lòng chuyển khoản vào STK XXX - Ngân hàng YYY với nội dung: [Số Điện Thoại] + Tên Gói
                 </div>
-                <button type="submit" className="btn btn-primary mt-4 w-full">Xác Nhận Đã Chuyển Khoản</button>
+                <button type="submit" disabled={submitting} className="btn btn-primary mt-4 w-full disabled:opacity-60">
+                  {submitting ? "Đang gửi..." : "Xác Nhận Đã Chuyển Khoản"}
+                </button>
               </div>
               <img
                 src="https://via.placeholder.com/280x280?text=QR+Thanh+Toan"
