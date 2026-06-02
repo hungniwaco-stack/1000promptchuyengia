@@ -54,9 +54,16 @@ export default function Page() {
                 />
                 <div className="flex h-full flex-col p-4">
                   <h3 className="mb-2 text-base font-bold">{product.title}</h3>
-                  <p className="mb-3 grow text-sm">{product.desc}</p>
-                  <div className="mb-3 text-xl font-extrabold text-red-600">{product.price}</div>
-                  <BuyButton packageName={product.title} className="btn btn-primary">Mua Gói Này</BuyButton>
+                  <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-red-100 bg-red-50 p-3">
+                    <div>
+                      <div className="text-xs font-semibold uppercase text-slate-500">Giá bán</div>
+                      <div className="text-xl font-extrabold text-red-600">{product.price}</div>
+                    </div>
+                    <BuyButton packageName={product.title} className="btn btn-primary px-4 py-2 text-sm">
+                      Thanh toán ngay
+                    </BuyButton>
+                  </div>
+                  <p className="grow text-sm">{product.desc}</p>
                 </div>
               </article>
             ))}
