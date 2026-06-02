@@ -29,7 +29,7 @@ function toRawGithubUrl(relativePath) {
 }
 
 function parsePackNumber(fileName) {
-  const match = fileName.match(/^PACK\s+(\d+)\s*[–-]/i);
+  const match = fileName.match(/^PACK\s+(\d+)\s*[-–—]/i);
   return match ? Number(match[1]) : null;
 }
 

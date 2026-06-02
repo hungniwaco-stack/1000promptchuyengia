@@ -1,11 +1,11 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { getCatalogItemByTitle } from "../../products";
 
 type OrderPayload = {
   name: string;
   phone: string;
   email: string;
   packageName: string;
-  amount: number;
 };
 
 function buildOrderId() {
@@ -48,9 +48,8 @@ export async function POST(req: Request) {
     const phone = normalizePhone(body.phone?.trim() ?? "");
     const email = body.email?.trim().toLowerCase() ?? "";
     const packageName = body.packageName?.trim() ?? "";
-    const amount = Number(body.amount ?? 0);
 
-    if (!name || !phone || !email || !packageName || amount <= 0) {
+    if (!name || !phone || !email || !packageName) {
       return NextResponse.json(
         { ok: false, message: "Thiếu dữ liệu bắt buộc." },
         { status: 400 },
@@ -64,6 +63,14 @@ export async function POST(req: Request) {
     if (!isValidPhone(phone)) {
       return NextResponse.json(
         { ok: false, message: "Số điện thoại không hợp lệ." },
+        { status: 400 },
+      );
+    }
+
+    const catalogItem = getCatalogItemByTitle(packageName);
+    if (!catalogItem) {
+      return NextResponse.json(
+        { ok: false, message: "Gói sản phẩm không hợp lệ." },
         { status: 400 },
       );
     }
@@ -96,7 +103,7 @@ export async function POST(req: Request) {
             rich_text: [{ text: { content: packageName } }],
           },
           Amount: {
-            number: amount,
+            number: catalogItem.amount,
           },
           "Payment Status": {
             select: { name: "Pending" },
