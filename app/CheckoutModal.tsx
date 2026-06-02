@@ -14,6 +14,7 @@ export default function CheckoutModal() {
   const [submitting, setSubmitting] = useState(false);
   const [formError, setFormError] = useState("");
   const [formSuccess, setFormSuccess] = useState("");
+  const [submittedOrderId, setSubmittedOrderId] = useState("");
 
   useEffect(() => {
     const openCheckout = (event: Event) => {
@@ -21,6 +22,7 @@ export default function CheckoutModal() {
       setSelectedPackage(packageName);
       setFormError("");
       setFormSuccess("");
+      setSubmittedOrderId("");
       setOpen(true);
     };
 
@@ -49,6 +51,28 @@ export default function CheckoutModal() {
         <button type="button" aria-label="Đóng form" className="absolute right-3 top-2 h-11 w-11 rounded-full text-3xl text-slate-500" onClick={() => setOpen(false)}>×</button>
         <h3 className="text-xl font-extrabold">Form Thanh Toán</h3>
         <p className="mt-1 font-bold text-blue-900">Gói đã chọn: {selectedPackage}</p>
+        {submittedOrderId ? (
+          <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 text-center">
+            <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 text-3xl text-white">
+              ✓
+            </div>
+            <h4 className="text-2xl font-extrabold text-emerald-800">Đã ghi nhận đơn hàng!</h4>
+            <p className="mt-3 text-base text-emerald-900">
+              Cảm ơn bạn đã chuyển khoản. Mã đơn của bạn là{" "}
+              <strong>{submittedOrderId}</strong>.
+            </p>
+            <p className="mt-2 text-sm text-emerald-800">
+              Hữu Hùng AI sẽ kiểm tra thanh toán và gửi file prompt qua email/số điện thoại bạn đã nhập.
+            </p>
+            <button
+              type="button"
+              className="btn btn-primary mt-5"
+              onClick={() => setOpen(false)}
+            >
+              Đã hiểu
+            </button>
+          </div>
+        ) : (
         <form
           className="mt-4 grid gap-5 md:grid-cols-[1fr_280px]"
           onSubmit={async (event) => {
@@ -89,6 +113,7 @@ export default function CheckoutModal() {
                 setFormError(data.message || "Gửi đơn thất bại. Vui lòng thử lại.");
                 return;
               }
+              setSubmittedOrderId(data.orderId);
               setFormSuccess(`Cảm ơn bạn! Đơn ${data.orderId} đã được ghi nhận. Chúng tôi sẽ liên hệ sớm.`);
               setName("");
               setPhone("");
@@ -130,6 +155,7 @@ export default function CheckoutModal() {
             className="h-auto w-full rounded-lg border border-slate-300 object-contain"
           />
         </form>
+        )}
       </div>
     </div>
   );
