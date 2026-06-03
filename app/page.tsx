@@ -22,6 +22,7 @@ export default function Page() {
               <li><a href="#gioi-thieu">Giới thiệu</a></li>
               <li><a href="#thu-vien">Thư viện Prompt</a></li>
               <li><a href="#bang-gia">Bảng giá</a></li>
+              <li><a href="/bai-viet">Bài viết</a></li>
               <li><a href="#mien-phi">Miễn phí</a></li>
               <li><a href="#lien-he">Liên hệ</a></li>
             </ul>
