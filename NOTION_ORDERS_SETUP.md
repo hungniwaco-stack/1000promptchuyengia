@@ -34,7 +34,7 @@ Tên cột phải đúng chính tả như dưới đây:
 7. `Payment Status` (type: `Select`)
 : giá trị dùng trong code: `Pending`
 8. `Delivery Status` (type: `Select`)
-: giá trị dùng trong code: `Not Sent`
+: giá trị dùng trong code: `Not Sent`, `Sent`
 
 ## 4) Test nhanh sau cấu hình
 
@@ -53,4 +53,3 @@ Kỳ vọng:
 
 - `Không thể ghi đơn vào Notion.`
 : sai tên cột, sai kiểu cột, hoặc integration chưa được share quyền vào database.
-

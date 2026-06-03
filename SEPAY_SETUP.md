@@ -7,6 +7,7 @@ Website dùng SePay theo luồng VietQR + webhook:
 3. Modal hiển thị QR động từ `qr.sepay.vn` với đúng số tiền và nội dung chuyển khoản.
 4. Khi ngân hàng nhận tiền, SePay gửi webhook về website.
 5. Website kiểm tra HMAC, mã đơn, số tiền rồi cập nhật `Payment Status = Paid` trong Notion.
+6. Nếu đã cấu hình Resend, website gửi email link tải file prompt và cập nhật `Delivery Status = Sent`.
 
 ## 1) Biến môi trường
 
@@ -17,6 +18,9 @@ Thiết lập trên Vercel:
 - `SEPAY_WEBHOOK_SECRET`: Secret HMAC-SHA256 tạo trong SePay webhook.
 - `SEPAY_BANK_CODE`: mã ngân hàng dùng tạo QR, ví dụ `ACB`.
 - `SEPAY_ACCOUNT_NUMBER`: số tài khoản nhận tiền, ví dụ `201482319`.
+- `RESEND_API_KEY`: API key dùng gửi email giao hàng tự động.
+- `DELIVERY_FROM_EMAIL`: email gửi đi, ví dụ `Hữu Hùng AI <orders@1000promptchuyengia.shop>`.
+- `DELIVERY_REPLY_TO_EMAIL`: email nhận phản hồi của khách, ví dụ `hatmuadem@gmail.com`.
 
 Không commit secret thật vào repository.
 
@@ -46,6 +50,19 @@ Webhook hiện cần các cột đã có:
 Khi giao dịch khớp, webhook chỉ cập nhật:
 
 - `Payment Status = Paid`
+- `Delivery Status = Sent` nếu email giao hàng gửi thành công
+
+Webhook cũng đọc các cột:
+
+- `Name`
+- `Email`
+- `Package`
+
+Prompt Packs database cần có:
+
+- `Pack Code`
+- `Pack No`
+- `File`
 
 ## 4) Kiểm thử
 
@@ -55,3 +72,4 @@ Sau khi deploy:
 2. Kiểm tra Notion có đơn `Pending`.
 3. Trong SePay webhook, dùng tính năng test send nếu có thể chỉnh payload, hoặc chuyển khoản thật số tiền nhỏ theo mã đơn test.
 4. Kỳ vọng Notion chuyển sang `Paid`.
+5. Nếu đã có `RESEND_API_KEY` và `DELIVERY_FROM_EMAIL`, kỳ vọng khách nhận email link tải file và Notion chuyển sang `Sent`.

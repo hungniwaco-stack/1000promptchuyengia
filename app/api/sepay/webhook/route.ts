@@ -23,8 +23,25 @@ type NotionQueryResponse = {
     id: string;
     properties?: {
       Amount?: { number?: number | null };
+      Email?: { email?: string | null };
+      Name?: { rich_text?: Array<{ plain_text?: string }> };
+      Package?: { rich_text?: Array<{ plain_text?: string }> };
       "Payment Status"?: { select?: { name?: string } | null };
+      "Delivery Status"?: { select?: { name?: string } | null };
     };
+  }>;
+};
+
+type OrderPage = NonNullable<NotionQueryResponse["results"]>[number];
+
+type PromptPackLink = {
+  title: string;
+  url: string;
+};
+
+type PromptPackQueryResponse = {
+  results?: Array<{
+    properties?: Record<string, unknown>;
   }>;
 };
 
@@ -89,6 +106,31 @@ function extractOrderId(payload: SepayPayload) {
   return "";
 }
 
+function richTextToPlain(value: unknown) {
+  const richText = (value as { rich_text?: Array<{ plain_text?: string }> })?.rich_text;
+  return richText?.map((item) => item.plain_text ?? "").join("").trim() ?? "";
+}
+
+function titleToPlain(value: unknown) {
+  const title = (value as { title?: Array<{ plain_text?: string }> })?.title;
+  return title?.map((item) => item.plain_text ?? "").join("").trim() ?? "";
+}
+
+function getFileUrl(value: unknown) {
+  const prop = value as {
+    url?: string;
+    files?: Array<{ file?: { url?: string }; external?: { url?: string } }>;
+    rich_text?: Array<{ plain_text?: string }>;
+  };
+
+  return prop?.url || prop?.files?.[0]?.file?.url || prop?.files?.[0]?.external?.url || prop?.rich_text?.[0]?.plain_text || "";
+}
+
+function getPackNoFromProductTitle(packageName: string) {
+  const match = packageName.match(/PACK\s+(\d+)/i);
+  return match ? Number(match[1]) : null;
+}
+
 async function findOrderPage(orderId: string, notionApiKey: string, notionOrdersDbId: string) {
   const res = await fetch(`https://api.notion.com/v1/databases/${notionOrdersDbId}/query`, {
     method: "POST",
@@ -136,6 +178,155 @@ async function markOrderPaid(pageId: string, notionApiKey: string) {
   if (!res.ok) {
     throw new Error(await res.text());
   }
+}
+
+async function markDeliverySent(pageId: string, notionApiKey: string) {
+  const res = await fetch(`https://api.notion.com/v1/pages/${pageId}`, {
+    method: "PATCH",
+    headers: {
+      Authorization: `Bearer ${notionApiKey}`,
+      "Notion-Version": "2022-06-28",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      properties: {
+        "Delivery Status": {
+          select: { name: "Sent" },
+        },
+      },
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(await res.text());
+  }
+}
+
+async function fetchPromptPackLinks(packageName: string, notionApiKey: string) {
+  const promptPacksDbId = process.env.NOTION_PROMPT_PACKS_DB_ID;
+
+  if (!promptPacksDbId) {
+    throw new Error("Missing NOTION_PROMPT_PACKS_DB_ID");
+  }
+
+  const packNo = getPackNoFromProductTitle(packageName);
+  const isCombo = packNo === null;
+  const res = await fetch(`https://api.notion.com/v1/databases/${promptPacksDbId}/query`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${notionApiKey}`,
+      "Notion-Version": "2022-06-28",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      ...(isCombo
+        ? {}
+        : {
+            filter: {
+              property: "Pack No",
+              number: {
+                equals: packNo,
+              },
+            },
+          }),
+      sorts: [
+        {
+          property: "Pack No",
+          direction: "ascending",
+        },
+      ],
+      page_size: isCombo ? 10 : 1,
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(await res.text());
+  }
+
+  const data = (await res.json()) as PromptPackQueryResponse;
+  const links =
+    data.results
+      ?.map((page) => {
+        const properties = page.properties ?? {};
+        const title = titleToPlain(properties["Pack Code"]) || richTextToPlain(properties["Name"]) || "Prompt pack";
+        const url = getFileUrl(properties.File);
+
+        return { title, url };
+      })
+      .filter((link): link is PromptPackLink => Boolean(link.url)) ?? [];
+
+  if (!links.length) {
+    throw new Error("No prompt pack file links found");
+  }
+
+  return links;
+}
+
+function buildDeliveryEmail(orderId: string, customerName: string, packageName: string, links: PromptPackLink[]) {
+  const linkItems = links
+    .map(
+      (link) =>
+        `<li style="margin:8px 0"><a href="${link.url}" target="_blank" rel="noreferrer">${link.title}</a></li>`,
+    )
+    .join("");
+  const textLinks = links.map((link) => `${link.title}: ${link.url}`).join("\n");
+
+  return {
+    subject: `File prompt cho đơn ${orderId}`,
+    html: `
+      <div style="font-family:Arial,sans-serif;line-height:1.6;color:#0f172a">
+        <p>Chào ${customerName || "bạn"},</p>
+        <p>Hữu Hùng AI đã xác nhận thanh toán cho đơn <strong>${orderId}</strong>.</p>
+        <p>Gói bạn đã mua: <strong>${packageName}</strong></p>
+        <p>Link tải file prompt:</p>
+        <ul>${linkItems}</ul>
+        <p>Nếu cần hỗ trợ, bạn chỉ cần phản hồi email này.</p>
+        <p>Trân trọng,<br/>Hữu Hùng AI</p>
+      </div>
+    `,
+    text: `Chào ${customerName || "bạn"},\n\nHữu Hùng AI đã xác nhận thanh toán cho đơn ${orderId}.\nGói bạn đã mua: ${packageName}\n\nLink tải file prompt:\n${textLinks}\n\nTrân trọng,\nHữu Hùng AI`,
+  };
+}
+
+async function sendDeliveryEmail(orderId: string, orderPage: OrderPage, notionApiKey: string) {
+  const resendApiKey = process.env.RESEND_API_KEY;
+  const from = process.env.DELIVERY_FROM_EMAIL;
+
+  if (!resendApiKey || !from) {
+    return { sent: false, reason: "email_not_configured" };
+  }
+
+  const email = orderPage.properties?.Email?.email;
+  const customerName = richTextToPlain(orderPage.properties?.Name);
+  const packageName = richTextToPlain(orderPage.properties?.Package);
+
+  if (!email || !packageName) {
+    return { sent: false, reason: "missing_order_email_or_package" };
+  }
+
+  const links = await fetchPromptPackLinks(packageName, notionApiKey);
+  const message = buildDeliveryEmail(orderId, customerName, packageName, links);
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: email,
+      subject: message.subject,
+      html: message.html,
+      text: message.text,
+      reply_to: process.env.DELIVERY_REPLY_TO_EMAIL || undefined,
+    }),
+  });
+
+  if (!res.ok) {
+    throw new Error(await res.text());
+  }
+
+  return { sent: true, count: links.length };
 }
 
 export async function POST(req: Request) {
@@ -192,7 +383,17 @@ export async function POST(req: Request) {
       await markOrderPaid(page.id, notionApiKey);
     }
 
-    return json(true, 200, { orderId, status: "paid" });
+    const currentDeliveryStatus = page.properties?.["Delivery Status"]?.select?.name;
+    if (currentDeliveryStatus === "Sent") {
+      return json(true, 200, { orderId, status: "paid", delivery: "already_sent" });
+    }
+
+    const delivery = await sendDeliveryEmail(orderId, page, notionApiKey);
+    if (delivery.sent) {
+      await markDeliverySent(page.id, notionApiKey);
+    }
+
+    return json(true, 200, { orderId, status: "paid", delivery });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown webhook error";
     return json(false, 500, { message });
