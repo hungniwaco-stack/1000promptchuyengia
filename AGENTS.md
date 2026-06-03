@@ -33,6 +33,7 @@
 - Required SePay env vars are `SEPAY_WEBHOOK_SECRET`, `SEPAY_BANK_CODE`, and `SEPAY_ACCOUNT_NUMBER`.
 - Current receiving bank config used by the website: `SEPAY_BANK_CODE=ACB`, `SEPAY_ACCOUNT_NUMBER=201482319`.
 - SePay automation was tested successfully on 2026-06-03: a `+99,000đ` transaction for order `ORD20260603125554` triggered webhook `Webhook1`, updated Notion `Payment Status` to `Paid`, and left `Delivery Status` as `Not Sent` before email delivery setup.
+- Current pricing after 2026-06-03 update is `49,000đ` per individual pack and `199,000đ` for the combo; future payment tests should use these amounts.
 - Webhook code lives in `app/api/sepay/webhook/route.ts`. It now accepts only compact order codes matching `ORD\d{14}`.
 - Recent SePay commits on `main`: `8b9e610` added webhook, `1897224` normalized SePay order codes, `2e8d9ae` switched order creation to compact codes, `970ac00` removed dashed-code support.
 
@@ -43,6 +44,7 @@
 - Prompt Packs database must have `Pack Code`, `Pack No`, and `File` properties populated.
 - Email delivery uses Resend via direct API fetch, not an npm package.
 - Required email env vars to actually send: `RESEND_API_KEY` and `DELIVERY_FROM_EMAIL`; optional `DELIVERY_REPLY_TO_EMAIL`.
+- Production email env was configured on 2026-06-03: `RESEND_API_KEY`, `DELIVERY_FROM_EMAIL`, and `DELIVERY_REPLY_TO_EMAIL` are present in Vercel runtime. Verify by length only if needed.
 - If email env vars are missing, webhook still marks the order `Paid` but leaves `Delivery Status = Not Sent`.
 - If email sends successfully, webhook updates Notion `Delivery Status = Sent`.
 - Recent delivery commit on `main`: `e1aff52` added prompt-link email delivery after payment.
@@ -58,8 +60,11 @@
 - Current prompt-pack sync script is `scripts/sync-notion-prompts.mjs`; it now defaults to `1000 Prompt/FORMAT_FINAL_CLEAN`, uses `Pack Code` by default, auto-detects the Notion title property, and generates raw GitHub URLs from the selected prompt directory.
 - As of commit `0fbe15a`, `scripts/sync-notion-prompts.mjs` finds existing Prompt Pack pages by `Pack No` first, then falls back to title. This avoids empty `File` links or duplicate pages when titles differ.
 - Prompt Packs sync should update the `File` property with raw GitHub URLs pointing at `1000 Prompt/FORMAT_FINAL_CLEAN`.
-- As of 2026-06-03, local `.env.local` does not contain `NOTION_API_KEY`. Pulling Vercel production/preview env returned empty quoted Notion values (`""`), so Notion sync cannot run until a valid `NOTION_API_KEY` is added locally or in Vercel.
-- On 2026-06-03, another Vercel production env pull for prompt sync returned `NOTION_API_KEY`, `NOTION_PROMPT_PACKS_DB_ID`, and `NOTION_ORDERS_DB_ID` with length `0`. Do not assume Vercel has valid Notion values; verify by length only.
+- As of 2026-06-03, Vercel production runtime env has valid Notion variables: `NOTION_API_KEY`, `NOTION_PROMPT_PACKS_DB_ID`, and `NOTION_ORDERS_DB_ID`. Sensitive env values may still pull as empty via `vercel env pull`; verify runtime by length only when needed.
+- On 2026-06-03, `NOTION_PROMPT_PACKS_DB_ID` and `NOTION_ORDERS_DB_ID` were corrected after accidental Resend-key/partial-ID entries. Current verified runtime lengths are 32 for both database IDs.
+- On 2026-06-03, a temporary production sync endpoint updated all 10 Prompt Pack pages successfully: `files=10`, `created=0`, `updated=10`. It was deleted afterward and production was redeployed clean.
+- Verified Prompt Packs database schema on 2026-06-03: database title `Prompt Packs`; `Pack Code` is `title`, `Pack No` is `number`, `File` is `files`, and `Price` is `select`. Since `Price` is select, do not attempt numeric API updates to it unless the schema changes.
+- Verified Orders database schema on 2026-06-03: database title `Orders - 1000 Prompt`; required properties are `Order ID` title, `Name` rich_text, `Phone` phone_number, `Email` email, `Package` rich_text, `Amount` number, `Payment Status` select, and `Delivery Status` select.
 - When checking env files, only print variable names or value lengths; never print raw Notion/Vercel secrets. Delete temporary env pulls from `C:\tmp` after use.
 
 ## Word Prompt Pack Formatting
@@ -69,7 +74,7 @@
 - Verified format target: each formatted DOCX has 122 non-empty paragraphs, 10 sections, and 100 prompts.
 - On 2026-06-03, `python scripts\format_word_packs.py` was rerun and validation confirmed all 10 formatted DOCX files still have 122 non-empty paragraphs, 10 sections, and 100 prompts.
 - Commit `902e22b` refreshed the formatted prompt pack files on `main`; use these GitHub raw files for Notion Prompt Packs `File` links.
-- The sample file `1000 Prompt/Mẫu chuẩn PACK 9.docx` may remain untracked locally; do not remove it without explicit user approval.
+- The sample file `1000 Prompt/Mẫu chuẩn PACK 9.docx` was removed from the local workspace on 2026-06-03 at the user's request.
 
 ## Deployment Notes
 - `npm run build` has been used successfully for validation.
@@ -81,14 +86,13 @@
 - GitHub `main` contains the working Next.js source after replacing an older static-only remote.
 - Tailwind requires `@tailwindcss/postcss` and `postcss.config.mjs`.
 - `.vercelignore` exists to avoid deploying unwanted files.
-- Untracked local image files may exist, such as `Banner.png` and `Logo.png`; do not remove them unless the user asks.
+- Root-level duplicate `Banner.png` and `Logo.png` were removed on 2026-06-03 because their hashes matched the live assets under `public/images/`.
 
 ## Visual Assets
-- `Logo.png` is the current project logo asset.
-- `Banner.png` is the current project banner/hero visual asset.
-- Treat these two files as intended assets for the website, not disposable scratch files.
-- If adding them to the live site, place them under `public/` or another Next.js-served asset path and update components accordingly.
-- Do not rename, overwrite, compress, or delete these assets without explicit user approval.
+- `public/images/logo.png` is the current project logo asset used by the website.
+- `public/images/banner.png` is the current project banner/hero visual asset used by the website.
+- The root-level duplicate `Logo.png` and `Banner.png` are no longer needed after 2026-06-03 cleanup.
+- Do not rename, overwrite, compress, or delete the assets under `public/images/` without explicit user approval.
 
 ## Useful Verification
 - Check git state with `git status --short`.
