@@ -8,6 +8,9 @@ type OrderPayload = {
   packageName: string;
 };
 
+const bankCode = process.env.SEPAY_BANK_CODE || "ACB";
+const bankAccountNumber = process.env.SEPAY_ACCOUNT_NUMBER || "201482319";
+
 function buildOrderId() {
   const now = new Date();
   const stamp = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, "0")}${String(
@@ -28,7 +31,19 @@ function normalizePhone(phone: string) {
 }
 
 function isValidPhone(phone: string) {
-  return /^(0[3|5|7|8|9])[0-9]{8}$/.test(phone);
+  return /^(0[35789])[0-9]{8}$/.test(phone);
+}
+
+function buildSepayQrUrl(orderId: string, amount: number) {
+  const params = new URLSearchParams({
+    acc: bankAccountNumber,
+    bank: bankCode,
+    amount: String(amount),
+    des: orderId,
+    template: "compact",
+  });
+
+  return `https://qr.sepay.vn/img?${params.toString()}`;
 }
 
 export async function POST(req: Request) {
@@ -123,7 +138,15 @@ export async function POST(req: Request) {
       );
     }
 
-    return NextResponse.json({ ok: true, orderId });
+    return NextResponse.json({
+      ok: true,
+      orderId,
+      amount: catalogItem.amount,
+      bankCode,
+      bankAccountNumber,
+      paymentContent: orderId,
+      qrUrl: buildSepayQrUrl(orderId, catalogItem.amount),
+    });
   } catch {
     return NextResponse.json({ ok: false, message: "Đã xảy ra lỗi khi tạo đơn." }, { status: 500 });
   }
