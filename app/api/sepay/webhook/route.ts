@@ -28,7 +28,7 @@ type NotionQueryResponse = {
   }>;
 };
 
-const orderCodePattern = /ORD-\d{14}/i;
+const orderCodePattern = /ORD-?\d{14}/i;
 
 function json(success: boolean, status = 200, extra: Record<string, unknown> = {}) {
   return NextResponse.json({ success, ...extra }, { status });
@@ -72,15 +72,19 @@ function verifySepaySignature(rawBody: string, req: Request) {
   return safeCompare(expected, signature);
 }
 
-function extractOrderId(payload: SepayPayload) {
-  const directCode = payload.code?.match(orderCodePattern)?.[0];
-  if (directCode) {
-    return directCode.toUpperCase();
-  }
+function normalizeOrderId(orderCode: string) {
+  const normalizedCode = orderCode.toUpperCase().replace(/^ORD-?/, "");
+  return `ORD-${normalizedCode}`;
+}
 
-  const contentCode = payload.content?.match(orderCodePattern)?.[0];
-  if (contentCode) {
-    return contentCode.toUpperCase();
+function extractOrderId(payload: SepayPayload) {
+  const candidates = [payload.code, payload.content, payload.description];
+
+  for (const candidate of candidates) {
+    const orderCode = candidate?.match(orderCodePattern)?.[0];
+    if (orderCode) {
+      return normalizeOrderId(orderCode);
+    }
   }
 
   return "";
