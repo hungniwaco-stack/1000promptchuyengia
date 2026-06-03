@@ -110,6 +110,12 @@ function getTitleValue(page) {
   return (prop.title || []).map((x) => x.plain_text || "").join("").trim();
 }
 
+function getPackNoValue(page) {
+  const prop = page.properties?.[PACK_NO_PROP];
+  if (!prop || prop.type !== "number") return null;
+  return typeof prop.number === "number" ? prop.number : null;
+}
+
 function buildProperties({ title, packNo, fileUrl, fileName }) {
   const properties = {
     [titleProp]: {
@@ -187,6 +193,11 @@ async function main() {
   await notionDetectTitleProperty();
   const existingPages = await notionQueryAllPages();
   const pageByTitle = new Map(existingPages.map((p) => [getTitleValue(p), p]));
+  const pageByPackNo = new Map(
+    existingPages
+      .map((p) => [getPackNoValue(p), p])
+      .filter(([packNo]) => typeof packNo === "number"),
+  );
 
   let created = 0;
   let updated = 0;
@@ -197,7 +208,7 @@ async function main() {
     const relativePath = path.relative(process.cwd(), path.join(promptDir, fileName)).split(path.sep).join("/");
     const fileUrl = toRawGithubUrl(relativePath);
     const props = buildProperties({ title, packNo, fileUrl, fileName });
-    const found = pageByTitle.get(title);
+    const found = pageByPackNo.get(packNo) || pageByTitle.get(title);
 
     if (DRY_RUN) {
       console.log(`[DRY] ${found ? "UPDATE" : "CREATE"}: pack=${packNo ?? "unknown"}`);
