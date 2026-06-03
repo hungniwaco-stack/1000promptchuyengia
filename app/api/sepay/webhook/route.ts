@@ -74,7 +74,12 @@ function verifySepaySignature(rawBody: string, req: Request) {
 
 function normalizeOrderId(orderCode: string) {
   const normalizedCode = orderCode.toUpperCase().replace(/^ORD-?/, "");
-  return `ORD-${normalizedCode}`;
+  return `ORD${normalizedCode}`;
+}
+
+function buildOrderIdVariants(orderId: string) {
+  const normalizedCode = orderId.toUpperCase().replace(/^ORD-?/, "");
+  return [`ORD${normalizedCode}`, `ORD-${normalizedCode}`];
 }
 
 function extractOrderId(payload: SepayPayload) {
@@ -91,30 +96,38 @@ function extractOrderId(payload: SepayPayload) {
 }
 
 async function findOrderPage(orderId: string, notionApiKey: string, notionOrdersDbId: string) {
-  const res = await fetch(`https://api.notion.com/v1/databases/${notionOrdersDbId}/query`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${notionApiKey}`,
-      "Notion-Version": "2022-06-28",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      filter: {
-        property: "Order ID",
-        title: {
-          equals: orderId,
-        },
+  for (const orderIdVariant of buildOrderIdVariants(orderId)) {
+    const res = await fetch(`https://api.notion.com/v1/databases/${notionOrdersDbId}/query`, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${notionApiKey}`,
+        "Notion-Version": "2022-06-28",
+        "Content-Type": "application/json",
       },
-      page_size: 1,
-    }),
-  });
+      body: JSON.stringify({
+        filter: {
+          property: "Order ID",
+          title: {
+            equals: orderIdVariant,
+          },
+        },
+        page_size: 1,
+      }),
+    });
 
-  if (!res.ok) {
-    throw new Error(await res.text());
+    if (!res.ok) {
+      throw new Error(await res.text());
+    }
+
+    const data = (await res.json()) as NotionQueryResponse;
+    const page = data.results?.[0] ?? null;
+
+    if (page) {
+      return page;
+    }
   }
 
-  const data = (await res.json()) as NotionQueryResponse;
-  return data.results?.[0] ?? null;
+  return null;
 }
 
 async function markOrderPaid(pageId: string, notionApiKey: string) {

@@ -3,7 +3,7 @@
 Website dùng SePay theo luồng VietQR + webhook:
 
 1. Khách tạo đơn trên website.
-2. API tạo mã đơn dạng `ORD-YYYYMMDDHHMMSS`.
+2. API tạo mã đơn dạng `ORDYYYYMMDDHHMMSS`.
 3. Modal hiển thị QR động từ `qr.sepay.vn` với đúng số tiền và nội dung chuyển khoản.
 4. Khi ngân hàng nhận tiền, SePay gửi webhook về website.
 5. Website kiểm tra HMAC, mã đơn, số tiền rồi cập nhật `Payment Status = Paid` trong Notion.
@@ -27,7 +27,7 @@ Trong SePay Dashboard:
 1. Vào `Integrations` -> `Webhooks`.
 2. Tạo webhook mới.
 3. URL production:
-   `https://1000promptchuyengia.shop/api/sepay/webhook`
+   `https://www.1000promptchuyengia.shop/api/sepay/webhook`
 4. Event type: `Money in`.
 5. Content-Type: `application/json`.
 6. Security: chọn `HMAC-SHA256`.

@@ -19,7 +19,7 @@ function buildOrderId() {
     2,
     "0",
   )}${String(now.getSeconds()).padStart(2, "0")}`;
-  return `ORD-${stamp}`;
+  return `ORD${stamp}`;
 }
 
 function isValidEmail(email: string) {
