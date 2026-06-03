@@ -14,7 +14,8 @@
 
 ## Current Product Rules
 - Product catalog lives in `app/products.ts`.
-- There are 10 individual prompt packs, each priced at `99,000 VNĐ`.
+- There are 10 individual prompt packs, each priced at `49,000 VNĐ`.
+- The combo product is priced at `199,000 VNĐ`.
 - The combo product is sold from the main CTA.
 - Product cards should show the pack price and a checkout action.
 - The pricing table must not appear by default on page load.

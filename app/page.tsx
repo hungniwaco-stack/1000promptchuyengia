@@ -13,7 +13,7 @@ export default function Page() {
           <a href="#" className="flex items-center">
             <img
               src="/images/logo.png"
-              alt="Logo Huu Hung AI"
+              alt="Logo Hữu Hùng AI"
               className="h-24 w-auto max-w-[230px] object-contain"
             />
           </a>
@@ -34,25 +34,25 @@ export default function Page() {
           <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
             <img
               src="/images/banner.png"
-              alt="Banner 1000 Prompt Chuyen Gia"
+              alt="Banner 1000 Prompt Chuyên Gia"
               className="w-full object-cover"
               decoding="async"
               fetchPriority="high"
             />
           </div>
           <div className="mx-auto max-w-4xl text-center">
-          <h1 className="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">
-            <span className="block">Mở Khóa Sức Mạnh AI</span>
-            <span className="block">Với 1000 Prompt Chuyên Gia</span>
-          </h1>
-          <p className="mb-8 max-w-4xl text-base md:text-lg">
-            <span className="block">Giải pháp tối ưu x10 hiệu suất làm việc, tiết kiệm thời gian và tạo ra đột phá doanh thu.</span>
-            <span className="block">Được tinh lọc bởi Hữu Hùng AI.</span>
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a href="#thu-vien" className="btn btn-primary">Khám phá ngay</a>
-            <BuyButton packageName={comboName} className="btn btn-accent">Mua Combo Trọn Bộ</BuyButton>
-          </div>
+            <h1 className="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">
+              <span className="block">Mở Khóa Sức Mạnh AI</span>
+              <span className="block">Với 1000 Prompt Chuyên Gia</span>
+            </h1>
+            <p className="mb-8 max-w-4xl text-base md:text-lg">
+              <span className="block">Giải pháp tối ưu x10 hiệu suất làm việc, tiết kiệm thời gian và tạo ra đột phá doanh thu.</span>
+              <span className="block">Được tinh lọc bởi Hữu Hùng AI.</span>
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="#thu-vien" className="btn btn-primary">Khám phá ngay</a>
+              <BuyButton packageName={comboName} className="btn btn-accent">Mua Combo Trọn Bộ</BuyButton>
+            </div>
           </div>
         </div>
       </section>
