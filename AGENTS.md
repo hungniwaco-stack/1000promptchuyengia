@@ -25,6 +25,26 @@
 - Order API is `app/api/order/route.ts`.
 - The order API must calculate price server-side from `app/products.ts`; do not trust client-submitted amounts.
 - Orders are written to Notion through Vercel environment variables.
+- Order IDs now use the compact SePay-compatible format `ORDYYYYMMDDHHMMSS` only, for example `ORD20260603125554`. Do not reintroduce the older dashed format `ORD-YYYYMMDDHHMMSS`.
+- SePay QR payment content should be exactly the compact `ORD...` order ID.
+- The SePay webhook endpoint is `https://www.1000promptchuyengia.shop/api/sepay/webhook`; use the `www` URL to avoid the apex-domain 308 redirect.
+- SePay webhook event is `Money in`, security is `HMAC-SHA256`, and payment-code prefix/filter is `ORD`.
+- Required SePay env vars are `SEPAY_WEBHOOK_SECRET`, `SEPAY_BANK_CODE`, and `SEPAY_ACCOUNT_NUMBER`.
+- Current receiving bank config used by the website: `SEPAY_BANK_CODE=ACB`, `SEPAY_ACCOUNT_NUMBER=201482319`.
+- SePay automation was tested successfully on 2026-06-03: a `+99,000đ` transaction for order `ORD20260603125554` triggered webhook `Webhook1`, updated Notion `Payment Status` to `Paid`, and left `Delivery Status` as `Not Sent` before email delivery setup.
+- Webhook code lives in `app/api/sepay/webhook/route.ts`. It now accepts only compact order codes matching `ORD\d{14}`.
+- Recent SePay commits on `main`: `8b9e610` added webhook, `1897224` normalized SePay order codes, `2e8d9ae` switched order creation to compact codes, `970ac00` removed dashed-code support.
+
+## Email Delivery
+- After a matching SePay payment, the webhook attempts automatic delivery if email env vars are configured.
+- Delivery reads the order's `Name`, `Email`, and `Package` properties from Notion Orders.
+- Delivery looks up Prompt Pack file links from Notion Prompt Packs using `NOTION_PROMPT_PACKS_DB_ID`; individual packs are matched from the `PACK N` number in the package title, and combo orders send all 10 pack links.
+- Prompt Packs database must have `Pack Code`, `Pack No`, and `File` properties populated.
+- Email delivery uses Resend via direct API fetch, not an npm package.
+- Required email env vars to actually send: `RESEND_API_KEY` and `DELIVERY_FROM_EMAIL`; optional `DELIVERY_REPLY_TO_EMAIL`.
+- If email env vars are missing, webhook still marks the order `Paid` but leaves `Delivery Status = Not Sent`.
+- If email sends successfully, webhook updates Notion `Delivery Status = Sent`.
+- Recent delivery commit on `main`: `e1aff52` added prompt-link email delivery after payment.
 
 ## Notion Integration
 - Never print or commit the raw `NOTION_API_KEY` / Internal Integration Secret.
@@ -34,6 +54,21 @@
 - The sync added/uses `File` and `Pack No` properties.
 - There is one old unexpected Notion page named `PACK01` with no `Pack No`; do not delete/archive it without explicit user approval.
 - If syncing prompt packs again, prefer setting `NOTION_PROMPT_TITLE_PROP=Pack Code` or make the sync script auto-detect the title property.
+- Current prompt-pack sync script is `scripts/sync-notion-prompts.mjs`; it now defaults to `1000 Prompt/FORMAT_FINAL_CLEAN`, uses `Pack Code` by default, auto-detects the Notion title property, and generates raw GitHub URLs from the selected prompt directory.
+- As of commit `0fbe15a`, `scripts/sync-notion-prompts.mjs` finds existing Prompt Pack pages by `Pack No` first, then falls back to title. This avoids empty `File` links or duplicate pages when titles differ.
+- Prompt Packs sync should update the `File` property with raw GitHub URLs pointing at `1000 Prompt/FORMAT_FINAL_CLEAN`.
+- As of 2026-06-03, local `.env.local` does not contain `NOTION_API_KEY`. Pulling Vercel production/preview env returned empty quoted Notion values (`""`), so Notion sync cannot run until a valid `NOTION_API_KEY` is added locally or in Vercel.
+- On 2026-06-03, another Vercel production env pull for prompt sync returned `NOTION_API_KEY`, `NOTION_PROMPT_PACKS_DB_ID`, and `NOTION_ORDERS_DB_ID` with length `0`. Do not assume Vercel has valid Notion values; verify by length only.
+- When checking env files, only print variable names or value lengths; never print raw Notion/Vercel secrets. Delete temporary env pulls from `C:\tmp` after use.
+
+## Word Prompt Pack Formatting
+- Formatted prompt-pack Word files live in `1000 Prompt/FORMAT_FINAL_CLEAN`.
+- Commit `31d28dc` on `main` added the formatted 10-pack Word output and the formatting script.
+- `scripts/format_word_packs.py` formats the 10 `PACK *.docx` files from `1000 Prompt`, auto-detects `Mau/Mẫu chuẩn PACK 9.docx`, and writes clean output to `1000 Prompt/FORMAT_FINAL_CLEAN`.
+- Verified format target: each formatted DOCX has 122 non-empty paragraphs, 10 sections, and 100 prompts.
+- On 2026-06-03, `python scripts\format_word_packs.py` was rerun and validation confirmed all 10 formatted DOCX files still have 122 non-empty paragraphs, 10 sections, and 100 prompts.
+- Commit `902e22b` refreshed the formatted prompt pack files on `main`; use these GitHub raw files for Notion Prompt Packs `File` links.
+- The sample file `1000 Prompt/Mẫu chuẩn PACK 9.docx` may remain untracked locally; do not remove it without explicit user approval.
 
 ## Deployment Notes
 - `npm run build` has been used successfully for validation.
