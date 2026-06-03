@@ -1,13 +1,16 @@
-import { readdir } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import path from "node:path";
+
+await loadDotEnvLocal();
 
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const NOTION_DB_ID = process.env.NOTION_PROMPT_PACKS_DB_ID;
 const GITHUB_REPO = process.env.GITHUB_REPO || "hungniwaco-stack/1000promptchuyengia";
 const GITHUB_BRANCH = process.env.GITHUB_BRANCH || "main";
-const PROMPT_DIR = "1000 Prompt";
+const DEFAULT_PROMPT_DIR = "1000 Prompt/FORMAT_FINAL_CLEAN";
+const FALLBACK_PROMPT_DIR = "1000 Prompt";
 
-const TITLE_PROP = process.env.NOTION_PROMPT_TITLE_PROP || "Name";
+let titleProp = process.env.NOTION_PROMPT_TITLE_PROP || "Pack Code";
 const FILE_PROP = process.env.NOTION_PROMPT_FILE_PROP || "File";
 const PACK_NO_PROP = process.env.NOTION_PROMPT_PACK_NO_PROP || "Pack No";
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -23,6 +26,25 @@ const notionHeaders = {
   "Content-Type": "application/json",
 };
 
+async function loadDotEnvLocal() {
+  if (process.env.NOTION_API_KEY && process.env.NOTION_PROMPT_PACKS_DB_ID) return;
+
+  try {
+    const content = await readFile(".env.local", "utf8");
+    for (const line of content.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#") || !trimmed.includes("=")) continue;
+
+      const [name, ...valueParts] = trimmed.split("=");
+      if (!process.env[name]) {
+        process.env[name] = valueParts.join("=");
+      }
+    }
+  } catch {
+    // The explicit missing-env check below will report the actionable problem.
+  }
+}
+
 function toRawGithubUrl(relativePath) {
   const encodedPath = relativePath.split(/[\\/]/).map(encodeURIComponent).join("/");
   return `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${encodedPath}`;
@@ -35,6 +57,28 @@ function parsePackNumber(fileName) {
 
 function toTitleFromFileName(fileName) {
   return fileName.replace(/\.docx$/i, "");
+}
+
+async function notionReadDatabase() {
+  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DB_ID}`, {
+    method: "GET",
+    headers: notionHeaders,
+  });
+  if (!res.ok) {
+    throw new Error(`Notion database read failed: ${await res.text()}`);
+  }
+  return res.json();
+}
+
+async function notionDetectTitleProperty() {
+  const database = await notionReadDatabase();
+  if (database.properties?.[titleProp]?.type === "title") return;
+
+  const detected = Object.entries(database.properties || {}).find(([, prop]) => prop.type === "title");
+  if (!detected) {
+    throw new Error("No title property found in Notion database.");
+  }
+  titleProp = detected[0];
 }
 
 async function notionQueryAllPages() {
@@ -61,14 +105,14 @@ async function notionQueryAllPages() {
 }
 
 function getTitleValue(page) {
-  const prop = page.properties?.[TITLE_PROP];
+  const prop = page.properties?.[titleProp];
   if (!prop || prop.type !== "title") return "";
   return (prop.title || []).map((x) => x.plain_text || "").join("").trim();
 }
 
 function buildProperties({ title, packNo, fileUrl, fileName }) {
   const properties = {
-    [TITLE_PROP]: {
+    [titleProp]: {
       title: [{ text: { content: title } }],
     },
     [FILE_PROP]: {
@@ -113,8 +157,24 @@ async function notionUpdatePage(pageId, payload) {
   }
 }
 
+async function resolvePromptDir() {
+  const requested = process.env.NOTION_PROMPT_DIR || DEFAULT_PROMPT_DIR;
+  try {
+    await access(requested);
+    return requested;
+  } catch {
+    if (process.env.NOTION_PROMPT_DIR) {
+      throw new Error(`Missing prompt directory: ${requested}`);
+    }
+  }
+
+  await access(FALLBACK_PROMPT_DIR);
+  return FALLBACK_PROMPT_DIR;
+}
+
 async function main() {
-  const files = (await readdir(PROMPT_DIR, { withFileTypes: true }))
+  const promptDir = await resolvePromptDir();
+  const files = (await readdir(promptDir, { withFileTypes: true }))
     .filter((d) => d.isFile() && /\.docx$/i.test(d.name))
     .map((d) => d.name)
     .sort((a, b) => (parsePackNumber(a) ?? 999) - (parsePackNumber(b) ?? 999));
@@ -124,6 +184,7 @@ async function main() {
     return;
   }
 
+  await notionDetectTitleProperty();
   const existingPages = await notionQueryAllPages();
   const pageByTitle = new Map(existingPages.map((p) => [getTitleValue(p), p]));
 
@@ -133,24 +194,24 @@ async function main() {
   for (const fileName of files) {
     const title = toTitleFromFileName(fileName);
     const packNo = parsePackNumber(fileName);
-    const relativePath = path.posix.join("1000 Prompt", fileName);
+    const relativePath = path.relative(process.cwd(), path.join(promptDir, fileName)).split(path.sep).join("/");
     const fileUrl = toRawGithubUrl(relativePath);
     const props = buildProperties({ title, packNo, fileUrl, fileName });
     const found = pageByTitle.get(title);
 
     if (DRY_RUN) {
-      console.log(`[DRY] ${found ? "UPDATE" : "CREATE"}: ${title}`);
+      console.log(`[DRY] ${found ? "UPDATE" : "CREATE"}: pack=${packNo ?? "unknown"}`);
       continue;
     }
 
     if (found) {
       await notionUpdatePage(found.id, props);
       updated += 1;
-      console.log(`Updated: ${title}`);
+      console.log(`Updated: pack=${packNo ?? "unknown"}`);
     } else {
       await notionCreatePage(props);
       created += 1;
-      console.log(`Created: ${title}`);
+      console.log(`Created: pack=${packNo ?? "unknown"}`);
     }
   }
 
