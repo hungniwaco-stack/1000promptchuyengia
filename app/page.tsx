@@ -5,11 +5,55 @@ import { comboProduct, products } from "./products";
 
 const comboName = comboProduct.title;
 
+const heroStats = [
+  { value: "1000", label: "prompt sẵn dùng" },
+  { value: "10", label: "lĩnh vực thực chiến" },
+  { value: "199K", label: "combo trọn bộ" },
+  { value: "Vài phút", label: "nhận file tự động" },
+];
+
+const heroBullets = [
+  "1000 prompt thực chiến, chia sẵn theo mục tiêu công việc",
+  "10 lĩnh vực: kinh doanh, marketing, bán hàng, tài chính, năng suất...",
+  "Dùng được với ChatGPT, Gemini, Claude và các công cụ AI phổ biến",
+  "Combo 199K, thanh toán QR và nhận file qua email trong vài phút",
+];
+
+const trustBadges = [
+  {
+    title: "Thanh toán QR an toàn",
+    text: "Chuyển khoản theo mã ORD, hệ thống tự đối soát.",
+    icon: "QR",
+  },
+  {
+    title: "Nhận file tự động",
+    text: "File/link prompt được gửi qua email sau khi khớp thanh toán.",
+    icon: "MAIL",
+  },
+  {
+    title: "Hỗ trợ Zalo nếu lỗi",
+    text: "Liên hệ 0944 851719 hoặc hatmuadem@gmail.com.",
+    icon: "ZALO",
+  },
+];
+
 const deliverables = [
-  "10 file Word theo 10 lĩnh vực thực chiến: kinh doanh, tài chính, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và prompt đa lĩnh vực.",
-  "100 prompt/pack, tổng cộng 1000 prompt có cấu trúc rõ ràng để sao chép và dùng ngay.",
-  "Dùng tốt với ChatGPT, Gemini, Claude và các công cụ AI phổ biến khác.",
-  "File được gửi tự động qua email sau khi hệ thống xác nhận thanh toán.",
+  {
+    title: "10 file Word",
+    text: "Bao phủ kinh doanh, tài chính, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và prompt đa lĩnh vực.",
+  },
+  {
+    title: "100 prompt/pack",
+    text: "Tổng cộng 1000 prompt có cấu trúc rõ ràng để sao chép, thay thông tin trong ngoặc và dùng ngay.",
+  },
+  {
+    title: "Dùng với nhiều AI",
+    text: "Phù hợp với ChatGPT, Gemini, Claude và các công cụ AI phổ biến khác.",
+  },
+  {
+    title: "Giao file qua email",
+    text: "Sau khi thanh toán đúng nội dung ORD..., hệ thống gửi file tự động tới email đã nhập.",
+  },
 ];
 
 const samplePrompts = [
@@ -49,20 +93,39 @@ const previewRows = [
   "Kết quả mong muốn: lịch nội dung, ý tưởng chiến dịch, KPI và việc cần làm",
 ];
 
+const productHooks = [
+  "Từ ý tưởng đến kế hoạch 30 ngày",
+  "Kiểm soát tiền, chi tiêu, đầu tư",
+  "Ra chiến dịch, nội dung, định vị",
+  "Chốt sale và xử lý từ chối",
+  "Lập lịch, học nhanh, làm sâu",
+  "Giao việc, họp, phản hồi đội nhóm",
+  "Affiliate, blog, kênh nội dung",
+  "Tự động hóa và vận hành bằng AI",
+  "Thói quen, stress, cân bằng sống",
+  "Kết hợp nhiều góc nhìn để giải bài khó",
+];
+
 const testimonials = [
   {
-    name: "Người bán hàng online",
-    role: "Ứng dụng cho nội dung Facebook/Zalo",
-    quote: "Mình dùng prompt mẫu để viết lại bài bán hàng và kịch bản tư vấn. Điểm hay là chỉ cần thay thông tin sản phẩm, không phải nghĩ cấu trúc từ đầu.",
+    name: "Lan N.",
+    role: "Chủ shop mỹ phẩm online",
+    brand: "Shop chăm sóc da nhỏ",
+    initials: "LN",
+    quote: "Mình dùng prompt để viết lại bài bán hàng và kịch bản tư vấn. Chỉ cần thay thông tin sản phẩm là có bản nháp khá chắc để chỉnh tiếp.",
   },
   {
-    name: "Chủ shop nhỏ",
-    role: "Lên kế hoạch kinh doanh",
-    quote: "Bộ prompt giúp mình chia nhỏ việc cần làm theo tuần, đặc biệt hữu ích khi cần hỏi AI về khách hàng, ưu đãi và nội dung quảng cáo.",
+    name: "Minh T.",
+    role: "Freelancer content",
+    brand: "Dịch vụ viết nội dung",
+    initials: "MT",
+    quote: "Phần marketing và bán hàng giúp mình lên outline nhanh hơn. Có nhiều câu hỏi gợi ý rất tiện khi cần khai thác insight khách hàng.",
   },
   {
-    name: "Nhân sự văn phòng",
-    role: "Tăng năng suất cá nhân",
+    name: "Hà P.",
+    role: "Nhân sự văn phòng",
+    brand: "Đội vận hành nội bộ",
+    initials: "HP",
     quote: "Các prompt về lập kế hoạch, ưu tiên công việc và viết email giúp mình tiết kiệm thời gian khi dùng ChatGPT hằng ngày.",
   },
 ];
@@ -112,16 +175,16 @@ export default function Page() {
   return (
     <main className="bg-white text-slate-800">
       <header className="sticky top-0 z-50 border-b border-slate-200/90 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-4 py-4">
+        <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-3 py-3 md:gap-4 md:py-4">
           <a href="#" className="flex items-center">
             <img
               src="/images/logo.png"
               alt="Logo Hữu Hùng AI"
-              className="h-24 w-auto max-w-[230px] object-contain"
+              className="h-16 w-auto max-w-[190px] object-contain md:h-20 md:max-w-[230px]"
             />
           </a>
           <nav>
-            <ul className="flex flex-wrap gap-4 text-base font-extrabold md:gap-7">
+            <ul className="flex flex-wrap gap-3 text-sm font-extrabold md:gap-7 md:text-base">
               <li><a href="#gioi-thieu">Giới thiệu</a></li>
               <li><a href="/bai-viet">Bài viết</a></li>
               <li><a href="#thu-vien">Thư viện Prompt</a></li>
@@ -134,67 +197,123 @@ export default function Page() {
         </div>
       </header>
 
-      <section id="gioi-thieu" className="bg-gradient-to-b from-white to-slate-50 py-16">
-        <div className="mx-auto grid w-[92%] max-w-6xl gap-10">
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl">
-            <img
-              src="/images/banner.png"
-              alt="Banner 1000 Prompt Chuyên Gia"
-              className="w-full object-cover"
-              decoding="async"
-              fetchPriority="high"
-            />
-          </div>
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-4 text-3xl font-extrabold leading-tight md:text-5xl">
-              <span className="block">Mở Khóa Sức Mạnh AI</span>
-              <span className="block">Với 1000 Prompt Chuyên Gia</span>
-            </h1>
-            <p className="mb-8 max-w-4xl text-base md:text-lg">
-              <span className="block">Giải pháp tối ưu x10 hiệu suất làm việc, tiết kiệm thời gian và tạo ra đột phá doanh thu.</span>
-              <span className="block">Được tinh lọc bởi Hữu Hùng AI.</span>
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <a href="#thu-vien" className="btn btn-primary">Khám phá ngay</a>
-              <BuyButton packageName={comboName} className="btn btn-accent">Mua Combo Trọn Bộ</BuyButton>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-14">
-        <div className="mx-auto grid w-[92%] max-w-6xl gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+      <section id="gioi-thieu" className="relative isolate overflow-hidden bg-slate-950 py-14 text-white md:py-20">
+        <img
+          src="/images/banner.png"
+          alt="Banner 1000 Prompt Chuyên Gia"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
+          decoding="async"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 -z-10 bg-slate-950/70" />
+        <div className="mx-auto grid w-[92%] max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
-            <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">Nhận gì sau khi mua</p>
-            <h2 className="mb-5 text-2xl font-bold md:text-3xl">Một bộ prompt có thể dùng ngay, không phải tự mò từ đầu</h2>
-            <div className="grid gap-3">
-              {deliverables.map((item) => (
-                <div key={item} className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-700">
-                  {item}
+            <p className="mb-3 inline-flex rounded-md bg-amber-300 px-3 py-1 text-sm font-extrabold uppercase tracking-wide text-slate-950">
+              Combo tốt nhất cho người mới dùng AI
+            </p>
+            <h1 className="max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
+              1000 Prompt Chuyên Gia dùng ngay trong 10 lĩnh vực
+            </h1>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-slate-100 md:text-lg">
+              Bộ file Word giúp bạn hỏi AI rõ hơn, ra kết quả nhanh hơn và không phải tự nghĩ cấu trúc prompt từ đầu.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <BuyButton packageName={comboName} className="btn btn-accent px-6 py-4 text-base">
+                Mua Combo 199,000đ
+              </BuyButton>
+              <a href="#thu-vien" className="btn bg-white text-slate-950 hover:bg-slate-100">Xem 10 lĩnh vực</a>
+            </div>
+            <div className="mt-5 grid max-w-2xl gap-2">
+              {heroBullets.map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-lg border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold leading-6 text-white backdrop-blur">
+                  <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400 text-xs font-extrabold text-slate-950">
+                    ✓
+                  </span>
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-7 grid grid-cols-2 gap-3 md:grid-cols-4">
+              {heroStats.map((item) => (
+                <div key={item.label} className="rounded-lg border border-white/20 bg-white/10 p-4 backdrop-blur">
+                  <div className="text-2xl font-extrabold text-amber-200">{item.value}</div>
+                  <div className="mt-1 text-xs font-bold uppercase tracking-wide text-slate-200">{item.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-lg border-2 border-amber-400 bg-amber-50 p-6 shadow-md">
-            <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-amber-700">Deal tốt nhất</p>
-            <h2 className="text-2xl font-extrabold text-slate-950 md:text-3xl">Combo trọn bộ 1000 Prompt</h2>
-            <div className="mt-5 grid gap-3 rounded-lg bg-white p-4 text-sm">
+          <div className="rounded-lg border border-amber-300 bg-white p-5 text-slate-950 shadow-2xl">
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-wide text-amber-700">Deal tốt nhất</p>
+                <h2 className="text-2xl font-extrabold">Trọn bộ 1000 Prompt</h2>
+              </div>
+              <div className="rounded-md bg-red-600 px-3 py-2 text-sm font-extrabold text-white">Tiết kiệm 291K</div>
+            </div>
+            <div className="grid gap-3 rounded-lg bg-amber-50 p-4">
               <div className="flex items-center justify-between gap-4">
                 <span>Mua lẻ 10 pack</span>
                 <span className="font-extrabold text-slate-500 line-through">490,000đ</span>
               </div>
-              <div className="flex items-center justify-between gap-4">
-                <span>Combo trọn bộ</span>
-                <span className="text-2xl font-extrabold text-red-600">{comboProduct.price}</span>
-              </div>
-              <div className="rounded-lg bg-emerald-50 p-3 font-bold text-emerald-800">
-                Tiết kiệm 291,000đ và nhận đủ 10 lĩnh vực trong một lần mua.
+              <div className="flex items-end justify-between gap-4 border-t border-amber-200 pt-3">
+                <span className="font-bold">Combo trọn bộ</span>
+                <span className="text-3xl font-extrabold text-red-600">{comboProduct.price}</span>
               </div>
             </div>
-            <BuyButton packageName={comboName} className="btn btn-accent mt-5 w-full py-4 text-base">
-              Mua Combo 199,000đ
-            </BuyButton>
+            <div className="mt-4 grid gap-3">
+              {trustBadges.map((item) => (
+                <div key={item.title} className="flex gap-3 rounded-lg border border-slate-200 bg-white p-3">
+                  <div className="flex h-10 w-12 shrink-0 items-center justify-center rounded-md bg-blue-50 text-xs font-extrabold text-blue-700">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <div className="font-extrabold">{item.title}</div>
+                    <p className="text-sm leading-5 text-slate-600">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12">
+        <div className="mx-auto grid w-[92%] max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div>
+            <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">Nhận gì sau khi mua</p>
+            <h2 className="mb-4 text-2xl font-bold md:text-3xl">Giá trị cốt lõi được gom lại cho người lướt nhanh</h2>
+            <p className="text-slate-600">
+              Bạn nhận đủ bộ file Word, có prompt mẫu theo từng bối cảnh và có thể bắt đầu dùng ngay với công cụ AI quen thuộc.
+            </p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            {deliverables.map((item) => (
+              <div key={item.title} className="rounded-lg border border-slate-200 bg-slate-50 p-4">
+                <h3 className="mb-2 font-extrabold text-slate-950">{item.title}</h3>
+                <p className="text-sm leading-6 text-slate-700">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="ve-huu-hung-ai" className="bg-slate-50 py-14">
+        <div className="mx-auto grid w-[92%] max-w-6xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">Về Hữu Hùng AI</p>
+            <h2 className="text-2xl font-bold md:text-3xl">Người đứng sau bộ 1000 Prompt Chuyên Gia</h2>
+          </div>
+          <div className="grid gap-4 text-slate-700">
+            <p className="leading-7">
+              Mình là Hữu Hùng, người mê mày mò AI và áp dụng nó vào công việc kinh doanh, sáng tạo nội dung và quản lý thời gian hằng ngày.
+            </p>
+            <p className="leading-7">
+              Sau khi tự xây rất nhiều bộ prompt cho bản thân và cho bạn bè xung quanh, mình nhận ra đa số mọi người đều tốn quá nhiều thời gian “nghĩ câu hỏi cho AI” thay vì tập trung vào kết quả.
+            </p>
+            <p className="leading-7">
+              Bộ “1000 Prompt Chuyên Gia” ra đời để giúp bạn rút ngắn giai đoạn thử - sai, có khung prompt rõ ràng, điền thông tin là dùng được ngay, từ đó tiết kiệm thời gian nhưng vẫn giữ được chất riêng trong công việc của mình.
+            </p>
           </div>
         </div>
       </section>
@@ -204,7 +323,7 @@ export default function Page() {
           <p className="mb-2 text-center text-sm font-extrabold uppercase tracking-wide text-amber-300">Miễn phí</p>
           <h2 className="mb-3 text-center text-2xl font-bold md:text-3xl">5 prompt mẫu để bạn thử ngay</h2>
           <p className="mx-auto mb-8 max-w-3xl text-center text-slate-300">
-            Dưới đây là vài prompt mẫu theo phong cách trong bộ 1000 Prompt. Bạn có thể thay phần trong ngoặc vuông rồi dùng trực tiếp với ChatGPT, Gemini hoặc Claude.
+            Thay phần trong ngoặc vuông rồi dùng trực tiếp với ChatGPT, Gemini hoặc Claude.
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             {samplePrompts.map((prompt) => (
@@ -230,36 +349,69 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="rounded-lg border border-slate-200 bg-slate-50 p-5 shadow-sm">
-            <div className="rounded-lg border border-slate-300 bg-white p-5">
-              <div className="mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
-                <div>
-                  <div className="text-xs font-bold uppercase text-slate-500">Preview file Word</div>
-                  <div className="font-extrabold text-slate-950">PACK 3: Marketing & Xây Dựng Thương Hiệu</div>
-                </div>
-                <div className="rounded-md bg-blue-50 px-3 py-1 text-xs font-extrabold text-blue-700">DOCX</div>
-              </div>
-              <div className="grid gap-3">
-                {previewRows.map((row, index) => (
-                  <div key={row} className="rounded-md border border-slate-200 bg-slate-50 p-3 text-sm">
-                    <span className="mr-2 font-extrabold text-blue-700">{String(index + 1).padStart(2, "0")}</span>
-                    {row}
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm">
+              <div className="rounded-lg border border-slate-300 bg-white p-4">
+                <div className="mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                  <div>
+                    <div className="text-xs font-bold uppercase text-slate-500">Preview file Word</div>
+                    <div className="font-extrabold text-slate-950">PACK 3: Marketing & Thương hiệu</div>
                   </div>
-                ))}
+                  <div className="rounded-md bg-blue-50 px-3 py-1 text-xs font-extrabold text-blue-700">DOCX</div>
+                </div>
+                <div className="grid gap-3">
+                  {previewRows.map((row, index) => (
+                    <div key={row} className="rounded-md border border-slate-200 bg-slate-50 p-3 text-sm">
+                      <span className="mr-2 font-extrabold text-blue-700">{String(index + 1).padStart(2, "0")}</span>
+                      {row}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="mt-4 rounded-md bg-emerald-50 p-3 text-sm font-bold text-emerald-800">
-                Cấu trúc này giúp bạn biết cần điền gì trước khi gửi prompt cho AI.
+            </div>
+            <div className="rounded-lg border border-slate-200 bg-slate-950 p-5 text-white shadow-sm">
+              <div className="mb-4 flex items-center justify-between">
+                <div>
+                  <div className="text-xs font-bold uppercase text-amber-200">Cách dùng trong 3 bước</div>
+                  <div className="font-extrabold">Copy, thay thông tin, gửi cho AI</div>
+                </div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-300 pl-1 text-xl font-extrabold text-slate-950">
+                  ▶
+                </div>
+              </div>
+              <div className="grid gap-3 text-sm">
+                <div className="rounded-md bg-white/10 p-3">1. Chọn prompt đúng mục tiêu công việc.</div>
+                <div className="rounded-md bg-white/10 p-3">2. Thay phần [thông tin của bạn].</div>
+                <div className="rounded-md bg-white/10 p-3">3. Dán vào ChatGPT, Gemini hoặc Claude.</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section className="bg-amber-50 py-10">
+        <div className="mx-auto flex w-[92%] max-w-6xl flex-col items-start justify-between gap-5 md:flex-row md:items-center">
+          <div>
+            <p className="text-sm font-extrabold uppercase tracking-wide text-amber-700">Đã thấy cấu trúc file?</p>
+            <h2 className="mt-1 text-2xl font-extrabold text-slate-950">Lấy trọn bộ 10 lĩnh vực để dùng ngay hôm nay</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+              Một lần mua, nhận đủ 10 file Word và 1000 prompt để áp dụng cho công việc, kinh doanh, nội dung và quản lý cá nhân.
+            </p>
+          </div>
+          <BuyButton packageName={comboName} className="btn btn-accent w-full justify-center px-6 py-4 text-base md:w-auto">
+            Mua Combo 199,000đ
+          </BuyButton>
+        </div>
+      </section>
+
       <section id="thu-vien" className="bg-slate-50 py-14">
         <div className="mx-auto w-[92%] max-w-6xl">
-          <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Danh mục 10 Gói Sản Phẩm</h2>
+          <h2 className="mb-3 text-center text-2xl font-bold md:text-3xl">Danh mục 10 Gói Sản Phẩm</h2>
+          <p className="mx-auto mb-7 max-w-3xl text-center text-slate-600">
+            Mỗi pack có một “hook” riêng để người mua nhận ra nhanh gói phù hợp với nhu cầu hiện tại.
+          </p>
           <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <article key={product.title} className="card">
                 <img
                   className="aspect-video w-full object-cover"
@@ -269,6 +421,9 @@ export default function Page() {
                   decoding="async"
                 />
                 <div className="flex h-full flex-col p-4">
+                  <div className="mb-3 rounded-md bg-blue-50 px-3 py-2 text-sm font-extrabold text-blue-800">
+                    {productHooks[index]}
+                  </div>
                   <h3 className="mb-2 text-base font-bold">{product.title}</h3>
                   <div className="mb-3 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-red-100 bg-red-50 p-3">
                     <div>
@@ -279,7 +434,7 @@ export default function Page() {
                       Thanh toán ngay
                     </BuyButton>
                   </div>
-                  <p className="grow text-sm">{product.desc}</p>
+                  <p className="grow text-sm leading-6">{product.desc}</p>
                 </div>
               </article>
             ))}
@@ -305,15 +460,37 @@ export default function Page() {
       <section className="bg-slate-950 py-14 text-white">
         <div className="mx-auto w-[92%] max-w-6xl">
           <p className="mb-2 text-center text-sm font-extrabold uppercase tracking-wide text-amber-300">Phản hồi sử dụng</p>
-          <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Khách hàng dùng prompt để tiết kiệm thời gian triển khai AI</h2>
+          <h2 className="mb-3 text-center text-2xl font-bold md:text-3xl">Người dùng khác đang áp dụng prompt như thế nào?</h2>
+          <p className="mx-auto mb-7 max-w-3xl text-center text-sm leading-6 text-slate-300">
+            Một vài ví dụ phản hồi ẩn danh theo bối cảnh sử dụng thực tế, giúp bạn hình dung bộ prompt có thể đi vào công việc hằng ngày ra sao.
+          </p>
           <div className="grid gap-4 md:grid-cols-3">
             {testimonials.map((item) => (
               <article key={item.name} className="rounded-lg border border-slate-700 bg-slate-900 p-5">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-amber-300 text-sm font-extrabold text-slate-950 shadow-lg shadow-amber-950/30">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <div className="font-extrabold text-amber-200">{item.name}</div>
+                    <div className="text-sm text-slate-300">{item.role}</div>
+                  </div>
+                </div>
+                <div className="mb-3 text-sm font-extrabold tracking-[0.15em] text-amber-300">★★★★★</div>
                 <p className="mb-4 text-sm leading-6 text-slate-100">"{item.quote}"</p>
-                <div className="font-extrabold text-amber-200">{item.name}</div>
-                <div className="text-sm text-slate-400">{item.role}</div>
+                <div className="rounded-md border border-slate-700 bg-slate-800 px-3 py-2 text-xs font-bold uppercase tracking-wide text-slate-300">
+                  {item.brand}
+                </div>
               </article>
             ))}
+          </div>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 text-center">
+            <p className="max-w-2xl text-sm leading-6 text-slate-300">
+              Nếu bạn cũng muốn có sẵn khung hỏi AI thay vì bắt đầu từ trang trắng, combo trọn bộ là lựa chọn tiết kiệm nhất.
+            </p>
+            <BuyButton packageName={comboName} className="btn btn-accent px-6 py-4 text-base">
+              Mua Combo 199,000đ
+            </BuyButton>
           </div>
         </div>
       </section>
