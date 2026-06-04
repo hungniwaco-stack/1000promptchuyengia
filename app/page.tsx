@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     question: "Thanh toán xong bao lâu nhận file?",
-    answer: "Thông thường hệ thống gửi tự động trong vài phút sau khi tiền vào tài khoản và mã chuyển khoản khớp đơn hàng.",
+    answer: "Thông thường hệ thống gửi tự động trong vài phút sau khi tiền vào tài khoản và mã chuyển khoản khớp đơn hàng. Bạn cũng có thể vào trang Tra cứu đơn hàng để kiểm tra trạng thái.",
   },
   {
     question: "Có cần biết kỹ thuật mới dùng được không?",
@@ -84,6 +84,7 @@ export default function Page() {
               <li><a href="#thu-vien">Thư viện Prompt</a></li>
               <li><a href="#bang-gia">Bảng giá</a></li>
               <li><a href="#mien-phi">Miễn phí</a></li>
+              <li><a href="/tra-cuu-don-hang">Tra cứu đơn</a></li>
               <li><a href="#lien-he">Liên hệ</a></li>
             </ul>
           </nav>
