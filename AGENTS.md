@@ -42,6 +42,7 @@
 - Footer links to the three policy/support pages.
 - Trust content should emphasize: automatic file delivery after correct `ORD...` payment, no technical knowledge required, immediate usability, and support via hotline/Zalo/email.
 - Current contact shown publicly: hotline/Zalo `0944 851719`, email `hatmuadem@gmail.com`.
+- Automatic delivery sender in production is now `Huu Hung AI <huuhung@1000promptchuyengia.shop>`.
 - `npm install @vercel/analytics` reported 2 moderate vulnerabilities, but `npm audit` was blocked by sandbox during the 2026-06-04 session. Do not run `npm audit fix --force` without reviewing impact first.
 
 ## Checkout & Orders
@@ -82,8 +83,16 @@
 - Email delivery uses Resend via direct API fetch, not an npm package.
 - Required email env vars to actually send: `RESEND_API_KEY` and `DELIVERY_FROM_EMAIL`; optional `DELIVERY_REPLY_TO_EMAIL`.
 - Production email env was configured on 2026-06-03: `RESEND_API_KEY`, `DELIVERY_FROM_EMAIL`, and `DELIVERY_REPLY_TO_EMAIL` are present in Vercel runtime. Verify by length only if needed.
-- On 2026-06-04, order `ORD20260604031133` was marked `Paid` by SePay but delivery failed. Vercel logs showed `POST /api/sepay/webhook` returned 500, and a temporary retry endpoint revealed Resend error: domain `1000promptchuyengia.shop` is not verified in Resend. Verify the domain in Resend before expecting automatic delivery to external customer emails.
-- Until Resend domain verification is complete, paid orders may remain `Delivery Status = Not Sent`; send the raw GitHub file links manually by email/Zalo and update Notion delivery status manually after sending.
+- On 2026-06-04, `DELIVERY_FROM_EMAIL` was updated in Vercel production to `Huu Hung AI <huuhung@1000promptchuyengia.shop>`, followed by a production redeploy.
+- Resend domain `1000promptchuyengia.shop` was verified successfully on 2026-06-04 using Hostinger DNS. Required records were:
+  - TXT `resend._domainkey` with the Resend DKIM public key.
+  - MX `send` -> `feedback-smtp.ap-northeast-1.amazonses.com`, priority `10`.
+  - TXT `send` -> `v=spf1 include:amazonses.com ~all`.
+- DNS provider for `1000promptchuyengia.shop` is Hostinger (`horizon.dns-parking.com`, `orbit.dns-parking.com`). Resend region used: Tokyo (`ap-northeast-1`).
+- On 2026-06-04, order `ORD20260604031133` was marked `Paid` by SePay but delivery initially failed. Vercel logs showed `POST /api/sepay/webhook` returned 500, and a temporary retry endpoint revealed Resend error: domain `1000promptchuyengia.shop` was not verified at that time.
+- After Resend verification, order `ORD20260604031133` was resent successfully to `bupsenxanh@gmail.com` from the verified sender. Resend email id: `565f3d1b-fa35-4af6-9962-60d6a542b166`. Notion `Delivery Status` was updated to `Sent`.
+- Temporary retry endpoint `app/api/retry-delivery-ord20260604031133/route.ts` was created only to resend that paid order, then deleted and production redeployed clean. Its live URL was verified to return `404` after cleanup.
+- A temporary env pull file `C:\tmp\delivery-production.env` was created during troubleshooting and deleted afterward. Never keep Vercel env pulls around; delete temp env files immediately.
 - If email env vars are missing, webhook still marks the order `Paid` but leaves `Delivery Status = Not Sent`.
 - If email sends successfully, webhook updates Notion `Delivery Status = Sent`.
 - Recent delivery commit on `main`: `e1aff52` added prompt-link email delivery after payment.
@@ -122,6 +131,7 @@
 - If using temporary API endpoints for Notion/Vercel runtime checks, delete them afterward and redeploy clean.
 - On 2026-06-04, production deploys after commits `ef74ac8`, `f9fc21b`, and `3e5763f` were verified as `Ready` on Vercel.
 - Live route checks on 2026-06-04 returned 200 for `/`, `/tra-cuu-don-hang`, `/chinh-sach-giao-file`, `/ho-tro`, `/dieu-khoan-su-dung`; `/sitemap.xml` returned OK.
+- On 2026-06-04, direct Vercel deploys were used to apply the verified Resend sender env and later remove the temporary retry endpoint from production. Latest clean production deploy verified `/` returns `200`.
 
 ## Current Known State
 - GitHub `main` contains the working Next.js source after replacing an older static-only remote.

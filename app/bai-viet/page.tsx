@@ -22,9 +22,11 @@ export default function BlogPage() {
           <nav>
             <ul className="flex flex-wrap gap-4 text-base font-extrabold md:gap-7">
               <li><Link href="/#gioi-thieu">Giới thiệu</Link></li>
+              <li><Link href="/bai-viet">Bài viết</Link></li>
               <li><Link href="/#thu-vien">Thư viện Prompt</Link></li>
               <li><Link href="/#bang-gia">Bảng giá</Link></li>
-              <li><Link href="/bai-viet">Bài viết</Link></li>
+              <li><Link href="/#mien-phi">Miễn phí</Link></li>
+              <li><Link href="/tra-cuu-don-hang">Tra cứu đơn</Link></li>
               <li><Link href="/#lien-he">Liên hệ</Link></li>
             </ul>
           </nav>

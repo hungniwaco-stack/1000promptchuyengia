@@ -47,9 +47,21 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <main className="bg-white text-slate-800">
       <header className="border-b border-slate-200/90 bg-white">
-        <div className="mx-auto flex w-[92%] max-w-4xl flex-wrap items-center justify-between gap-4 py-4">
-          <Link href="/" className="font-extrabold text-slate-950">Hữu Hùng AI</Link>
-          <Link href="/bai-viet" className="font-bold text-blue-700">Bài viết</Link>
+        <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-4 py-4">
+          <Link href="/" className="flex items-center">
+            <img src="/images/logo.png" alt="Logo Hữu Hùng AI" className="h-20 w-auto max-w-[210px] object-contain" />
+          </Link>
+          <nav>
+            <ul className="flex flex-wrap gap-4 text-base font-extrabold md:gap-7">
+              <li><Link href="/#gioi-thieu">Giới thiệu</Link></li>
+              <li><Link href="/bai-viet">Bài viết</Link></li>
+              <li><Link href="/#thu-vien">Thư viện Prompt</Link></li>
+              <li><Link href="/#bang-gia">Bảng giá</Link></li>
+              <li><Link href="/#mien-phi">Miễn phí</Link></li>
+              <li><Link href="/tra-cuu-don-hang">Tra cứu đơn</Link></li>
+              <li><Link href="/#lien-he">Liên hệ</Link></li>
+            </ul>
+          </nav>
         </div>
       </header>
 
