@@ -70,6 +70,14 @@ export default function CheckoutModal() {
               <p className="mt-3 text-sm text-emerald-900">
                 Vui lòng quét QR hoặc chuyển khoản đúng thông tin bên dưới. SePay sẽ tự động xác nhận khi tiền vào tài khoản.
               </p>
+              <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">
+                <div className="mb-2 font-extrabold">Lưu ý để nhận file tự động</div>
+                <ul className="grid gap-2 pl-5">
+                  <li className="list-disc">Nội dung chuyển khoản phải đúng mã đơn: <strong>{createdOrder.paymentContent}</strong>.</li>
+                  <li className="list-disc">Sau khi thanh toán thành công, hệ thống sẽ tự gửi file qua email bạn đã nhập.</li>
+                  <li className="list-disc">Nếu sau 10 phút chưa nhận email, vui lòng kiểm tra Spam/Quảng cáo hoặc liên hệ hotline 0944 851719 / email hatmuadem@gmail.com.</li>
+                </ul>
+              </div>
 
               <dl className="mt-5 grid gap-3 text-sm">
                 <div className="rounded-lg bg-white p-3">
@@ -158,7 +166,10 @@ export default function CheckoutModal() {
               <label className="label">Email nhận file</label>
               <input className="input" type="email" required autoComplete="email" inputMode="email" value={email} onChange={(event) => setEmail(event.target.value)} />
               <div className="mt-3 rounded-lg border border-dashed border-slate-400 bg-slate-50 p-3 text-sm">
-                Sau khi tạo mã, hệ thống sẽ hiển thị QR thanh toán riêng cho đơn hàng này.
+                Sau khi tạo mã, hệ thống sẽ hiển thị QR thanh toán riêng cho đơn hàng này. Vui lòng chuyển khoản đúng nội dung mã đơn ORD... để hệ thống gửi file tự động qua email sau thanh toán.
+              </div>
+              <div className="mt-3 rounded-lg border border-blue-100 bg-blue-50 p-3 text-sm text-blue-950">
+                Nếu thanh toán xong nhưng sau 10 phút chưa nhận file, hãy kiểm tra hộp thư Spam/Quảng cáo hoặc liên hệ 0944 851719 / hatmuadem@gmail.com để được hỗ trợ.
               </div>
               {formError && (
                 <p className="mt-3 rounded-md border border-red-200 bg-red-50 p-2 text-sm text-red-700">

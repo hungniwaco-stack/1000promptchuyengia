@@ -79,9 +79,9 @@ export default function PricingSection() {
 
         <div className="mt-8 rounded-lg border-2 border-amber-500 bg-amber-50 p-7 text-center shadow-md">
           <h3 className="mb-3 text-2xl font-extrabold md:text-3xl">{comboProduct.title}</h3>
-          <p className="mb-5 text-2xl font-extrabold text-red-600">
-            Chỉ {comboProduct.price} (Tiết kiệm 50%)
-          </p>
+          <p className="text-sm font-bold text-slate-700">Mua lẻ 10 pack: <span className="line-through">490,000đ</span></p>
+          <p className="mb-2 text-2xl font-extrabold text-red-600">Combo chỉ {comboProduct.price}</p>
+          <p className="mb-5 font-bold text-emerald-700">Tiết kiệm 291,000đ và nhận đủ 1000 prompt.</p>
           <BuyButton packageName={comboProduct.title} className="btn btn-accent px-8 py-4 text-base">
             SỞ HỮU TRỌN BỘ NGAY HÔM NAY
           </BuyButton>
