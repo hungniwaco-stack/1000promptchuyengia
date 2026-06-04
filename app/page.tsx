@@ -42,6 +42,49 @@ const commitments = [
   "Hỗ trợ qua email hoặc hotline/Zalo nếu cần kiểm tra đơn hàng.",
 ];
 
+const previewRows = [
+  "Mục tiêu prompt: Tạo kế hoạch marketing 30 ngày",
+  "Vai trò AI: Chuyên gia growth marketing cho doanh nghiệp nhỏ",
+  "Đầu vào cần thay: ngành hàng, ngân sách, kênh bán, khách hàng mục tiêu",
+  "Kết quả mong muốn: lịch nội dung, ý tưởng chiến dịch, KPI và việc cần làm",
+];
+
+const testimonials = [
+  {
+    name: "Người bán hàng online",
+    role: "Ứng dụng cho nội dung Facebook/Zalo",
+    quote: "Mình dùng prompt mẫu để viết lại bài bán hàng và kịch bản tư vấn. Điểm hay là chỉ cần thay thông tin sản phẩm, không phải nghĩ cấu trúc từ đầu.",
+  },
+  {
+    name: "Chủ shop nhỏ",
+    role: "Lên kế hoạch kinh doanh",
+    quote: "Bộ prompt giúp mình chia nhỏ việc cần làm theo tuần, đặc biệt hữu ích khi cần hỏi AI về khách hàng, ưu đãi và nội dung quảng cáo.",
+  },
+  {
+    name: "Nhân sự văn phòng",
+    role: "Tăng năng suất cá nhân",
+    quote: "Các prompt về lập kế hoạch, ưu tiên công việc và viết email giúp mình tiết kiệm thời gian khi dùng ChatGPT hằng ngày.",
+  },
+];
+
+const policyHighlights = [
+  {
+    title: "Giao file tự động",
+    text: "Sau khi hệ thống xác nhận thanh toán đúng mã đơn, file/link prompt được gửi qua email đã nhập khi đặt hàng.",
+    href: "/chinh-sach-giao-file",
+  },
+  {
+    title: "Hỗ trợ sau mua",
+    text: "Nếu sau 10 phút chưa nhận file, khách có thể tra cứu mã đơn hoặc liên hệ hotline/email để được kiểm tra thủ công.",
+    href: "/ho-tro",
+  },
+  {
+    title: "Quyền sử dụng rõ ràng",
+    text: "Prompt dùng cho cá nhân/công việc nội bộ. Không phân phối lại nguyên bộ file nếu chưa có sự đồng ý.",
+    href: "/dieu-khoan-su-dung",
+  },
+];
+
 const faqs = [
   {
     question: "Tôi nhận file như thế nào?",
@@ -174,6 +217,44 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="bg-white py-14">
+        <div className="mx-auto grid w-[92%] max-w-6xl gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">Xem trước sản phẩm</p>
+            <h2 className="mb-4 text-2xl font-bold md:text-3xl">File Word được chia mục rõ ràng, dễ sao chép để dùng ngay</h2>
+            <p className="mb-5 text-slate-600">
+              Mỗi pack gồm 10 phần nội dung và 100 prompt. Prompt được viết theo cấu trúc vai trò, bối cảnh, đầu vào cần thay và kết quả mong muốn.
+            </p>
+            <a href="#mien-phi" className="btn btn-primary inline-flex">
+              Xem prompt mẫu miễn phí
+            </a>
+          </div>
+
+          <div className="rounded-lg border border-slate-200 bg-slate-50 p-5 shadow-sm">
+            <div className="rounded-lg border border-slate-300 bg-white p-5">
+              <div className="mb-4 flex items-center justify-between border-b border-slate-200 pb-3">
+                <div>
+                  <div className="text-xs font-bold uppercase text-slate-500">Preview file Word</div>
+                  <div className="font-extrabold text-slate-950">PACK 3: Marketing & Xây Dựng Thương Hiệu</div>
+                </div>
+                <div className="rounded-md bg-blue-50 px-3 py-1 text-xs font-extrabold text-blue-700">DOCX</div>
+              </div>
+              <div className="grid gap-3">
+                {previewRows.map((row, index) => (
+                  <div key={row} className="rounded-md border border-slate-200 bg-slate-50 p-3 text-sm">
+                    <span className="mr-2 font-extrabold text-blue-700">{String(index + 1).padStart(2, "0")}</span>
+                    {row}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-4 rounded-md bg-emerald-50 p-3 text-sm font-bold text-emerald-800">
+                Cấu trúc này giúp bạn biết cần điền gì trước khi gửi prompt cho AI.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="thu-vien" className="bg-slate-50 py-14">
         <div className="mx-auto w-[92%] max-w-6xl">
           <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Danh mục 10 Gói Sản Phẩm</h2>
@@ -221,6 +302,36 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="bg-slate-950 py-14 text-white">
+        <div className="mx-auto w-[92%] max-w-6xl">
+          <p className="mb-2 text-center text-sm font-extrabold uppercase tracking-wide text-amber-300">Phản hồi sử dụng</p>
+          <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Khách hàng dùng prompt để tiết kiệm thời gian triển khai AI</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {testimonials.map((item) => (
+              <article key={item.name} className="rounded-lg border border-slate-700 bg-slate-900 p-5">
+                <p className="mb-4 text-sm leading-6 text-slate-100">"{item.quote}"</p>
+                <div className="font-extrabold text-amber-200">{item.name}</div>
+                <div className="text-sm text-slate-400">{item.role}</div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-14">
+        <div className="mx-auto w-[92%] max-w-6xl">
+          <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Chính sách rõ ràng trước khi mua</h2>
+          <div className="grid gap-4 md:grid-cols-3">
+            {policyHighlights.map((item) => (
+              <a key={item.title} href={item.href} className="rounded-lg border border-slate-200 bg-slate-50 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+                <h3 className="mb-2 text-lg font-extrabold text-slate-950">{item.title}</h3>
+                <p className="text-sm leading-6 text-slate-700">{item.text}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-50 py-14">
         <div className="mx-auto w-[92%] max-w-5xl">
           <h2 className="mb-7 text-center text-2xl font-bold md:text-3xl">Câu hỏi thường gặp</h2>
@@ -241,6 +352,11 @@ export default function Page() {
           <div>Hotline: 0944 851719</div>
           <div>Email: hatmuadem@gmail.com</div>
           <div>Địa chỉ: Phan Rang - Khánh Hòa</div>
+          <div className="mt-3 flex flex-wrap gap-4 font-semibold">
+            <a href="/chinh-sach-giao-file">Chính sách giao file</a>
+            <a href="/ho-tro">Hỗ trợ</a>
+            <a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a>
+          </div>
         </div>
       </footer>
 
