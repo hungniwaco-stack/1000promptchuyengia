@@ -388,7 +388,15 @@ export async function POST(req: Request) {
       return json(true, 200, { orderId, status: "paid", delivery: "already_sent" });
     }
 
-    const delivery = await sendDeliveryEmail(orderId, page, notionApiKey);
+    let delivery;
+    try {
+      delivery = await sendDeliveryEmail(orderId, page, notionApiKey);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : "Unknown delivery error";
+      console.error("Delivery email failed", { orderId, message });
+      throw error;
+    }
+
     if (delivery.sent) {
       await markDeliverySent(page.id, notionApiKey);
     }
