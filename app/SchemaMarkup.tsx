@@ -37,7 +37,7 @@ const comboProductSchema = {
   description:
     "Trọn bộ 1000 Prompt AI chuyên gia chia thành 10 lĩnh vực: kinh doanh, tài chính cá nhân, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực. Dùng được với ChatGPT, Gemini, Claude.",
   url: BASE_URL,
-  image: `${BASE_URL}/images/banner.webp`,
+  image: `${BASE_URL}/images/banner.png`,
   brand: {
     "@type": "Brand",
     name: "Hữu Hùng AI",

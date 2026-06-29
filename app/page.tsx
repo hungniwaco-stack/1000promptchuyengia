@@ -180,7 +180,7 @@ export default function Page() {
         <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-3 py-3 md:gap-4 md:py-4">
           <a href="#" className="flex items-center">
             <img
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="Logo Hữu Hùng AI"
               className="h-16 w-auto max-w-[190px] object-contain md:h-20 md:max-w-[230px]"
             />
@@ -201,7 +201,7 @@ export default function Page() {
 
       <section id="gioi-thieu" className="relative isolate overflow-hidden bg-slate-950 py-14 text-white md:py-20">
         <img
-          src="/images/banner.webp"
+          src="/images/banner.png"
           alt="Banner 1000 Prompt Chuyên Gia"
           className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
           decoding="async"

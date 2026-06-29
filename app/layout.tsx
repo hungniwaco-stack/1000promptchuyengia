@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/banner.webp",
+        url: "/images/banner.png",
         width: 1942,
         height: 809,
         alt: "1000 Prompt Chuyên Gia Hữu Hùng AI",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hữu Hùng AI - 1000 Prompt Chuyên Gia",
     description: "Mua prompt AI theo từng pack hoặc combo trọn bộ, thanh toán QR và nhận file tự động qua email.",
-    images: ["/images/banner.webp"],
+    images: ["/images/banner.png"],
   },
 };
 
