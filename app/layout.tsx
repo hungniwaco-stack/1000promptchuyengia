@@ -46,4 +46,9 @@ export default function RootLayout({
     <html lang="vi">
       <body>
         {children}
-        <A
+        <Analytics />
+        <AnalyticsTracking />
+      </body>
+    </html>
+  );
+}
