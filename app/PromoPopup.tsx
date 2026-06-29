@@ -42,12 +42,14 @@ export default function PromoPopup() {
           Mua lẻ 10 pack hết 490,000đ. Combo tiết kiệm 291,000đ — nhận file tự động qua email ngay sau thanh toán.
         </p>
         <div className="mt-4 flex gap-3">
-          <BuyButton
-            packageName={comboProduct.title}
-            className="btn btn-accent flex-1 justify-center py-3 text-sm"
-          >
-            Mua ngay 199,000đ
-          </BuyButton>
+          <div onClick={dismiss} className="flex-1">
+            <BuyButton
+              packageName={comboProduct.title}
+              className="btn btn-accent w-full justify-center py-3 text-sm"
+            >
+              Mua ngay 199,000đ
+            </BuyButton>
+          </div>
           <button
             onClick={dismiss}
             className="rounded-lg border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-500 hover:bg-slate-50"
