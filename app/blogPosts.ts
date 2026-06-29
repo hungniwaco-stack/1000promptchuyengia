@@ -15,6 +15,61 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "100-prompt-kinh-doanh-startup",
+    title: "100 Prompt AI Giúp Bạn Kinh Doanh Hiệu Quả Hơn — Không Cần Biết Lập Trình",
+    description:
+      "Bộ 100 Prompt Kinh Doanh & Startup giúp người mới khởi nghiệp và chủ shop nhỏ dùng ChatGPT, Gemini hiệu quả ngay từ lần đầu — không cần kiến thức kỹ thuật.",
+    category: "Kinh doanh & Startup",
+    publishedAt: "2026-06-26",
+    readingTime: "7 phút đọc",
+    keywords: ["prompt kinh doanh", "AI cho startup", "ChatGPT kinh doanh", "prompt startup", "100 prompt AI"],
+    intro:
+      "100 Prompt Kinh Doanh và Startup là bộ câu lệnh AI có sẵn, giúp người kinh doanh nhỏ và người mới khởi nghiệp dùng ChatGPT hoặc Gemini hiệu quả ngay từ lần đầu, không cần biết viết prompt từ đầu.",
+    sections: [
+      {
+        heading: "Vì sao bạn cần bộ prompt này",
+        body: [
+          "Phần lớn người Việt đã từng dùng AI, nhưng chưa thực sự khai thác được nó vào công việc. Theo khảo sát của Decision Lab (đối tác YouGov tại Việt Nam), 60% người được hỏi nói đã từng trải nghiệm AI ít nhất một lần, nhưng chỉ 3% đang dùng hàng ngày một cách thực chất.",
+          "Vấn đề thường không phải vì AI yếu, mà vì người dùng chưa biết cách đặt câu hỏi để AI trả lời đúng việc mình cần. Theo khảo sát của McKinsey, dù 72% doanh nghiệp trên thế giới đã ứng dụng AI vào ít nhất một bộ phận, các doanh nghiệp nhỏ tại Việt Nam vẫn còn lúng túng, phần nhiều vì không biết bắt đầu từ đâu.",
+          "Bộ 100 Prompt Kinh Doanh và Startup được làm ra để giải quyết đúng điểm nghẽn này: bạn không cần tự nghĩ ra cách hỏi, chỉ cần chọn prompt đúng với việc đang cần làm.",
+        ],
+      },
+      {
+        heading: "Bộ tài liệu này dành cho ai",
+        body: [
+          "Phù hợp với ba nhóm người: người đang kinh doanh nhỏ cần một trợ lý AI hỗ trợ việc hàng ngày, người mới khởi nghiệp chưa có kinh nghiệm dùng AI vào công việc, và người làm marketing, bán hàng, quản lý muốn rút ngắn thời gian brainstorm.",
+        ],
+      },
+      {
+        heading: "Bên trong bộ tài liệu có gì",
+        body: [
+          "100 prompt thực chiến, chia theo 10 nhóm việc cụ thể mà người làm kinh doanh hay gặp: tìm và kiểm tra ý tưởng kinh doanh, viết nội dung bán hàng và mô tả sản phẩm, lên kế hoạch marketing theo từng giai đoạn, phân tích đối thủ và thị trường, xây dựng quy trình quản lý và vận hành, lập kế hoạch tài chính cơ bản cho startup, ứng dụng AI vào việc ra quyết định hàng ngày, và nhiều nhóm prompt thực chiến khác.",
+        ],
+      },
+      {
+        heading: "Ví dụ một prompt trong bộ",
+        body: [
+          "Đây là một prompt thuộc nhóm phân tích thị trường: \"Đóng vai một chuyên gia nghiên cứu thị trường. Phân tích 3 đối thủ cạnh tranh trực tiếp của [tên sản phẩm/ngành], chỉ ra điểm mạnh, điểm yếu, và một khoảng trống thị trường mà [sản phẩm của tôi] có thể khai thác. Trình bày dưới dạng bảng so sánh.\"",
+          "Khác với một câu hỏi mơ hồ kiểu \"phân tích thị trường giúp tôi\", prompt này cho AI đủ ngữ cảnh để trả lời cụ thể, dùng được ngay mà không cần sửa nhiều.",
+        ],
+      },
+      {
+        heading: "Cách sử dụng",
+        body: [
+          "Bốn bước đơn giản: mở file và chọn prompt phù hợp với việc đang cần, sao chép và dán vào ChatGPT hoặc Gemini, thay các phần trong dấu ngoặc vuông bằng thông tin thực tế của bạn, sau đó nhận kết quả và điều chỉnh nếu cần.",
+          "Không cần biết lập trình, không cần có kinh nghiệm dùng AI trước đó.",
+        ],
+      },
+      {
+        heading: "AI rút ngắn thời gian — bạn vẫn là người quyết định",
+        body: [
+          "AI không thay bạn làm kinh doanh, và bộ prompt này không biến 10 triệu thành 100 triệu chỉ qua một đêm. Việc kinh doanh vẫn cần sản phẩm tốt, vẫn cần bạn ra quyết định.",
+          "Nhưng AI có thể rút ngắn rất nhiều thời gian ở những việc lặp lại như brainstorm, viết draft đầu tiên, hay tổng hợp thông tin — để bạn dành thời gian cho những việc chỉ con người mới làm được.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "cach-viet-prompt-ai-hieu-qua",
     title: "Cách viết prompt AI hiệu quả cho người mới bắt đầu",
     description:
