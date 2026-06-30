@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Kinh Doanh và Startup là bộ câu lệnh AI có sẵn, giúp người kinh doanh nhỏ và người mới khởi nghiệp dùng ChatGPT hoặc Gemini hiệu quả ngay từ lần đầu, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao người kinh doanh cần bộ 100 prompt AI này",
         body: [
           "Phần lớn người Việt đã từng dùng AI, nhưng chưa thực sự khai thác được nó vào công việc. Theo khảo sát của Decision Lab (đối tác YouGov tại Việt Nam), 60% người được hỏi nói đã từng trải nghiệm AI ít nhất một lần, nhưng chỉ 3% đang dùng hàng ngày một cách thực chất.",
           "Vấn đề thường không phải vì AI yếu, mà vì người dùng chưa biết cách đặt câu hỏi để AI trả lời đúng việc mình cần. Theo khảo sát của McKinsey, dù 72% doanh nghiệp trên thế giới đã ứng dụng AI vào ít nhất một bộ phận, các doanh nghiệp nhỏ tại Việt Nam vẫn còn lúng túng, phần nhiều vì không biết bắt đầu từ đâu.",
@@ -44,13 +44,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt kinh doanh và startup có gì",
         body: [
           "100 prompt thực chiến, chia theo 10 nhóm việc cụ thể mà người làm kinh doanh hay gặp: tìm và kiểm tra ý tưởng kinh doanh, viết nội dung bán hàng và mô tả sản phẩm, lên kế hoạch marketing theo từng giai đoạn, phân tích đối thủ và thị trường, xây dựng quy trình quản lý và vận hành, lập kế hoạch tài chính cơ bản cho startup, ứng dụng AI vào việc ra quyết định hàng ngày, và nhiều nhóm prompt thực chiến khác.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI kinh doanh thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm phân tích thị trường: \"Đóng vai một chuyên gia nghiên cứu thị trường. Phân tích 3 đối thủ cạnh tranh trực tiếp của [tên sản phẩm/ngành], chỉ ra điểm mạnh, điểm yếu, và một khoảng trống thị trường mà [sản phẩm của tôi] có thể khai thác. Trình bày dưới dạng bảng so sánh.\"",
           "Khác với một câu hỏi mơ hồ kiểu \"phân tích thị trường giúp tôi\", prompt này cho AI đủ ngữ cảnh để trả lời cụ thể, dùng được ngay mà không cần sửa nhiều.",
@@ -89,7 +89,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Tài Chính và Đầu Tư là bộ câu lệnh AI có sẵn, giúp người quản lý tài chính cá nhân và nhà đầu tư dùng ChatGPT hoặc Gemini để có thêm góc nhìn rõ ràng trước mỗi quyết định, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao nhà đầu tư cần bộ 100 prompt tài chính AI này",
         body: [
           "Khi hỏi AI những câu chung như \"tôi nên đầu tư gì\", câu trả lời cũng sẽ chung không kém. Nhưng khi hỏi đúng cách, có ngữ cảnh, có số liệu cụ thể về tình hình tài chính của bạn, AI có thể giúp bạn nhìn rõ một quyết định chỉ trong vài phút.",
           "Theo khảo sát của Decision Lab, 60% người Việt đã từng trải nghiệm AI ít nhất một lần, nhưng chỉ 3% đang dùng hàng ngày một cách thực chất. Bộ prompt này giải quyết đúng điểm nghẽn đó.",
@@ -102,13 +102,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt tài chính và đầu tư có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: quản lý tài chính cá nhân, đầu tư chứng khoán, đầu tư bất động sản, đầu tư vàng và hàng hóa, đầu tư tiền số, doanh nghiệp và quản trị tài chính, đầu tư khởi nghiệp, chiến lược làm giàu và tăng thu nhập, quản trị rủi ro và bảo hiểm, mindset tài chính.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI tài chính thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm đầu tư chứng khoán: \"Đóng vai một cố vấn tài chính có kinh nghiệm. Dựa trên danh mục đầu tư gồm các mã cổ phiếu mà tôi cung cấp, hãy đánh giá mức độ rủi ro tổng thể, chỉ ra những mã đang chiếm tỷ trọng quá lớn, và gợi ý cách phân bổ lại để cân bằng hơn.\"",
           "Một prompt như vậy giúp bạn có cái nhìn rõ ràng về danh mục của mình, thay vì chỉ dựa vào cảm tính.",
@@ -140,7 +140,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Marketing và Xây Dựng Thương Hiệu là bộ câu lệnh AI có sẵn, giúp người làm marketing và chủ thương hiệu dùng ChatGPT hoặc Gemini để ra ý tưởng nhanh hơn, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao người làm marketing cần bộ 100 prompt AI này",
         body: [
           "Khi hỏi AI những câu chung như \"viết content cho thương hiệu của tôi\", câu trả lời cũng sẽ chung không kém — vì AI không có đủ thông tin về thương hiệu, khách hàng và bối cảnh cụ thể của bạn.",
           "Một prompt hỏi đúng cách có thể cho ra ngay một bản kế hoạch chiến dịch, một concept content, hay một thông điệp định vị thương hiệu chỉ trong vài phút.",
@@ -153,13 +153,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt marketing và thương hiệu có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: chiến lược marketing tổng thể, digital marketing, thương hiệu và định vị, content marketing, quảng cáo sáng tạo, marketing trải nghiệm khách hàng, influencer và PR, marketing đột phá, dữ liệu và performance marketing, truyền cảm hứng sáng tạo.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI marketing thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm thương hiệu và định vị: \"Đóng vai một chuyên gia định vị thương hiệu. Dựa trên sản phẩm, khách hàng mục tiêu và đối thủ mà tôi cung cấp, hãy đề xuất một câu định vị thương hiệu ngắn gọn, khác biệt, và giải thích vì sao câu định vị đó phù hợp với thị trường hiện tại.\"",
           "Một prompt như vậy giúp bạn có ngay một hướng định vị cụ thể, thay vì ngồi brainstorm cả buổi mà chưa ra được gì.",
@@ -191,7 +191,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Bán Hàng và Đàm Phán là bộ câu lệnh AI có sẵn, giúp người bán hàng dùng ChatGPT hoặc Gemini để có sẵn câu trả lời trước mỗi tình huống khó, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao người bán hàng cần bộ 100 prompt AI này",
         body: [
           "Vấn đề của người bán hàng thường không phải vì không biết bán, mà vì khi khách hàng từ chối hoặc đưa ra lý do để không mua, không có ai ở bên để hỏi cách phản hồi sao cho khéo, sao cho không mất khách.",
           "Một prompt rõ ngữ cảnh có thể cho ngay một câu trả lời xử lý phản đối, một cách chốt hợp đồng, hay một chiến thuật đàm phán giá — chỉ trong vài giây.",
@@ -204,13 +204,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt bán hàng và đàm phán có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: kỹ năng chốt sale, xử lý phản đối khách hàng, nghệ thuật thuyết phục, kỹ năng đàm phán giá, bán hàng online, chốt hợp đồng, bán hàng B2B và Enterprise, bán hàng B2C và Retail, tư duy bán hàng, thương lượng nâng cao.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI bán hàng thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm xử lý phản đối: \"Đóng vai một chuyên gia bán hàng giàu kinh nghiệm. Khách hàng của tôi đang nói rằng giá sản phẩm cao hơn so với đối thủ. Hãy đưa ra ba cách phản hồi khác nhau, vừa giữ được giá trị sản phẩm, vừa không làm khách hàng cảm thấy bị ép.\"",
           "Một prompt như vậy giúp bạn có sẵn nhiều phương án trả lời, thay vì phải ứng biến ngay tại chỗ và dễ bị cuốn theo cuộc thương lượng của khách.",
@@ -242,7 +242,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Phát Triển Bản Thân và Năng Suất là bộ câu lệnh AI có sẵn, giúp bạn có thêm một góc nhìn và hành động cụ thể mỗi ngày khi dùng ChatGPT hoặc Gemini, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao bạn cần bộ 100 prompt AI phát triển bản thân này",
         body: [
           "Đọc sách hay nghe podcast về phát triển bản thân thì nhiều, nhưng áp dụng đúng vào tình huống cụ thể của mình lại là chuyện khác. Một prompt rõ ngữ cảnh có thể cho bạn ngay một kế hoạch quản lý thời gian, một cách nhìn khác về một thói quen xấu, hay một lời động viên đúng lúc bạn cần.",
         ],
@@ -254,13 +254,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt phát triển bản thân và năng suất có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: tư duy và mindset thành công, quản lý thời gian và năng suất, kỹ năng giao tiếp cá nhân, sức khỏe và thói quen tích cực, học tập và phát triển kỹ năng, lãnh đạo bản thân, quản lý cảm xúc và stress, xây dựng thói quen thành công, quản lý mục tiêu và sự nghiệp, truyền cảm hứng và động lực sống.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI phát triển bản thân thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm quản lý cảm xúc: \"Đóng vai một chuyên gia tâm lý tích cực. Tôi đang cảm thấy quá tải vì công việc dồn lại nhiều. Hãy giúp tôi nhìn lại tình huống này theo hướng bình tĩnh hơn, và gợi ý ba việc cụ thể tôi có thể làm ngay trong hôm nay để giảm áp lực.\"",
           "Một prompt như vậy giúp bạn có một góc nhìn khác và vài bước hành động cụ thể, ngay khi đang cần.",
@@ -292,7 +292,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Lãnh Đạo và Quản Lý Đội Nhóm là bộ câu lệnh AI có sẵn, giúp quản lý và trưởng nhóm dùng ChatGPT hoặc Gemini để chuẩn bị trước mỗi tình huống khó với nhân viên, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao quản lý cần bộ 100 prompt AI lãnh đạo này",
         body: [
           "Nhiều người được lên làm quản lý vì giỏi chuyên môn, nhưng đến lúc xử lý xung đột giữa nhân viên hay động viên một người đang chán việc thì lại lúng túng — vì không có sẵn câu trả lời.",
           "Một prompt rõ ngữ cảnh có thể cho ngay một cách mở đầu cuộc nói chuyện khó, một kế hoạch huấn luyện nhân viên mới, hay một hướng giải quyết xung đột trong nhóm.",
@@ -305,13 +305,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt lãnh đạo và quản lý đội nhóm có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: tư duy lãnh đạo, xây dựng đội nhóm, quản lý hiệu suất, kỹ năng giao tiếp lãnh đạo, quản trị xung đột, truyền cảm hứng và động viên nhân viên, huấn luyện và phát triển nhân viên, văn hóa doanh nghiệp, lãnh đạo trong khủng hoảng, lãnh đạo truyền cảm hứng toàn diện.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI lãnh đạo thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm quản trị xung đột: \"Đóng vai một chuyên gia quản trị nhân sự. Hai nhân viên trong nhóm của tôi đang có mâu thuẫn về cách phân chia công việc, ảnh hưởng đến không khí làm việc chung. Hãy gợi ý cho tôi cách mở đầu một buổi nói chuyện riêng với từng người, và cách dẫn dắt để hai bên cùng tìm ra hướng giải quyết.\"",
           "Một prompt như vậy giúp bạn có sẵn cách tiếp cận trước khi vào cuộc trò chuyện, thay vì tự xử lý theo cảm tính.",
@@ -343,7 +343,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Kiếm Tiền Online và Thu Nhập Thụ Động là bộ câu lệnh AI có sẵn, giúp bạn có ngay một hướng đi cụ thể để bắt đầu kiếm thêm thu nhập, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao bạn cần bộ 100 prompt AI kiếm tiền online này",
         body: [
           "Affiliate, bán hàng online, làm content hay thu nhập thụ động — mỗi hướng đều có người làm được, nhưng đa số người mới lại không biết nên chọn cái nào và bắt đầu như thế nào.",
           "Một prompt rõ ngữ cảnh có thể cho ngay một hướng đi phù hợp với điều kiện của bạn, một kế hoạch bắt đầu, hay một cách triển khai cụ thể cho từng mô hình.",
@@ -356,13 +356,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt kiếm tiền online và thu nhập thụ động có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: kinh doanh online, affiliate marketing, kinh doanh số (digital products), freelance và dịch vụ online, kiếm tiền từ YouTube/TikTok/Podcast, thương mại điện tử quốc tế, thu nhập thụ động, kinh doanh nội dung số, kiếm tiền từ công nghệ mới, tư duy làm giàu và tự do tài chính.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI kiếm tiền online thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm affiliate marketing: \"Đóng vai một chuyên gia affiliate marketing. Tôi đang có một kênh nội dung trong ngành làm đẹp, với lượng người theo dõi vừa phải. Hãy gợi ý ba loại sản phẩm affiliate phù hợp để tôi bắt đầu, và cách lồng ghép link giới thiệu vào nội dung một cách tự nhiên, không gây phản cảm.\"",
           "Một prompt như vậy giúp bạn có ngay một hướng đi cụ thể cho đúng tình huống của mình.",
@@ -394,7 +394,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt AI và Công Nghệ Trong Kinh Doanh là bộ câu lệnh AI có sẵn, giúp chủ doanh nghiệp tìm ra điểm bắt đầu ứng dụng AI cụ thể cho từng bộ phận, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao doanh nghiệp cần bộ 100 prompt AI công nghệ này",
         body: [
           "Marketing, bán hàng, nhân sự, vận hành — mỗi bộ phận đều có thể dùng AI, nhưng dùng như thế nào cho từng việc cụ thể thì không phải ai cũng hình dung ra.",
           "Một prompt rõ ngữ cảnh có thể cho ngay một quy trình tự động hóa công việc lặp lại, một cách ứng dụng AI vào chăm sóc khách hàng, hay một gợi ý cụ thể cho từng bộ phận.",
@@ -407,13 +407,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt AI và công nghệ kinh doanh có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: AI trong marketing, AI trong bán hàng, AI trong quản trị doanh nghiệp, AI trong đầu tư và tài chính, AI trong chăm sóc khách hàng, AI trong sản xuất và vận hành, AI trong nhân sự, Blockchain và Web3, tự động hóa (automation), xu hướng công nghệ.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI ứng dụng công nghệ thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm AI trong chăm sóc khách hàng: \"Đóng vai một chuyên gia vận hành doanh nghiệp. Cửa hàng của tôi đang nhận khoảng vài chục câu hỏi giống nhau mỗi ngày từ khách hàng qua tin nhắn. Hãy gợi ý cho tôi một quy trình dùng AI để tự động trả lời các câu hỏi thường gặp, và những câu hỏi nào nên vẫn để người thật xử lý.\"",
           "Một prompt như vậy giúp bạn có ngay một hướng triển khai cụ thể cho chính doanh nghiệp của mình.",
@@ -445,7 +445,7 @@ export const blogPosts: BlogPost[] = [
       "100 Prompt Cuộc Sống và Hạnh Phúc là bộ câu lệnh AI có sẵn, giúp bạn có thêm một góc nhìn cho những việc quan trọng trong đời sống cá nhân, không cần biết viết prompt từ đầu.",
     sections: [
       {
-        heading: "Vì sao bạn cần bộ prompt này",
+        heading: "Vì sao bạn cần bộ 100 prompt AI cuộc sống và hạnh phúc này",
         body: [
           "Nhiều người dành cả ngày lo công việc, đến khi về nhà thì không còn nhiều sức để dành cho gia đình, sức khỏe, hay chính bản thân mình.",
           "Một prompt rõ ngữ cảnh có thể cho ngay một cách mở lời với con, một cách chăm sóc tinh thần cho chính mình, hay một gợi ý để cuộc sống có thêm chút ý nghĩa mỗi ngày.",
@@ -458,13 +458,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt cuộc sống và hạnh phúc có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm: gia đình và hôn nhân, nuôi dạy con cái, sức khỏe và thể chất, sức khỏe tinh thần và mindfulness, quan hệ và giao tiếp xã hội, hạnh phúc và phát triển bản thân, sáng tạo và nghệ thuật, tài chính cá nhân đời sống, du lịch và trải nghiệm, truyền cảm hứng và cuộc sống ý nghĩa.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI cuộc sống thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm nuôi dạy con cái: \"Con tôi đang ở tuổi dậy thì và gần đây có vẻ ít chia sẻ với tôi hơn. Hãy gợi ý cho tôi vài câu mở đầu nhẹ nhàng để bắt đầu một cuộc trò chuyện thật với con, mà không khiến con cảm thấy bị tra hỏi.\"",
           "Một prompt như vậy giúp bạn có sẵn một cách tiếp cận nhẹ nhàng hơn, thay vì phải tự mò mẫm trong những tình huống nhạy cảm với người thân.",
@@ -509,13 +509,13 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Bên trong bộ tài liệu có gì",
+        heading: "Bên trong bộ 100 prompt fusion đa lĩnh vực có gì",
         body: [
           "100 prompt thực chiến chia theo 10 nhóm fusion: kinh doanh và AI, marketing và sáng tạo, lãnh đạo và phát triển bản thân, đàm phán và tâm lý học, kinh doanh và cuộc sống, AI và học tập/giáo dục, marketing và đời sống xã hội, sáng tạo và lãnh đạo, tài chính và hạnh phúc, tương lai và con người.",
         ],
       },
       {
-        heading: "Ví dụ một prompt trong bộ",
+        heading: "Ví dụ prompt AI fusion đa lĩnh vực thực chiến",
         body: [
           "Đây là một prompt thuộc nhóm Fusion Đàm phán và Tâm lý học: \"Đóng vai một chuyên gia kết hợp đàm phán và tâm lý học hành vi. Tôi sắp đàm phán tăng lương với cấp trên, nhưng người đó có tính cách khá thận trọng và ít khi đưa ra quyết định ngay tại chỗ. Hãy giúp tôi xây dựng cách tiếp cận vừa dựa trên chiến thuật đàm phán, vừa phù hợp với tâm lý của một người thận trọng như vậy.\"",
           "Một prompt như vậy giúp bạn có một câu trả lời đã tính đến cả hai yếu tố cùng lúc.",

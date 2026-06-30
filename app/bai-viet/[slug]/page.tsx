@@ -44,8 +44,38 @@ export default async function BlogPostPage({ params }: PageProps) {
     notFound();
   }
 
+  const now = new Date();
+  const relatedPosts = blogPosts
+    .filter((p) => p.slug !== slug && new Date(p.publishedAt) <= now)
+    .slice(0, 3);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: post.publishedAt,
+    keywords: post.keywords.join(", "),
+    url: `https://www.1000promptchuyengia.shop/bai-viet/${post.slug}`,
+    author: {
+      "@type": "Person",
+      name: "Nguyen Huu Hung",
+      url: "https://www.1000promptchuyengia.shop",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Hữu Hùng AI",
+      url: "https://www.1000promptchuyengia.shop",
+    },
+  };
+
   return (
     <main className="bg-white text-slate-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <header className="border-b border-slate-200/90 bg-white">
         <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-4 py-4">
           <Link href="/" className="flex items-center">
@@ -118,6 +148,33 @@ export default async function BlogPostPage({ params }: PageProps) {
           </Link>
         </div>
       </article>
+
+      {relatedPosts.length > 0 && (
+        <section className="border-t border-slate-100 py-14">
+          <div className="mx-auto w-[92%] max-w-4xl">
+            <h2 className="text-2xl font-extrabold text-slate-950">Bài viết liên quan</h2>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {relatedPosts.map((related) => (
+                <article key={related.slug} className="card p-5">
+                  <div className="mb-2 text-xs font-bold uppercase tracking-wide text-blue-700">
+                    {related.category}
+                  </div>
+                  <h3 className="text-base font-extrabold leading-snug text-slate-950">
+                    <Link href={`/bai-viet/${related.slug}`}>{related.title}</Link>
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600 line-clamp-3">{related.description}</p>
+                  <Link
+                    href={`/bai-viet/${related.slug}`}
+                    className="mt-4 inline-block text-sm font-bold text-blue-700 hover:underline"
+                  >
+                    Đọc bài →
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }
