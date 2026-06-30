@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "../blogPosts";
 
+// Render động để lọc bài theo ngày đăng chính xác
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Bài viết AI - Tin tức và mẹo sử dụng AI | Hữu Hùng AI",
   description:
@@ -12,6 +15,9 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const now = new Date();
+  const publishedPosts = blogPosts.filter((p) => new Date(p.publishedAt) <= now);
+
   return (
     <main className="bg-white text-slate-800">
       <header className="border-b border-slate-200/90 bg-white">
@@ -48,12 +54,12 @@ export default function BlogPage() {
 
       <section className="py-14">
         <div className="mx-auto grid w-[92%] max-w-6xl gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {blogPosts.map((post) => (
+          {publishedPosts.map((post) => (
             <article key={post.slug} className="card flex h-full flex-col p-5">
               <div className="mb-4 flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wide text-blue-700">
                 <span>{post.category}</span>
                 <span className="text-slate-300">/</span>
-                <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+                <time dateTime={post.publishedAt}>{post.publishedAt.slice(0, 10)}</time>
               </div>
               <h2 className="text-xl font-extrabold leading-snug text-slate-950">
                 <Link href={`/bai-viet/${post.slug}`}>{post.title}</Link>

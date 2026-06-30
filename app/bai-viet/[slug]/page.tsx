@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="mt-6 flex flex-wrap items-center gap-2 text-sm font-bold uppercase tracking-wide text-blue-700">
           <span>{post.category}</span>
           <span className="text-slate-300">/</span>
-          <time dateTime={post.publishedAt}>{post.publishedAt}</time>
+          <time dateTime={post.publishedAt}>{post.publishedAt.slice(0, 10)}</time>
           <span className="text-slate-300">/</span>
           <span>{post.readingTime}</span>
         </div>
@@ -90,7 +90,24 @@ export default async function BlogPostPage({ params }: PageProps) {
           ))}
         </div>
 
-        <div className="mt-12 rounded-lg border border-amber-200 bg-amber-50 p-6">
+        {post.giftLink && (
+          <div className="mt-12 rounded-lg border border-green-200 bg-green-50 p-6">
+            <h2 className="text-xl font-extrabold text-slate-950">🎁 Quà tặng miễn phí dành cho bạn</h2>
+            <p className="mt-2 text-slate-700">
+              Tải ngay <strong>{post.giftLinkLabel}</strong> hoàn toàn miễn phí — áp dụng được ngay hôm nay.
+            </p>
+            <a
+              href={post.giftLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-accent mt-5 inline-block"
+            >
+              Tải bộ prompt miễn phí →
+            </a>
+          </div>
+        )}
+
+        <div className="mt-8 rounded-lg border border-amber-200 bg-amber-50 p-6">
           <h2 className="text-xl font-extrabold text-slate-950">Muốn dùng prompt nhanh hơn?</h2>
           <p className="mt-2 text-slate-700">
             Bộ 1000 Prompt Hữu Hùng AI đã phân loại sẵn theo kinh doanh, marketing, bán hàng, tài chính,
