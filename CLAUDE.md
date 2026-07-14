@@ -98,14 +98,54 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 7. **`git remote set-url` với token trong URL vẫn fail từ sandbox** — git tách username/token và hỏi password riêng qua TTY → không dùng cách này.
 8. **Vercel MCP** trả về 403 cho project này — không dùng được `deploy_to_vercel`. Deploy tự động qua GitHub khi push.
 
+## AEO — Trạng thái đã làm (2026-07-14)
+
+**Đã hoàn thành:**
+- `app/SchemaMarkup.tsx` — có đủ 5 schema: WebSite, Product + AggregateRating, FAQPage, ItemList (10 packs), Person (Hữu Hùng). **Không cần làm lại.**
+- `app/[slug]/page.tsx` — có JSON-LD Article schema cho từng bài viết.
+- Meta description trong `layout.tsx` — đã viết lại dạng câu trả lời trực tiếp AI có thể trích.
+- FAQ: 10 câu (5 vận hành + 5 AEO: định nghĩa, so sánh, dành cho ai, combo vs lẻ, cập nhật).
+- 2 bài blog AEO: `prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san` (7h 14/7) và `so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt` (18h 14/7).
+
+**Còn thiếu (cần user cung cấp thông tin):**
+- Trang "Về Hữu Hùng" chi tiết: số đơn đã bán, background, ảnh/video thật → E-E-A-T
+- Review có nguồn xác minh: ảnh chụp màn hình, link Facebook thật
+
+**Nguyên tắc viết bài AEO:**
+- Đoạn `intro` phải tự chứa đủ nghĩa, AI có thể trích nguyên văn (định nghĩa hoặc tóm tắt trong 2-3 câu)
+- Heading H2 chứa từ khóa + câu hỏi mà người dùng thực sự gõ
+- Có ít nhất 1 section định nghĩa ("X là gì"), 1 section so sánh, 1 section "dành cho ai"
+- Cuối bài có internal link về trang chủ hoặc bài liên quan
+- Category "So sánh & Đánh giá" và "Kiến thức AI" là 2 category AEO cao nhất
+
+## Lịch đăng bài — đầy đủ (15 bài)
+| # | Slug | publishedAt |
+|---|------|-------------|
+| Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T07:00:00+07:00 |
+| Pack 2 | 100-prompt-tai-chinh-dau-tu | 2026-06-30T18:00:00+07:00 |
+| Pack 3 | 100-prompt-marketing-thuong-hieu | 2026-07-01T07:00:00+07:00 |
+| Pack 4 | 100-prompt-ban-hang-dam-phan | 2026-07-01T18:00:00+07:00 |
+| Pack 5 | 100-prompt-phat-trien-ban-than-nang-suat | 2026-07-02T07:00:00+07:00 |
+| Pack 6 | 100-prompt-lanh-dao-quan-ly-doi-nhom | 2026-07-02T18:00:00+07:00 |
+| Pack 7 | 100-prompt-kiem-tien-online-thu-nhap-thu-dong | 2026-07-03T07:00:00+07:00 |
+| Pack 8 | 100-prompt-ai-cong-nghe-kinh-doanh | 2026-07-03T18:00:00+07:00 |
+| Pack 9 | 100-prompt-cuoc-song-hanh-phuc | 2026-07-04T07:00:00+07:00 |
+| Pack 10 | 100-prompt-fusion-da-linh-vuc | 2026-07-04T18:00:00+07:00 |
+| KB 1 | cach-viet-prompt-ai-hieu-qua | 2026-06-04 |
+| KB 2 | ung-dung-ai-trong-kinh-doanh-nho | 2026-06-04 |
+| KB 3 | checklist-chon-cong-cu-ai-phu-hop | 2026-06-04 |
+| AEO 1 | prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san | 2026-07-14T07:00:00+07:00 |
+| AEO 2 | so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt | 2026-07-14T18:00:00+07:00 |
+
 ## Cấu trúc thư mục chính
 ```
 app/
-  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết
+  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (15 bài)
+  SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person
   bai-viet/
-    page.tsx            ← danh sách bài (có force-dynamic + datetime filter)
-    [slug]/page.tsx     ← chi tiết bài (có gift link block)
-  layout.tsx            ← có Analytics (GA4 + Facebook Pixel)
+    page.tsx            ← danh sách bài (force-dynamic + datetime filter)
+    [slug]/page.tsx     ← chi tiết bài (JSON-LD Article + gift link + related posts)
+  layout.tsx            ← Analytics (GA4 + FB Pixel) + meta AEO
 components/
   Analytics.tsx         ← GA4 + FB Pixel (đã tích hợp)
 public/images/
