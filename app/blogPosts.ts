@@ -704,7 +704,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Phân tích chi tiết sự khác biệt giữa dùng bộ prompt AI mua sẵn và tự tìm prompt miễn phí trên Reddit, YouTube hay yêu cầu ChatGPT tự tạo — về thời gian, chất lượng và chi phí thực tế.",
     category: "So sánh & Đánh giá",
-    publishedAt: "2026-07-14T18:00:00+07:00",
+    publishedAt: "2026-07-14T13:00:00+07:00",
     readingTime: "7 phút đọc",
     keywords: [
       "mua prompt AI",
