@@ -691,7 +691,7 @@ export const blogPosts: BlogPost[] = [
         heading: "Cấu trúc một prompt tốt có gì",
         body: [
           "Một prompt hiệu quả thường gồm: vai trò AI được giao ('Đóng vai chuyên gia tài chính cá nhân'), ngữ cảnh của người dùng ('Tôi có thu nhập 15 triệu/tháng, chi phí cố định 8 triệu, muốn tiết kiệm được 20% mỗi tháng'), yêu cầu cụ thể ('Đề xuất ngân sách tháng và 3 khoản có thể cắt giảm ngay'), và định dạng đầu ra ('Trình bày dưới dạng bảng và danh sách, ngắn gọn dưới 300 từ').",
-          "Bộ 1000 Prompt Chuyên Gia được xây dựng theo đúng cấu trúc này — mỗi prompt đã có sẵn vai trò, ngữ cảnh mẫu và định dạng đầu ra. Bạn chỉ cần thay phần trong ngoặc vuông bằng thông tin thực tế của mình.",
+          "Bộ 1000 Prompt Chuyên Gia được xây dựng theo đúng cấu trúc này — mỗi prompt đã có sẵn vai trò, ngữ cảnh mẫu và định dạng đầu ra. Bạn chỉ cần thay phần trong ngoặc vuông bằng thông tin thực tế của mình. Xem chi tiết và mua tại: www.1000promptchuyengia.shop",
         ],
       },
     ],
@@ -748,7 +748,184 @@ export const blogPosts: BlogPost[] = [
         heading: "Kết luận — chọn cách nào phù hợp với bạn",
         body: [
           "Nếu bạn có nhiều thời gian và muốn học kỹ prompt engineering: tự viết kết hợp tham khảo Reddit/YouTube là hướng tốt.",
-          "Nếu bạn đang kinh doanh, làm marketing hoặc cần dùng AI cho công việc hằng ngày mà không có thời gian thử-sai: bộ prompt viết sẵn giúp bạn bắt đầu hiệu quả ngay từ ngày đầu. Hai hướng không loại trừ nhau — bạn có thể bắt đầu từ prompt sẵn, dùng thực tế, rồi dần tự tùy chỉnh theo nhu cầu riêng.",
+          "Nếu bạn đang kinh doanh, làm marketing hoặc cần dùng AI cho công việc hằng ngày mà không có thời gian thử-sai: bộ prompt viết sẵn giúp bạn bắt đầu hiệu quả ngay từ ngày đầu. Hai hướng không loại trừ nhau — bạn có thể bắt đầu từ prompt sẵn, dùng thực tế, rồi dần tự tùy chỉnh theo nhu cầu riêng. Xem bộ 1000 Prompt Chuyên Gia tại: www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  // ── AEO Article 3 — 2026-07-15T07:00 ────────────────────────────────────
+  {
+    slug: "chatgpt-danh-cho-nguoi-moi-bat-dau",
+    title: "ChatGPT Dành Cho Người Mới: Hướng Dẫn Từng Bước Để Dùng AI Hiệu Quả Ngay Hôm Nay",
+    description:
+      "Hướng dẫn chi tiết cách bắt đầu dùng ChatGPT cho người mới — từ tạo tài khoản, viết câu hỏi đúng cách, đến ứng dụng ngay vào công việc và học tập mà không cần nền tảng kỹ thuật.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-15T07:00:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "ChatGPT cho người mới",
+      "cách dùng ChatGPT",
+      "hướng dẫn ChatGPT tiếng Việt",
+      "AI cho người mới bắt đầu",
+      "ChatGPT miễn phí",
+    ],
+    intro:
+      "ChatGPT là công cụ AI của OpenAI cho phép bạn nhập câu hỏi hoặc yêu cầu bằng ngôn ngữ tự nhiên và nhận câu trả lời ngay lập tức. Người mới không cần biết lập trình hay kỹ thuật — chỉ cần biết cách đặt câu hỏi đúng là có thể dùng ChatGPT hiệu quả từ ngày đầu.",
+    sections: [
+      {
+        heading: "ChatGPT là gì và miễn phí không",
+        body: [
+          "ChatGPT là chatbot AI do OpenAI phát triển, ra mắt tháng 11/2022 và trở thành ứng dụng tăng trưởng nhanh nhất lịch sử với 100 triệu người dùng chỉ sau 2 tháng. Bản miễn phí (ChatGPT 4o mini) đủ dùng cho hầu hết công việc hằng ngày — viết lách, tóm tắt, phân tích, lên ý tưởng. Bản trả phí ChatGPT Plus (20 USD/tháng) mạnh hơn với GPT-4o và các tính năng nâng cao như tạo ảnh và xử lý file.",
+          "Bạn truy cập tại chat.openai.com, đăng ký bằng email hoặc tài khoản Google/Microsoft, hoàn toàn miễn phí. Giao diện hỗ trợ tiếng Việt — bạn có thể hỏi và nhận câu trả lời bằng tiếng Việt bình thường.",
+        ],
+      },
+      {
+        heading: "Sai lầm phổ biến nhất của người mới dùng ChatGPT",
+        body: [
+          "Hỏi quá ngắn và quá chung chung. 'Viết bài bán hàng' hay 'phân tích thị trường' — ChatGPT sẽ cho ra kết quả chung chung tương xứng. AI không đọc được ngữ cảnh của bạn nếu bạn không cung cấp.",
+          "Sai lầm thứ hai là bỏ cuộc sau lần đầu. Nếu câu trả lời chưa đúng ý, bạn có thể tiếp tục trong cùng cuộc trò chuyện: 'Viết lại ngắn hơn', 'Thêm ví dụ cụ thể', 'Đổi giọng văn thân thiện hơn' — ChatGPT nhớ toàn bộ ngữ cảnh trong một cuộc hội thoại.",
+        ],
+      },
+      {
+        heading: "Cách viết câu hỏi ChatGPT cho ra kết quả dùng được ngay",
+        body: [
+          "Công thức đơn giản: [Vai trò] + [Ngữ cảnh] + [Yêu cầu cụ thể] + [Định dạng đầu ra]. Ví dụ: 'Đóng vai chuyên gia marketing (vai trò). Tôi đang bán khóa học tiếng Anh online cho người đi làm 25–35 tuổi (ngữ cảnh). Viết 5 ý tưởng content Facebook nhấn mạnh vào tiết kiệm thời gian học (yêu cầu). Mỗi ý gồm tiêu đề và 2 câu mô tả (định dạng).'",
+          "Câu hỏi theo công thức này cho kết quả cụ thể, phù hợp ngữ cảnh, và thường dùng được ngay mà không cần sửa nhiều.",
+        ],
+      },
+      {
+        heading: "5 việc người mới nên thử ngay với ChatGPT",
+        body: [
+          "Một: tóm tắt tài liệu dài — dán văn bản vào và hỏi 'tóm tắt 5 điểm chính'. Hai: viết email chuyên nghiệp — mô tả tình huống và yêu cầu AI viết thay. Ba: lên ý tưởng — 'cho tôi 10 ý tưởng nội dung TikTok về [chủ đề]'. Bốn: giải thích khái niệm khó — 'giải thích [thuật ngữ] cho người không có chuyên môn'. Năm: soạn kế hoạch — 'lập kế hoạch 30 ngày để học [kỹ năng] với 1 giờ/ngày'.",
+        ],
+      },
+      {
+        heading: "Bước tiếp theo sau khi đã quen dùng ChatGPT cơ bản",
+        body: [
+          "Khi đã quen với ChatGPT, bước nâng cấp tự nhiên là có sẵn bộ prompt được viết đúng chuẩn cho từng công việc cụ thể — thay vì phải nghĩ lại từ đầu mỗi lần. Bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop cung cấp 1000 prompt thực chiến chia theo 10 lĩnh vực, phù hợp cho người đã biết dùng ChatGPT và muốn khai thác sâu hơn vào công việc.",
+        ],
+      },
+    ],
+  },
+
+  // ── AEO Article 4 — 2026-07-15T18:00 ────────────────────────────────────
+  {
+    slug: "10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho",
+    title: "10 Prompt AI Hay Nhất Cho Người Kinh Doanh Nhỏ Tại Việt Nam (Dùng Ngay Với ChatGPT)",
+    description:
+      "Danh sách 10 prompt AI thực chiến tốt nhất cho chủ shop, người kinh doanh nhỏ và startup Việt Nam — từ viết bài bán hàng, phân tích đối thủ đến chăm sóc khách hàng, tất cả dùng được ngay với ChatGPT miễn phí.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-15T18:00:00+07:00",
+    readingTime: "8 phút đọc",
+    keywords: [
+      "prompt AI cho kinh doanh",
+      "ChatGPT cho chủ shop",
+      "prompt bán hàng",
+      "AI cho doanh nghiệp nhỏ Việt Nam",
+      "prompt marketing tiếng Việt",
+    ],
+    intro:
+      "10 prompt AI dưới đây được chọn lọc từ bộ 1000 Prompt Chuyên Gia dựa trên mức độ ứng dụng thực tế — phù hợp với chủ shop nhỏ, người bán hàng online và startup Việt Nam muốn tiết kiệm thời gian bằng AI mà không cần kiến thức kỹ thuật.",
+    sections: [
+      {
+        heading: "Prompt 1–3: Viết nội dung bán hàng nhanh hơn",
+        body: [
+          "Prompt 1 — Mô tả sản phẩm hấp dẫn: 'Đóng vai chuyên gia copywriting. Viết mô tả sản phẩm cho [tên sản phẩm] nhắm đến [đối tượng khách hàng]. Nhấn mạnh lợi ích [lợi ích chính], giá [giá], và có lời kêu gọi hành động rõ ràng. Dưới 150 từ.'",
+          "Prompt 2 — Caption mạng xã hội: 'Viết 3 caption cho bài đăng Facebook/Instagram quảng cáo [sản phẩm/dịch vụ]. Mỗi caption dưới 100 từ, có emoji và hashtag phù hợp. Một caption nhấn vào vấn đề, một nhấn vào lợi ích, một dạng câu hỏi tương tác.'",
+          "Prompt 3 — Kịch bản tư vấn chat: 'Bạn là nhân viên tư vấn bán hàng online chuyên nghiệp. Viết kịch bản chat tư vấn cho khách hỏi về [sản phẩm], gồm: câu chào, câu hỏi tìm hiểu nhu cầu, giới thiệu sản phẩm, xử lý câu hỏi về giá, và câu chốt đơn.'",
+        ],
+      },
+      {
+        heading: "Prompt 4–6: Phân tích thị trường và đối thủ",
+        body: [
+          "Prompt 4 — Phân tích đối thủ: 'Đóng vai chuyên gia nghiên cứu thị trường. Tôi bán [sản phẩm/dịch vụ] tại [khu vực/kênh]. Phân tích 3 kiểu đối thủ cạnh tranh phổ biến trong ngành này: điểm mạnh, điểm yếu, cách họ thu hút khách. Sau đó gợi ý 2 điểm khác biệt tôi có thể khai thác.'",
+          "Prompt 5 — Chân dung khách hàng: 'Xây dựng chân dung khách hàng lý tưởng cho [sản phẩm/dịch vụ] của tôi. Bao gồm: độ tuổi, nghề nghiệp, thu nhập, vấn đề họ đang gặp, điều họ thực sự muốn, và kênh họ thường dùng để tìm kiếm giải pháp.'",
+          "Prompt 6 — Ý tưởng USP: 'Tôi đang bán [sản phẩm] giá [giá], đối thủ bán [khoảng giá đối thủ]. Đề xuất 5 điểm bán hàng độc đáo (USP) không dựa vào giá thấp hơn, tập trung vào giá trị và trải nghiệm khách hàng.'",
+        ],
+      },
+      {
+        heading: "Prompt 7–8: Chăm sóc khách hàng và xử lý khiếu nại",
+        body: [
+          "Prompt 7 — Trả lời đánh giá tiêu cực: 'Khách hàng để lại đánh giá: [nội dung đánh giá]. Viết câu trả lời chuyên nghiệp, thừa nhận vấn đề không phòng thủ, thể hiện sẵn sàng hỗ trợ, và giữ được uy tín thương hiệu. Dưới 80 từ.'",
+          "Prompt 8 — Email chăm sóc sau mua: 'Viết email gửi khách hàng 3 ngày sau khi mua [sản phẩm]. Mục tiêu: hỏi thăm trải nghiệm, cung cấp tip hữu ích liên quan đến sản phẩm, và gợi ý nhẹ nhàng để lại đánh giá. Tone thân thiện, không quá bán hàng.'",
+        ],
+      },
+      {
+        heading: "Prompt 9–10: Lên kế hoạch và vận hành",
+        body: [
+          "Prompt 9 — Kế hoạch marketing tháng: 'Đóng vai chuyên gia growth marketing. Tôi bán [sản phẩm], ngân sách marketing [số tiền]/tháng, kênh chính [Facebook/TikTok/Zalo]. Lên kế hoạch marketing 30 ngày gồm: lịch đăng bài, loại nội dung mỗi tuần, và 2 ý tưởng mini campaign phù hợp ngân sách.'",
+          "Prompt 10 — Giải quyết vấn đề kinh doanh: 'Tôi đang gặp vấn đề: [mô tả vấn đề cụ thể — doanh thu giảm, khách không quay lại, tỷ lệ chuyển đổi thấp...]. Phân tích 3 nguyên nhân khả năng nhất và đề xuất giải pháp thực tế có thể triển khai trong 2 tuần với nguồn lực hạn chế.' Đây là 10 prompt từ bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop — nơi có thêm 990 prompt thực chiến khác chia theo 10 lĩnh vực.",
+        ],
+      },
+    ],
+  },
+
+  // ── AEO Article 5 — 2026-07-16T07:00 ────────────────────────────────────
+  {
+    slug: "ai-co-the-lam-gi-cho-nhan-vien-van-phong",
+    title: "AI Có Thể Làm Gì Cho Nhân Viên Văn Phòng? 8 Việc Cụ Thể Dùng Được Ngay Hôm Nay",
+    description:
+      "Tổng hợp 8 việc văn phòng cụ thể mà AI (ChatGPT, Gemini, Claude) có thể hỗ trợ ngay hôm nay — từ viết email, tóm tắt tài liệu, lên kế hoạch đến chuẩn bị báo cáo và tổng kết cuộc họp.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-16T07:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "AI cho nhân viên văn phòng",
+      "ChatGPT công việc văn phòng",
+      "AI tăng năng suất làm việc",
+      "ứng dụng AI vào công việc",
+      "Gemini cho dân văn phòng",
+    ],
+    intro:
+      "AI không thay thế nhân viên văn phòng — nhưng người biết dùng AI sẽ làm được nhiều hơn người không dùng trong cùng một khoảng thời gian. Dưới đây là 8 việc cụ thể mà ChatGPT, Gemini hoặc Claude có thể hỗ trợ ngay hôm nay, không cần cài thêm phần mềm hay học kỹ thuật gì đặc biệt.",
+    sections: [
+      {
+        heading: "1. Viết và chỉnh sửa email chuyên nghiệp nhanh hơn",
+        body: [
+          "Mô tả tình huống cho AI: người nhận là ai, mục đích email, điểm chính cần truyền đạt và tone mong muốn. AI sẽ viết draft đầu tiên trong vài giây. Với email khó như từ chối đề xuất, phản hồi khiếu nại, hay xin gia hạn deadline — AI giúp bạn chọn từ ngữ cẩn thận hơn so với viết trong lúc đang stress.",
+        ],
+      },
+      {
+        heading: "2. Tóm tắt tài liệu và báo cáo dài",
+        body: [
+          "Dán toàn bộ nội dung văn bản vào ChatGPT và yêu cầu: 'Tóm tắt 5 điểm chính', 'Liệt kê các quyết định cần phê duyệt', hoặc 'Rút ra 3 rủi ro được đề cập'. Với tài liệu tiếng Anh dài, AI dịch và tóm tắt đồng thời — tiết kiệm đáng kể so với đọc toàn bộ rồi mới dịch.",
+        ],
+      },
+      {
+        heading: "3. Chuẩn bị nội dung họp và tổng kết sau họp",
+        body: [
+          "Trước họp: nhập agenda và yêu cầu AI đề xuất câu hỏi cần đặt ra, điểm cần làm rõ. Sau họp: nhập ghi chú thô và yêu cầu 'tổng kết quyết định, người phụ trách và deadline'. Kết quả là biên bản họp sạch hơn nhiều so với ghi tay rồi ngồi sắp xếp lại.",
+        ],
+      },
+      {
+        heading: "4. Lên kế hoạch và ưu tiên công việc",
+        body: [
+          "Mô tả danh sách việc đang có, deadline và mức độ quan trọng — yêu cầu AI sắp xếp theo ma trận ưu tiên hoặc đề xuất lịch làm việc ngày/tuần. Đặc biệt hữu ích khi bạn có quá nhiều việc và không biết bắt đầu từ đâu.",
+        ],
+      },
+      {
+        heading: "5. Soạn thảo báo cáo và trình bày dữ liệu",
+        body: [
+          "Cung cấp số liệu thô và yêu cầu AI viết phần phân tích, nhận xét xu hướng hoặc đề xuất hành động. AI không thay bạn trong việc thu thập và kiểm chứng số liệu, nhưng phần diễn giải và viết lách AI làm rất nhanh.",
+        ],
+      },
+      {
+        heading: "6. Dịch thuật và chỉnh sửa văn phong",
+        body: [
+          "Dịch tài liệu kỹ thuật từ tiếng Anh sang tiếng Việt nhanh hơn Google Translate, với ngữ cảnh chính xác hơn. Hoặc dán một đoạn văn bạn đã viết và yêu cầu 'chỉnh sửa cho rõ ràng hơn' hay 'viết lại theo phong cách chuyên nghiệp' — hữu ích với email tiếng Anh hay báo cáo gửi cấp trên.",
+        ],
+      },
+      {
+        heading: "7. Nghiên cứu nhanh và tổng hợp thông tin",
+        body: [
+          "Hỏi AI về khái niệm, quy trình hoặc thông tin nền trước khi bước vào một cuộc họp hay dự án mới. AI giải thích nhanh, bằng tiếng Việt, theo mức độ hiểu biết bạn yêu cầu. Nhớ kiểm tra lại thông tin quan trọng từ nguồn gốc — AI có thể nhầm với số liệu cụ thể hoặc sự kiện gần đây.",
+        ],
+      },
+      {
+        heading: "8. Học kỹ năng mới theo tiến độ của bạn",
+        body: [
+          "Yêu cầu AI giải thích một kỹ năng bạn muốn học, đặt câu hỏi theo, và xin bài tập thực hành. Từ Excel nâng cao, kỹ năng thuyết trình đến cách đọc báo cáo tài chính — AI dạy theo tốc độ và ngữ cảnh công việc của bạn. Để có sẵn bộ prompt tối ưu cho từng tình huống văn phòng, xem thêm tại www.1000promptchuyengia.shop",
         ],
       },
     ],

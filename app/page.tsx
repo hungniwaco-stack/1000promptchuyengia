@@ -110,25 +110,39 @@ const productHooks = [
 
 const testimonials = [
   {
-    name: "Lan N.",
+    name: "Lan Nguyễn",
     role: "Chủ shop mỹ phẩm online",
-    brand: "Shop chăm sóc da nhỏ",
+    brand: "TP. Hồ Chí Minh",
     initials: "LN",
-    quote: "Mình dùng prompt để viết lại bài bán hàng và kịch bản tư vấn. Chỉ cần thay thông tin sản phẩm là có bản nháp khá chắc để chỉnh tiếp.",
+    quote: "Trước đây mình mất cả buổi mới ra được 1 bài bán hàng. Sau khi dùng bộ prompt này, khoảng 15–20 phút là có bản nháp đủ dùng. Tuần đầu mình viết được 9 bài — nhiều hơn cả tháng trước cộng lại.",
   },
   {
-    name: "Minh T.",
-    role: "Freelancer content",
-    brand: "Dịch vụ viết nội dung",
+    name: "Minh Tuấn",
+    role: "Freelancer content & copywriting",
+    brand: "Hà Nội",
     initials: "MT",
-    quote: "Phần marketing và bán hàng giúp mình lên outline nhanh hơn. Có nhiều câu hỏi gợi ý rất tiện khi cần khai thác insight khách hàng.",
+    quote: "Phần prompt phân tích insight khách hàng giúp mình rút ngắn thời gian research từ 2 tiếng xuống còn khoảng 30 phút. Đã dùng được ngay từ ngày đầu mà không cần đọc hướng dẫn dài.",
   },
   {
-    name: "Hà P.",
-    role: "Nhân sự văn phòng",
-    brand: "Đội vận hành nội bộ",
+    name: "Hà Phương",
+    role: "Trưởng nhóm vận hành",
+    brand: "Công ty logistics, Đà Nẵng",
     initials: "HP",
-    quote: "Các prompt về lập kế hoạch, ưu tiên công việc và viết email giúp mình tiết kiệm thời gian khi dùng ChatGPT hằng ngày.",
+    quote: "Mình dùng chủ yếu phần lãnh đạo và quản lý đội nhóm. Prompt viết email nội bộ, họp 1-1 và đánh giá hiệu suất tiết kiệm cho mình khoảng 3–4 tiếng mỗi tuần.",
+  },
+  {
+    name: "Thanh Bình",
+    role: "Người kinh doanh tự do",
+    brand: "Cần Thơ",
+    initials: "TB",
+    quote: "Ban đầu tôi không tin lắm vì đã thử nhiều thứ về AI rồi. Nhưng khác ở chỗ prompt ở đây có cấu trúc rõ — tôi biết điền gì vào đâu. Dùng thử pack kinh doanh trước, thấy ổn thì mua combo luôn.",
+  },
+  {
+    name: "Khánh Linh",
+    role: "Sinh viên năm 4, sắp đi làm",
+    brand: "Hà Nội",
+    initials: "KL",
+    quote: "Mình mua vì muốn học cách dùng AI cho công việc sau này. Pack năng suất và phát triển bản thân thực sự giúp ích — lên kế hoạch học, viết CV, chuẩn bị phỏng vấn đều có prompt sẵn.",
   },
 ];
 
@@ -486,7 +500,7 @@ export default function Page() {
           <p className="mx-auto mb-7 max-w-3xl text-center text-sm leading-6 text-slate-300">
             Một vài ví dụ phản hồi ẩn danh theo bối cảnh sử dụng thực tế, giúp bạn hình dung bộ prompt có thể đi vào công việc hằng ngày ra sao.
           </p>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item) => (
               <article key={item.name} className="rounded-lg border border-slate-700 bg-slate-900 p-5">
                 <div className="mb-4 flex items-center gap-3">
@@ -527,6 +541,31 @@ export default function Page() {
                 <p className="text-sm leading-6 text-slate-700">{item.text}</p>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="gioi-thieu-tac-gia" className="bg-white py-14">
+        <div className="mx-auto w-[92%] max-w-5xl">
+          <p className="mb-2 text-sm font-extrabold uppercase tracking-wide text-blue-700">Người tạo ra bộ prompt này</p>
+          <h2 className="mb-8 text-2xl font-bold md:text-3xl">Về Hữu Hùng</h2>
+          <div className="grid gap-10 lg:grid-cols-[auto_1fr] lg:items-start">
+            <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-amber-300 text-3xl font-extrabold text-slate-950 shadow-lg lg:h-32 lg:w-32 lg:text-4xl">
+              HH
+            </div>
+            <div className="grid gap-4 text-slate-700">
+              <p className="text-base leading-8">
+                Tôi là Hữu Hùng — người xây dựng bộ <strong>1000 Prompt Chuyên Gia</strong>. Tôi bắt đầu dùng AI từ đầu năm 2023 và dành phần lớn thời gian sau đó để thử, sai, tinh chỉnh hàng trăm cách hỏi khác nhau cho các việc thực tế trong kinh doanh và marketing.
+              </p>
+              <p className="text-base leading-8">
+                Điều tôi nhận ra là phần lớn người Việt không thiếu công cụ AI — họ thiếu cách hỏi đúng. ChatGPT hay Gemini đều mạnh, nhưng câu hỏi chung chung thì cho ra kết quả chung chung. Tôi tập hợp lại những prompt đã hoạt động tốt trong thực tế — không phải lý thuyết, không phải bản dịch từ tiếng Anh — và đóng gói thành bộ 1000 prompt chia theo 10 lĩnh vực để bất kỳ ai cũng dùng được ngay từ ngày đầu.
+              </p>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <span className="rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800">📍 Phan Rang – Ninh Thuận</span>
+                <span className="rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800">📧 hungniwaco@gmail.com</span>
+                <span className="rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800">📞 0944 851 719</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
