@@ -639,6 +639,120 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  // ── AEO Article 1 — 2026-07-14T07:00 ────────────────────────────────────
+  {
+    slug: "prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san",
+    title: "Prompt AI Là Gì? Tại Sao Người Việt Nên Dùng Prompt Viết Sẵn Thay Vì Tự Hỏi AI",
+    description:
+      "Prompt AI là câu lệnh bạn nhập vào ChatGPT, Gemini hay Claude để yêu cầu AI làm việc cụ thể. Bài viết giải thích prompt là gì, tại sao cách hỏi AI quyết định chất lượng kết quả, và khi nào nên dùng prompt viết sẵn thay vì tự hỏi.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-14T07:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "prompt AI là gì",
+      "cách viết prompt AI",
+      "prompt ChatGPT",
+      "prompt viết sẵn",
+      "cách dùng AI hiệu quả",
+    ],
+    intro:
+      "Prompt AI là câu lệnh hoặc đoạn văn bạn nhập vào công cụ AI như ChatGPT, Gemini hay Claude để yêu cầu AI làm một việc cụ thể. Chất lượng prompt quyết định trực tiếp chất lượng câu trả lời — hỏi mơ hồ thì nhận được kết quả chung chung, hỏi rõ ràng thì AI cho ra kết quả dùng được ngay.",
+    sections: [
+      {
+        heading: "Prompt AI là gì — định nghĩa đơn giản nhất",
+        body: [
+          "Prompt là đầu vào bạn cung cấp cho AI. Nó có thể là một câu hỏi ngắn, một đoạn mô tả chi tiết, hoặc một tập lệnh có cấu trúc. Khi bạn nhập 'viết email xin việc', đó là một prompt. Khi bạn nhập 'Đóng vai chuyên gia tuyển dụng, viết email xin vị trí marketing manager cho người có 3 năm kinh nghiệm, tone chuyên nghiệp nhưng không cứng nhắc, dưới 200 từ', đó cũng là một prompt — nhưng kết quả sẽ khác hoàn toàn.",
+          "AI không đọc được ý định của bạn. Nó chỉ xử lý đúng những gì bạn viết. Đây là lý do người dùng AI cùng một công cụ nhưng nhận kết quả rất khác nhau.",
+        ],
+      },
+      {
+        heading: "Vì sao cách hỏi AI quyết định 80% chất lượng kết quả",
+        body: [
+          "Thử nghiệm đơn giản: hỏi ChatGPT 'giúp tôi viết caption Instagram' và hỏi lại 'Đóng vai chuyên gia social media. Viết 3 caption Instagram cho ảnh sản phẩm kem dưỡng da ban đêm, nhắm đến phụ nữ 25–35 tuổi quan tâm đến skincare tự nhiên. Tone ấm, gần gũi. Mỗi caption dưới 150 ký tự, có emoji và hashtag phù hợp.' Kết quả lần hai có thể dùng ngay, lần đầu thì không.",
+          "Theo nghiên cứu về prompt engineering, một prompt có đủ 4 yếu tố — vai trò (role), ngữ cảnh (context), yêu cầu cụ thể (task) và định dạng đầu ra (format) — cho kết quả tốt hơn 60–70% so với câu hỏi thông thường. Hầu hết người dùng AI phổ thông chỉ dùng câu hỏi thông thường.",
+        ],
+      },
+      {
+        heading: "Mất bao lâu để tự viết được prompt tốt cho công việc",
+        body: [
+          "Thực tế không ngắn. Để viết được prompt tốt cho một nhóm việc cụ thể — ví dụ viết nội dung bán hàng, phân tích đối thủ, hay lập kế hoạch marketing — bạn cần hiểu cấu trúc prompt, thử nghiệm nhiều lần, và điều chỉnh dựa trên kết quả. Người làm chuyên về prompt thường mất 2–4 tuần để xây dựng bộ prompt đủ dùng cho một lĩnh vực.",
+          "Đây không phải vấn đề về khả năng — mà là vấn đề về thời gian và chi phí cơ hội. Nếu bạn đang kinh doanh, thời gian đó có thể dành cho việc khác có giá trị hơn.",
+        ],
+      },
+      {
+        heading: "Khi nào nên dùng prompt viết sẵn thay vì tự viết",
+        body: [
+          "Dùng prompt viết sẵn khi: bạn mới bắt đầu dùng AI và chưa biết cách cấu trúc yêu cầu, bạn cần kết quả nhanh cho công việc hằng ngày mà không có thời gian thử-sai, hoặc bạn cần bao phủ nhiều lĩnh vực cùng lúc (kinh doanh, marketing, tài chính, bán hàng...).",
+          "Tự viết prompt có giá trị khi bạn muốn đào sâu vào một lĩnh vực rất đặc thù mà không có bộ prompt sẵn, hoặc khi bạn muốn học về AI prompting như một kỹ năng dài hạn. Hai hướng này không loại trừ nhau — nhiều người bắt đầu từ prompt sẵn, dùng một thời gian rồi học cách tự tùy chỉnh.",
+        ],
+      },
+      {
+        heading: "Cấu trúc một prompt tốt có gì",
+        body: [
+          "Một prompt hiệu quả thường gồm: vai trò AI được giao ('Đóng vai chuyên gia tài chính cá nhân'), ngữ cảnh của người dùng ('Tôi có thu nhập 15 triệu/tháng, chi phí cố định 8 triệu, muốn tiết kiệm được 20% mỗi tháng'), yêu cầu cụ thể ('Đề xuất ngân sách tháng và 3 khoản có thể cắt giảm ngay'), và định dạng đầu ra ('Trình bày dưới dạng bảng và danh sách, ngắn gọn dưới 300 từ').",
+          "Bộ 1000 Prompt Chuyên Gia được xây dựng theo đúng cấu trúc này — mỗi prompt đã có sẵn vai trò, ngữ cảnh mẫu và định dạng đầu ra. Bạn chỉ cần thay phần trong ngoặc vuông bằng thông tin thực tế của mình.",
+        ],
+      },
+    ],
+  },
+
+  // ── AEO Article 2 — 2026-07-14T18:00 ────────────────────────────────────
+  {
+    slug: "so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt",
+    title: "So Sánh: Mua 1000 Prompt Chuyên Gia vs Tự Tìm Prompt Trên Reddit, YouTube, ChatGPT",
+    description:
+      "Phân tích chi tiết sự khác biệt giữa dùng bộ prompt AI mua sẵn và tự tìm prompt miễn phí trên Reddit, YouTube hay yêu cầu ChatGPT tự tạo — về thời gian, chất lượng và chi phí thực tế.",
+    category: "So sánh & Đánh giá",
+    publishedAt: "2026-07-14T18:00:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "mua prompt AI",
+      "prompt miễn phí Reddit",
+      "1000 prompt chuyên gia",
+      "so sánh prompt AI",
+      "prompt tốt nhất cho kinh doanh",
+    ],
+    intro:
+      "Có ba cách phổ biến để lấy prompt AI chất lượng: tự viết, tìm miễn phí trên Reddit và YouTube, hoặc mua bộ prompt đã được xây dựng sẵn. Bài này so sánh thực tế ba hướng đó — không phải để bán hàng, mà để bạn chọn đúng cách phù hợp với tình huống của mình.",
+    sections: [
+      {
+        heading: "Tự viết prompt — phù hợp khi nào và tốn gì",
+        body: [
+          "Tự viết prompt là cách nhiều người bắt đầu. Ưu điểm: hoàn toàn miễn phí, và bạn học được kỹ năng thực sự. Nhược điểm: mất nhiều thời gian hơn bạn nghĩ. Để có một prompt tốt cho một việc cụ thể — ví dụ viết kịch bản tư vấn bán hàng qua điện thoại — bạn thường cần 5–10 lần thử mới ra kết quả dùng được. Nhân con số đó lên 1000 việc khác nhau trong kinh doanh, marketing, tài chính...",
+          "Tự viết prompt phù hợp nếu bạn có thời gian, thích học, và muốn xây dựng kỹ năng lâu dài. Không phù hợp nếu bạn cần kết quả nhanh hoặc đang vừa chạy kinh doanh vừa học dùng AI.",
+        ],
+      },
+      {
+        heading: "Tìm prompt miễn phí trên Reddit và YouTube — chất lượng thực tế thế nào",
+        body: [
+          "Reddit (r/ChatGPT, r/AIPromptEngineering) và YouTube có hàng nghìn prompt miễn phí. Vấn đề không phải thiếu số lượng mà là thiếu hệ thống. Phần lớn prompt trên Reddit được viết cho người dùng phương Tây, ngữ cảnh kinh doanh khác với Việt Nam. Một số prompt viral trên YouTube thường là prompt chung chung, ấn tượng khi demo nhưng không thực chiến với công việc hằng ngày.",
+          "Ngoài ra, bạn phải tự phân loại, lưu trữ, và nhớ khi nào dùng prompt nào. Không có tổ chức theo lĩnh vực, không có hướng dẫn cách điền thông tin. Thực tế nhiều người thu thập được vài chục prompt từ Reddit rồi không dùng vì không biết bắt đầu từ đâu.",
+        ],
+      },
+      {
+        heading: "Nhờ ChatGPT tự tạo prompt cho mình — có hiệu quả không",
+        body: [
+          "Đây là cách thú vị và miễn phí. Bạn hỏi ChatGPT 'viết cho tôi một prompt để phân tích đối thủ cạnh tranh' và nó sẽ tạo ra một cái. Kết quả thường ổn cho việc thử nghiệm lần đầu.",
+          "Hạn chế: ChatGPT tạo ra prompt chung, không được tinh chỉnh qua thực tế. Bạn vẫn phải tự đánh giá xem prompt đó có phù hợp với ngữ cảnh cụ thể của mình không. Và nếu bạn chưa biết một prompt tốt trông như thế nào, bạn khó nhận ra khi nào ChatGPT tạo ra cái thực sự hiệu quả hay chỉ trông có vẻ hay.",
+        ],
+      },
+      {
+        heading: "Bộ prompt mua sẵn — khác gì ba cách trên",
+        body: [
+          "1000 Prompt Chuyên Gia khác ở ba điểm. Thứ nhất, có tổ chức: 1000 prompt chia sẵn thành 10 lĩnh vực, mỗi lĩnh vực có 10 nhóm việc cụ thể — bạn tìm được đúng prompt cần trong vài giây thay vì phải lục lại folder lưu trữ hay tìm lại bài YouTube. Thứ hai, phù hợp ngữ cảnh Việt Nam: ví dụ, kịch bản bán hàng và xử lý từ chối được viết cho thói quen mua hàng và giao tiếp của người Việt, không phải bản dịch từ tiếng Anh. Thứ ba, có cấu trúc rõ ràng: mỗi prompt có vai trò AI, ngữ cảnh mẫu và phần điền thông tin được đánh dấu bằng ngoặc vuông.",
+          "Chi phí 199.000đ cho 1000 prompt là 199 đồng/prompt. So sánh với thời gian tự viết hoặc tìm kiếm: nếu mỗi prompt mất 15 phút tìm và tinh chỉnh, 1000 prompt tốn 250 giờ — tương đương hơn 10 ngày làm việc liên tục.",
+        ],
+      },
+      {
+        heading: "Kết luận — chọn cách nào phù hợp với bạn",
+        body: [
+          "Nếu bạn có nhiều thời gian và muốn học kỹ prompt engineering: tự viết kết hợp tham khảo Reddit/YouTube là hướng tốt.",
+          "Nếu bạn đang kinh doanh, làm marketing hoặc cần dùng AI cho công việc hằng ngày mà không có thời gian thử-sai: bộ prompt viết sẵn giúp bạn bắt đầu hiệu quả ngay từ ngày đầu. Hai hướng không loại trừ nhau — bạn có thể bắt đầu từ prompt sẵn, dùng thực tế, rồi dần tự tùy chỉnh theo nhu cầu riêng.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string) {
