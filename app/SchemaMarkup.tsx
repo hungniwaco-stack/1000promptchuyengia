@@ -142,6 +142,38 @@ const faqSchema = {
         text: "Hiện website ưu tiên bán lẻ và giao file tự động. Nếu bạn cần chứng từ riêng, vui lòng liên hệ trước khi thanh toán.",
       },
     },
+    {
+      "@type": "Question",
+      name: "1000 Prompt Chuyên Gia là gì?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "1000 Prompt Chuyên Gia là bộ 10 file Word gồm 1000 prompt AI được viết sẵn, chia theo 10 lĩnh vực thực chiến: kinh doanh, tài chính, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực. Dùng ngay với ChatGPT, Gemini, Claude. Combo 199.000đ, nhận file tự động qua email.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Bộ 1000 Prompt Chuyên Gia phù hợp với ai?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Phù hợp với người mới bắt đầu dùng AI chưa biết cách hỏi hiệu quả, chủ shop và người kinh doanh nhỏ cần tiết kiệm thời gian, freelancer viết nội dung và làm marketing, nhân sự văn phòng muốn tăng năng suất, và người đang học cách dùng AI cho công việc thực tế.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Mua combo 1000 prompt hay mua lẻ từng pack?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nếu bạn dùng AI cho nhiều mục đích khác nhau, combo trọn bộ 199.000đ tiết kiệm hơn nhiều so với mua lẻ 10 pack riêng (490.000đ). Nếu chỉ cần đúng một lĩnh vực cụ thể, bạn có thể mua lẻ từng pack với giá 49.000đ/pack.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Prompt AI mua sẵn có tốt hơn tự viết prompt không?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Prompt viết sẵn giúp bạn bỏ qua giai đoạn thử-sai tốn thời gian. Mỗi prompt trong bộ đã được cấu trúc đúng vai trò, ngữ cảnh và yêu cầu đầu ra — thứ mà người mới dùng AI thường mất nhiều tuần mới tự tối ưu được. Bạn vẫn cần điền thông tin thực tế của mình vào, AI không làm thay hoàn toàn.",
+      },
+    },
   ],
 };
 
@@ -247,6 +279,34 @@ const itemListSchema = {
   ],
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${BASE_URL}/#founder`,
+  name: "Hữu Hùng",
+  alternateName: "Nguyen Huu Hung",
+  url: BASE_URL,
+  email: "hungniwaco@gmail.com",
+  knowsAbout: [
+    "AI Prompting",
+    "ChatGPT",
+    "Gemini",
+    "Kinh doanh online",
+    "Marketing",
+    "Năng suất cá nhân",
+  ],
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "AI Prompt Specialist",
+    description: "Chuyên xây dựng và phân phối bộ prompt AI thực chiến cho doanh nghiệp và cá nhân Việt Nam.",
+  },
+  worksFor: {
+    "@type": "Organization",
+    name: "Hữu Hùng AI",
+    url: BASE_URL,
+  },
+};
+
 export default function SchemaMarkup() {
   return (
     <>
@@ -265,6 +325,10 @@ export default function SchemaMarkup() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </>
   );

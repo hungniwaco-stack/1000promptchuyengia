@@ -61,15 +61,32 @@ Thư mục thứ hai được mount:
 
 Các file: `Bai 1 - Pack 1.docx` → `Bai 10 - Pack 10.docx`
 
-## Git workflow
-**Vấn đề thường gặp:** `.git/index.lock` và `.git/HEAD.lock` — sandbox không xóa được, phải chạy từ PowerShell của user:
+## Git workflow — CONFIRMED WORKING
+
+**Sandbox KHÔNG thể tự push** — không có TTY để nhập credentials. Mọi push phải chạy từ PowerShell của user.
+
+**Workflow chuẩn sau mỗi lần tôi sửa xong:**
 ```powershell
-del .git\index.lock
-del .git\HEAD.lock
+cd D:\Hungniwaco\CODEX\1000-Prompt-Website
 git add .
-git commit -m "..."
+git commit -m "mô tả thay đổi"
 git push
 ```
+Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → những lần sau không cần nhập lại.
+
+**Vấn đề thường gặp:**
+- `.git/index.lock` hoặc `.git/HEAD.lock` → chạy `del .git\index.lock` từ PowerShell
+- `git add` không có dấu chấm → phải là `git add .` (có dấu chấm)
+- `.git` là thư mục ẩn trên Windows → mở bằng `notepad .git\config` trong PowerShell
+
+**KHÔNG làm:**
+- Đừng nhúng GitHub token vào URL git config — sandbox không push được dù có token trong URL
+- Đừng chụp màn hình terminal khi token đang hiển thị — token bị lộ phải revoke ngay
+- Đừng dùng `Read-Host "TOKEN"` — đặt token làm prompt text thay vì input
+- Sandbox không thể edit `.git/config` qua Edit tool (protected location) — dùng bash hoặc notepad
+
+**Remote URL sạch (không nhúng token):**
+`https://github.com/hungniwaco-stack/1000promptchuyengia.git`
 
 ## Bài học kỹ thuật quan trọng
 1. **Không dùng Python script để replace nội dung lớn trong file TypeScript** — dễ bị truncate. Dùng Write tool (ghi toàn bộ file) hoặc Edit tool (thay đoạn nhỏ).
@@ -77,6 +94,9 @@ git push
 3. **So sánh datetime:** dùng `new Date(p.publishedAt) <= new Date()`, không dùng string comparison `p.publishedAt <= today`.
 4. **Hiển thị ngày:** dùng `.slice(0, 10)` để cắt bỏ phần giờ trong ISO string khi render.
 5. **Gift link block** nằm trong `app/bai-viet/[slug]/page.tsx`, hiển thị có điều kiện `{post.giftLink && ...}`.
+6. **PowerShell `@` splatting:** URL chứa `@github.com` bị PowerShell hiểu là splat operator → bọc toàn bộ URL trong dấu ngoặc kép `"..."`.
+7. **`git remote set-url` với token trong URL vẫn fail từ sandbox** — git tách username/token và hỏi password riêng qua TTY → không dùng cách này.
+8. **Vercel MCP** trả về 403 cho project này — không dùng được `deploy_to_vercel`. Deploy tự động qua GitHub khi push.
 
 ## Cấu trúc thư mục chính
 ```

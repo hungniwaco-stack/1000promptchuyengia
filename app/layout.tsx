@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: "Hữu Hùng AI - 1000 Prompt Chuyên Gia",
     template: "%s",
   },
-  description: "Bộ 1000 Prompt AI chuyên gia cho kinh doanh, marketing, bán hàng, tài chính, năng suất và ứng dụng AI thực chiến.",
+  description: "1000 Prompt Chuyên Gia là bộ 10 file Word gồm 1000 prompt AI sẵn dùng, chia theo 10 lĩnh vực: kinh doanh, marketing, bán hàng, tài chính, năng suất và ứng dụng AI thực chiến. Dùng ngay với ChatGPT, Gemini, Claude. Combo 199.000đ, nhận file tự động qua email.",
   alternates: {
     canonical: "/",
   },

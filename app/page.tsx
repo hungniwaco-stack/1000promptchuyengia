@@ -171,6 +171,26 @@ const faqs = [
     question: "Có xuất hóa đơn không?",
     answer: "Hiện website ưu tiên bán lẻ và giao file tự động. Nếu bạn cần chứng từ riêng, vui lòng liên hệ trước khi thanh toán.",
   },
+  {
+    question: "1000 Prompt Chuyên Gia là gì?",
+    answer: "1000 Prompt Chuyên Gia là bộ 10 file Word gồm 1000 prompt AI được viết sẵn, chia theo 10 lĩnh vực thực chiến: kinh doanh, tài chính, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực. Bạn chỉ cần chọn prompt phù hợp, điền thông tin vào phần trong ngoặc và dán vào ChatGPT, Gemini hoặc Claude.",
+  },
+  {
+    question: "Bộ prompt này phù hợp với ai?",
+    answer: "Phù hợp với người mới bắt đầu dùng AI chưa biết cách hỏi hiệu quả, chủ shop và người kinh doanh nhỏ cần tiết kiệm thời gian, freelancer viết nội dung và làm marketing, nhân sự văn phòng muốn tăng năng suất, và người đang học cách dùng AI cho công việc thực tế.",
+  },
+  {
+    question: "Mua combo trọn bộ hay mua lẻ từng pack?",
+    answer: "Nếu bạn dùng AI cho nhiều mục đích khác nhau, combo trọn bộ 199.000đ tiết kiệm hơn nhiều so với mua lẻ 10 pack riêng (490.000đ). Nếu chỉ cần đúng một lĩnh vực cụ thể, bạn có thể mua lẻ từng pack với giá 49.000đ/pack.",
+  },
+  {
+    question: "Prompt AI mua sẵn có hơn tự viết không?",
+    answer: "Prompt viết sẵn giúp bạn bỏ qua giai đoạn thử-sai tốn thời gian. Mỗi prompt trong bộ đã được cấu trúc đúng vai trò, ngữ cảnh và yêu cầu đầu ra — thứ mà người mới dùng AI thường mất nhiều tuần mới tự tối ưu được. Bạn vẫn cần điền thông tin thực tế của mình vào, AI không làm thay hoàn toàn.",
+  },
+  {
+    question: "Sau khi mua có được cập nhật thêm prompt không?",
+    answer: "File bạn nhận là phiên bản hiện tại tại thời điểm mua. Nếu có phiên bản cập nhật lớn, Hữu Hùng AI sẽ thông báo qua email đã đăng ký. Bạn có thể liên hệ để hỏi về tình trạng cập nhật trước khi mua.",
+  },
 ];
 
 export default function Page() {
