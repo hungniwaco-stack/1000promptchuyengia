@@ -97,6 +97,11 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 6. **PowerShell `@` splatting:** URL chứa `@github.com` bị PowerShell hiểu là splat operator → bọc toàn bộ URL trong dấu ngoặc kép `"..."`.
 7. **`git remote set-url` với token trong URL vẫn fail từ sandbox** — git tách username/token và hỏi password riêng qua TTY → không dùng cách này.
 8. **Vercel MCP** trả về 403 cho project này — không dùng được `deploy_to_vercel`. Deploy tự động qua GitHub khi push.
+9. **File blogPosts.ts bị duplicate content sau nhiều lần append:** Luôn kiểm tra `grep -n '^\];' app/blogPosts.ts` sau khi append. Nếu có 2 dòng `];` → dùng Python đọc file với `errors='replace'`, giữ lines đến trước `];` đầu tiên, ghi lại sạch.
+10. **Lịch đăng bài:** Sáng **6h45** và tối **19h15** giờ Việt Nam (UTC+7). Format: `T06:45:00+07:00` và `T19:15:00+07:00`. Đổi hàng loạt bằng `sed -i 's/T07:00:00/T06:45:00/g; s/T18:00:00/T19:15:00/g'`.
+11. **Schema `offers` cần 3 trường bổ sung** để tránh cảnh báo vàng trong Search Console: `validFrom`, `shippingDetails` (OfferShippingDetails với deliveryTime), `hasMerchantReturnPolicy` (MerchantReturnNotPermitted cho sản phẩm số).
+12. **Google Search Console — đã setup:** Sitemap `/sitemap.xml` đã submit thành công ngày 15/7/2026, phát hiện 30 trang. Sau mỗi lần push bài mới, vào Search Console → Kiểm tra URL → Yêu cầu lập chỉ mục cho từng bài quan trọng.
+13. **Khi append bằng heredoc (`cat >>`)** — luôn kiểm tra tail -10 sau đó. Heredoc đôi khi bị encoding issue với ký tự tiếng Việt trên một số môi trường → dùng Python script thay thế nếu file bị corrupt.
 
 ## AEO — Trạng thái đã làm (cập nhật 2026-07-15)
 
@@ -142,12 +147,12 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 | AEO 3 | chatgpt-danh-cho-nguoi-moi-bat-dau | 2026-07-15T07:00:00+07:00 |
 | AEO 4 | 10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho | 2026-07-15T18:00:00+07:00 |
 | AEO 5 | ai-co-the-lam-gi-cho-nhan-vien-van-phong | 2026-07-16T07:00:00+07:00 |
-| AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-16T18:00:00+07:00 |
-| AEO 7 | prompt-engineering-la-gi-huong-dan-tu-a-den-z | 2026-07-17T07:00:00+07:00 |
-| AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-17T18:00:00+07:00 |
-| AEO 9 | ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap | 2026-07-18T07:00:00+07:00 |
-| AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-18T18:00:00+07:00 |
-| AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T07:00:00+07:00 |
+| AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-20T06:45:00+07:00 |
+| AEO 7 | prompt-engineering-la-gi-huong-dan-tu-a-den-z | 2026-07-17T06:45:00+07:00 |
+| AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-21T06:45:00+07:00 |
+| AEO 9 | ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap | 2026-07-18T06:45:00+07:00 |
+| AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
+| AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T06:45:00+07:00 |
 
 ## Cấu trúc thư mục chính
 ```
