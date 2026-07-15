@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { blogPosts } from "./blogPosts";
 
-const baseUrl = "https://1000promptchuyengia.shop";
+const baseUrl = "https://www.1000promptchuyengia.shop";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [

@@ -34,7 +34,7 @@ const publishedPosts = blogPosts.filter((p) => new Date(p.publishedAt) <= now);
 ```
 > Dùng `force-dynamic` để lọc theo giờ thực, không dùng string comparison.
 
-## Lịch đăng bài (2 bài/ngày, 7h và 18h giờ VN)
+## Lịch đăng bài (2 bài/ngày, 6h45 và 19h15 giờ VN)
 | Pack | Slug | publishedAt | giftLink (doc ID) |
 |------|------|------------|-------------------|
 | 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T07:00:00+07:00 | 1ScW0ar_Gb-2qTd1KhLh6w6zjxzzHSjzY |
@@ -98,18 +98,21 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 7. **`git remote set-url` với token trong URL vẫn fail từ sandbox** — git tách username/token và hỏi password riêng qua TTY → không dùng cách này.
 8. **Vercel MCP** trả về 403 cho project này — không dùng được `deploy_to_vercel`. Deploy tự động qua GitHub khi push.
 
-## AEO — Trạng thái đã làm (2026-07-14)
+## AEO — Trạng thái đã làm (cập nhật 2026-07-15)
 
 **Đã hoàn thành:**
 - `app/SchemaMarkup.tsx` — có đủ 5 schema: WebSite, Product + AggregateRating, FAQPage, ItemList (10 packs), Person (Hữu Hùng). **Không cần làm lại.**
-- `app/[slug]/page.tsx` — có JSON-LD Article schema cho từng bài viết.
+- `app/bai-viet/[slug]/page.tsx` — có JSON-LD Article schema + canonical URL cho từng bài.
+- `app/robots.ts` — tạo mới, trỏ đến sitemap.
+- `app/sitemap.ts` — sửa baseUrl thành `https://www.1000promptchuyengia.shop` (nhất quán với layout).
 - Meta description trong `layout.tsx` — đã viết lại dạng câu trả lời trực tiếp AI có thể trích.
-- FAQ: 10 câu (5 vận hành + 5 AEO: định nghĩa, so sánh, dành cho ai, combo vs lẻ, cập nhật).
-- 2 bài blog AEO: `prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san` (7h 14/7) và `so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt` (18h 14/7).
+- FAQ: 9 câu (5 vận hành + 4 AEO: định nghĩa, dành cho ai, combo vs lẻ, prompt mua sẵn vs tự viết).
+- 24 bài blog tổng cộng (xem lịch bên dưới).
 
 **Còn thiếu (cần user cung cấp thông tin):**
 - Trang "Về Hữu Hùng" chi tiết: số đơn đã bán, background, ảnh/video thật → E-E-A-T
 - Review có nguồn xác minh: ảnh chụp màn hình, link Facebook thật
+- SchemaMarkup: reviewCount hiện là 3, cần cập nhật khi có review thật
 
 **Nguyên tắc viết bài AEO:**
 - Đoạn `intro` phải tự chứa đủ nghĩa, AI có thể trích nguyên văn (định nghĩa hoặc tóm tắt trong 2-3 câu)
@@ -118,11 +121,14 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 - Cuối bài có internal link về trang chủ hoặc bài liên quan
 - Category "So sánh & Đánh giá" và "Kiến thức AI" là 2 category AEO cao nhất
 
-## Lịch đăng bài — đầy đủ (15 bài)
+## Lịch đăng bài — đầy đủ (24 bài)
 | # | Slug | publishedAt |
 |---|------|-------------|
 | Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T07:00:00+07:00 |
 | Pack 2 | 100-prompt-tai-chinh-dau-tu | 2026-06-30T18:00:00+07:00 |
+| KB 1 | cach-viet-prompt-ai-hieu-qua | 2026-06-04 |
+| KB 2 | ung-dung-ai-trong-kinh-doanh-nho | 2026-06-04 |
+| KB 3 | checklist-chon-cong-cu-ai-phu-hop | 2026-06-04 |
 | Pack 3 | 100-prompt-marketing-thuong-hieu | 2026-07-01T07:00:00+07:00 |
 | Pack 4 | 100-prompt-ban-hang-dam-phan | 2026-07-01T18:00:00+07:00 |
 | Pack 5 | 100-prompt-phat-trien-ban-than-nang-suat | 2026-07-02T07:00:00+07:00 |
@@ -131,11 +137,17 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 | Pack 8 | 100-prompt-ai-cong-nghe-kinh-doanh | 2026-07-03T18:00:00+07:00 |
 | Pack 9 | 100-prompt-cuoc-song-hanh-phuc | 2026-07-04T07:00:00+07:00 |
 | Pack 10 | 100-prompt-fusion-da-linh-vuc | 2026-07-04T18:00:00+07:00 |
-| KB 1 | cach-viet-prompt-ai-hieu-qua | 2026-06-04 |
-| KB 2 | ung-dung-ai-trong-kinh-doanh-nho | 2026-06-04 |
-| KB 3 | checklist-chon-cong-cu-ai-phu-hop | 2026-06-04 |
 | AEO 1 | prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san | 2026-07-14T07:00:00+07:00 |
-| AEO 2 | so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt | 2026-07-14T18:00:00+07:00 |
+| AEO 2 | so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt | 2026-07-14T13:00:00+07:00 |
+| AEO 3 | chatgpt-danh-cho-nguoi-moi-bat-dau | 2026-07-15T07:00:00+07:00 |
+| AEO 4 | 10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho | 2026-07-15T18:00:00+07:00 |
+| AEO 5 | ai-co-the-lam-gi-cho-nhan-vien-van-phong | 2026-07-16T07:00:00+07:00 |
+| AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-16T18:00:00+07:00 |
+| AEO 7 | prompt-engineering-la-gi-huong-dan-tu-a-den-z | 2026-07-17T07:00:00+07:00 |
+| AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-17T18:00:00+07:00 |
+| AEO 9 | ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap | 2026-07-18T07:00:00+07:00 |
+| AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-18T18:00:00+07:00 |
+| AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T07:00:00+07:00 |
 
 ## Cấu trúc thư mục chính
 ```

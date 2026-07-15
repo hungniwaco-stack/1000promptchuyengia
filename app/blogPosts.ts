@@ -3,7 +3,7 @@ export type BlogPost = {
   title: string;
   description: string;
   category: string;
-  publishedAt: string; // ISO datetime: "2026-07-01T07:00:00+07:00" hoặc "YYYY-MM-DD"
+  publishedAt: string; // ISO datetime: "2026-07-01T06:45:00+07:00" hoặc "YYYY-MM-DD"
   readingTime: string;
   keywords: string[];
   intro: string;
@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Kinh Doanh & Startup giúp người mới khởi nghiệp và chủ shop nhỏ dùng ChatGPT, Gemini hiệu quả ngay từ lần đầu — không cần kiến thức kỹ thuật.",
     category: "Kinh doanh & Startup",
-    publishedAt: "2026-06-26T07:00:00+07:00",
+    publishedAt: "2026-06-26T06:45:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt kinh doanh", "AI cho startup", "ChatGPT kinh doanh", "prompt startup", "100 prompt AI"],
     intro:
@@ -82,7 +82,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Tài Chính và Đầu Tư giúp nhà đầu tư cá nhân và người tự quản lý tài chính dùng ChatGPT, Gemini để có thêm góc nhìn rõ ràng trước mỗi quyết định quan trọng.",
     category: "Tài chính & Đầu tư",
-    publishedAt: "2026-06-30T18:00:00+07:00",
+    publishedAt: "2026-06-30T19:15:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt tài chính", "AI đầu tư", "quản lý tài chính", "prompt đầu tư", "ChatGPT tài chính"],
     intro:
@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Marketing và Xây Dựng Thương Hiệu giúp người làm marketing và chủ thương hiệu dùng ChatGPT, Gemini ra ý tưởng chiến dịch, viết content và định vị thương hiệu nhanh hơn.",
     category: "Marketing & Thương hiệu",
-    publishedAt: "2026-07-01T07:00:00+07:00",
+    publishedAt: "2026-07-01T06:45:00+07:00",
     readingTime: "6 phút đọc",
     keywords: ["prompt marketing", "AI marketing", "xây dựng thương hiệu", "content marketing", "prompt thương hiệu"],
     intro:
@@ -184,7 +184,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Bán Hàng và Đàm Phán giúp người bán hàng và nhân viên kinh doanh dùng ChatGPT, Gemini để có sẵn câu trả lời xử lý phản đối, chốt hợp đồng và đàm phán giá tự tin hơn.",
     category: "Bán hàng & Đàm phán",
-    publishedAt: "2026-07-01T18:00:00+07:00",
+    publishedAt: "2026-07-01T19:15:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt bán hàng", "AI bán hàng", "chốt sale", "xử lý phản đối", "đàm phán giá"],
     intro:
@@ -235,7 +235,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Phát Triển Bản Thân và Năng Suất giúp bạn có thêm góc nhìn cụ thể mỗi ngày khi dùng ChatGPT, Gemini để quản lý thời gian, xây dựng thói quen và cân bằng cảm xúc.",
     category: "Phát triển bản thân",
-    publishedAt: "2026-07-02T07:00:00+07:00",
+    publishedAt: "2026-07-02T06:45:00+07:00",
     readingTime: "6 phút đọc",
     keywords: ["prompt phát triển bản thân", "AI năng suất", "quản lý thời gian", "xây dựng thói quen", "ChatGPT năng suất"],
     intro:
@@ -285,7 +285,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Lãnh Đạo và Quản Lý Đội Nhóm giúp quản lý, trưởng nhóm dùng ChatGPT, Gemini để chuẩn bị trước mỗi tình huống khó với nhân viên, từ xung đột đến động viên và huấn luyện.",
     category: "Lãnh đạo & Quản lý",
-    publishedAt: "2026-07-02T18:00:00+07:00",
+    publishedAt: "2026-07-02T19:15:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt lãnh đạo", "AI quản lý", "quản lý đội nhóm", "xử lý xung đột nhân viên", "ChatGPT quản lý"],
     intro:
@@ -336,7 +336,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Kiếm Tiền Online giúp bạn có ngay hướng đi cụ thể để bắt đầu kiếm thêm thu nhập từ affiliate, freelance, nội dung số, YouTube, TikTok và thu nhập thụ động.",
     category: "Kiếm tiền online",
-    publishedAt: "2026-07-03T07:00:00+07:00",
+    publishedAt: "2026-07-03T06:45:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt kiếm tiền online", "AI affiliate", "thu nhập thụ động", "freelance AI", "kinh doanh online"],
     intro:
@@ -387,7 +387,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt AI và Công Nghệ Trong Kinh Doanh giúp chủ doanh nghiệp tìm ra điểm bắt đầu ứng dụng AI cụ thể cho từng bộ phận: marketing, bán hàng, chăm sóc khách hàng, nhân sự và vận hành.",
     category: "AI & Công nghệ",
-    publishedAt: "2026-07-03T18:00:00+07:00",
+    publishedAt: "2026-07-03T19:15:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["ứng dụng AI kinh doanh", "tự động hóa doanh nghiệp", "AI cho doanh nghiệp nhỏ", "prompt công nghệ", "AI vận hành"],
     intro:
@@ -438,7 +438,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Cuộc Sống và Hạnh Phúc giúp bạn có thêm góc nhìn cho những việc quan trọng trong đời sống cá nhân: gia đình, nuôi con, sức khỏe tinh thần, quan hệ và hạnh phúc mỗi ngày.",
     category: "Cuộc sống & Hạnh phúc",
-    publishedAt: "2026-07-04T07:00:00+07:00",
+    publishedAt: "2026-07-04T06:45:00+07:00",
     readingTime: "6 phút đọc",
     keywords: ["prompt cuộc sống", "AI hạnh phúc", "nuôi dạy con AI", "sức khỏe tinh thần", "cân bằng cuộc sống"],
     intro:
@@ -489,7 +489,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Bộ 100 Prompt Fusion kết hợp hai lĩnh vực trong cùng một prompt, dành cho người đã quen dùng AI và muốn câu trả lời sát với thực tế nhiều chiều hơn — kinh doanh, tâm lý, tài chính, lãnh đạo và cuộc sống.",
     category: "Fusion & Đa lĩnh vực",
-    publishedAt: "2026-07-04T18:00:00+07:00",
+    publishedAt: "2026-07-04T19:15:00+07:00",
     readingTime: "7 phút đọc",
     keywords: ["prompt fusion", "AI đa lĩnh vực", "prompt kết hợp", "ChatGPT nâng cao", "prompt chuyên sâu"],
     intro:
@@ -647,7 +647,7 @@ export const blogPosts: BlogPost[] = [
     description:
       "Prompt AI là câu lệnh bạn nhập vào ChatGPT, Gemini hay Claude để yêu cầu AI làm việc cụ thể. Bài viết giải thích prompt là gì, tại sao cách hỏi AI quyết định chất lượng kết quả, và khi nào nên dùng prompt viết sẵn thay vì tự hỏi.",
     category: "Kiến thức AI",
-    publishedAt: "2026-07-14T07:00:00+07:00",
+    publishedAt: "2026-07-14T06:45:00+07:00",
     readingTime: "6 phút đọc",
     keywords: [
       "prompt AI là gì",
@@ -754,29 +754,21 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 
-  // ── AEO Article 3 — 2026-07-15T07:00 ────────────────────────────────────
+  // ── AEO Article 3 — 2026-07-15T07:00 ─────────────────────
   {
     slug: "chatgpt-danh-cho-nguoi-moi-bat-dau",
     title: "ChatGPT Dành Cho Người Mới: Hướng Dẫn Từng Bước Để Dùng AI Hiệu Quả Ngay Hôm Nay",
-    description:
-      "Hướng dẫn chi tiết cách bắt đầu dùng ChatGPT cho người mới — từ tạo tài khoản, viết câu hỏi đúng cách, đến ứng dụng ngay vào công việc và học tập mà không cần nền tảng kỹ thuật.",
+    description: "Hướng dẫn chi tiết cách bắt đầu dùng ChatGPT cho người mới — từ tạo tài khoản, viết câu hỏi đúng cách, đến ứng dụng ngay vào công việc và học tập mà không cần nền tảng kỹ thuật.",
     category: "Kiến thức AI",
-    publishedAt: "2026-07-15T07:00:00+07:00",
+    publishedAt: "2026-07-15T06:45:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: [
-      "ChatGPT cho người mới",
-      "cách dùng ChatGPT",
-      "hướng dẫn ChatGPT tiếng Việt",
-      "AI cho người mới bắt đầu",
-      "ChatGPT miễn phí",
-    ],
-    intro:
-      "ChatGPT là công cụ AI của OpenAI cho phép bạn nhập câu hỏi hoặc yêu cầu bằng ngôn ngữ tự nhiên và nhận câu trả lời ngay lập tức. Người mới không cần biết lập trình hay kỹ thuật — chỉ cần biết cách đặt câu hỏi đúng là có thể dùng ChatGPT hiệu quả từ ngày đầu.",
+    keywords: ["ChatGPT cho người mới", "cách dùng ChatGPT", "hướng dẫn ChatGPT tiếng Việt", "AI cho người mới bắt đầu", "ChatGPT miễn phí"],
+    intro: "ChatGPT là công cụ AI của OpenAI cho phép bạn nhập câu hỏi hoặc yêu cầu bằng ngôn ngữ tự nhiên và nhận câu trả lời ngay lập tức. Người mới không cần biết lập trình hay kỹ thuật — chỉ cần biết cách đặt câu hỏi đúng là có thể dùng ChatGPT hiệu quả từ ngày đầu.",
     sections: [
       {
-        heading: "ChatGPT là gì và miễn phí không",
+        heading: "ChatGPT là gì và có miễn phí không",
         body: [
-          "ChatGPT là chatbot AI do OpenAI phát triển, ra mắt tháng 11/2022 và trở thành ứng dụng tăng trưởng nhanh nhất lịch sử với 100 triệu người dùng chỉ sau 2 tháng. Bản miễn phí (ChatGPT 4o mini) đủ dùng cho hầu hết công việc hằng ngày — viết lách, tóm tắt, phân tích, lên ý tưởng. Bản trả phí ChatGPT Plus (20 USD/tháng) mạnh hơn với GPT-4o và các tính năng nâng cao như tạo ảnh và xử lý file.",
+          "ChatGPT là chatbot AI do OpenAI phát triển, ra mắt tháng 11/2022 và trở thành ứng dụng tăng trưởng nhanh nhất lịch sử với 100 triệu người dùng chỉ sau 2 tháng. Bản miễn phí (ChatGPT 4o mini) đủ dùng cho hầu hết công việc hằng ngày — viết lách, tóm tắt, phân tích, lên ý tưởng. Bản trả phí ChatGPT Plus (20 USD/tháng) mạnh hơn với GPT-4o và các tính năng nâng cao.",
           "Bạn truy cập tại chat.openai.com, đăng ký bằng email hoặc tài khoản Google/Microsoft, hoàn toàn miễn phí. Giao diện hỗ trợ tiếng Việt — bạn có thể hỏi và nhận câu trả lời bằng tiếng Việt bình thường.",
         ],
       },
@@ -788,10 +780,9 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "Cách viết câu hỏi ChatGPT cho ra kết quả dùng được ngay",
+        heading: "Công thức viết câu hỏi ChatGPT cho kết quả dùng được ngay",
         body: [
-          "Công thức đơn giản: [Vai trò] + [Ngữ cảnh] + [Yêu cầu cụ thể] + [Định dạng đầu ra]. Ví dụ: 'Đóng vai chuyên gia marketing (vai trò). Tôi đang bán khóa học tiếng Anh online cho người đi làm 25–35 tuổi (ngữ cảnh). Viết 5 ý tưởng content Facebook nhấn mạnh vào tiết kiệm thời gian học (yêu cầu). Mỗi ý gồm tiêu đề và 2 câu mô tả (định dạng).'",
-          "Câu hỏi theo công thức này cho kết quả cụ thể, phù hợp ngữ cảnh, và thường dùng được ngay mà không cần sửa nhiều.",
+          "Công thức đơn giản: [Vai trò] + [Ngữ cảnh] + [Yêu cầu cụ thể] + [Định dạng đầu ra]. Ví dụ thay vì hỏi 'viết caption Instagram', hãy hỏi: 'Đóng vai chuyên gia social media. Viết 3 caption Instagram cho ảnh sản phẩm kem dưỡng da, nhắm đến phụ nữ 25–35 tuổi. Tone ấm, gần gũi. Mỗi caption dưới 150 ký tự, có emoji và hashtag.' Kết quả dùng được ngay, không cần sửa nhiều.",
         ],
       },
       {
@@ -809,76 +800,58 @@ export const blogPosts: BlogPost[] = [
     ],
   },
 
-  // ── AEO Article 4 — 2026-07-15T18:00 ────────────────────────────────────
   {
     slug: "10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho",
     title: "10 Prompt AI Hay Nhất Cho Người Kinh Doanh Nhỏ Tại Việt Nam (Dùng Ngay Với ChatGPT)",
-    description:
-      "Danh sách 10 prompt AI thực chiến tốt nhất cho chủ shop, người kinh doanh nhỏ và startup Việt Nam — từ viết bài bán hàng, phân tích đối thủ đến chăm sóc khách hàng, tất cả dùng được ngay với ChatGPT miễn phí.",
+    description: "Danh sách 10 prompt AI thực chiến tốt nhất cho chủ shop, người kinh doanh nhỏ và startup Việt Nam — từ viết bài bán hàng, phân tích đối thủ đến chăm sóc khách hàng, tất cả dùng được ngay với ChatGPT miễn phí.",
     category: "Kiến thức AI",
-    publishedAt: "2026-07-15T18:00:00+07:00",
+    publishedAt: "2026-07-15T19:15:00+07:00",
     readingTime: "8 phút đọc",
-    keywords: [
-      "prompt AI cho kinh doanh",
-      "ChatGPT cho chủ shop",
-      "prompt bán hàng",
-      "AI cho doanh nghiệp nhỏ Việt Nam",
-      "prompt marketing tiếng Việt",
-    ],
-    intro:
-      "10 prompt AI dưới đây được chọn lọc từ bộ 1000 Prompt Chuyên Gia dựa trên mức độ ứng dụng thực tế — phù hợp với chủ shop nhỏ, người bán hàng online và startup Việt Nam muốn tiết kiệm thời gian bằng AI mà không cần kiến thức kỹ thuật.",
+    keywords: ["prompt AI cho kinh doanh", "ChatGPT cho chủ shop", "prompt bán hàng", "AI cho doanh nghiệp nhỏ Việt Nam", "prompt marketing tiếng Việt"],
+    intro: "10 prompt AI dưới đây được chọn lọc từ bộ 1000 Prompt Chuyên Gia dựa trên mức độ ứng dụng thực tế — phù hợp với chủ shop nhỏ, người bán hàng online và startup Việt Nam muốn tiết kiệm thời gian bằng AI mà không cần kiến thức kỹ thuật.",
     sections: [
       {
         heading: "Prompt 1–3: Viết nội dung bán hàng nhanh hơn",
         body: [
           "Prompt 1 — Mô tả sản phẩm hấp dẫn: 'Đóng vai chuyên gia copywriting. Viết mô tả sản phẩm cho [tên sản phẩm] nhắm đến [đối tượng khách hàng]. Nhấn mạnh lợi ích [lợi ích chính], giá [giá], và có lời kêu gọi hành động rõ ràng. Dưới 150 từ.'",
-          "Prompt 2 — Caption mạng xã hội: 'Viết 3 caption cho bài đăng Facebook/Instagram quảng cáo [sản phẩm/dịch vụ]. Mỗi caption dưới 100 từ, có emoji và hashtag phù hợp. Một caption nhấn vào vấn đề, một nhấn vào lợi ích, một dạng câu hỏi tương tác.'",
-          "Prompt 3 — Kịch bản tư vấn chat: 'Bạn là nhân viên tư vấn bán hàng online chuyên nghiệp. Viết kịch bản chat tư vấn cho khách hỏi về [sản phẩm], gồm: câu chào, câu hỏi tìm hiểu nhu cầu, giới thiệu sản phẩm, xử lý câu hỏi về giá, và câu chốt đơn.'",
+          "Prompt 2 — Caption mạng xã hội: 'Viết 3 caption cho bài đăng Facebook/Instagram quảng cáo [sản phẩm]. Mỗi caption dưới 100 từ, có emoji và hashtag. Một caption nhấn vào vấn đề, một nhấn vào lợi ích, một dạng câu hỏi tương tác.'",
+          "Prompt 3 — Kịch bản tư vấn chat: 'Bạn là nhân viên tư vấn bán hàng online. Viết kịch bản chat tư vấn cho khách hỏi về [sản phẩm], gồm: câu chào, câu hỏi tìm hiểu nhu cầu, giới thiệu sản phẩm, xử lý câu hỏi về giá, và câu chốt đơn.'",
         ],
       },
       {
         heading: "Prompt 4–6: Phân tích thị trường và đối thủ",
         body: [
-          "Prompt 4 — Phân tích đối thủ: 'Đóng vai chuyên gia nghiên cứu thị trường. Tôi bán [sản phẩm/dịch vụ] tại [khu vực/kênh]. Phân tích 3 kiểu đối thủ cạnh tranh phổ biến trong ngành này: điểm mạnh, điểm yếu, cách họ thu hút khách. Sau đó gợi ý 2 điểm khác biệt tôi có thể khai thác.'",
-          "Prompt 5 — Chân dung khách hàng: 'Xây dựng chân dung khách hàng lý tưởng cho [sản phẩm/dịch vụ] của tôi. Bao gồm: độ tuổi, nghề nghiệp, thu nhập, vấn đề họ đang gặp, điều họ thực sự muốn, và kênh họ thường dùng để tìm kiếm giải pháp.'",
-          "Prompt 6 — Ý tưởng USP: 'Tôi đang bán [sản phẩm] giá [giá], đối thủ bán [khoảng giá đối thủ]. Đề xuất 5 điểm bán hàng độc đáo (USP) không dựa vào giá thấp hơn, tập trung vào giá trị và trải nghiệm khách hàng.'",
+          "Prompt 4 — Phân tích đối thủ: 'Đóng vai chuyên gia nghiên cứu thị trường. Tôi bán [sản phẩm] tại [kênh]. Phân tích 3 kiểu đối thủ phổ biến trong ngành: điểm mạnh, điểm yếu, cách thu hút khách. Gợi ý 2 điểm khác biệt tôi có thể khai thác.'",
+          "Prompt 5 — Chân dung khách hàng: 'Xây dựng chân dung khách hàng lý tưởng cho [sản phẩm]. Bao gồm: độ tuổi, nghề nghiệp, thu nhập, vấn đề đang gặp, điều họ thực sự muốn, và kênh thường dùng để tìm giải pháp.'",
+          "Prompt 6 — USP không dựa vào giá: 'Tôi đang bán [sản phẩm] giá [giá], đối thủ bán [khoảng giá đối thủ]. Đề xuất 5 điểm bán hàng độc đáo không dựa vào giá thấp hơn, tập trung vào giá trị và trải nghiệm khách hàng.'",
         ],
       },
       {
-        heading: "Prompt 7–8: Chăm sóc khách hàng và xử lý khiếu nại",
+        heading: "Prompt 7–8: Chăm sóc khách hàng",
         body: [
-          "Prompt 7 — Trả lời đánh giá tiêu cực: 'Khách hàng để lại đánh giá: [nội dung đánh giá]. Viết câu trả lời chuyên nghiệp, thừa nhận vấn đề không phòng thủ, thể hiện sẵn sàng hỗ trợ, và giữ được uy tín thương hiệu. Dưới 80 từ.'",
-          "Prompt 8 — Email chăm sóc sau mua: 'Viết email gửi khách hàng 3 ngày sau khi mua [sản phẩm]. Mục tiêu: hỏi thăm trải nghiệm, cung cấp tip hữu ích liên quan đến sản phẩm, và gợi ý nhẹ nhàng để lại đánh giá. Tone thân thiện, không quá bán hàng.'",
+          "Prompt 7 — Trả lời đánh giá tiêu cực: 'Khách hàng để lại đánh giá: [nội dung]. Viết câu trả lời chuyên nghiệp, thừa nhận vấn đề không phòng thủ, sẵn sàng hỗ trợ và giữ được uy tín thương hiệu. Dưới 80 từ.'",
+          "Prompt 8 — Email chăm sóc sau mua: 'Viết email gửi khách 3 ngày sau khi mua [sản phẩm]. Mục tiêu: hỏi thăm trải nghiệm, cung cấp tip hữu ích, gợi ý nhẹ nhàng để lại đánh giá. Tone thân thiện, không quá bán hàng.'",
         ],
       },
       {
         heading: "Prompt 9–10: Lên kế hoạch và vận hành",
         body: [
-          "Prompt 9 — Kế hoạch marketing tháng: 'Đóng vai chuyên gia growth marketing. Tôi bán [sản phẩm], ngân sách marketing [số tiền]/tháng, kênh chính [Facebook/TikTok/Zalo]. Lên kế hoạch marketing 30 ngày gồm: lịch đăng bài, loại nội dung mỗi tuần, và 2 ý tưởng mini campaign phù hợp ngân sách.'",
-          "Prompt 10 — Giải quyết vấn đề kinh doanh: 'Tôi đang gặp vấn đề: [mô tả vấn đề cụ thể — doanh thu giảm, khách không quay lại, tỷ lệ chuyển đổi thấp...]. Phân tích 3 nguyên nhân khả năng nhất và đề xuất giải pháp thực tế có thể triển khai trong 2 tuần với nguồn lực hạn chế.' Đây là 10 prompt từ bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop — nơi có thêm 990 prompt thực chiến khác chia theo 10 lĩnh vực.",
+          "Prompt 9 — Kế hoạch marketing tháng: 'Đóng vai chuyên gia growth marketing. Tôi bán [sản phẩm], ngân sách [số tiền]/tháng, kênh chính [Facebook/TikTok/Zalo]. Lên kế hoạch marketing 30 ngày gồm lịch đăng bài, loại nội dung mỗi tuần, và 2 ý tưởng mini campaign phù hợp ngân sách.'",
+          "Prompt 10 — Giải quyết vấn đề kinh doanh: 'Tôi đang gặp vấn đề: [mô tả cụ thể]. Phân tích 3 nguyên nhân khả năng nhất và đề xuất giải pháp thực tế có thể triển khai trong 2 tuần với nguồn lực hạn chế.' Đây là 10 prompt từ bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop — nơi có thêm 990 prompt thực chiến khác.",
         ],
       },
     ],
   },
 
-  // ── AEO Article 5 — 2026-07-16T07:00 ────────────────────────────────────
   {
     slug: "ai-co-the-lam-gi-cho-nhan-vien-van-phong",
     title: "AI Có Thể Làm Gì Cho Nhân Viên Văn Phòng? 8 Việc Cụ Thể Dùng Được Ngay Hôm Nay",
-    description:
-      "Tổng hợp 8 việc văn phòng cụ thể mà AI (ChatGPT, Gemini, Claude) có thể hỗ trợ ngay hôm nay — từ viết email, tóm tắt tài liệu, lên kế hoạch đến chuẩn bị báo cáo và tổng kết cuộc họp.",
+    description: "Tổng hợp 8 việc văn phòng cụ thể mà AI (ChatGPT, Gemini, Claude) có thể hỗ trợ ngay hôm nay — từ viết email, tóm tắt tài liệu, lên kế hoạch đến chuẩn bị báo cáo và tổng kết cuộc họp.",
     category: "Kiến thức AI",
-    publishedAt: "2026-07-16T07:00:00+07:00",
+    publishedAt: "2026-07-16T06:45:00+07:00",
     readingTime: "6 phút đọc",
-    keywords: [
-      "AI cho nhân viên văn phòng",
-      "ChatGPT công việc văn phòng",
-      "AI tăng năng suất làm việc",
-      "ứng dụng AI vào công việc",
-      "Gemini cho dân văn phòng",
-    ],
-    intro:
-      "AI không thay thế nhân viên văn phòng — nhưng người biết dùng AI sẽ làm được nhiều hơn người không dùng trong cùng một khoảng thời gian. Dưới đây là 8 việc cụ thể mà ChatGPT, Gemini hoặc Claude có thể hỗ trợ ngay hôm nay, không cần cài thêm phần mềm hay học kỹ thuật gì đặc biệt.",
+    keywords: ["AI cho nhân viên văn phòng", "ChatGPT công việc văn phòng", "AI tăng năng suất làm việc", "ứng dụng AI vào công việc", "Gemini cho dân văn phòng"],
+    intro: "AI không thay thế nhân viên văn phòng — nhưng người biết dùng AI sẽ làm được nhiều hơn người không dùng trong cùng một khoảng thời gian. Dưới đây là 8 việc cụ thể mà ChatGPT, Gemini hoặc Claude có thể hỗ trợ ngay hôm nay, không cần cài thêm phần mềm hay học kỹ thuật gì đặc biệt.",
     sections: [
       {
         heading: "1. Viết và chỉnh sửa email chuyên nghiệp nhanh hơn",
@@ -889,7 +862,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "2. Tóm tắt tài liệu và báo cáo dài",
         body: [
-          "Dán toàn bộ nội dung văn bản vào ChatGPT và yêu cầu: 'Tóm tắt 5 điểm chính', 'Liệt kê các quyết định cần phê duyệt', hoặc 'Rút ra 3 rủi ro được đề cập'. Với tài liệu tiếng Anh dài, AI dịch và tóm tắt đồng thời — tiết kiệm đáng kể so với đọc toàn bộ rồi mới dịch.",
+          "Dán toàn bộ nội dung vào ChatGPT và yêu cầu: 'Tóm tắt 5 điểm chính', 'Liệt kê các quyết định cần phê duyệt', hoặc 'Rút ra 3 rủi ro được đề cập'. Với tài liệu tiếng Anh dài, AI dịch và tóm tắt đồng thời — tiết kiệm đáng kể so với đọc toàn bộ rồi mới dịch.",
         ],
       },
       {
@@ -899,33 +872,231 @@ export const blogPosts: BlogPost[] = [
         ],
       },
       {
-        heading: "4. Lên kế hoạch và ưu tiên công việc",
+        heading: "4–5. Lên kế hoạch và soạn báo cáo",
         body: [
-          "Mô tả danh sách việc đang có, deadline và mức độ quan trọng — yêu cầu AI sắp xếp theo ma trận ưu tiên hoặc đề xuất lịch làm việc ngày/tuần. Đặc biệt hữu ích khi bạn có quá nhiều việc và không biết bắt đầu từ đâu.",
+          "Kế hoạch: mô tả danh sách việc đang có, deadline và mức độ quan trọng — yêu cầu AI sắp xếp theo ma trận ưu tiên hoặc đề xuất lịch làm việc ngày/tuần.",
+          "Báo cáo: cung cấp số liệu thô và yêu cầu AI viết phần phân tích, nhận xét xu hướng hoặc đề xuất hành động. AI không thay bạn trong việc thu thập và kiểm chứng số liệu, nhưng phần diễn giải và viết lách AI làm rất nhanh.",
         ],
       },
       {
-        heading: "5. Soạn thảo báo cáo và trình bày dữ liệu",
+        heading: "6–8. Dịch thuật, nghiên cứu nhanh và học kỹ năng mới",
         body: [
-          "Cung cấp số liệu thô và yêu cầu AI viết phần phân tích, nhận xét xu hướng hoặc đề xuất hành động. AI không thay bạn trong việc thu thập và kiểm chứng số liệu, nhưng phần diễn giải và viết lách AI làm rất nhanh.",
+          "Dịch thuật: tài liệu kỹ thuật tiếng Anh sang tiếng Việt chính xác hơn Google Translate, có ngữ cảnh. Nghiên cứu: hỏi AI về khái niệm, quy trình hoặc thông tin nền trước khi bước vào cuộc họp hay dự án mới — nhớ kiểm tra lại thông tin quan trọng từ nguồn gốc.",
+          "Học kỹ năng: yêu cầu AI giải thích một kỹ năng bạn muốn học, đặt câu hỏi theo, và xin bài tập thực hành. Từ Excel nâng cao, kỹ năng thuyết trình đến cách đọc báo cáo tài chính. Để có sẵn bộ prompt tối ưu cho từng tình huống văn phòng, xem thêm tại www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet",
+    title: "Gemini vs ChatGPT: Công Cụ AI Nào Phù Hợp Hơn Cho Người Việt Nam Năm 2026",
+    description: "So sánh trực tiếp Gemini và ChatGPT về chất lượng tiếng Việt, khả năng tích hợp, giá và trường hợp dùng phù hợp — để bạn chọn đúng công cụ cho công việc thực tế.",
+    category: "So sánh & Đánh giá",
+    publishedAt: "2026-07-16T19:15:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: ["Gemini vs ChatGPT", "so sánh AI 2026", "Gemini tiếng Việt", "ChatGPT tiếng Việt", "công cụ AI tốt nhất"],
+    intro: "Gemini (Google) và ChatGPT (OpenAI) là hai công cụ AI phổ biến nhất hiện nay. Cả hai đều xử lý tiếng Việt được, nhưng khác nhau rõ ở tốc độ, khả năng tích hợp và điểm mạnh từng lĩnh vực — nên câu trả lời đúng là tùy mục đích dùng, không có cái nào tốt hơn tuyệt đối.",
+    sections: [
+      {
+        heading: "Gemini và ChatGPT khác nhau ở đâu về cơ bản",
+        body: [
+          "ChatGPT (GPT-4o) do OpenAI phát triển, ra mắt 2022, có hệ sinh thái plugin và GPT tùy chỉnh rộng nhất thị trường. Gemini do Google DeepMind phát triển, tích hợp sâu với Google Search, Google Docs, Gmail và toàn bộ Google Workspace. Nếu bạn dùng Google hàng ngày, Gemini có lợi thế về tích hợp — nếu bạn cần khả năng tùy biến và plugin đa dạng, ChatGPT có hệ sinh thái mạnh hơn.",
         ],
       },
       {
-        heading: "6. Dịch thuật và chỉnh sửa văn phong",
+        heading: "So sánh chất lượng tiếng Việt: cái nào hiểu và viết tốt hơn",
         body: [
-          "Dịch tài liệu kỹ thuật từ tiếng Anh sang tiếng Việt nhanh hơn Google Translate, với ngữ cảnh chính xác hơn. Hoặc dán một đoạn văn bạn đã viết và yêu cầu 'chỉnh sửa cho rõ ràng hơn' hay 'viết lại theo phong cách chuyên nghiệp' — hữu ích với email tiếng Anh hay báo cáo gửi cấp trên.",
+          "Cả hai xử lý tiếng Việt tốt hơn hẳn so với 2–3 năm trước. Trong các bài kiểm tra thực tế 2025–2026: ChatGPT GPT-4o cho câu trả lời tiếng Việt tự nhiên hơn, ít lỗi ngữ pháp hơn và giữ ngữ điệu tốt hơn khi viết nội dung sáng tạo. Gemini 2.0 Flash nhanh hơn và tốt hơn khi tóm tắt tài liệu tiếng Việt dài, đặc biệt khi kết hợp với Google Docs.",
+          "Kết luận thực tế: dùng ChatGPT để viết nội dung, copywriting, phân tích sâu. Dùng Gemini để tóm tắt, nghiên cứu nhanh, và làm việc trong Google Workspace.",
         ],
       },
       {
-        heading: "7. Nghiên cứu nhanh và tổng hợp thông tin",
+        heading: "Bản miễn phí: Gemini hay ChatGPT dùng được hơn",
         body: [
-          "Hỏi AI về khái niệm, quy trình hoặc thông tin nền trước khi bước vào một cuộc họp hay dự án mới. AI giải thích nhanh, bằng tiếng Việt, theo mức độ hiểu biết bạn yêu cầu. Nhớ kiểm tra lại thông tin quan trọng từ nguồn gốc — AI có thể nhầm với số liệu cụ thể hoặc sự kiện gần đây.",
+          "Bản miễn phí của Gemini (Gemini 2.0 Flash) hiện khá mạnh và không giới hạn số lượt dùng. Bản miễn phí ChatGPT (GPT-4o mini) đủ dùng cho hầu hết tác vụ nhưng có giới hạn tin nhắn với GPT-4o đầy đủ. Về mặt miễn phí, Gemini đang có lợi thế hơn cho người dùng phổ thông không muốn trả phí.",
         ],
       },
       {
-        heading: "8. Học kỹ năng mới theo tiến độ của bạn",
+        heading: "Nên dùng cái nào cho từng mục đích cụ thể",
         body: [
-          "Yêu cầu AI giải thích một kỹ năng bạn muốn học, đặt câu hỏi theo, và xin bài tập thực hành. Từ Excel nâng cao, kỹ năng thuyết trình đến cách đọc báo cáo tài chính — AI dạy theo tốc độ và ngữ cảnh công việc của bạn. Để có sẵn bộ prompt tối ưu cho từng tình huống văn phòng, xem thêm tại www.1000promptchuyengia.shop",
+          "Viết bài, content, copywriting → ChatGPT GPT-4o. Tóm tắt tài liệu dài, email, Google Docs → Gemini. Code và lập trình → ChatGPT (hoặc Claude). Tìm kiếm thông tin mới nhất → Gemini (tích hợp Google Search). Tùy biến workflow, plugin, GPT riêng → ChatGPT. Dùng đa thiết bị trong Google ecosystem → Gemini.",
+          "Lời khuyên thực tế: mở cả hai tab và dùng song song — chúng miễn phí và bổ trợ nhau tốt hơn là cạnh tranh. Nếu muốn prompt được viết sẵn chuẩn cho cả hai, xem bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "prompt-engineering-la-gi-huong-dan-tu-a-den-z",
+    title: "Prompt Engineering Là Gì? Hướng Dẫn Từ A Đến Z Cho Người Không Có Nền Tảng Kỹ Thuật",
+    description: "Giải thích prompt engineering theo cách đơn giản nhất: là gì, tại sao quan trọng, và 5 kỹ thuật cốt lõi bất kỳ ai cũng học được trong một buổi chiều.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-17T06:45:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: ["prompt engineering là gì", "học prompt engineering", "kỹ thuật viết prompt", "prompt AI hiệu quả", "prompt engineering cho người mới"],
+    intro: "Prompt engineering là kỹ năng viết câu lệnh (prompt) cho AI sao cho AI hiểu đúng ý và trả lời đúng nhu cầu. Không cần biết lập trình — bất kỳ ai biết viết câu rõ ràng đều có thể học prompt engineering trong vài giờ và áp dụng ngay vào công việc.",
+    sections: [
+      {
+        heading: "Prompt engineering là gì và tại sao nó quan trọng",
+        body: [
+          "Prompt là câu lệnh bạn nhập vào AI. Prompt engineering là nghệ thuật và kỹ thuật viết prompt sao cho AI hiểu đúng ngữ cảnh, đúng yêu cầu, và cho ra kết quả dùng được ngay — thay vì phải chỉnh sửa nhiều lần.",
+          "Tầm quan trọng: cùng một AI nhưng hai người dùng prompt khác nhau sẽ nhận được kết quả chất lượng chênh lệch rất lớn. Prompt tốt là sự khác biệt giữa câu trả lời chung chung và câu trả lời đúng việc đúng người.",
+        ],
+      },
+      {
+        heading: "5 kỹ thuật prompt engineering cốt lõi",
+        body: [
+          "1. Role prompting — cho AI một vai trò: 'Đóng vai chuyên gia tư vấn tài chính với 10 năm kinh nghiệm'. AI sẽ điều chỉnh tone, mức độ chuyên sâu và góc nhìn theo vai trò được giao.",
+          "2. Context setting — cung cấp ngữ cảnh đầy đủ trước khi yêu cầu. Thay vì 'viết email', hãy kể: đây là email gửi cho ai, mục tiêu là gì, tone mong muốn như thế nào.",
+          "3. Few-shot examples — cho AI xem ví dụ mẫu kết quả bạn muốn. 'Tôi muốn caption theo phong cách này: [ví dụ]. Hãy viết 3 caption tương tự cho sản phẩm X.'",
+          "4. Chain of thought — yêu cầu AI suy nghĩ từng bước trước khi trả lời: 'Hãy phân tích từng bước trước khi đưa ra kết luận.' Đặc biệt hiệu quả cho bài toán phức tạp hoặc cần lập luận.",
+          "5. Output format — chỉ định cụ thể định dạng đầu ra: 'Trả lời dưới dạng bảng với 3 cột', 'Liệt kê 5 điểm, mỗi điểm tối đa 2 câu', 'Viết dưới 150 từ'. Kết quả sẽ dùng được ngay mà không cần format lại.",
+        ],
+      },
+      {
+        heading: "Prompt engineering khác học AI như thế nào",
+        body: [
+          "Học AI thường bao gồm machine learning, lập trình Python, xử lý dữ liệu — cần nền tảng kỹ thuật. Prompt engineering không cần bất kỳ kỹ năng lập trình nào. Bạn chỉ cần hiểu rõ bạn muốn gì và diễn đạt điều đó bằng ngôn ngữ tự nhiên một cách có cấu trúc.",
+          "Đây là lý do tại sao prompt engineering đang được gọi là 'kỹ năng của thập kỷ' — nó nằm ở giao điểm của tư duy rõ ràng và sử dụng công cụ AI, không phải kỹ thuật thuần túy. Để có sẵn 1000 prompt đã được engineering chuẩn cho 10 lĩnh vực, xem tại www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc",
+    title: "Tại Sao AI Trả Lời Không Đúng Ý? 5 Nguyên Nhân và Cách Khắc Phục Ngay",
+    description: "Giải thích 5 lý do phổ biến khiến ChatGPT, Gemini hoặc Claude trả lời không đúng ý — và cách điều chỉnh prompt ngay trong cuộc trò chuyện để ra kết quả tốt hơn.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-17T19:15:00+07:00",
+    readingTime: "5 phút đọc",
+    keywords: ["AI trả lời sai", "ChatGPT không hiểu ý", "cách sửa prompt", "AI cho kết quả không đúng", "tại sao AI không hiểu"],
+    intro: "AI không đọc được suy nghĩ của bạn — nó chỉ xử lý đúng những gì bạn viết vào. Khi AI trả lời không đúng ý, 95% là do prompt chưa đủ thông tin, chưa rõ ngữ cảnh, hoặc chưa xác định đúng yêu cầu đầu ra. Tin tốt: bạn không cần viết lại từ đầu, chỉ cần biết cách tinh chỉnh trong cùng cuộc trò chuyện.",
+    sections: [
+      {
+        heading: "Nguyên nhân 1–2: Prompt quá ngắn và thiếu ngữ cảnh",
+        body: [
+          "Prompt quá ngắn là nguyên nhân số 1. 'Viết bài marketing' hay 'phân tích đối thủ' buộc AI phải đoán bạn đang làm trong ngành gì, với sản phẩm gì, cho khách hàng nào. AI sẽ cho ra câu trả lời trung bình, áp dụng được cho tất cả và không đặc biệt phù hợp với ai.",
+          "Thiếu ngữ cảnh là nguyên nhân số 2. AI không biết bạn là ai, bạn đang ở giai đoạn nào, và kết quả sẽ được dùng để làm gì. Cung cấp: bạn là ai (vai trò/ngành), tình huống hiện tại, và kết quả bạn cần dùng để làm gì.",
+        ],
+      },
+      {
+        heading: "Nguyên nhân 3–5: Format, ảo giác AI, và yêu cầu mâu thuẫn",
+        body: [
+          "Không chỉ định format đầu ra — AI có thể viết dưới dạng đoạn văn trong khi bạn cần danh sách. Luôn nói rõ: 'trả lời dạng bảng', 'liệt kê 5 điểm', 'viết dưới 100 từ'.",
+          "AI hallucination (ảo giác AI) — AI có thể bịa ra số liệu, tên người, hoặc sự kiện nghe có vẻ thật. Không dùng AI để tra cứu số liệu cụ thể mà không kiểm chứng lại. Với câu hỏi thực tế, thêm: 'chỉ dùng thông tin bạn chắc chắn, nếu không chắc hãy nói rõ'.",
+          "Yêu cầu mâu thuẫn trong một prompt — 'viết ngắn gọn nhưng đầy đủ chi tiết, thân thiện nhưng chuyên nghiệp'. AI sẽ chọn một trong hai hoặc trung hòa không ra gì. Ưu tiên một tiêu chí, hoặc tách thành nhiều prompt.",
+        ],
+      },
+      {
+        heading: "Cách sửa khi AI đã trả lời sai (trong cùng cuộc trò chuyện)",
+        body: [
+          "Không cần viết lại từ đầu. Trong cùng chat, tiếp tục với: 'Viết lại ngắn hơn, chỉ giữ 3 điểm quan trọng nhất' — hoặc 'Câu trả lời quá chung chung. Tôi cụ thể cần [X]. Viết lại với ngữ cảnh này.' AI nhớ toàn bộ lịch sử cuộc trò chuyện và sẽ điều chỉnh theo.",
+          "Câu hỏi hữu ích sau câu trả lời sai: 'Tôi cần kết quả cho [đối tượng cụ thể], tone [cụ thể], dưới [số từ/dòng]. Viết lại.' Để có sẵn prompt đúng chuẩn ngay từ đầu mà không cần sửa nhiều lần, xem bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap",
+    title: "AI Dành Cho Học Sinh Sinh Viên: 7 Cách Dùng ChatGPT Học Tập Hiệu Quả Không Bị Thụ Động",
+    description: "Hướng dẫn 7 cách học sinh sinh viên có thể dùng ChatGPT để học tập hiệu quả hơn — từ hiểu bài khó, ôn tập, viết luận đến luyện ngoại ngữ — mà không bị lệ thuộc hay mất kỹ năng tự học.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-18T06:45:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: ["AI cho học sinh", "ChatGPT học tập", "dùng AI để học", "ChatGPT cho sinh viên", "học tập với AI"],
+    intro: "ChatGPT và các công cụ AI có thể trở thành người thầy gia sư 24/7 miễn phí, kiên nhẫn giải thích không giới hạn và điều chỉnh theo tốc độ học của từng người. Dưới đây là 7 cách dùng AI để học tập thực sự hiệu quả — không phải để AI làm bài thay, mà để hiểu bài sâu hơn và nhanh hơn.",
+    sections: [
+      {
+        heading: "1–3: Hiểu bài khó, ôn tập và tự kiểm tra",
+        body: [
+          "Giải thích khái niệm khó theo cách bạn hiểu: 'Giải thích [khái niệm] bằng ngôn ngữ đơn giản nhất, dùng ví dụ thực tế trong cuộc sống hàng ngày. Tôi là học sinh lớp 11 chưa có nền tảng về chủ đề này.' AI có thể giải thích cùng một khái niệm theo nhiều cách khác nhau cho đến khi bạn hiểu.",
+          "Ôn tập bằng câu hỏi: 'Tạo 10 câu hỏi trắc nghiệm về [chủ đề] mức độ [cơ bản/trung bình/nâng cao].' Sau đó: 'Giải thích tại sao đáp án đúng là [X], không phải [Y].' Hiệu quả hơn đọc lại sách vì bạn đang chủ động xử lý thông tin.",
+          "Tạo flashcard: 'Tóm tắt [chương/bài] thành 20 cặp câu hỏi-trả lời ngắn, mỗi cặp tối đa 2 dòng.' Dán vào app flashcard yêu thích hoặc tự ôn bằng cách che một vế.",
+        ],
+      },
+      {
+        heading: "4–5: Viết luận và nghiên cứu có trách nhiệm",
+        body: [
+          "Dùng AI để lên outline, không phải viết thay: 'Tôi cần viết luận về [chủ đề], 1500 từ, góc nhìn [X]. Gợi ý cấu trúc 5 đoạn với luận điểm chính mỗi đoạn.' Sau đó tự viết từng đoạn — đây mới là lúc bạn học thực sự.",
+          "Kiểm tra lập luận của bạn: sau khi viết xong, dán vào và hỏi: 'Lập luận nào trong bài này yếu nhất? Phản biện ra sao?' AI như người phản biện thông minh giúp bạn tự cải thiện bài trước khi nộp.",
+        ],
+      },
+      {
+        heading: "6–7: Luyện ngoại ngữ và lập kế hoạch học tập",
+        body: [
+          "Luyện hội thoại: 'Đóng vai người bản ngữ, trò chuyện với tôi về [chủ đề] bằng tiếng Anh. Sau mỗi tin nhắn, sửa lỗi ngữ pháp và gợi ý cách diễn đạt tự nhiên hơn.' Đây là cách luyện Speaking/Writing miễn phí không giới hạn thời gian.",
+          "Lập kế hoạch ôn thi: 'Tôi có 3 tuần ôn thi [môn], hiện tại [điểm/mức độ], học được 2 tiếng/ngày. Lập lịch ôn tập theo từng ngày, ưu tiên phần nào trước.' AI sẽ lên lịch cụ thể hơn bạn tự lên vì nó không có thiên kiến về chủ đề nào bạn ngại học. Xem thêm bài về cách viết prompt hiệu quả tại www.1000promptchuyengia.shop",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "chatgpt-co-the-thay-nhan-vien-marketing-khong",
+    title: "ChatGPT Có Thể Thay Thế Nhân Viên Marketing Không? Phân Tích Thực Tế 2026",
+    description: "Phân tích thực tế những công việc marketing mà AI đang làm tốt, những việc AI không thể thay, và chiến lược phù hợp cho doanh nghiệp vừa và nhỏ tại Việt Nam.",
+    category: "So sánh & Đánh giá",
+    publishedAt: "2026-07-18T19:15:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: ["ChatGPT thay nhân viên marketing", "AI marketing", "AI thay thế người làm marketing", "ứng dụng AI trong marketing", "ChatGPT marketing 2026"],
+    intro: "Câu trả lời ngắn: không hoàn toàn, nhưng AI đang thay thế một phần đáng kể công việc marketing lặp lại và tốn thời gian. Người làm marketing biết dùng AI sẽ làm được khối lượng công việc của 2–3 người, không bị thay thế bởi AI mà bị thay bởi người khác biết dùng AI tốt hơn.",
+    sections: [
+      {
+        heading: "Những công việc marketing AI đang làm tốt ngay hôm nay",
+        body: [
+          "Viết bản nháp đầu tiên: caption mạng xã hội, mô tả sản phẩm, email marketing, bài blog — AI viết draft nhanh và bạn chỉnh lại. Tiết kiệm 60–80% thời gian so với viết từ đầu. Brainstorming ý tưởng: trong 2 phút AI cho ra 20 góc độ nội dung cho một chủ đề mà bạn mất cả buổi mới nghĩ được. A/B test copy: viết 5–10 biến thể tiêu đề, CTA, mô tả để test nhanh chóng.",
+          "Nghiên cứu và tóm tắt: AI đọc và tóm tắt báo cáo thị trường, bài phân tích đối thủ, xu hướng ngành trong vài phút. Lên kế hoạch nội dung: từ một chủ đề, AI phân tách ra lịch content 30 ngày với angle cụ thể từng bài.",
+        ],
+      },
+      {
+        heading: "Những việc AI chưa thể thay thế người làm marketing",
+        body: [
+          "Xây dựng quan hệ và cộng đồng — AI không thể reply comment đúng lúc với cảm xúc thật, không thể tạo kết nối cá nhân với KOL/partner, không hiểu subtlety văn hóa địa phương đủ sâu để tránh phát ngôn nhạy cảm.",
+          "Chiến lược cấp cao — quyết định positioning, chọn thị trường mục tiêu, ứng phó khủng hoảng truyền thông đòi hỏi phán đoán chiến lược từ kinh nghiệm thực tế. AI là công cụ thực thi, không thay được tư duy chiến lược. Sáng tạo đột phá — idea viral thực sự thường đến từ việc kết hợp ngữ cảnh văn hóa, thời điểm, và cảm xúc mà AI không tự sinh ra được.",
+        ],
+      },
+      {
+        heading: "Chiến lược thực tế cho doanh nghiệp vừa và nhỏ",
+        body: [
+          "Không nên: sa thải toàn bộ team content và thay bằng AI — output sẽ nhạt, thiếu cá tính thương hiệu, và dễ bị phát hiện là AI-generated gây mất uy tín.",
+          "Nên: dùng AI để tăng output của team hiện có. 1 người làm content với AI tốt bằng 2–3 người không dùng AI. Đầu tư vào việc train team cách dùng AI + prompt tốt thay vì tuyển thêm người làm thủ công. Bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop có 100 prompt chuyên về marketing — đủ để team content của bạn bắt đầu dùng AI hiệu quả ngay từ ngày đầu.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua",
+    title: "Cách Viết Prompt AI Để Tạo Content Bán Hàng Không Nhạt, Không Sáo Rỗng",
+    description: "Hướng dẫn thực tế cách viết prompt cho ChatGPT và Gemini để ra content bán hàng có cá tính, đúng đối tượng, không bị nhạt như AI-generic — kèm ví dụ trước/sau cụ thể.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-19T06:45:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: ["prompt viết content bán hàng", "ChatGPT viết content", "prompt marketing", "AI viết bài bán hàng", "content AI không nhạt"],
+    intro: "Vấn đề phổ biến nhất khi dùng AI viết content bán hàng: kết quả đúng ngữ pháp nhưng nhạt, nghe như chatbot, không có giọng thương hiệu, và khách hàng đọc là biết ngay AI viết. Nguyên nhân không phải AI kém — mà prompt chưa cung cấp đủ thông tin về giọng điệu, đối tượng và cá tính thương hiệu.",
+    sections: [
+      {
+        heading: "Tại sao content AI thường bị nhạt và cách bắt đầu khắc phục",
+        body: [
+          "AI viết theo xác suất trung bình — nó dùng những từ và cấu trúc phổ biến nhất trong dữ liệu huấn luyện. Không có giọng thương hiệu cụ thể trong prompt → AI dùng giọng trung tính, an toàn, không gây phản ứng cảm xúc.",
+          "Khắc phục bắt đầu từ chỉ định giọng điệu cụ thể: thay vì 'thân thiện và chuyên nghiệp' (quá chung), hãy nói 'như người anh/chị đã làm ngành này 5 năm, nói chuyện thẳng thắn, không hoa mỹ, hay dùng ví dụ cụ thể'. Hoặc cho AI xem 1–2 đoạn bạn đã viết trước làm mẫu tham chiếu.",
+        ],
+      },
+      {
+        heading: "Công thức prompt content bán hàng có kết quả",
+        body: [
+          "Cấu trúc: [Vai trò] + [Đối tượng đọc] + [Vấn đề của họ] + [Sản phẩm giải quyết gì] + [Giọng điệu cụ thể] + [Format và độ dài].",
+          "Ví dụ trước (prompt nhạt): 'Viết caption Instagram bán kem dưỡng da.' Kết quả: generic, không ai dừng lại đọc. Ví dụ sau (prompt đầy đủ): 'Đóng vai chuyên gia skincare có 7 năm tư vấn da nhờn ở Sài Gòn. Viết caption Instagram cho kem dưỡng ẩm [tên], nhắm đến phụ nữ 25–35 tuổi da nhờn đang bị bóng dầu mùa hè. Nỗi đau: dùng kem nào cũng bóng như đổ dầu. Giải pháp: kem này thấm trong 30 giây, không bóng, phù hợp dưới lớp trang điểm. Giọng: gần gũi, hơi hài hước, không quảng cáo lộ liễu. 3 phiên bản, mỗi bản dưới 100 ký tự + 5 hashtag phù hợp.' Kết quả: 3 caption khác nhau về angle, dùng được ngay.",
+        ],
+      },
+      {
+        heading: "3 kỹ thuật nâng cấp content AI ngay trong cuộc trò chuyện",
+        body: [
+          "Một: cho AI xem ví dụ bạn thích. Dán vào một đoạn content bạn thấy hay (của mình hoặc đối thủ) và nói 'viết theo phong cách này nhưng cho sản phẩm của tôi'. Hai: yêu cầu AI viết lại với một cảm xúc cụ thể — 'viết lại để người đọc cảm thấy tò mò', 'viết để khách hàng thấy mình hiểu được họ'. Ba: yêu cầu nhiều phiên bản với angle khác nhau — vấn đề, lợi ích, câu chuyện, bằng chứng — rồi chọn cái tốt nhất.",
+          "Để có sẵn bộ prompt content bán hàng đã được viết chuẩn cho nhiều ngành và tình huống khác nhau, xem bộ 1000 Prompt Chuyên Gia (Pack 3 Marketing + Pack 4 Bán Hàng) tại www.1000promptchuyengia.shop",
         ],
       },
     ],
