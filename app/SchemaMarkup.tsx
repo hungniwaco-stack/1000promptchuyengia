@@ -47,11 +47,44 @@ const comboProductSchema = {
     url: BASE_URL,
     priceCurrency: "VND",
     price: "199000",
+    validFrom: "2026-01-01",
     priceValidUntil: "2026-12-31",
     availability: "https://schema.org/InStock",
     seller: {
       "@type": "Person",
       name: "Hữu Hùng",
+    },
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "0",
+        currency: "VND",
+      },
+      shippingDestination: {
+        "@type": "DefinedRegion",
+        addressCountry: "VN",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: "0",
+          maxValue: "10",
+          unitCode: "MIN",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: "0",
+          maxValue: "0",
+          unitCode: "MIN",
+        },
+      },
+    },
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: "VN",
+      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
     },
   },
   aggregateRating: {
