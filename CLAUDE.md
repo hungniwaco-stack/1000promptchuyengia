@@ -34,7 +34,7 @@ const publishedPosts = blogPosts.filter((p) => new Date(p.publishedAt) <= now);
 ```
 > Dùng `force-dynamic` để lọc theo giờ thực, không dùng string comparison.
 
-## Lịch đăng bài (2 bài/ngày, 6h45 và 19h15 giờ VN)
+## Lịch đăng bài (1 bài/ngày lúc 6h45 sáng giờ VN — từ 16/7/2026)
 | Pack | Slug | publishedAt | giftLink (doc ID) |
 |------|------|------------|-------------------|
 | 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T07:00:00+07:00 | 1ScW0ar_Gb-2qTd1KhLh6w6zjxzzHSjzY |
@@ -129,24 +129,24 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 ## Lịch đăng bài — đầy đủ (24 bài)
 | # | Slug | publishedAt |
 |---|------|-------------|
-| Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T07:00:00+07:00 |
-| Pack 2 | 100-prompt-tai-chinh-dau-tu | 2026-06-30T18:00:00+07:00 |
+| Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T06:45:00+07:00 |
+| Pack 2 | 100-prompt-tai-chinh-dau-tu | 2026-06-30T19:15:00+07:00 |
 | KB 1 | cach-viet-prompt-ai-hieu-qua | 2026-06-04 |
 | KB 2 | ung-dung-ai-trong-kinh-doanh-nho | 2026-06-04 |
 | KB 3 | checklist-chon-cong-cu-ai-phu-hop | 2026-06-04 |
-| Pack 3 | 100-prompt-marketing-thuong-hieu | 2026-07-01T07:00:00+07:00 |
-| Pack 4 | 100-prompt-ban-hang-dam-phan | 2026-07-01T18:00:00+07:00 |
-| Pack 5 | 100-prompt-phat-trien-ban-than-nang-suat | 2026-07-02T07:00:00+07:00 |
-| Pack 6 | 100-prompt-lanh-dao-quan-ly-doi-nhom | 2026-07-02T18:00:00+07:00 |
-| Pack 7 | 100-prompt-kiem-tien-online-thu-nhap-thu-dong | 2026-07-03T07:00:00+07:00 |
-| Pack 8 | 100-prompt-ai-cong-nghe-kinh-doanh | 2026-07-03T18:00:00+07:00 |
-| Pack 9 | 100-prompt-cuoc-song-hanh-phuc | 2026-07-04T07:00:00+07:00 |
-| Pack 10 | 100-prompt-fusion-da-linh-vuc | 2026-07-04T18:00:00+07:00 |
-| AEO 1 | prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san | 2026-07-14T07:00:00+07:00 |
+| Pack 3 | 100-prompt-marketing-thuong-hieu | 2026-07-01T06:45:00+07:00 |
+| Pack 4 | 100-prompt-ban-hang-dam-phan | 2026-07-01T19:15:00+07:00 |
+| Pack 5 | 100-prompt-phat-trien-ban-than-nang-suat | 2026-07-02T06:45:00+07:00 |
+| Pack 6 | 100-prompt-lanh-dao-quan-ly-doi-nhom | 2026-07-02T19:15:00+07:00 |
+| Pack 7 | 100-prompt-kiem-tien-online-thu-nhap-thu-dong | 2026-07-03T06:45:00+07:00 |
+| Pack 8 | 100-prompt-ai-cong-nghe-kinh-doanh | 2026-07-03T19:15:00+07:00 |
+| Pack 9 | 100-prompt-cuoc-song-hanh-phuc | 2026-07-04T06:45:00+07:00 |
+| Pack 10 | 100-prompt-fusion-da-linh-vuc | 2026-07-04T19:15:00+07:00 |
+| AEO 1 | prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san | 2026-07-14T06:45:00+07:00 |
 | AEO 2 | so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt | 2026-07-14T13:00:00+07:00 |
-| AEO 3 | chatgpt-danh-cho-nguoi-moi-bat-dau | 2026-07-15T07:00:00+07:00 |
-| AEO 4 | 10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho | 2026-07-15T18:00:00+07:00 |
-| AEO 5 | ai-co-the-lam-gi-cho-nhan-vien-van-phong | 2026-07-16T07:00:00+07:00 |
+| AEO 3 | chatgpt-danh-cho-nguoi-moi-bat-dau | 2026-07-15T06:45:00+07:00 |
+| AEO 4 | 10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho | 2026-07-15T19:15:00+07:00 |
+| AEO 5 | ai-co-the-lam-gi-cho-nhan-vien-van-phong | 2026-07-16T06:45:00+07:00 |
 | AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-20T06:45:00+07:00 |
 | AEO 7 | prompt-engineering-la-gi-huong-dan-tu-a-den-z | 2026-07-17T06:45:00+07:00 |
 | AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-21T06:45:00+07:00 |
@@ -154,10 +154,33 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 | AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
 | AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T06:45:00+07:00 |
 
+## SEO workflow — sau mỗi lần push bài mới
+
+**Google (mỗi bài mới):**
+1. Vào https://search.google.com/search-console → Kiểm tra URL
+2. Nhập URL bài mới (vd: `/bai-viet/prompt-ai-la-gi-...`) → Enter
+3. Nhấn "Yêu cầu lập chỉ mục" → Google crawl trong 1–3 ngày
+
+**Bing — CHƯA SETUP (cần làm):**
+1. Vào https://www.bing.com/webmasters → đăng nhập Microsoft
+2. Thêm site `https://www.1000promptchuyengia.shop`
+3. Xác minh quyền sở hữu → thêm meta tag vào `layout.tsx`
+4. Submit sitemap `https://www.1000promptchuyengia.shop/sitemap.xml`
+> Bing quan trọng vì ChatGPT Search và Copilot dùng Bing index — muốn AI trích dẫn thì phải có trên Bing.
+
+**Từ khóa AEO người dùng hay gõ vào AI (test thử định kỳ):**
+- "prompt AI là gì" / "prompt engineering là gì"
+- "ChatGPT vs Gemini cái nào tốt hơn"
+- "bộ prompt AI tiếng Việt" / "1000 prompt AI mua ở đâu"
+- "ChatGPT làm gì được cho người kinh doanh"
+- "AI cho nhân viên văn phòng" / "dùng AI để viết content bán hàng"
+
 ## Cấu trúc thư mục chính
 ```
 app/
-  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (15 bài)
+  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (24 bài tính đến 15/7/2026)
+  robots.ts             ← robots.txt tự động, trỏ đến sitemap
+  sitemap.ts            ← sitemap động, tự thêm bài mới
   SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person
   bai-viet/
     page.tsx            ← danh sách bài (force-dynamic + datetime filter)
