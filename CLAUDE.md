@@ -153,6 +153,7 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 | AEO 9 | ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap | 2026-07-18T06:45:00+07:00 |
 | AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
 | AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T06:45:00+07:00 |
+| Pillar | prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien | 2026-07-19T09:00:00+07:00 |
 
 ## SEO workflow — sau mỗi lần push bài mới
 
