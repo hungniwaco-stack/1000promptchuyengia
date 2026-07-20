@@ -110,7 +110,7 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
     ```
     Không bao giờ viết `git add . && git commit ... && git push` trong hướng dẫn cho user.
 
-## AEO + GEO — Trạng thái đã làm (cập nhật 2026-07-19)
+## AEO + GEO — Trạng thái đã làm (cập nhật 2026-07-20)
 
 **Đã hoàn thành (Phase 1 — AEO/SEO):**
 - `app/SchemaMarkup.tsx` — có đủ 5 schema: WebSite, Product + AggregateRating, FAQPage, ItemList (10 packs), Person (Hữu Hùng). **Không cần làm lại.**
@@ -130,7 +130,10 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 - Review có nguồn xác minh: ảnh chụp màn hình, link Facebook thật
 - SchemaMarkup: reviewCount hiện là 3, cần cập nhật khi có review thật
 - **Bing Webmaster Tools** — CHƯA SETUP (xem hướng dẫn trong SEO workflow)
-- **Twitter Card meta tags** — chưa thêm vào layout.tsx (twitter:card, twitter:title, twitter:description, twitter:image)
+- OG Image (1200×630px) — để Facebook/Zalo preview đẹp khi chia sẻ link
+
+**Đã có sẵn, KHÔNG làm lại:**
+- Twitter Card meta tags — **đã có trong `layout.tsx`** (twitter:card, title, description, images). Kiểm tra ngày 20/7/2026, xác nhận đầy đủ.
 
 ## Báo cáo Audit SEO (đã đọc 19/7/2026)
 - **Location:** `D:\Dropbox\01. DỰ ÁN 2026\INDEX\Báo cáo 1000chuyengia`
@@ -140,16 +143,21 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
   - `02. GEO-DEEP-ANALYSIS.md` — GEO Score: 4/100 (trước khi sửa), AI bot access analysis
 - **Lưu ý:** Audit được viết cho Shopify — nhiều khuyến nghị không áp dụng cho Next.js (theme.liquid, Shopify Admin). Cross-check với codebase trước khi làm theo.
 
-## Content Cluster — Spoke posts còn lại (viết tuần 20-24/7)
+## Content Cluster — Spoke posts (cập nhật 20/7/2026)
 Thứ tự ưu tiên (theo commercial intent + search volume):
 
-| # | Spoke | Chủ đề | publishedAt dự kiến | Ghi chú |
-|---|-------|---------|---------------------|---------|
-| 4 | Spoke 4 | ChatGPT vs Claude vs Gemini 2026 — Nên dùng AI nào? | 2026-07-23T06:45:00+07:00 | Commercial intent cao nhất |
-| 2 | Spoke 2 | Prompt AI viết content marketing: Facebook → Email trong 30 phút | 2026-07-24T06:45:00+07:00 | Search volume cao nhất |
-| 1 | Spoke 1 | 7 lỗi viết prompt ChatGPT mà 90% người mới mắc phải | 2026-07-25T06:45:00+07:00 | Dễ viral |
-| 3 | Spoke 3 | Prompt AI cho chủ doanh nghiệp: Tự động hóa 80% công việc | 2026-07-26T06:45:00+07:00 | Buyer intent |
-| 5 | Spoke 5 | 6 kỹ thuật prompt engineering nâng cao | 2026-07-27T06:45:00+07:00 | Retention cho người đã mua |
+| # | Spoke | Slug | publishedAt | Trạng thái |
+|---|-------|------|-------------|------------|
+| 4 | Spoke 4 | chatgpt-vs-claude-vs-gemini-2026-nen-dung-ai-nao | 2026-07-23T06:45:00+07:00 | ✅ ĐÃ VIẾT |
+| 2 | Spoke 2 | prompt-ai-viet-content-marketing-hieu-qua | 2026-07-24T06:45:00+07:00 | ✅ ĐÃ VIẾT |
+| 1 | Spoke 1 | (chưa có slug) | 2026-07-25T06:45:00+07:00 | ⏳ Chưa viết |
+| 3 | Spoke 3 | (chưa có slug) | 2026-07-26T06:45:00+07:00 | ⏳ Chưa viết |
+| 5 | Spoke 5 | (chưa có slug) | 2026-07-27T06:45:00+07:00 | ⏳ Chưa viết |
+
+**Chủ đề Spoke chưa viết:**
+- Spoke 1: "7 lỗi viết prompt ChatGPT mà 90% người mới mắc phải" — dễ viral
+- Spoke 3: "Prompt AI cho chủ doanh nghiệp: Tự động hóa 80% công việc" — buyer intent
+- Spoke 5: "6 kỹ thuật prompt engineering nâng cao" — retention cho người đã mua
 
 Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien`) và về **trang chủ**.
 
@@ -160,7 +168,7 @@ Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/promp
 - Cuối bài có internal link về trang chủ hoặc bài liên quan
 - Category "So sánh & Đánh giá" và "Kiến thức AI" là 2 category AEO cao nhất
 
-## Lịch đăng bài — đầy đủ (25 bài tính đến 19/7/2026)
+## Lịch đăng bài — đầy đủ (27 bài tính đến 20/7/2026)
 | # | Slug | publishedAt |
 |---|------|-------------|
 | Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T06:45:00+07:00 |
@@ -181,13 +189,15 @@ Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/promp
 | AEO 3 | chatgpt-danh-cho-nguoi-moi-bat-dau | 2026-07-15T06:45:00+07:00 |
 | AEO 4 | 10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho | 2026-07-15T19:15:00+07:00 |
 | AEO 5 | ai-co-the-lam-gi-cho-nhan-vien-van-phong | 2026-07-16T06:45:00+07:00 |
-| AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-20T06:45:00+07:00 |
 | AEO 7 | prompt-engineering-la-gi-huong-dan-tu-a-den-z | 2026-07-17T06:45:00+07:00 |
-| AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-21T06:45:00+07:00 |
 | AEO 9 | ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap | 2026-07-18T06:45:00+07:00 |
-| AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
 | AEO 11 | cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua | 2026-07-19T06:45:00+07:00 |
 | Pillar | prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien | 2026-07-19T09:00:00+07:00 |
+| AEO 6 | gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet | 2026-07-20T06:45:00+07:00 |
+| AEO 8 | tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc | 2026-07-21T06:45:00+07:00 |
+| AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
+| Spoke 4 | chatgpt-vs-claude-vs-gemini-2026-nen-dung-ai-nao | 2026-07-23T06:45:00+07:00 |
+| Spoke 2 | prompt-ai-viet-content-marketing-hieu-qua | 2026-07-24T06:45:00+07:00 |
 
 ## SEO workflow — sau mỗi lần push bài mới
 
@@ -213,7 +223,7 @@ Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/promp
 ## Cấu trúc thư mục chính
 ```
 app/
-  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (25 bài tính đến 19/7/2026)
+  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (27 bài tính đến 20/7/2026)
   robots.ts             ← robots.txt tự động + 8 AI bot directives (đã cập nhật 19/7)
   sitemap.ts            ← sitemap động, tự thêm bài mới
   SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person
