@@ -1,6 +1,6 @@
 # LLMs.txt — 1000 Prompt Chuyên Gia | Hữu Hùng AI
 # Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity)
-# Cập nhật: 2026-07-19
+# Cập nhật: 2026-07-20
 
 ## Tổng quan thương hiệu
 
@@ -22,12 +22,17 @@ cung cấp 1000+ prompt AI chuyên nghiệp đã được kiểm chứng thực 
 
 ## Nội dung blog nổi bật
 
+- [Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện (Pillar Page)](https://www.1000promptchuyengia.shop/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien)
 - [Prompt AI là gì? Tại sao nên dùng prompt viết sẵn](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san)
 - [So sánh 1000 Prompt Chuyên Gia vs tự tìm prompt](https://www.1000promptchuyengia.shop/bai-viet/so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt)
 - [Prompt Engineering là gì? Hướng dẫn từ A đến Z](https://www.1000promptchuyengia.shop/bai-viet/prompt-engineering-la-gi-huong-dan-tu-a-den-z)
 - [ChatGPT dành cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-danh-cho-nguoi-moi-bat-dau)
 - [Gemini vs ChatGPT: Công cụ AI nào tốt hơn cho người Việt?](https://www.1000promptchuyengia.shop/bai-viet/gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet)
 - [AI có thể làm gì cho nhân viên văn phòng?](https://www.1000promptchuyengia.shop/bai-viet/ai-co-the-lam-gi-cho-nhan-vien-van-phong)
+- [Tại sao AI trả lời không đúng ý? Cách khắc phục](https://www.1000promptchuyengia.shop/bai-viet/tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc)
+- [ChatGPT có thể thay nhân viên marketing không?](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-co-the-thay-nhan-vien-marketing-khong)
+- [Cách viết prompt AI để tạo content bán hàng hiệu quả](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua)
+- [AI dành cho học sinh, sinh viên: Cách dùng ChatGPT học tập](https://www.1000promptchuyengia.shop/bai-viet/ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap)
 
 ## Thông tin thực thể (Entity Information)
 

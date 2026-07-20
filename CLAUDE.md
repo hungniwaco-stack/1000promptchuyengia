@@ -102,22 +102,56 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 11. **Schema `offers` cần 3 trường bổ sung** để tránh cảnh báo vàng trong Search Console: `validFrom`, `shippingDetails` (OfferShippingDetails với deliveryTime), `hasMerchantReturnPolicy` (MerchantReturnNotPermitted cho sản phẩm số).
 12. **Google Search Console — đã setup:** Sitemap `/sitemap.xml` đã submit thành công ngày 15/7/2026, phát hiện 30 trang. Sau mỗi lần push bài mới, vào Search Console → Kiểm tra URL → Yêu cầu lập chỉ mục cho từng bài quan trọng.
 13. **Khi append bằng heredoc (`cat >>`)** — luôn kiểm tra tail -10 sau đó. Heredoc đôi khi bị encoding issue với ký tự tiếng Việt trên một số môi trường → dùng Python script thay thế nếu file bị corrupt.
+14. **PowerShell `&&` KHÔNG hoạt động** trên PowerShell 5 (mặc định Windows) — token `&&` không phải statement separator hợp lệ. **LUÔN hướng dẫn chạy từng lệnh riêng:**
+    ```powershell
+    git add .
+    git commit -m "mô tả"
+    git push
+    ```
+    Không bao giờ viết `git add . && git commit ... && git push` trong hướng dẫn cho user.
 
-## AEO — Trạng thái đã làm (cập nhật 2026-07-15)
+## AEO + GEO — Trạng thái đã làm (cập nhật 2026-07-19)
 
-**Đã hoàn thành:**
+**Đã hoàn thành (Phase 1 — AEO/SEO):**
 - `app/SchemaMarkup.tsx` — có đủ 5 schema: WebSite, Product + AggregateRating, FAQPage, ItemList (10 packs), Person (Hữu Hùng). **Không cần làm lại.**
 - `app/bai-viet/[slug]/page.tsx` — có JSON-LD Article schema + canonical URL cho từng bài.
-- `app/robots.ts` — tạo mới, trỏ đến sitemap.
-- `app/sitemap.ts` — sửa baseUrl thành `https://www.1000promptchuyengia.shop` (nhất quán với layout).
+- `app/robots.ts` — đã nâng cấp: 8 AI bot directives (GPTBot, ChatGPT-User, ClaudeBot, anthropic-ai, Google-Extended, PerplexityBot, CCBot, meta-externalagent) + rules dạng array.
+- `app/sitemap.ts` — sửa baseUrl thành `https://www.1000promptchuyengia.shop`.
 - Meta description trong `layout.tsx` — đã viết lại dạng câu trả lời trực tiếp AI có thể trích.
-- FAQ: 9 câu (5 vận hành + 4 AEO: định nghĩa, dành cho ai, combo vs lẻ, prompt mua sẵn vs tự viết).
-- 24 bài blog tổng cộng (xem lịch bên dưới).
+- FAQ: 9 câu (5 vận hành + 4 AEO).
+- 25 bài blog tổng cộng (bao gồm Pillar page).
+
+**Đã hoàn thành (Phase 2 — GEO, thực hiện 19/7/2026):**
+- `public/llms.txt` — **ĐÃ TẠO.** File hướng dẫn AI Language Models (ChatGPT, Claude, Gemini, Perplexity) nhận diện thương hiệu. Chứa: tên thương hiệu, important pages, factual claims, 10 lĩnh vực, social links. **Không tạo lại.**
+- Pillar Page: `prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien` (3.500 chữ, 11 sections, publishedAt: 2026-07-19T09:00:00+07:00) — **đã thêm vào blogPosts.ts.**
 
 **Còn thiếu (cần user cung cấp thông tin):**
 - Trang "Về Hữu Hùng" chi tiết: số đơn đã bán, background, ảnh/video thật → E-E-A-T
 - Review có nguồn xác minh: ảnh chụp màn hình, link Facebook thật
 - SchemaMarkup: reviewCount hiện là 3, cần cập nhật khi có review thật
+- **Bing Webmaster Tools** — CHƯA SETUP (xem hướng dẫn trong SEO workflow)
+- **Twitter Card meta tags** — chưa thêm vào layout.tsx (twitter:card, twitter:title, twitter:description, twitter:image)
+
+## Báo cáo Audit SEO (đã đọc 19/7/2026)
+- **Location:** `D:\Dropbox\01. DỰ ÁN 2026\INDEX\Báo cáo 1000chuyengia`
+- **Files chính:**
+  - `01. CONSOLIDATED-AUDIT.md` — SEO Health Score: 12/100 (trước khi sửa), 7 categories
+  - `6.3. CLUSTER-PLAN.md` — Hub-and-spoke: 1 Pillar + 5 Spokes, 42 keywords, ~17.000 lượt/tháng
+  - `02. GEO-DEEP-ANALYSIS.md` — GEO Score: 4/100 (trước khi sửa), AI bot access analysis
+- **Lưu ý:** Audit được viết cho Shopify — nhiều khuyến nghị không áp dụng cho Next.js (theme.liquid, Shopify Admin). Cross-check với codebase trước khi làm theo.
+
+## Content Cluster — Spoke posts còn lại (viết tuần 20-24/7)
+Thứ tự ưu tiên (theo commercial intent + search volume):
+
+| # | Spoke | Chủ đề | publishedAt dự kiến | Ghi chú |
+|---|-------|---------|---------------------|---------|
+| 4 | Spoke 4 | ChatGPT vs Claude vs Gemini 2026 — Nên dùng AI nào? | 2026-07-23T06:45:00+07:00 | Commercial intent cao nhất |
+| 2 | Spoke 2 | Prompt AI viết content marketing: Facebook → Email trong 30 phút | 2026-07-24T06:45:00+07:00 | Search volume cao nhất |
+| 1 | Spoke 1 | 7 lỗi viết prompt ChatGPT mà 90% người mới mắc phải | 2026-07-25T06:45:00+07:00 | Dễ viral |
+| 3 | Spoke 3 | Prompt AI cho chủ doanh nghiệp: Tự động hóa 80% công việc | 2026-07-26T06:45:00+07:00 | Buyer intent |
+| 5 | Spoke 5 | 6 kỹ thuật prompt engineering nâng cao | 2026-07-27T06:45:00+07:00 | Retention cho người đã mua |
+
+Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien`) và về **trang chủ**.
 
 **Nguyên tắc viết bài AEO:**
 - Đoạn `intro` phải tự chứa đủ nghĩa, AI có thể trích nguyên văn (định nghĩa hoặc tóm tắt trong 2-3 câu)
@@ -126,7 +160,7 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 - Cuối bài có internal link về trang chủ hoặc bài liên quan
 - Category "So sánh & Đánh giá" và "Kiến thức AI" là 2 category AEO cao nhất
 
-## Lịch đăng bài — đầy đủ (24 bài)
+## Lịch đăng bài — đầy đủ (25 bài tính đến 19/7/2026)
 | # | Slug | publishedAt |
 |---|------|-------------|
 | Pack 1 | 100-prompt-kinh-doanh-startup | 2026-06-26T06:45:00+07:00 |
@@ -179,8 +213,8 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 ## Cấu trúc thư mục chính
 ```
 app/
-  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (24 bài tính đến 15/7/2026)
-  robots.ts             ← robots.txt tự động, trỏ đến sitemap
+  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (25 bài tính đến 19/7/2026)
+  robots.ts             ← robots.txt tự động + 8 AI bot directives (đã cập nhật 19/7)
   sitemap.ts            ← sitemap động, tự thêm bài mới
   SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person
   bai-viet/
@@ -189,6 +223,8 @@ app/
   layout.tsx            ← Analytics (GA4 + FB Pixel) + meta AEO
 components/
   Analytics.tsx         ← GA4 + FB Pixel (đã tích hợp)
-public/images/
-  logo.png
+public/
+  llms.txt              ← GEO: hướng dẫn AI bots nhận diện thương hiệu (tạo 19/7)
+  images/
+    logo.png
 ```
