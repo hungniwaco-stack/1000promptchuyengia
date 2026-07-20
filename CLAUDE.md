@@ -150,14 +150,9 @@ Thứ tự ưu tiên (theo commercial intent + search volume):
 |---|-------|------|-------------|------------|
 | 4 | Spoke 4 | chatgpt-vs-claude-vs-gemini-2026-nen-dung-ai-nao | 2026-07-23T06:45:00+07:00 | ✅ ĐÃ VIẾT |
 | 2 | Spoke 2 | prompt-ai-viet-content-marketing-hieu-qua | 2026-07-24T06:45:00+07:00 | ✅ ĐÃ VIẾT |
-| 1 | Spoke 1 | (chưa có slug) | 2026-07-25T06:45:00+07:00 | ⏳ Chưa viết |
-| 3 | Spoke 3 | (chưa có slug) | 2026-07-26T06:45:00+07:00 | ⏳ Chưa viết |
-| 5 | Spoke 5 | (chưa có slug) | 2026-07-27T06:45:00+07:00 | ⏳ Chưa viết |
-
-**Chủ đề Spoke chưa viết:**
-- Spoke 1: "7 lỗi viết prompt ChatGPT mà 90% người mới mắc phải" — dễ viral
-- Spoke 3: "Prompt AI cho chủ doanh nghiệp: Tự động hóa 80% công việc" — buyer intent
-- Spoke 5: "6 kỹ thuật prompt engineering nâng cao" — retention cho người đã mua
+| 1 | Spoke 1 | 7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai | 2026-07-25T06:45:00+07:00 | ✅ ĐÃ VIẾT |
+| 3 | Spoke 3 | prompt-ai-cho-chu-doanh-nghiep-tu-dong-hoa-cong-viec | 2026-07-26T06:45:00+07:00 | ✅ ĐÃ VIẾT |
+| 5 | Spoke 5 | 6-ky-thuat-prompt-engineering-nang-cao | 2026-07-27T06:45:00+07:00 | ✅ ĐÃ VIẾT |
 
 Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien`) và về **trang chủ**.
 
@@ -198,6 +193,9 @@ Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/promp
 | AEO 10 | chatgpt-co-the-thay-nhan-vien-marketing-khong | 2026-07-22T06:45:00+07:00 |
 | Spoke 4 | chatgpt-vs-claude-vs-gemini-2026-nen-dung-ai-nao | 2026-07-23T06:45:00+07:00 |
 | Spoke 2 | prompt-ai-viet-content-marketing-hieu-qua | 2026-07-24T06:45:00+07:00 |
+| Spoke 1 | 7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai | 2026-07-25T06:45:00+07:00 |
+| Spoke 3 | prompt-ai-cho-chu-doanh-nghiep-tu-dong-hoa-cong-viec | 2026-07-26T06:45:00+07:00 |
+| Spoke 5 | 6-ky-thuat-prompt-engineering-nang-cao | 2026-07-27T06:45:00+07:00 |
 
 ## SEO workflow — sau mỗi lần push bài mới
 
@@ -223,7 +221,7 @@ Tất cả Spoke phải có **internal link về Pillar page** (`/bai-viet/promp
 ## Cấu trúc thư mục chính
 ```
 app/
-  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (27 bài tính đến 20/7/2026)
+  blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (30 bài tính đến 20/7/2026)
   robots.ts             ← robots.txt tự động + 8 AI bot directives (đã cập nhật 19/7)
   sitemap.ts            ← sitemap động, tự thêm bài mới
   SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person

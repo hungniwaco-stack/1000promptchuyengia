@@ -1268,6 +1268,243 @@ export const blogPosts: BlogPost[] = [
   },
 
   {
+    slug: "7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai",
+    title: "7 Lỗi Viết Prompt ChatGPT Mà 90% Người Mới Mắc Phải (Và Cách Sửa Ngay)",
+    description: "Khám phá 7 lỗi viết prompt phổ biến nhất khiến ChatGPT trả lời không đúng ý — kèm cách sửa cụ thể và checklist prompt chuẩn để áp dụng ngay.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-25T06:45:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "lỗi viết prompt",
+      "lỗi prompt ChatGPT",
+      "prompt ChatGPT người mới",
+      "cách viết prompt đúng",
+      "tại sao ChatGPT không hiểu",
+      "prompt AI hiệu quả",
+      "mẹo viết prompt",
+    ],
+    intro: "90% người mới dùng ChatGPT đều mắc ít nhất 3 trong 7 lỗi này — và không biết tại sao AI trả lời không như ý. Tin tốt là mỗi lỗi đều có cách sửa đơn giản, và khi hiểu ra, chất lượng câu trả lời của AI cải thiện ngay lập tức mà không cần học thêm bất cứ thứ gì phức tạp.",
+    sections: [
+      {
+        heading: "Lỗi 1: Prompt quá ngắn, thiếu ngữ cảnh — AI không có đủ thông tin để trả lời đúng",
+        body: [
+          "Ví dụ lỗi: 'Viết email cho khách hàng.' AI không biết bạn là ai, khách hàng là ai, email về việc gì, giọng văn thế nào. Kết quả: email chung chung, không dùng được.",
+          "Cách sửa: Thêm đủ 4 thứ vào prompt — (1) bạn là ai hoặc AI đóng vai gì, (2) đối tượng nhận là ai, (3) mục đích cụ thể, (4) giọng điệu và độ dài. Ví dụ đúng: 'Đóng vai trưởng phòng kinh doanh phần mềm B2B. Viết email follow-up gửi khách hàng sau buổi demo sản phẩm hôm qua — họ tỏ ra quan tâm nhưng chưa quyết định. Mục tiêu: nhắc nhở nhẹ nhàng và đặt lịch gặp tiếp theo. Giọng chuyên nghiệp nhưng thân thiện, dưới 150 từ.'",
+        ],
+      },
+      {
+        heading: "Lỗi 2: Không chỉ định vai trò cho AI — ChatGPT sẽ tự chọn góc nhìn trung tính",
+        body: [
+          "Khi bạn không nói AI đóng vai gì, nó sẽ trả lời như một 'trợ lý chung chung' — không có chuyên môn, không có quan điểm, không có kinh nghiệm thực tế. Kết quả là câu trả lời đúng nhưng nhạt, thiếu chiều sâu.",
+          "Cách sửa: Bắt đầu prompt bằng 'Đóng vai [chuyên gia cụ thể] với [X] năm kinh nghiệm trong [lĩnh vực].' Ví dụ: 'Đóng vai chuyên gia tài chính cá nhân 10 năm kinh nghiệm tư vấn cho người Việt thu nhập trung bình.' Một vai trò tốt thay đổi hoàn toàn chất lượng phân tích và góc nhìn mà AI đưa ra.",
+        ],
+      },
+      {
+        heading: "Lỗi 3: Hỏi quá nhiều thứ trong một prompt — AI sẽ trả lời nông tất cả",
+        body: [
+          "Ví dụ lỗi: 'Phân tích thị trường, viết chiến lược marketing, tạo lịch content 3 tháng và viết 5 caption Instagram.' Đây là 4 task khác nhau. AI sẽ làm tất cả — nhưng mỗi thứ chỉ làm ở mức 20% chất lượng.",
+          "Cách sửa: Một prompt = một task. Làm xong bước 1, dùng output đó làm input cho bước 2. Workflow nhiều bước cho kết quả tốt hơn nhiều so với yêu cầu tất cả cùng lúc. Nếu cần nhiều thứ liên quan đến nhau, chia thành cuộc trò chuyện nhiều lượt trong cùng một session.",
+        ],
+      },
+      {
+        heading: "Lỗi 4: Không chỉ định format đầu ra — AI tự chọn cách trình bày",
+        body: [
+          "AI mặc định viết theo dạng đoạn văn dài. Nếu bạn cần bảng so sánh, bullet point, template điền vào, hay code — bạn phải nói rõ. Không nói thì AI không tự biết.",
+          "Cách sửa: Thêm vào cuối prompt: 'Trình bày dưới dạng [bảng / danh sách gạch đầu dòng / template / đoạn văn / JSON]' và 'Độ dài khoảng [X] từ/dòng.' Ví dụ: 'Liệt kê dưới dạng bảng 2 cột: Vấn đề | Giải pháp. Tối đa 8 hàng.'",
+        ],
+      },
+      {
+        heading: "Lỗi 5: Không phản hồi khi AI trả lời sai — bỏ qua thay vì điều chỉnh",
+        body: [
+          "Nhiều người nhận được câu trả lời không như ý rồi... bỏ đi, nghĩ rằng AI không làm được. Thực ra AI chỉ cần được hướng dẫn thêm. Một cuộc trò chuyện với AI hoạt động như tinh chỉnh dần — mỗi lượt phản hồi giúp AI hiểu ý bạn hơn.",
+          "Cách sửa: Thay vì bỏ đi, hãy nói cụ thể điều gì chưa đúng. Ví dụ: 'Tốt, nhưng giọng văn quá trang trọng — viết lại thân thiện hơn như nói chuyện với bạn bè.' Hoặc: 'Đoạn 2 quá dài và lan man — rút gọn còn 3 câu, giữ ý chính.' Hai hoặc ba lượt điều chỉnh thường cho ra kết quả tốt hơn rất nhiều so với prompt đầu tiên.",
+        ],
+      },
+      {
+        heading: "Lỗi 6: Bắt đầu cuộc trò chuyện mới mỗi lần hỏi — AI mất hết ngữ cảnh",
+        body: [
+          "Mỗi cuộc trò chuyện mới là một tờ giấy trắng với AI. Nếu bạn đang làm một dự án dài (viết bài blog, phân tích tài liệu, lên kế hoạch kinh doanh) mà cứ mở chat mới — AI không nhớ những gì đã thảo luận, phải giải thích lại từ đầu mỗi lần.",
+          "Cách sửa: Tiếp tục trong cùng một cuộc trò chuyện cho các task liên quan. Nếu bắt buộc phải mở chat mới (ví dụ session hết hạn), tóm tắt ngữ cảnh quan trọng ở đầu prompt mới: 'Chúng ta đang viết bài blog về [chủ đề], đã xong phần intro và 3 heading đầu. Tiếp tục với heading 4: [tiêu đề].'",
+        ],
+      },
+      {
+        heading: "Lỗi 7: Không cho AI ví dụ tham chiếu — AI đoán thay vì học theo",
+        body: [
+          "Nếu bạn muốn AI viết theo giọng văn cụ thể của bạn hoặc theo style mà bạn thích — hãy cho AI xem ví dụ. Mô tả bằng lời ('viết thân thiện và chuyên nghiệp') không rõ bằng một đoạn văn mẫu.",
+          "Cách sửa: Dán vào prompt 1–2 đoạn văn theo style bạn muốn, rồi nói 'Viết theo phong cách tương tự đoạn này nhưng về [chủ đề mới].' Kỹ thuật này gọi là few-shot prompting — một trong những cách nâng cao chất lượng output nhanh nhất. Để tìm hiểu thêm các kỹ thuật nâng cao, xem bài Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Checklist nhanh: Một prompt tốt cần có đủ 5 thứ này",
+        body: [
+          "Trước khi gửi prompt, kiểm tra nhanh 5 điểm: (1) AI đóng vai gì? (2) Đối tượng hoặc ngữ cảnh là ai/gì? (3) Yêu cầu cụ thể là gì — chỉ một task? (4) Format và độ dài đầu ra? (5) Có ví dụ tham chiếu không (nếu cần giọng văn cụ thể)? Năm điểm này không cần đủ trong mọi prompt — nhưng prompt nào có đủ thường cho kết quả tốt hơn đáng kể.",
+          "Nếu bạn muốn có sẵn bộ prompt đã được viết đúng chuẩn cho hơn 100 tình huống công việc và kinh doanh thực tế, xem bộ 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop — mỗi prompt đã được kiểm tra và tối ưu, dùng được ngay với ChatGPT, Claude và Gemini.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp về lỗi viết prompt",
+        body: [
+          "Prompt tiếng Việt hay tiếng Anh tốt hơn? Cả hai đều được với ChatGPT và Claude. Dùng ngôn ngữ nào bạn diễn đạt rõ ràng nhất — không cần dịch prompt sang tiếng Anh nếu tiếng Việt của bạn đã đủ chi tiết.",
+          "Prompt dài hơn có luôn tốt hơn không? Không phải lúc nào cũng vậy. Prompt tốt là prompt đủ thông tin cần thiết, không thừa, không thiếu. Thêm thông tin không liên quan có thể làm AI bị phân tán và kém tập trung vào yêu cầu chính.",
+          "AI trả lời sai nhiều lần thì làm gì? Thử bắt đầu cuộc trò chuyện mới với prompt được viết lại từ đầu — rõ ràng hơn, cụ thể hơn. Đôi khi một session dài khiến AI bị 'lạc' trong quá nhiều ngữ cảnh. Chat mới với prompt tốt hơn thường hiệu quả hơn tiếp tục điều chỉnh trong cùng một session.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "prompt-ai-cho-chu-doanh-nghiep-tu-dong-hoa-cong-viec",
+    title: "Prompt AI Cho Chủ Doanh Nghiệp: Tự Động Hóa 80% Công Việc Hành Chính",
+    description: "Hướng dẫn chủ doanh nghiệp dùng prompt AI để tự động hóa email, tuyển dụng, báo cáo, marketing và hoạch định chiến lược — kèm prompt mẫu copy-paste sẵn dùng.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-26T06:45:00+07:00",
+    readingTime: "9 phút đọc",
+    keywords: [
+      "prompt AI cho chủ doanh nghiệp",
+      "tự động hóa công việc bằng AI",
+      "AI quản lý doanh nghiệp",
+      "prompt quản lý công việc",
+      "AI cho SME Việt Nam",
+      "ứng dụng AI kinh doanh",
+      "prompt email doanh nghiệp",
+    ],
+    intro: "Chủ doanh nghiệp mất trung bình 4–6 tiếng mỗi ngày cho công việc lặp đi lặp lại: email, báo cáo, họp, tuyển dụng, chăm sóc khách hàng. AI không thể thay bạn ra quyết định chiến lược — nhưng với bộ prompt đúng, AI xử lý được 80% khối lượng công việc hành chính, để bạn tập trung vào 20% việc chỉ chủ doanh nghiệp mới làm được.",
+    sections: [
+      {
+        heading: "5 nhóm công việc chủ doanh nghiệp có thể giao cho AI ngay hôm nay",
+        body: [
+          "Nhóm 1: Giao tiếp và email — soạn email khách hàng, email nội bộ, thông báo, từ chối khéo léo, follow-up. Nhóm 2: Tuyển dụng và HR — viết JD, câu hỏi phỏng vấn, onboarding checklist, đánh giá nhân sự. Nhóm 3: Báo cáo và phân tích — tóm tắt meeting, phân tích số liệu, viết báo cáo tuần/tháng. Nhóm 4: Marketing và content — caption mạng xã hội, email marketing, script video ngắn. Nhóm 5: Hoạch định và chiến lược — SWOT, phân tích đối thủ, lên kế hoạch theo quý.",
+          "Điểm quan trọng: AI không thay thế quyết định của bạn — AI xử lý phần soạn thảo, tóm tắt và phân tích sơ bộ để bạn review và phê duyệt nhanh hơn thay vì làm từ đầu.",
+        ],
+      },
+      {
+        heading: "Prompt mẫu cho email và giao tiếp khách hàng",
+        body: [
+          "Email từ chối khéo: 'Đóng vai giám đốc công ty [lĩnh vực]. Viết email từ chối hợp tác với đối tác [mô tả], lý do là [lý do thật] nhưng diễn đạt tế nhị, giữ quan hệ tốt để hợp tác trong tương lai. Giọng chuyên nghiệp và trân trọng. Dưới 150 từ.'",
+          "Email xử lý khiếu nại: 'Khách hàng phàn nàn về [vấn đề cụ thể]. Viết email phản hồi: (1) thừa nhận vấn đề không biện hộ, (2) xin lỗi chân thành, (3) nêu giải pháp cụ thể chúng tôi sẽ làm, (4) cam kết thời hạn giải quyết. Giọng đồng cảm và chuyên nghiệp, không dùng ngôn ngữ pháp lý cứng nhắc.'",
+          "Tóm tắt cuộc họp: 'Đây là ghi chú thô của cuộc họp [chủ đề]. Tóm tắt thành: (1) quyết định đã thống nhất, (2) action items với người phụ trách và deadline, (3) các vấn đề cần thảo luận tiếp. Format bảng, ngắn gọn.'",
+        ],
+      },
+      {
+        heading: "Prompt mẫu cho tuyển dụng và quản lý nhân sự",
+        body: [
+          "Viết JD: 'Viết mô tả công việc cho vị trí [tên vị trí] tại công ty [lĩnh vực], quy mô [số nhân viên]. Yêu cầu: [kỹ năng cứng], [kỹ năng mềm]. Ưu tiên: [tiêu chí ưu tiên]. Format chuẩn gồm: Giới thiệu công ty (2 câu), Mô tả công việc (5–7 bullet), Yêu cầu (phải có / tốt nếu có), Quyền lợi, Cách ứng tuyển.'",
+          "Câu hỏi phỏng vấn: 'Tạo bộ 10 câu hỏi phỏng vấn cho vị trí [tên vị trí]. Mix: 3 câu về kinh nghiệm kỹ thuật, 3 câu tình huống (STAR method), 2 câu về văn hóa và giá trị, 2 câu về động lực và định hướng. Kèm theo dấu hiệu câu trả lời tốt cho mỗi câu.'",
+          "Onboarding plan: 'Tạo kế hoạch onboarding 30 ngày cho [vị trí mới]. Tuần 1: làm quen và nắm quy trình. Tuần 2–3: training và làm thật có hướng dẫn. Tuần 4: độc lập với checkin định kỳ. Liệt kê task cụ thể, người hỗ trợ, và tiêu chí hoàn thành mỗi giai đoạn.'",
+        ],
+      },
+      {
+        heading: "Prompt mẫu cho báo cáo và phân tích kinh doanh",
+        body: [
+          "Phân tích số liệu: 'Đây là số liệu doanh thu tháng [tháng]: [dán số liệu vào]. Phân tích: (1) xu hướng so với tháng trước, (2) sản phẩm/kênh nào tăng/giảm, (3) nguyên nhân có thể, (4) 2–3 khuyến nghị hành động. Format báo cáo ngắn gọn cho ban lãnh đạo, tránh số liệu thô.'",
+          "Chuẩn bị họp chiến lược: 'Chúng tôi sắp họp về [chủ đề]. Bối cảnh: [mô tả tình hình]. Tạo agenda 60 phút gồm: mục tiêu cuộc họp, các điểm thảo luận chính, câu hỏi cần quyết định, phân bổ thời gian. Kèm 3 câu hỏi khai mở để bắt đầu thảo luận.'",
+        ],
+      },
+      {
+        heading: "Prompt mẫu cho marketing và content doanh nghiệp",
+        body: [
+          "Phân tích đối thủ: 'Phân tích đối thủ cạnh tranh [tên đối thủ] trong ngành [ngành]. Dựa trên thông tin công khai, đánh giá: định vị thương hiệu, điểm mạnh/yếu, thị trường mục tiêu, chiến lược giá (nếu có), và điểm khác biệt so với chúng tôi [mô tả doanh nghiệp bạn]. Đề xuất 2–3 cơ hội để chúng tôi chiếm thị phần.'",
+          "Content strategy ngắn: 'Doanh nghiệp [mô tả ngắn], khách hàng mục tiêu [mô tả]. Đề xuất chiến lược content cho [platform] trong 1 tháng: tỉ lệ mix nội dung, 3 chủ đề cốt lõi, tần suất đăng và thời điểm đăng tốt nhất. Giải thích ngắn tại sao mỗi đề xuất phù hợp với đối tượng.'",
+        ],
+      },
+      {
+        heading: "Cách setup quy trình AI cho doanh nghiệp nhỏ từ số 0",
+        body: [
+          "Bước 1: Liệt kê 10 task lặp đi lặp lại mà bạn làm nhiều nhất mỗi tuần. Bước 2: Đánh dấu những task nào là 'soạn thảo', 'tóm tắt', 'phân tích sơ bộ' — đây là task AI làm tốt nhất. Bước 3: Viết prompt mẫu cho từng task, lưu vào một file template. Bước 4: Test mỗi prompt 3–5 lần, tinh chỉnh đến khi output đủ tốt để dùng sau khi review nhanh. Bước 5: Chia sẻ prompt template với nhân viên để cả team dùng được.",
+          "Kết quả thực tế: doanh nghiệp nhỏ 5–10 người áp dụng AI cho email, content và báo cáo thường tiết kiệm được 10–15 giờ/tuần cho toàn team. Để có bộ prompt đã được tối ưu cho 10 lĩnh vực kinh doanh, xem 1000 Prompt Chuyên Gia tại www.1000promptchuyengia.shop. Tìm hiểu thêm kỹ thuật viết prompt hiệu quả tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp của chủ doanh nghiệp về dùng AI",
+        body: [
+          "Dùng AI có lo lộ bí mật kinh doanh không? Không dán dữ liệu khách hàng, hợp đồng chưa ký, hoặc thông tin tài chính nhạy cảm vào AI công cộng. Với thông tin nội bộ quan trọng, dùng phiên bản Enterprise có cam kết bảo mật, hoặc chỉ dán dữ liệu đã ẩn danh.",
+          "AI nào phù hợp nhất cho chủ doanh nghiệp? ChatGPT đa năng nhất, Claude tốt nhất cho viết lách và phân tích tài liệu dài, Gemini tốt nhất cho thông tin thời sự và tích hợp Google Workspace. Bắt đầu với một, thêm dần khi cần.",
+          "Mất bao lâu để thấy hiệu quả? Hầu hết chủ doanh nghiệp thấy kết quả rõ trong tuần đầu tiên — đặc biệt với email và soạn thảo văn bản. Quy trình đầy đủ thường mất 2–4 tuần để thiết lập và thành thói quen cho toàn team.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "6-ky-thuat-prompt-engineering-nang-cao",
+    title: "6 Kỹ Thuật Prompt Engineering Nâng Cao Để AI Cho Kết Quả Ấn Tượng",
+    description: "Khám phá 6 kỹ thuật prompt engineering nâng cao — từ Chain-of-Thought, Few-Shot đến Meta-Prompting — mà các chuyên gia đang dùng để khai thác tối đa ChatGPT, Claude và Gemini.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-07-27T06:45:00+07:00",
+    readingTime: "10 phút đọc",
+    keywords: [
+      "kỹ thuật prompt engineering nâng cao",
+      "chain of thought prompting",
+      "few shot prompting",
+      "meta prompting",
+      "prompt engineering chuyên nghiệp",
+      "kỹ thuật AI nâng cao",
+      "cách dùng AI hiệu quả hơn",
+    ],
+    intro: "Sau khi nắm được cơ bản, hầu hết người dùng AI dừng ở đó. Nhưng có 6 kỹ thuật prompt engineering nâng cao mà khi áp dụng, kết quả từ AI thay đổi hoàn toàn — từ 'dùng được' sang 'ấn tượng'. Đây là những kỹ thuật mà các prompt engineer chuyên nghiệp và người dùng AI cấp độ expert đang dùng hàng ngày.",
+    sections: [
+      {
+        heading: "Kỹ thuật 1: Chain-of-Thought — Buộc AI suy nghĩ từng bước trước khi kết luận",
+        body: [
+          "Chain-of-Thought (CoT) là kỹ thuật yêu cầu AI trình bày quá trình suy luận thay vì đưa ra câu trả lời trực tiếp. Khi AI 'nghĩ to', nó ít mắc lỗi logic hơn và đưa ra kết quả chính xác hơn — đặc biệt với bài toán phân tích, tính toán, hay ra quyết định phức tạp.",
+          "Cách áp dụng: Thêm vào cuối prompt một trong các cụm sau: 'Hãy suy nghĩ từng bước trước khi trả lời.', 'Phân tích từng khía cạnh rồi mới kết luận.', hoặc 'Trước tiên liệt kê những gì bạn cần xem xét, sau đó đưa ra đánh giá cuối.' Ví dụ thực tế: 'Tôi đang cân nhắc mở thêm cửa hàng thứ hai. Hãy phân tích từng bước: yếu tố cần xem xét, rủi ro chính, dấu hiệu thời điểm phù hợp — rồi đưa ra đánh giá cuối.'",
+        ],
+      },
+      {
+        heading: "Kỹ thuật 2: Few-Shot Prompting — Dạy AI bằng ví dụ thay vì mô tả",
+        body: [
+          "Thay vì giải thích bạn muốn AI làm gì, hãy cho AI thấy 2–3 ví dụ về input và output mong muốn. AI học từ pattern của ví dụ và áp dụng cho task mới — chính xác hơn nhiều so với mô tả bằng lời.",
+          "Cách áp dụng: Cấu trúc prompt: [Ví dụ 1 input] → [Ví dụ 1 output]. [Ví dụ 2 input] → [Ví dụ 2 output]. Bây giờ hãy làm: [Input mới của bạn]. Ví dụ thực tế cho viết caption: 'Sản phẩm: Kem chống nắng SPF50 → Caption: Bảo vệ da cả ngày không lo lem kem. Nhẹ như không có gì. Sản phẩm: Serum vitamin C → Caption: Tông đều, sáng da sau 2 tuần — không cần filter. Bây giờ hãy viết: Sản phẩm: Tẩy trang dạng dầu.' AI sẽ học được style và tone từ 2 ví dụ trên.",
+        ],
+      },
+      {
+        heading: "Kỹ thuật 3: Role + Constraint Stacking — Gán vai trò và đặt ràng buộc đồng thời",
+        body: [
+          "Kết hợp vai trò chuyên môn với các ràng buộc cụ thể tạo ra framework mà AI hoạt động trong đó — cho kết quả tập trung và nhất quán hơn nhiều so với chỉ dùng một trong hai.",
+          "Cách áp dụng: [Vai trò] + [Ràng buộc về nội dung] + [Ràng buộc về format] + [Ràng buộc về giọng điệu]. Ví dụ: 'Đóng vai copywriter 10 năm kinh nghiệm viết quảng cáo cho thị trường Việt Nam [vai trò]. Viết headline cho sản phẩm X, KHÔNG dùng từ 'chất lượng', 'uy tín', 'hàng đầu' vì quá chung chung [ràng buộc nội dung]. 5 phiên bản, mỗi bản dưới 10 từ [format]. Giọng tự nhiên như người nói chuyện thật, không như quảng cáo [giọng điệu].'",
+        ],
+      },
+      {
+        heading: "Kỹ thuật 4: Iterative Refinement — Cải thiện output qua vòng lặp có hệ thống",
+        body: [
+          "Thay vì kỳ vọng prompt đầu tiên cho ra kết quả hoàn hảo, xem mỗi lượt là một vòng lặp tinh chỉnh. Cách tiếp cận này tiết kiệm thời gian hơn so với viết lại prompt từ đầu mỗi lần.",
+          "Quy trình 3 bước: Bước 1 — Gửi prompt khung cơ bản, nhận output đầu tiên. Bước 2 — Đánh giá: điều gì đúng (giữ nguyên), điều gì sai (cần sửa), điều gì thiếu (cần thêm). Bước 3 — Phản hồi cụ thể theo 3 chiều đó. Ví dụ phản hồi tốt: 'Đoạn mở đầu rất tốt — giữ nguyên. Phần giải pháp quá ngắn — mở rộng thêm 2 ý. Thiếu ví dụ thực tế — thêm 1 case study cụ thể. Bỏ phần kết luận — kết thúc bằng CTA trực tiếp hơn.'",
+        ],
+      },
+      {
+        heading: "Kỹ thuật 5: Tree-of-Thought — Khám phá nhiều hướng giải quyết song song",
+        body: [
+          "Tree-of-Thought (ToT) là phiên bản nâng cao của Chain-of-Thought: thay vì đi theo một đường suy luận, AI được yêu cầu khám phá nhiều hướng khác nhau rồi so sánh để tìm ra hướng tốt nhất.",
+          "Cách áp dụng: 'Với vấn đề [mô tả], hãy đề xuất 3 hướng tiếp cận khác nhau. Với mỗi hướng: (1) mô tả cách làm, (2) ưu điểm chính, (3) rủi ro chính, (4) phù hợp nhất với bối cảnh nào. Sau khi đã liệt kê 3 hướng, đánh giá và đề xuất hướng nào phù hợp nhất với bối cảnh của tôi: [mô tả ngữ cảnh cụ thể].' Kỹ thuật này đặc biệt hữu ích cho quyết định chiến lược, giải quyết vấn đề phức tạp và brainstorm có cấu trúc.",
+        ],
+      },
+      {
+        heading: "Kỹ thuật 6: Meta-Prompting — Nhờ AI viết prompt tốt hơn cho bạn",
+        body: [
+          "Meta-prompting là kỹ thuật dùng AI để tối ưu chính prompt của bạn. Thay vì tự mình cố gắng viết prompt hoàn hảo, bạn mô tả mục tiêu và nhờ AI đề xuất prompt tốt nhất để đạt được mục tiêu đó.",
+          "Cách áp dụng: 'Tôi muốn dùng AI để [mô tả mục tiêu]. Đối tượng là [mô tả]. Tôi đang dùng prompt này: [dán prompt hiện tại]. Hãy đánh giá điểm yếu của prompt này và viết lại phiên bản tốt hơn — giải thích tại sao mỗi thay đổi sẽ cho kết quả tốt hơn.' Đây là kỹ thuật mà nhiều prompt engineer dùng khi họ bí — để AI tự cải thiện prompt của chính nó.",
+          "Bonus: Sau khi AI viết prompt mới, hãy dùng chính prompt đó ngay lập tức và so sánh với kết quả từ prompt cũ. Hầu hết trường hợp, phiên bản AI đề xuất cho output tốt hơn đáng kể.",
+        ],
+      },
+      {
+        heading: "Kết hợp 6 kỹ thuật trong một workflow thực tế",
+        body: [
+          "Ví dụ workflow viết bài blog chuyên sâu áp dụng cả 6 kỹ thuật: (1) Few-Shot — cho AI xem 2 bài viết theo style bạn muốn. (2) Role + Constraint — gán vai chuyên gia và giới hạn rõ format/từ ngữ cấm. (3) Tree-of-Thought — brainstorm 3 angle khác nhau cho bài. (4) Chain-of-Thought — với section phân tích phức tạp, yêu cầu AI suy nghĩ từng bước. (5) Iterative Refinement — tinh chỉnh từng section sau khi đọc. (6) Meta-Prompting — nếu prompt nào không ra kết quả tốt, nhờ AI cải thiện prompt đó.",
+          "Không cần dùng cả 6 kỹ thuật cho mọi task. Chọn kỹ thuật phù hợp với độ phức tạp: task đơn giản chỉ cần Role + Constraint; task phức tạp mới cần Chain-of-Thought hay Tree-of-Thought. Xem thêm hướng dẫn nền tảng tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien và bộ 1000 prompt đã được viết theo các kỹ thuật này tại www.1000promptchuyengia.shop.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp về kỹ thuật prompt nâng cao",
+        body: [
+          "Kỹ thuật nào nên học trước? Few-Shot và Chain-of-Thought vì dễ áp dụng ngay và cho thấy kết quả rõ nhất. Tree-of-Thought và Meta-Prompting học sau khi đã thành thạo cơ bản.",
+          "Các kỹ thuật này có dùng được với Gemini và Claude không? Có, tất cả đều hoạt động với ChatGPT, Claude và Gemini. Claude đặc biệt tốt với Chain-of-Thought và Iterative Refinement. Gemini tốt với Few-Shot khi kết hợp thông tin web.",
+          "Mất bao lâu để thành thạo? Few-Shot và Chain-of-Thought: 1–2 ngày thực hành là thấy kết quả. Tree-of-Thought và Meta-Prompting: 1–2 tuần để dùng tự nhiên. Tất cả 6 kỹ thuật: khoảng 1 tháng thực hành đều đặn.",
+        ],
+      },
+    ],
+  },
+
+  {
     slug: "prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien",
     title: "Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện Từ Cơ Bản Đến Chuyên Nghiệp (2026)",
     description: "Hướng dẫn prompt engineering toàn diện bằng tiếng Việt: định nghĩa, 5 nguyên tắc vàng, 4 cấp độ từ người mới đến chuyên gia, ứng dụng theo ngành nghề và câu hỏi thường gặp.",
