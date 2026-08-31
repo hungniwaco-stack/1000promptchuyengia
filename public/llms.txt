@@ -1,6 +1,6 @@
 # LLMs.txt — 1000 Prompt Chuyên Gia | Hữu Hùng AI
 # Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity)
-# Cập nhật: 2026-08-22
+# Cập nhật: 2026-09-05
 
 ## Tổng quan thương hiệu
 
@@ -19,7 +19,7 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [Bài viết](https://www.1000promptchuyengia.shop/bai-viet/): Hướng dẫn prompt engineering và ứng dụng AI bằng tiếng Việt
 - [Tra cứu đơn hàng](https://www.1000promptchuyengia.shop/tra-cuu-don-hang/): Kiểm tra trạng thái thanh toán và giao file
 
-## Nội dung blog (30 bài, sắp xếp theo ngày đăng)
+## Nội dung blog (35 bài, sắp xếp theo ngày đăng)
 
 - [Cách viết prompt AI hiệu quả cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-hieu-qua)
 - [7 cách ứng dụng AI trong kinh doanh nhỏ](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-ai-trong-kinh-doanh-nho)
@@ -51,6 +51,11 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [7 Lỗi Viết Prompt ChatGPT Người Mới Mắc Phải](https://www.1000promptchuyengia.shop/bai-viet/7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai)
 - [Prompt AI Cho Chủ Doanh Nghiệp: Tự Động Hóa Công Việc](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-cho-chu-doanh-nghiep-tu-dong-hoa-cong-viec)
 - [6 Kỹ Thuật Prompt Engineering Nâng Cao](https://www.1000promptchuyengia.shop/bai-viet/6-ky-thuat-prompt-engineering-nang-cao)
+- [Prompt Trong ChatGPT Là Gì? Giải Mã Bí Mật Giúp AI Trả Lời Thông Minh Hơn](https://www.1000promptchuyengia.shop/bai-viet/prompt-trong-chatgpt-la-gi-giai-ma-bi-mat)
+- [15 Prompt ChatGPT Hiệu Quả Nhất Đã Kiểm Chứng](https://www.1000promptchuyengia.shop/bai-viet/cac-prompt-chatgpt-hieu-qua-nhat-da-kiem-chung)
+- [Cách Tạo Prompt Cho ChatGPT Để Tối Ưu Hóa Công Việc Kinh Doanh](https://www.1000promptchuyengia.shop/bai-viet/tao-prompt-cho-chatgpt-toi-uu-cong-viec-kinh-doanh)
+- [Prompt ChatGPT Cho Marketing: Viết Content Bán Hàng Nhanh Hơn 5 Lần](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-cho-marketing-ban-hang-tang-doanh-so)
+- [Ứng Dụng Prompt Engineering Vào Công Việc Hằng Ngày](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-prompt-engineering-vao-cong-viec-hang-ngay)
 
 ## Thông tin thực thể (Entity Information)
 

@@ -1,5 +1,45 @@
 # Project Memory — 1000 Prompt Website
 
+## Content Plan 5 bài mới (2026-09-01 → 2026-09-05) — dựa trên keyword research CSV user gửi
+
+User gửi file `keywordresearch.csv` (95 từ khoá) kèm 1 bản kế hoạch phễu 3 tầng do
+một "Giám đốc Marketing" AI khác soạn (Bài 1-6). Đã đối chiếu số liệu thật trong CSV
+và phát hiện: tổng volume cộng dồn cả 95 từ khoá chỉ ~2.110/tháng, 69/95 từ khoá có
+volume ≤10, ~75/95 từ khoá là tiếng Anh/không dấu (nghi công cụ lấy data global, không
+riêng Việt Nam). Bài 4 gốc (prompt tạo ảnh) lệch hẳn 10 pack sản phẩm hiện có — không
+pack nào về prompt tạo ảnh. Bài 6 gốc bị ghi sai số liệu (nói Vol 10 là "cao nhất"
+trong khi đó là mức thấp nhất bảng). Bài 1, 2 gốc có nguy cơ cannibalize với bài đã có
+sẵn (`cach-viet-prompt-ai-hieu-qua`, `prompt-engineering-la-gi-huong-dan-tu-a-den-z`,
+Pillar). User đã duyệt phương án điều chỉnh — đã viết xong 5 bài mới + merge 1 phần
+vào bài cũ, **CHƯA PUSH lên GitHub, đang chờ user chạy git**:
+
+1. `prompt-trong-chatgpt-la-gi-giai-ma-bi-mat` (09/01) — gộp 3 biến thể "prompt trong
+   chatgpt là gì/la gì" + "prompt chatgpt là gì" (~170 lượt/tháng cộng dồn) vào 1 bài
+   duy nhất, tránh tách nhỏ gây cannibalize.
+2. `cac-prompt-chatgpt-hieu-qua-nhat-da-kiem-chung` (09/02) — 15 prompt miễn phí +
+   chốt sale mua trọn bộ, đúng tinh thần "nhá hàng rồi bán" của bản gốc.
+3. `tao-prompt-cho-chatgpt-toi-uu-cong-viec-kinh-doanh` (09/03) — gộp "tạo prompt cho
+   chatgpt" (110, cao nhất bảng) + "cách tạo prompt cho chatgpt" (50).
+4. `prompt-chatgpt-cho-marketing-ban-hang-tang-doanh-so` (09/04) — **thay cho Bài 4
+   gốc**, target cụm tiếng Việt "prompt chatgpt marketing" (không phải bản tiếng Anh),
+   gắn với Pack 3.
+5. `ung-dung-prompt-engineering-vao-cong-viec-hang-ngay` (09/05) — **thay cho Bài 6
+   gốc**, góc độ ứng dụng thực tế (khác góc độ lý thuyết của Pillar/spoke đã có) để
+   giảm cannibalize, vẫn bắt được từ khoá "prompt engineering for chatgpt"/"chatgpt
+   prompt engineering" (30-40 lượt).
+6. Bài 2 gốc ("cấu trúc prompt chatgpt") **không tạo bài mới** — đã thêm hẳn 1 section
+   "Cấu trúc prompt ChatGPT chuẩn chuyên gia: công thức 4 bước" vào đầu bài
+   `cach-viet-prompt-ai-hieu-qua` (bài cũ, đã có sẵn traffic/backlink).
+
+Mỗi bài mới đều có: intro tự chứa nghĩa, ít nhất 1 internal link về Pillar hoặc bài
+liên quan, 1 CTA link về trang chủ/thư viện Prompt — đúng "Nguyên tắc viết bài AEO" đã
+ghi trong CLAUDE.md. Word count mỗi bài ~450-610 từ (đã kiểm tra, không phải thin
+content). File `blogPosts.ts` giờ có 35 bài. Đã cập nhật `llms.txt` (danh sách 35 bài
++ ngày 2026-09-05).
+
+**Việc còn lại:** user cần `git add . / commit / push` để 5 bài này thật sự lên
+production (tương tự lần trước, đừng giả định code local = code live).
+
 ## Thông tin cơ bản
 - **Owner:** Nguyen Huu Hung — hungniwaco@gmail.com
 - **Domain:** www.1000promptchuyengia.shop

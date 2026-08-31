@@ -542,10 +542,21 @@ export const blogPosts: BlogPost[] = [
     category: "Mẹo sử dụng AI",
     publishedAt: "2026-06-04",
     readingTime: "5 phút đọc",
-    keywords: ["cách viết prompt", "prompt AI", "ChatGPT", "Gemini", "Claude"],
+    keywords: ["cách viết prompt", "prompt AI", "ChatGPT", "Gemini", "Claude", "cấu trúc prompt chatgpt", "công thức prompt chatgpt"],
     intro:
-      "Một prompt tốt không chỉ là câu hỏi. Đó là bản mô tả ngắn gọn về vai trò, bối cảnh, mục tiêu và tiêu chuẩn kết quả mà bạn mong muốn AI tạo ra.",
+      "Một prompt tốt không chỉ là câu hỏi. Đó là bản mô tả ngắn gọn về vai trò, bối cảnh, mục tiêu và tiêu chuẩn kết quả mà bạn mong muốn AI tạo ra — và cách nhanh nhất để làm điều đó là đi theo một công thức cố định thay vì đoán mò mỗi lần.",
     sections: [
+      {
+        heading: "Cấu trúc prompt ChatGPT chuẩn chuyên gia: công thức 4 bước",
+        body: [
+          "Thay vì nhớ nhiều nguyên tắc rời rạc, cách dễ áp dụng nhất là đi theo đúng 4 bước theo thứ tự mỗi lần viết prompt — đây cũng là cấu trúc mà phần lớn prompt chuyên nghiệp đang dùng.",
+          "Bước 1 — Vai trò (Role): cho AI biết nó cần đóng vai ai, ví dụ \"Bạn là chuyên gia marketing với 10 năm kinh nghiệm tại thị trường Việt Nam\".",
+          "Bước 2 — Bối cảnh (Context): mô tả tình huống thực tế của bạn — sản phẩm, khách hàng mục tiêu, kênh đăng, giới hạn ngân sách hoặc thời gian nếu có.",
+          "Bước 3 — Nhiệm vụ (Task): nói chính xác bạn muốn AI làm gì, càng cụ thể càng tốt, tránh các động từ chung chung như \"giúp tôi về...\".",
+          "Bước 4 — Định dạng đầu ra (Format): yêu cầu rõ kết quả nên là bảng, checklist, đoạn văn, email hay kịch bản, kèm giới hạn độ dài nếu cần.",
+          "Ví dụ áp dụng đủ 4 bước: \"Bạn là chuyên gia Facebook Ads (Vai trò). Tôi bán khóa học AI online cho chủ shop nhỏ, ngân sách quảng cáo 500.000đ/ngày (Bối cảnh). Hãy viết 3 mẫu quảng cáo nhắm vào mục tiêu tăng đăng ký tư vấn (Nhiệm vụ). Trình bày dưới dạng bảng gồm tiêu đề, nội dung và call-to-action, mỗi mẫu dưới 100 từ (Định dạng).\"",
+        ],
+      },
       {
         heading: "Bắt đầu bằng vai trò rõ ràng",
         body: [
@@ -565,6 +576,13 @@ export const blogPosts: BlogPost[] = [
         body: [
           "Nếu cần bảng, checklist, dàn ý, email hoặc kịch bản video, hãy nói rõ ngay trong prompt.",
           "Định dạng tốt giúp bạn tiết kiệm thời gian chỉnh sửa và có thể copy vào công cụ làm việc nhanh hơn.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn prompt đúng công thức, khỏi phải tự soạn?",
+        body: [
+          "Nếu áp dụng công thức 4 bước mỗi lần vẫn thấy mất thời gian, bộ 1000 Prompt Chuyên Gia đã soạn sẵn theo đúng cấu trúc này cho 10 lĩnh vực khác nhau — bạn chỉ cần điền thông tin của mình vào là dùng được ngay.",
+          "Xem thư viện Prompt tại trang chủ hoặc đọc thêm hướng dẫn toàn diện về Prompt Engineering để nắm kỹ thuật nâng cao hơn.",
         ],
       },
     ],
@@ -1620,6 +1638,233 @@ export const blogPosts: BlogPost[] = [
           "Mất bao lâu để thành thạo prompt engineering? Để đạt cấp 2 (người dùng cơ bản hiệu quả), khoảng 1-2 tuần thực hành hàng ngày. Để đạt cấp 3 (nâng cao), khoảng 1-3 tháng. Cấp 4 (chuyên gia) cần 6-12 tháng liên tục thực hành và nghiên cứu.",
           "Prompt của tôi có bị AI lưu lại không? ChatGPT và Claude có thể dùng cuộc trò chuyện để cải thiện model, nhưng bạn có thể tắt tính năng này trong cài đặt. Với thông tin nhạy cảm (dữ liệu khách hàng, bí mật kinh doanh), nên dùng phiên bản API hoặc enterprise với cam kết bảo mật rõ ràng.",
           "Prompt engineering có bị AI thay thế không? Paradox thú vị: AI ngày càng giỏi hơn, nhưng nhu cầu prompt engineering ngày càng tăng chứ không giảm. AI mạnh hơn có nghĩa là bạn có thể làm được nhiều hơn — nhưng vẫn cần biết cách ra lệnh đúng để khai thác hết tiềm năng đó.",
+        ],
+      },
+    ],
+  },
+  // ── Content Plan tháng 9/2026 — funnel 3 tầng theo từ khoá volume thấp/cạnh tranh thấp ──
+  {
+    slug: "prompt-trong-chatgpt-la-gi-giai-ma-bi-mat",
+    title: "Prompt Trong ChatGPT Là Gì? Giải Mã Bí Mật Giúp AI Trả Lời Thông Minh Hơn",
+    description:
+      "Prompt trong ChatGPT là gì và vì sao cùng một câu hỏi, người biết viết prompt lại nhận được câu trả lời hữu ích hơn hẳn? Giải thích dễ hiểu, có ví dụ minh họa.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-09-01T06:45:00+07:00",
+    readingTime: "5 phút đọc",
+    keywords: ["prompt trong chatgpt là gì", "prompt trong chatgpt la gì", "prompt chatgpt là gì", "prompt là gì", "cách dùng prompt"],
+    intro:
+      "Prompt trong ChatGPT là câu lệnh hoặc đoạn mô tả bạn nhập vào để yêu cầu AI thực hiện một việc cụ thể — nó vừa là câu hỏi, vừa là bản hướng dẫn cho AI biết cần trả lời theo vai trò, ngữ cảnh và định dạng nào.",
+    sections: [
+      {
+        heading: "Prompt trong ChatGPT là gì, hiểu đơn giản nhất?",
+        body: [
+          "Nhiều người nghĩ prompt chỉ là \"câu hỏi\" gõ vào ô chat. Thực ra prompt gần với một bản mô tả công việc hơn: nó cho AI biết đóng vai gì, xử lý thông tin nào, và cần trả về kết quả ra sao.",
+          "Ví dụ, gõ \"viết caption bán hàng\" là một câu hỏi. Nhưng \"Bạn là chuyên gia content bán hàng, viết 3 caption Facebook cho một shop bán mỹ phẩm thiên nhiên, giọng văn gần gũi, mỗi caption dưới 80 từ\" mới là một prompt đúng nghĩa — vì nó đủ để AI hiểu chính xác việc cần làm.",
+        ],
+      },
+      {
+        heading: "Vì sao cùng một câu hỏi, prompt khác nhau cho kết quả khác hẳn?",
+        body: [
+          "ChatGPT không đọc được suy nghĩ của bạn — nó chỉ dựa vào đúng những gì bạn gõ ra để đoán ý định. Prompt càng thiếu thông tin, AI càng phải tự đoán, và kết quả càng chung chung.",
+          "Đây là lý do hai người cùng hỏi ChatGPT về cùng một chủ đề nhưng nhận được chất lượng trả lời khác xa nhau: người viết prompt tốt đã loại bỏ gần hết phần AI phải đoán mò.",
+        ],
+      },
+      {
+        heading: "3 thành phần cơ bản của một prompt hiệu quả",
+        body: [
+          "Vai trò: cho AI biết nó đang \"đóng vai\" ai — chuyên gia tài chính, biên tập viên, trợ lý bán hàng — để điều chỉnh mức độ chuyên môn và giọng văn phù hợp.",
+          "Ngữ cảnh: thông tin thực tế xoay quanh yêu cầu của bạn — bạn đang làm gì, cho ai, trong tình huống nào.",
+          "Định dạng đầu ra: kết quả bạn muốn nhận — bảng, danh sách, email, kịch bản — và giới hạn độ dài nếu cần.",
+        ],
+      },
+      {
+        heading: "Muốn dùng ngay mà không cần tự nghĩ prompt từ đầu?",
+        body: [
+          "Nếu bạn mới bắt đầu và chưa quen tự soạn đủ 3 thành phần trên mỗi lần, bộ 1000 Prompt Chuyên Gia đã viết sẵn theo đúng cấu trúc này cho 10 lĩnh vực — bạn chỉ cần điền thông tin của mình vào là dùng ngay.",
+          "Xem thêm hướng dẫn chi tiết hơn về cấu trúc prompt tại bài Cách viết prompt AI hiệu quả cho người mới bắt đầu, hoặc khám phá thư viện Prompt ngay tại trang chủ.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "cac-prompt-chatgpt-hieu-qua-nhat-da-kiem-chung",
+    title: "15 Prompt ChatGPT Hiệu Quả Nhất Đã Kiểm Chứng (Copy Dùng Ngay)",
+    description:
+      "Tổng hợp 15 prompt ChatGPT hiệu quả nhất cho công việc, kinh doanh và cuộc sống hằng ngày — copy và điền thông tin của bạn vào là dùng được ngay.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-09-02T06:45:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: ["các prompt chatgpt hiệu quả", "prompt chatgpt hay", "mẫu prompt chatgpt", "prompt AI hiệu quả"],
+    intro:
+      "Dưới đây là 15 prompt ChatGPT hiệu quả, được chọn lọc từ những nhu cầu phổ biến nhất khi làm việc, kinh doanh và tổ chức cuộc sống — bạn chỉ cần copy, thay thông tin trong ngoặc vuông bằng tình huống thực tế của mình rồi dán vào ChatGPT.",
+    sections: [
+      {
+        heading: "5 prompt cho công việc và năng suất",
+        body: [
+          "1. \"Tóm tắt nội dung sau thành 5 gạch đầu dòng, mỗi dòng dưới 15 từ: [dán nội dung]\".",
+          "2. \"Bạn là trợ lý cá nhân. Sắp xếp danh sách công việc sau theo thứ tự ưu tiên, giải thích ngắn gọn lý do: [dán danh sách]\".",
+          "3. \"Viết email trả lời khách hàng đang phàn nàn về [vấn đề], giọng văn xin lỗi nhưng chuyên nghiệp, đề xuất hướng giải quyết cụ thể\".",
+          "4. \"Chuyển đoạn ghi chú cuộc họp sau thành bản tóm tắt có mục tiêu, quyết định và việc cần làm: [dán ghi chú]\".",
+          "5. \"Giải thích khái niệm [chủ đề] như đang nói với người chưa biết gì về lĩnh vực này, dùng ví dụ thực tế\".",
+        ],
+      },
+      {
+        heading: "5 prompt cho kinh doanh và marketing",
+        body: [
+          "6. \"Bạn là chuyên gia marketing. Viết 3 caption Facebook cho sản phẩm [tên sản phẩm], đối tượng [khách hàng mục tiêu], mục tiêu tăng inbox tư vấn\".",
+          "7. \"Phân tích 3 điểm mạnh và 3 điểm yếu của đối thủ [tên đối thủ] dựa trên thông tin sau: [dán thông tin]\".",
+          "8. \"Viết kịch bản video ngắn 30 giây quảng cáo [sản phẩm] cho TikTok, có hook mở đầu gây chú ý trong 3 giây đầu\".",
+          "9. \"Soạn 5 câu trả lời mẫu cho câu hỏi khách hàng thường hỏi về giá, giao hàng và bảo hành sản phẩm [tên sản phẩm]\".",
+          "10. \"Bạn là chuyên gia bán hàng. Viết kịch bản xử lý khi khách nói 'để tôi suy nghĩ thêm' một cách khéo léo, không tạo áp lực\".",
+        ],
+      },
+      {
+        heading: "5 prompt cho cuộc sống và phát triển bản thân",
+        body: [
+          "11. \"Lập kế hoạch 1 tuần cân bằng giữa công việc [mô tả công việc] và thời gian nghỉ ngơi, dạng bảng theo từng ngày\".",
+          "12. \"Đóng vai cố vấn tài chính cá nhân, gợi ý cách phân bổ ngân sách hàng tháng với thu nhập [số tiền] và mục tiêu tiết kiệm [mục tiêu]\".",
+          "13. \"Giải thích 3 kỹ thuật quản lý stress hiệu quả, phù hợp áp dụng trong ngày làm việc bận rộn, không cần dụng cụ hỗ trợ\".",
+          "14. \"Gợi ý lộ trình học [kỹ năng] trong 30 ngày cho người mới bắt đầu, chia theo tuần, mỗi tuần một mục tiêu rõ ràng\".",
+          "15. \"Viết một đoạn phản hồi mang tính xây dựng cho đồng nghiệp về [tình huống], vừa thẳng thắn vừa giữ được mối quan hệ tốt\".",
+        ],
+      },
+      {
+        heading: "15 prompt này mới chỉ là khởi đầu",
+        body: [
+          "Đây là 15 trong số 1000 prompt đã được kiểm chứng thực tế trên ChatGPT, Gemini và Claude, chia theo 10 lĩnh vực: kinh doanh, marketing, bán hàng, tài chính, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực.",
+          "Nếu 15 prompt trên đã giúp ích, bạn có thể sở hữu trọn bộ 1000 Prompt Chuyên Gia với giá 199.000đ cho combo đầy đủ, hoặc 49.000đ nếu chỉ cần đúng một lĩnh vực — xem chi tiết tại trang chủ.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tao-prompt-cho-chatgpt-toi-uu-cong-viec-kinh-doanh",
+    title: "Cách Tạo Prompt Cho ChatGPT Để Tối Ưu Hóa Công Việc Kinh Doanh",
+    description:
+      "Hướng dẫn cách tạo prompt cho ChatGPT theo từng loại công việc kinh doanh: bán hàng, chăm sóc khách hàng, lập kế hoạch và phân tích dữ liệu cơ bản.",
+    category: "AI cho kinh doanh",
+    publishedAt: "2026-09-03T06:45:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: ["tạo prompt cho chatgpt", "cách tạo prompt cho chatgpt", "prompt kinh doanh chatgpt", "prompt cho doanh nghiệp nhỏ"],
+    intro:
+      "Tạo prompt cho ChatGPT để phục vụ công việc kinh doanh không khác nhiều so với việc giao việc cho một trợ lý mới: bạn cần nói rõ vai trò, tình huống thực tế của doanh nghiệp và kết quả mong muốn — càng cụ thể, ChatGPT càng hỗ trợ đúng việc.",
+    sections: [
+      {
+        heading: "Vì sao chủ doanh nghiệp nhỏ cần biết tạo prompt đúng cách?",
+        body: [
+          "Chủ shop và doanh nghiệp nhỏ thường phải kiêm nhiều vai trò cùng lúc: bán hàng, marketing, chăm sóc khách hàng, quản lý. ChatGPT có thể hỗ trợ hầu hết các việc này, nhưng chỉ khi prompt đủ rõ ràng để AI hiểu đúng ngữ cảnh kinh doanh của bạn.",
+          "Một prompt tạo hời hợt như \"giúp tôi bán hàng tốt hơn\" sẽ nhận về lời khuyên chung chung không áp dụng được. Một prompt có đủ thông tin cụ thể sẽ cho ra kết quả dùng được ngay trong công việc.",
+        ],
+      },
+      {
+        heading: "Công thức tạo prompt cho từng tình huống kinh doanh",
+        body: [
+          "Bán hàng: \"Bạn là chuyên gia bán hàng B2C. Tôi bán [sản phẩm], khách hàng thường từ chối vì [lý do]. Viết 3 cách phản hồi khéo léo giúp khách yên tâm quyết định mua.\"",
+          "Chăm sóc khách hàng: \"Soạn 5 câu trả lời chuẩn cho các câu hỏi thường gặp về [chủ đề: giá/bảo hành/giao hàng] của [tên sản phẩm/dịch vụ], giọng văn thân thiện và chuyên nghiệp.\"",
+          "Lập kế hoạch: \"Bạn là cố vấn vận hành. Doanh nghiệp của tôi đang gặp vấn đề [mô tả vấn đề]. Đề xuất 3 hướng giải quyết, mỗi hướng nêu rõ việc cần làm và thời gian dự kiến.\"",
+          "Phân tích dữ liệu cơ bản: \"Dựa trên số liệu bán hàng sau [dán số liệu], chỉ ra 3 sản phẩm bán chạy nhất, 3 sản phẩm cần xem lại và gợi ý 1 hành động cụ thể cho mỗi nhóm.\"",
+        ],
+      },
+      {
+        heading: "3 lỗi thường gặp khi chủ doanh nghiệp tạo prompt",
+        body: [
+          "Không cung cấp số liệu hoặc ví dụ thực tế — khiến AI phải đưa ra lời khuyên chung chung áp dụng được cho bất kỳ ai, không riêng cho doanh nghiệp của bạn.",
+          "Hỏi quá nhiều việc trong một prompt — ví dụ vừa muốn phân tích thị trường, vừa muốn viết kế hoạch marketing, vừa muốn kịch bản bán hàng trong cùng một câu hỏi. Nên tách thành từng prompt riêng cho từng việc.",
+          "Không yêu cầu định dạng cụ thể — khiến kết quả trả về dưới dạng đoạn văn dài khó áp dụng ngay, trong khi bạn có thể yêu cầu thẳng dạng bảng, checklist hoặc từng bước hành động.",
+        ],
+      },
+      {
+        heading: "Tiết kiệm thời gian tạo prompt với bộ prompt đã soạn sẵn",
+        body: [
+          "Nếu bạn không có thời gian tự soạn prompt cho từng tình huống kinh doanh, bộ 1000 Prompt Chuyên Gia đã có sẵn các prompt cho kinh doanh, bán hàng, marketing, lãnh đạo và tự động hóa quy trình — chỉ cần điền thông tin của doanh nghiệp bạn vào.",
+          "Xem thêm bài Prompt AI Cho Chủ Doanh Nghiệp: Tự Động Hóa Công Việc hoặc khám phá toàn bộ thư viện Prompt tại trang chủ.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "prompt-chatgpt-cho-marketing-ban-hang-tang-doanh-so",
+    title: "Prompt ChatGPT Cho Marketing: Viết Content Bán Hàng Nhanh Hơn 5 Lần",
+    description:
+      "Bộ prompt ChatGPT cho marketing giúp viết caption, quảng cáo và kịch bản bán hàng nhanh hơn, đúng đối tượng khách hàng và có lời kêu gọi hành động rõ ràng.",
+    category: "Marketing & Thương hiệu",
+    publishedAt: "2026-09-04T06:45:00+07:00",
+    readingTime: "5 phút đọc",
+    keywords: ["prompt chatgpt marketing", "chatgpt prompt for marketing", "prompt content marketing", "prompt quảng cáo chatgpt"],
+    intro:
+      "Prompt ChatGPT cho marketing là những câu lệnh được thiết kế riêng để AI hiểu đúng vai trò marketer: viết content bán hàng, quảng cáo và chăm sóc khách hàng theo đúng giọng văn thương hiệu, thay vì trả lời chung chung như một trợ lý thông thường.",
+    sections: [
+      {
+        heading: "Vì sao dùng prompt riêng cho marketing hiệu quả hơn hỏi thông thường?",
+        body: [
+          "Khi bạn chỉ gõ \"viết content quảng cáo\", ChatGPT không biết bạn đang bán gì, cho ai, trên kênh nào — nên phải đoán, và kết quả thường quá chung chung để dùng ngay.",
+          "Prompt marketing hiệu quả luôn có đủ 4 thông tin: sản phẩm, khách hàng mục tiêu, kênh đăng và mục tiêu chuyển đổi (tăng inbox, tăng đơn hàng, tăng lượt theo dõi...).",
+        ],
+      },
+      {
+        heading: "3 prompt marketing dùng được ngay hôm nay",
+        body: [
+          "Viết caption bán hàng: \"Bạn là chuyên gia content marketing. Viết 3 caption Facebook cho [sản phẩm], khách hàng mục tiêu là [mô tả khách hàng], mục tiêu tăng inbox tư vấn, giọng văn [gần gũi/chuyên nghiệp].\"",
+          "Viết kịch bản quảng cáo video ngắn: \"Viết kịch bản video 30 giây cho TikTok quảng cáo [sản phẩm], có hook gây chú ý trong 3 giây đầu, kết thúc bằng lời kêu gọi hành động rõ ràng.\"",
+          "Viết email marketing: \"Soạn email giới thiệu [sản phẩm/chương trình khuyến mãi] cho khách hàng cũ, tiêu đề gây tò mò, nội dung dưới 150 từ, có 1 call-to-action duy nhất.\"",
+        ],
+      },
+      {
+        heading: "Prompt marketing phù hợp với ai?",
+        body: [
+          "Chủ shop online tự làm content một mình, chưa có ngân sách thuê agency hoặc nhân sự marketing riêng.",
+          "Nhân viên marketing cần ra nhiều nội dung cùng lúc cho nhiều kênh (Facebook, TikTok, email) mà không đủ thời gian viết tay từng bài.",
+          "Freelancer nhận viết content cho nhiều khách hàng, cần công cụ tăng tốc độ ra bản nháp đầu tiên.",
+        ],
+      },
+      {
+        heading: "Bộ prompt marketing đầy đủ hơn — không chỉ 3 mẫu ở trên",
+        body: [
+          "Pack 3: 100 Prompt Marketing & Xây Dựng Thương Hiệu trong bộ 1000 Prompt Chuyên Gia có đủ prompt cho quảng cáo, PR, kịch bản video viral và định vị thương hiệu — được viết sẵn theo đúng công thức vai trò, ngữ cảnh, nhiệm vụ, định dạng.",
+          "Xem chi tiết Pack 3 hoặc toàn bộ 10 pack tại thư viện Prompt trên trang chủ.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ung-dung-prompt-engineering-vao-cong-viec-hang-ngay",
+    title: "Ứng Dụng Prompt Engineering Vào Công Việc Hằng Ngày (Không Cần Học Code)",
+    description:
+      "Prompt engineering không chỉ dành cho lập trình viên. Xem cách ứng dụng thực tế vào công việc văn phòng, kinh doanh và marketing hằng ngày.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-09-05T06:45:00+07:00",
+    readingTime: "5 phút đọc",
+    keywords: ["prompt engineering for chatgpt", "chatgpt prompt engineering", "ứng dụng prompt engineering", "prompt engineering công việc"],
+    intro:
+      "Prompt engineering nghe có vẻ là thuật ngữ kỹ thuật, nhưng bản chất chỉ là kỹ năng đặt yêu cầu rõ ràng cho AI — bất kỳ ai làm công việc văn phòng, kinh doanh hay marketing đều có thể ứng dụng ngay mà không cần biết lập trình.",
+    sections: [
+      {
+        heading: "Prompt engineering trong công việc hằng ngày trông như thế nào?",
+        body: [
+          "Không phải viết code, mà là xây dựng thói quen luôn cung cấp đủ vai trò, ngữ cảnh, nhiệm vụ và định dạng mỗi khi hỏi AI — dù chỉ là soạn email hay tóm tắt tài liệu.",
+          "Người áp dụng đúng thói quen này thường tiết kiệm được nhiều lần chỉnh sửa qua lại với AI, vì kết quả nhận được đã gần đúng ý ngay từ lần đầu.",
+        ],
+      },
+      {
+        heading: "3 cách ứng dụng theo từng loại công việc",
+        body: [
+          "Công việc hành chính: dùng prompt engineering để soạn email, tóm tắt biên bản họp, dịch tài liệu — chỉ cần thêm ngữ cảnh (ai gửi, gửi cho ai, mục đích) là kết quả đã sát yêu cầu.",
+          "Công việc kinh doanh: áp dụng để phân tích số liệu bán hàng cơ bản, soạn kịch bản chăm sóc khách hàng, lập kế hoạch tuần — biến AI thành trợ lý phân tích và lập kế hoạch thay vì chỉ hỏi đáp đơn giản.",
+          "Công việc sáng tạo nội dung: dùng để giữ giọng văn thương hiệu nhất quán qua nhiều bài viết, bằng cách luôn đưa ví dụ phong cách mong muốn vào trong prompt (few-shot).",
+        ],
+      },
+      {
+        heading: "Bắt đầu từ đâu nếu chưa từng nghe đến prompt engineering?",
+        body: [
+          "Không cần học lý thuyết trước. Cách nhanh nhất là thực hành ngay với công việc bạn đang làm: chọn một việc lặp lại hằng tuần, áp dụng đủ 4 thành phần (vai trò, ngữ cảnh, nhiệm vụ, định dạng), rồi so sánh kết quả với cách hỏi thông thường trước đây.",
+          "Sau vài lần thực hành, việc thêm ngữ cảnh và định dạng vào prompt sẽ trở thành phản xạ, không cần suy nghĩ nhiều nữa.",
+        ],
+      },
+      {
+        heading: "Học nhanh hơn từ prompt đã được xây dựng sẵn",
+        body: [
+          "Cách học prompt engineering nhanh nhất là quan sát cách các prompt tốt được cấu trúc, rồi áp dụng lại cho công việc của mình — giống như học nấu ăn từ công thức có sẵn thay vì tự mò từ đầu.",
+          "Đọc thêm hướng dẫn toàn diện tại Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện, hoặc dùng ngay 1000 Prompt Chuyên Gia đã được xây dựng theo đúng cấu trúc chuyên nghiệp cho 10 lĩnh vực công việc khác nhau.",
         ],
       },
     ],
