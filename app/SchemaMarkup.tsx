@@ -6,6 +6,33 @@
 
 const BASE_URL = "https://www.1000promptchuyengia.shop";
 
+// Liên kết mạng xã hội / thực thể xác thực thương hiệu (E-E-A-T).
+// Thêm URL vào đây mỗi khi có thêm kênh chính thức (Zalo OA, TikTok, Youtube...).
+const SAME_AS = ["https://www.facebook.com/huuhungai/"];
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
+  name: "Hữu Hùng AI",
+  url: BASE_URL,
+  logo: `${BASE_URL}/images/logo.webp`,
+  image: `${BASE_URL}/images/og-image.jpg`,
+  sameAs: SAME_AS,
+  founder: {
+    "@type": "Person",
+    name: "Hữu Hùng",
+  },
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    telephone: "+84-944-851-719",
+    email: "hatmuadem@gmail.com",
+    areaServed: "VN",
+    availableLanguage: "Vietnamese",
+  },
+};
+
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -15,8 +42,9 @@ const websiteSchema = {
   description:
     "Bộ 1000 Prompt AI chuyên gia cho kinh doanh, marketing, bán hàng, tài chính, năng suất và ứng dụng AI thực chiến.",
   publisher: {
-    "@type": "Person",
-    name: "Hữu Hùng",
+    "@type": "Organization",
+    "@id": `${BASE_URL}/#organization`,
+    name: "Hữu Hùng AI",
     url: BASE_URL,
   },
   potentialAction: {
@@ -37,7 +65,7 @@ const comboProductSchema = {
   description:
     "Trọn bộ 1000 Prompt AI chuyên gia chia thành 10 lĩnh vực: kinh doanh, tài chính cá nhân, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực. Dùng được với ChatGPT, Gemini, Claude.",
   url: BASE_URL,
-  image: `${BASE_URL}/images/banner.png`,
+  image: `${BASE_URL}/images/og-image.jpg`,
   brand: {
     "@type": "Brand",
     name: "Hữu Hùng AI",
@@ -87,6 +115,13 @@ const comboProductSchema = {
       returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
     },
   },
+  // LƯU Ý QUAN TRỌNG: Google chỉ cho phép review/aggregateRating trong
+  // structured data khi review là thật và có thể xác minh (self-serving
+  // reviews policy). Nếu 3 review bên dưới không phải review thật từ khách
+  // (có ảnh chụp màn hình / link mạng xã hội xác minh), nên: (1) thay bằng
+  // review thật đã xin phép khách hàng, hoặc (2) xoá aggregateRating +
+  // review khỏi schema và chỉ hiển thị dạng testimonial thường trên trang,
+  // không đánh dấu JSON-LD, để tránh rủi ro Google gỡ rich snippet/phạt.
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5",
@@ -320,6 +355,7 @@ const personSchema = {
   alternateName: "Nguyen Huu Hung",
   url: BASE_URL,
   email: "hungniwaco@gmail.com",
+  sameAs: SAME_AS,
   knowsAbout: [
     "AI Prompting",
     "ChatGPT",
@@ -343,6 +379,10 @@ const personSchema = {
 export default function SchemaMarkup() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

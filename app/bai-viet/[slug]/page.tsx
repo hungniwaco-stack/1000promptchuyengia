@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { blogPosts, getBlogPostBySlug } from "../../blogPosts";
+import { truncateTitle, truncateDescription } from "../../seoText";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -19,19 +20,43 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return {};
   }
 
+  // <title>/meta description phải ngắn để Google không cắt bằng "...".
+  // H1 và mô tả đầy đủ trên trang (post.title / post.description) giữ nguyên,
+  // chỉ bản dùng cho thẻ <title>/<meta> mới được rút gọn ở đây. Giữ lại hậu tố
+  // thương hiệu " | Hữu Hùng AI" bằng cách trừ trước độ dài của nó.
+  const BRAND_SUFFIX = " | Hữu Hùng AI";
+  const seoTitle = `${truncateTitle(post.title, 60 - BRAND_SUFFIX.length)}${BRAND_SUFFIX}`;
+  const seoDescription = truncateDescription(post.description, 155);
+
   return {
-    title: `${post.title} | Hữu Hùng AI`,
-    description: post.description,
+    title: seoTitle,
+    description: seoDescription,
     keywords: post.keywords,
     alternates: {
       canonical: `/bai-viet/${post.slug}`,
     },
     openGraph: {
+      // Facebook/Zalo không cắt cứng ở 60 ký tự như Google, nên OG dùng tiêu đề
+      // đầy đủ (post.title) để giữ trọn ngữ nghĩa khi chia sẻ.
       title: post.title,
-      description: post.description,
+      description: seoDescription,
       type: "article",
       publishedTime: post.publishedAt,
       url: `/bai-viet/${post.slug}`,
+      images: [
+        {
+          url: "/images/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: seoDescription,
+      images: ["/images/og-image.jpg"],
     },
   };
 }
@@ -49,14 +74,22 @@ export default async function BlogPostPage({ params }: PageProps) {
     .filter((p) => p.slug !== slug && new Date(p.publishedAt) <= now)
     .slice(0, 3);
 
+  const postUrl = `https://www.1000promptchuyengia.shop/bai-viet/${post.slug}`;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.description,
+    image: ["https://www.1000promptchuyengia.shop/images/og-image.jpg"],
     datePublished: post.publishedAt,
+    dateModified: post.publishedAt,
     keywords: post.keywords.join(", "),
-    url: `https://www.1000promptchuyengia.shop/bai-viet/${post.slug}`,
+    url: postUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
     author: {
       "@type": "Person",
       name: "Nguyen Huu Hung",
@@ -66,7 +99,36 @@ export default async function BlogPostPage({ params }: PageProps) {
       "@type": "Organization",
       name: "Hữu Hùng AI",
       url: "https://www.1000promptchuyengia.shop",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.1000promptchuyengia.shop/images/logo.webp",
+      },
     },
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Trang chủ",
+        item: "https://www.1000promptchuyengia.shop/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Bài viết",
+        item: "https://www.1000promptchuyengia.shop/bai-viet",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
   };
 
   return (
@@ -75,11 +137,15 @@ export default async function BlogPostPage({ params }: PageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
 
       <header className="border-b border-slate-200/90 bg-white">
         <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-4 py-4">
           <Link href="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Logo Hữu Hùng AI" className="h-20 w-auto max-w-[210px] object-contain" />
+            <img src="/images/logo.webp" alt="Logo Hữu Hùng AI" className="h-20 w-auto max-w-[210px] object-contain" width={210} height={105} />
           </Link>
           <nav>
             <ul className="flex flex-wrap gap-4 text-base font-extrabold md:gap-7">

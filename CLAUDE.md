@@ -109,6 +109,9 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
     git push
     ```
     Không bao giờ viết `git add . && git commit ... && git push` trong hướng dẫn cho user.
+15. **Khi viết Spoke posts** — mỗi bài phải có: (1) đoạn `intro` tự chứa đủ nghĩa AI có thể trích, (2) heading H2 chứa từ khóa dạng câu hỏi, (3) internal link về Pillar page `/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien`, (4) internal link về trang chủ.
+16. **Cập nhật `llms.txt` khi có bài mới:** thêm entry vào section "Nội dung blog nổi bật", cập nhật ngày ở dòng 3. Format: `- [Tiêu đề bài](https://www.1000promptchuyengia.shop/bai-viet/[slug])`. Ưu tiên Pillar ở đầu danh sách.
+17. **Sau 27/7/2026 không còn bài nào được schedule** — cần lên kế hoạch Phase 2 nội dung (AEO mới, Spoke mới, hoặc update bài cũ) trước ngày 27/7.
 
 ## AEO + GEO — Trạng thái đã làm (cập nhật 2026-07-20)
 
@@ -119,11 +122,12 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 - `app/sitemap.ts` — sửa baseUrl thành `https://www.1000promptchuyengia.shop`.
 - Meta description trong `layout.tsx` — đã viết lại dạng câu trả lời trực tiếp AI có thể trích.
 - FAQ: 9 câu (5 vận hành + 4 AEO).
-- 25 bài blog tổng cộng (bao gồm Pillar page).
+- 30 bài blog tổng cộng (tính đến 20/7/2026).
 
-**Đã hoàn thành (Phase 2 — GEO, thực hiện 19/7/2026):**
-- `public/llms.txt` — **ĐÃ TẠO.** File hướng dẫn AI Language Models (ChatGPT, Claude, Gemini, Perplexity) nhận diện thương hiệu. Chứa: tên thương hiệu, important pages, factual claims, 10 lĩnh vực, social links. **Không tạo lại.**
-- Pillar Page: `prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien` (3.500 chữ, 11 sections, publishedAt: 2026-07-19T09:00:00+07:00) — **đã thêm vào blogPosts.ts.**
+**Đã hoàn thành (Phase 2 — GEO, thực hiện 19–20/7/2026):**
+- `public/llms.txt` — **ĐÃ TẠO VÀ CẬP NHẬT.** Ngày 20/7 đã thêm 5 bài mới + đưa Pillar lên đầu danh sách. Mỗi khi có bài mới publish, thêm entry vào phần "Nội dung blog nổi bật". **Không tạo lại.**
+- Pillar Page: `prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien` (3.500 chữ, 11 sections) — **đã thêm vào blogPosts.ts.**
+- Content Cluster (Hub-and-Spoke): **100% HOÀN THÀNH ngày 20/7/2026** — 1 Pillar + 5 Spokes đều đã viết và schedule. Spoke 4 & 2 viết trước (19/7), Spoke 1, 3, 5 viết sau (20/7). blogPosts.ts hiện có 30 bài, 1631 dòng.
 
 **Còn thiếu (cần user cung cấp thông tin):**
 - Trang "Về Hữu Hùng" chi tiết: số đơn đã bán, background, ảnh/video thật → E-E-A-T
@@ -134,6 +138,24 @@ Windows Credential Manager nhớ token sau lần đăng nhập đầu tiên → 
 
 **Đã có sẵn, KHÔNG làm lại:**
 - Twitter Card meta tags — **đã có trong `layout.tsx`** (twitter:card, title, description, images). Kiểm tra ngày 20/7/2026, xác nhận đầy đủ.
+
+## Đánh giá chất lượng website (20/7/2026) — Tổng: 6.2/10
+
+| Hạng mục | Điểm | Ghi chú |
+|----------|------|---------|
+| Kỹ thuật | 8/10 | Next.js, schema, sitemap, robots — tốt |
+| Nội dung | 7/10 | 30 bài AEO, content cluster hoàn chỉnh |
+| GEO/AEO | 6/10 | llms.txt có, nhưng Bing chưa setup |
+| Chuyển đổi | 5/10 | OG Image sai tỷ lệ, chưa A/B test giá |
+| E-E-A-T | 4/10 | Thiếu ảnh/video thật, review chưa xác minh |
+| Link building | 2/10 | Chưa có backlink, chưa được trích dẫn ngoài |
+
+**Điểm kéo xuống chủ yếu:** E-E-A-T và link building — cần anh cung cấp nội dung thật, không làm thay được.
+
+**3 ưu tiên tiếp theo:**
+1. Bing Webmaster Tools (30 phút, 1 lần)
+2. Ảnh/video thật của Hữu Hùng → trang Về tôi
+3. OG Image đúng kích thước 1200×630px
 
 ## Báo cáo Audit SEO (đã đọc 19/7/2026)
 - **Location:** `D:\Dropbox\01. DỰ ÁN 2026\INDEX\Báo cáo 1000chuyengia`
@@ -224,15 +246,108 @@ app/
   blogPosts.ts          ← nguồn dữ liệu tất cả bài viết (30 bài tính đến 20/7/2026)
   robots.ts             ← robots.txt tự động + 8 AI bot directives (đã cập nhật 19/7)
   sitemap.ts            ← sitemap động, tự thêm bài mới
-  SchemaMarkup.tsx      ← JSON-LD: WebSite, Product, FAQPage, ItemList, Person
+  SchemaMarkup.tsx      ← JSON-LD: Organization, WebSite, Product, FAQPage, ItemList, Person
+  icon.png              ← favicon (convention Next.js App Router, thêm 22/8/2026)
   bai-viet/
     page.tsx            ← danh sách bài (force-dynamic + datetime filter)
-    [slug]/page.tsx     ← chi tiết bài (JSON-LD Article + gift link + related posts)
-  layout.tsx            ← Analytics (GA4 + FB Pixel) + meta AEO
+    [slug]/page.tsx     ← chi tiết bài (JSON-LD Article + Breadcrumb + gift link + related posts)
+  layout.tsx            ← Analytics (GA4 + FB Pixel) + meta AEO + Bing verification hook
 components/
   Analytics.tsx         ← GA4 + FB Pixel (đã tích hợp)
 public/
-  llms.txt              ← GEO: hướng dẫn AI bots nhận diện thương hiệu (tạo 19/7)
+  llms.txt              ← GEO: hướng dẫn AI bots nhận diện thương hiệu (sửa chính xác 22/8/2026)
   images/
-    logo.png
+    logo.png / logo.webp        ← webp là bản tối ưu dùng trong code, png là gốc giữ nguyên
+    banner.png / banner.webp    ← webp là bản tối ưu dùng trong code, png là gốc giữ nguyên
+    og-image.jpg                 ← ảnh chia sẻ social chuẩn 1200×630
+    packs/pack-XX.png / pack-XX.webp  ← webp là bản tối ưu dùng trong code
 ```
+
+## SEO kỹ thuật — Audit & fix (2026-08-22)
+
+**Phát hiện quan trọng nhất:** ảnh trong `public/images/` chưa từng được nén cho web
+— banner.png 1.77MB, logo.png 847KB, 10 pack-XX.png ~1.8MB/ảnh (~18MB tổng). Đây là
+nguyên nhân chính khiến Core Web Vitals (LCP) kém, nặng hơn mọi vấn đề SEO khác từng
+ghi nhận trước đó.
+
+**Đã sửa (đã push lên `main`, xem commit ngày 22/8/2026):**
+- Tạo bản `.webp`/`.jpg` tối ưu bên cạnh mọi ảnh gốc (không xoá/ghi đè bản gốc, đúng
+  quy tắc "không đụng public/images/ gốc"): `banner.webp` (87KB), `logo.webp` (8.5KB),
+  10× `pack-XX.webp` (~45KB/ảnh), `og-image.jpg` mới 1200×630. Tổng ảnh trang chủ giảm
+  từ ~20.6MB xuống ~0.55MB (~97%). Code (`page.tsx`, `bai-viet/page.tsx`,
+  `bai-viet/[slug]/page.tsx`, `products.ts`, `layout.tsx`) đã trỏ sang bản webp/jpg mới.
+- Thêm `app/icon.png` (512×512, favicon) — trước đây site không có favicon.
+- `layout.tsx`: OG/Twitter image đổi sang `og-image.jpg` (1200×630) thay vì banner sai
+  tỷ lệ. Thêm hook đọc `process.env.BING_VERIFICATION_CODE` để tự sinh thẻ
+  `msvalidate.01` khi có giá trị — **chưa set trên Vercel, cần làm sau khi có mã từ
+  Bing Webmaster Tools** (xem mục Bing bên dưới).
+- `SchemaMarkup.tsx`: thêm `organizationSchema` (sameAs Facebook `facebook.com/huuhungai`,
+  contactPoint hotline/email), thêm `sameAs` vào Person schema, sửa `image` của
+  Product schema sang `og-image.jpg`.
+- `bai-viet/[slug]/page.tsx`: thêm BreadcrumbList schema, thêm `image`/`dateModified`/
+  `mainEntityOfPage` vào Article schema, thêm OG/Twitter image riêng cho từng bài
+  (trước đây không có).
+- `public/llms.txt`: sửa 2 lỗi thông tin sai — (1) ghi nhầm giao hàng qua Google Drive,
+  thực tế giao qua **email tự động** (Google Drive chỉ dùng cho quà tặng blog); (2) ghi
+  nhầm hỗ trợ qua Facebook Messenger, thực tế là **hotline/Zalo 0944 851719 + email
+  hatmuadem@gmail.com**. Đã cập nhật đủ danh sách 30 bài (trước chỉ có 11) và ngày cập
+  nhật 22/8/2026.
+
+**⚠️ Rủi ro cần quyết định — CHƯA TỰ SỬA:** `aggregateRating` (5 sao, reviewCount 3) và
+3 review mẫu trong `comboProductSchema` chưa rõ có phải review thật/xác minh được
+không. Google chỉ cho phép review trong structured data nếu là thật. Đã ghi cảnh báo
+ngay trong code. Cần hỏi user: giữ (nếu có ảnh chụp màn hình/link Facebook xác minh)
+hay gỡ `aggregateRating`/`review` khỏi schema.
+
+**Nội dung ngừng cập nhật:** bài blog gần nhất đăng 27/7/2026, commit gần nhất trước
+phiên 22/8 là 20/7/2026 → tính đến 22/8/2026 đã 26 ngày không có bài mới/commit. Ưu
+tiên quan trọng hơn kỹ thuật cho giai đoạn tiếp theo — cần lên kế hoạch Phase 3 nội
+dung (chủ đề mới, lịch đăng, từ khoá AEO) khi user sẵn sàng.
+
+**Việc user cần tự làm (đã hướng dẫn chi tiết trong
+`BAO_CAO_TOI_UU_SEO_2026-08-22.md` ở root repo):**
+- Setup Bing Webmaster Tools (bing.com/webmasters) → verify bằng HTML meta tag → set
+  `BING_VERIFICATION_CODE` trên Vercel env → submit sitemap.xml cho Bing. Quan trọng vì
+  ChatGPT Search và Copilot dùng chỉ mục Bing.
+- Google Search Console: yêu cầu lập chỉ mục URL mới sau mỗi lần deploy, theo dõi Core
+  Web Vitals cải thiện sau khi ảnh được nén.
+- Scrape lại link trên Facebook Debugger sau khi deploy để lấy ảnh OG mới.
+- Quyết định về aggregateRating/review (xem mục rủi ro ở trên).
+
+## ⚠️ QUAN TRỌNG: fix ngày 22/8/2026 CHƯA TỪNG ĐƯỢC PUSH (phát hiện 31/8/2026)
+
+Kiểm tra lại ngày 31/8/2026 cho thấy local vẫn đứng ở commit `9229cfa` (20/7/2026) —
+toàn bộ phần "Đã sửa" ở mục audit 22/8/2026 phía trên (ảnh webp, favicon, schema,
+llms.txt) **vẫn chỉ nằm trên máy user, chưa từng `git push`**. Một công cụ scan SEO
+ngoài ("OpenSEO") chạy vào site live ngày 31/8 vẫn báo LCP trang chủ 14.9s và ảnh
+hero nặng — đúng như dự đoán, vì bản live chưa nhận fix. **Luôn hỏi/nhắc user chạy
+git add/commit/push sau mỗi lần sửa code ở đây — đừng giả định code đã lên production
+chỉ vì đã ghi xong file vào máy.**
+
+## Audit SEO lần 2 — OpenSEO scan (2026-08-31)
+
+Công cụ ngoài scan site, điểm SEO chuẩn 97/100, TTFB 13ms, content 600-2400 từ/bài —
+nhưng báo 3 điểm nghẽn. Đã điều tra & sửa cả 3 (chờ user push):
+
+1. **Thin content — đúng 4 trang phụ** (`chinh-sach-giao-file`, `dieu-khoan-su-dung`,
+   `ho-tro`, `tra-cuu-don-hang`) chỉ có 51-128 từ. Đã viết thêm nội dung thực chất
+   (không nhồi từ khoá) lên 300+ từ mỗi trang, thêm heading H2, internal link chéo
+   giữa các trang chính sách. KHÔNG gắn `noindex` vì đây là trang chính sách thật, có
+   giá trị E-E-A-T, không phải trang giỏ hàng/đăng nhập.
+2. **`tra-cuu-don-hang` trước đây là Client Component (`"use client"`) nên KHÔNG THỂ
+   export `metadata`** — bị thiếu hẳn title/description riêng, kế thừa mặc định của
+   layout. Đã tách thành `page.tsx` (Server Component, có metadata riêng + nội dung
+   SEO tĩnh) + `OrderLookupForm.tsx` (Client Component chứa state/form). Nếu sau này
+   cần thêm trang có form tương tự, dùng đúng pattern tách này để không mất metadata.
+   Nhân tiện cũng sửa nốt `logo.png` → `logo.webp` còn sót lại ở trang này (bị bỏ sót
+   trong đợt sửa ảnh 22/8 vì không nằm trong danh sách file lúc đó tìm kiếm).
+3. **Title/meta quá dài:** 29/30 bài blog có `<title>` > 60 ký tự (do
+   `${post.title} | Hữu Hùng AI` cộng thêm hậu tố), 24/30 có mô tả > 150 ký tự; trang
+   chủ (`layout.tsx`) description dài 258 ký tự. Tạo `app/seoText.ts`
+   (`truncateTitle`, `truncateDescription` — cắt tại ranh giới từ, không cắt giữa
+   chữ) và áp dụng **chỉ cho thẻ `<title>`/`<meta description>`/Twitter** trong
+   `bai-viet/[slug]/page.tsx`; H1, mô tả đầy đủ trên trang, và OG title/description
+   (Facebook không cắt cứng 60 ký tự như Google) vẫn giữ nguyên bản đầy đủ
+   `post.title`/`post.description`. Trang chủ: viết lại description ngắn 132 ký tự,
+   có CTA "Tải ngay". **Không sửa từng bài trong `blogPosts.ts`** — giữ nguyên tiêu đề
+   gốc cho H1/OG, chỉ cắt bản dùng riêng cho thẻ `<title>`.

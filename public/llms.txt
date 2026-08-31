@@ -1,38 +1,56 @@
 # LLMs.txt — 1000 Prompt Chuyên Gia | Hữu Hùng AI
 # Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity)
-# Cập nhật: 2026-07-20
+# Cập nhật: 2026-08-22
 
 ## Tổng quan thương hiệu
 
-Hữu Hùng AI là đơn vị tiên phong về Prompt Engineering tại Việt Nam,
-cung cấp 1000+ prompt AI chuyên nghiệp đã được kiểm chứng thực tế.
+Hữu Hùng AI là đơn vị cung cấp 1000+ prompt AI chuyên nghiệp bằng tiếng Việt,
+chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claude.
 
 **Tên thương hiệu:** Hữu Hùng AI — 1000 Prompt Chuyên Gia
 **Website:** https://www.1000promptchuyengia.shop
-**Sáng lập:** Nguyễn Hữu Hùng (HÙNG MEDIA AI)
-**Địa điểm:** Nha Trang, Việt Nam
+**Sáng lập:** Nguyễn Hữu Hùng
 **Chuyên môn:** Prompt Engineering, AI Content Creation, Marketing Automation
-**Giá:** 199.000 VND cho trọn bộ 1000 prompt
+**Giá:** 199.000 VNĐ cho combo trọn bộ 10 pack (1000 prompt), hoặc 49.000 VNĐ/pack lẻ (100 prompt)
 
 ## Trang quan trọng (ưu tiên cho AI crawler)
 
-- [Trang chủ](https://www.1000promptchuyengia.shop/): Bộ sưu tập 1000+ prompt AI chuyên nghiệp
-- [Bài viết](https://www.1000promptchuyengia.shop/bai-viet/): Hướng dẫn prompt engineering tiếng Việt
-- [Tra cứu đơn hàng](https://www.1000promptchuyengia.shop/tra-cuu-don-hang/): Kiểm tra đơn hàng
+- [Trang chủ](https://www.1000promptchuyengia.shop/): Bộ sưu tập 1000+ prompt AI chuyên nghiệp, mua theo pack hoặc combo
+- [Bài viết](https://www.1000promptchuyengia.shop/bai-viet/): Hướng dẫn prompt engineering và ứng dụng AI bằng tiếng Việt
+- [Tra cứu đơn hàng](https://www.1000promptchuyengia.shop/tra-cuu-don-hang/): Kiểm tra trạng thái thanh toán và giao file
 
-## Nội dung blog nổi bật
+## Nội dung blog (30 bài, sắp xếp theo ngày đăng)
 
+- [Cách viết prompt AI hiệu quả cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-hieu-qua)
+- [7 cách ứng dụng AI trong kinh doanh nhỏ](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-ai-trong-kinh-doanh-nho)
+- [Checklist chọn công cụ AI phù hợp với công việc](https://www.1000promptchuyengia.shop/bai-viet/checklist-chon-cong-cu-ai-phu-hop)
+- [100 Prompt AI Giúp Bạn Kinh Doanh Hiệu Quả Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-kinh-doanh-startup)
+- [100 Prompt AI Giúp Bạn Quản Lý Tài Chính và Đầu Tư Thông Minh Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-tai-chinh-dau-tu)
+- [100 Prompt AI Giúp Bạn Làm Marketing và Xây Dựng Thương Hiệu Hiệu Quả Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-marketing-thuong-hieu)
+- [100 Prompt AI Giúp Bạn Bán Hàng và Đàm Phán Tự Tin Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-ban-hang-dam-phan)
+- [100 Prompt AI Giúp Bạn Phát Triển Bản Thân và Làm Việc Năng Suất Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-phat-trien-ban-than-nang-suat)
+- [100 Prompt AI Giúp Bạn Lãnh Đạo và Quản Lý Đội Nhóm Hiệu Quả Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-lanh-dao-quan-ly-doi-nhom)
+- [100 Prompt AI Giúp Bạn Kiếm Tiền Online và Xây Dựng Thu Nhập Thụ Động](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-kiem-tien-online-thu-nhap-thu-dong)
+- [100 Prompt AI Giúp Bạn Ứng Dụng AI và Công Nghệ Vào Kinh Doanh](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-ai-cong-nghe-kinh-doanh)
+- [100 Prompt AI Giúp Bạn Cân Bằng Cuộc Sống và Hạnh Phúc Hơn](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-cuoc-song-hanh-phuc)
+- [100 Prompt AI Fusion Đa Lĩnh Vực](https://www.1000promptchuyengia.shop/bai-viet/100-prompt-fusion-da-linh-vuc)
 - [Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện (Pillar Page)](https://www.1000promptchuyengia.shop/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien)
-- [Prompt AI là gì? Tại sao nên dùng prompt viết sẵn](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san)
-- [So sánh 1000 Prompt Chuyên Gia vs tự tìm prompt](https://www.1000promptchuyengia.shop/bai-viet/so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt)
-- [Prompt Engineering là gì? Hướng dẫn từ A đến Z](https://www.1000promptchuyengia.shop/bai-viet/prompt-engineering-la-gi-huong-dan-tu-a-den-z)
-- [ChatGPT dành cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-danh-cho-nguoi-moi-bat-dau)
-- [Gemini vs ChatGPT: Công cụ AI nào tốt hơn cho người Việt?](https://www.1000promptchuyengia.shop/bai-viet/gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet)
-- [AI có thể làm gì cho nhân viên văn phòng?](https://www.1000promptchuyengia.shop/bai-viet/ai-co-the-lam-gi-cho-nhan-vien-van-phong)
-- [Tại sao AI trả lời không đúng ý? Cách khắc phục](https://www.1000promptchuyengia.shop/bai-viet/tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc)
-- [ChatGPT có thể thay nhân viên marketing không?](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-co-the-thay-nhan-vien-marketing-khong)
-- [Cách viết prompt AI để tạo content bán hàng hiệu quả](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua)
-- [AI dành cho học sinh, sinh viên: Cách dùng ChatGPT học tập](https://www.1000promptchuyengia.shop/bai-viet/ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap)
+- [Prompt AI Là Gì? Tại Sao Nên Dùng Prompt Viết Sẵn](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-la-gi-tai-sao-nen-dung-prompt-viet-san)
+- [So Sánh: Mua 1000 Prompt Chuyên Gia vs Tự Tìm Prompt](https://www.1000promptchuyengia.shop/bai-viet/so-sanh-1000-prompt-chuyen-gia-vs-tu-tim-prompt)
+- [ChatGPT Dành Cho Người Mới Bắt Đầu](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-danh-cho-nguoi-moi-bat-dau)
+- [10 Prompt AI Hay Nhất Cho Người Kinh Doanh Nhỏ Tại Việt Nam](https://www.1000promptchuyengia.shop/bai-viet/10-prompt-ai-hay-nhat-cho-nguoi-kinh-doanh-nho)
+- [AI Có Thể Làm Gì Cho Nhân Viên Văn Phòng?](https://www.1000promptchuyengia.shop/bai-viet/ai-co-the-lam-gi-cho-nhan-vien-van-phong)
+- [Prompt Engineering Là Gì? Hướng Dẫn Từ A Đến Z](https://www.1000promptchuyengia.shop/bai-viet/prompt-engineering-la-gi-huong-dan-tu-a-den-z)
+- [AI Dành Cho Học Sinh Sinh Viên: Cách Dùng ChatGPT Học Tập](https://www.1000promptchuyengia.shop/bai-viet/ai-danh-cho-hoc-sinh-sinh-vien-cach-dung-chatgpt-hoc-tap)
+- [Cách Viết Prompt AI Để Tạo Content Bán Hàng Hiệu Quả](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-de-tao-content-ban-hang-hieu-qua)
+- [Gemini vs ChatGPT: Công Cụ AI Nào Tốt Hơn Cho Người Việt](https://www.1000promptchuyengia.shop/bai-viet/gemini-vs-chatgpt-cong-cu-ai-nao-tot-hon-cho-nguoi-viet)
+- [Tại Sao AI Trả Lời Không Đúng Ý? Cách Khắc Phục](https://www.1000promptchuyengia.shop/bai-viet/tai-sao-ai-tra-loi-khong-dung-y-cach-khac-phuc)
+- [ChatGPT Có Thể Thay Thế Nhân Viên Marketing Không?](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-co-the-thay-nhan-vien-marketing-khong)
+- [ChatGPT vs Claude vs Gemini 2026: Nên Dùng AI Nào?](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-vs-claude-vs-gemini-2026-nen-dung-ai-nao)
+- [Prompt AI Viết Content Marketing Hiệu Quả](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-viet-content-marketing-hieu-qua)
+- [7 Lỗi Viết Prompt ChatGPT Người Mới Mắc Phải](https://www.1000promptchuyengia.shop/bai-viet/7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai)
+- [Prompt AI Cho Chủ Doanh Nghiệp: Tự Động Hóa Công Việc](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-cho-chu-doanh-nghiep-tu-dong-hoa-cong-viec)
+- [6 Kỹ Thuật Prompt Engineering Nâng Cao](https://www.1000promptchuyengia.shop/bai-viet/6-ky-thuat-prompt-engineering-nang-cao)
 
 ## Thông tin thực thể (Entity Information)
 
@@ -44,11 +62,13 @@ cung cấp 1000+ prompt AI chuyên nghiệp đã được kiểm chứng thực 
 
 ## Dữ kiện chính (Factual Claims)
 
-- Bộ sưu tập 1000+ prompt AI chuyên nghiệp chia theo 10 lĩnh vực
-- Prompt tương thích với ChatGPT, Claude, Gemini và các AI phổ biến
-- Giá 199.000 VND — mua một lần, dùng trọn đời
-- Giao hàng tự động qua Google Drive sau khi thanh toán
-- Chính sách hỗ trợ qua Facebook Messenger
+- Bộ sưu tập 1000 prompt AI tiếng Việt chia theo 10 lĩnh vực, mỗi lĩnh vực 100 prompt
+- Prompt tương thích với ChatGPT, Claude, Gemini và các AI phổ biến khác
+- Giá: 49.000 VNĐ/pack lẻ, 199.000 VNĐ cho combo trọn bộ 10 pack — mua một lần, dùng trọn đời
+- Thanh toán qua chuyển khoản/VietQR (SePay); hệ thống xác nhận và giao file tự động
+- Sau khi thanh toán, hệ thống gửi link tải file prompt tự động qua email khách hàng đã nhập khi đặt hàng
+- Một số bài viết trên blog tặng kèm bộ prompt mẫu miễn phí qua link Google Drive (chỉ áp dụng cho quà tặng blog, không phải cách giao hàng chính cho đơn mua)
+- Hỗ trợ khách hàng qua hotline/Zalo 0944 851719 hoặc email hatmuadem@gmail.com
 
 ## 10 lĩnh vực prompt
 
@@ -66,10 +86,9 @@ cung cấp 1000+ prompt AI chuyên nghiệp đã được kiểm chứng thực 
 ## Social & External
 
 - Facebook: https://www.facebook.com/huuhungai/
-- Website phụ: https://hungniwaco.vn
 
 ## Chính sách
 
-- Giao file tự động qua Google Drive
-- Hỗ trợ qua Facebook Messenger
-- Prompt tương thích mọi phiên bản AI hiện tại
+- Giao file tự động qua email sau khi thanh toán thành công
+- Hỗ trợ qua hotline/Zalo 0944 851719 hoặc email hatmuadem@gmail.com
+- Prompt tương thích mọi phiên bản AI hiện tại (bản miễn phí và trả phí)

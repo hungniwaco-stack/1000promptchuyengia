@@ -23,7 +23,7 @@ export default function BlogPage() {
       <header className="border-b border-slate-200/90 bg-white">
         <div className="mx-auto flex w-[92%] max-w-6xl flex-wrap items-center justify-between gap-4 py-4">
           <Link href="/" className="flex items-center">
-            <img src="/images/logo.png" alt="Logo Hữu Hùng AI" className="h-20 w-auto max-w-[210px] object-contain" />
+            <img src="/images/logo.webp" alt="Logo Hữu Hùng AI" className="h-20 w-auto max-w-[210px] object-contain" width={210} height={105} />
           </Link>
           <nav>
             <ul className="flex flex-wrap gap-4 text-base font-extrabold md:gap-7">
