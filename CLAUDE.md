@@ -1,5 +1,37 @@
 # Project Memory — 1000 Prompt Website
 
+## Bài học quy trình (rút ra 31/8/2026 — áp dụng cho mọi phiên sau)
+
+1. **Khi user gửi 1 "content plan"/"kế hoạch SEO" do AI khác soạn (thường dán dạng
+   persona "Giám đốc Marketing"/"OpenSEO"...) kèm file keyword CSV thật** —
+   KHÔNG được implement thẳng theo plan đó. Luôn tự đối chiếu số liệu trong CSV
+   trước (tổng volume, % từ khoá volume thấp, ngôn ngữ, có khớp với 10 pack sản
+   phẩm hiện có không, có cannibalize với bài cũ không), rồi trình bày đánh giá
+   thật (kể cả khi phải chỉ ra plan đó sai số liệu hoặc lệch sản phẩm) trước khi
+   viết code. Đã áp dụng thành công 1 lần: phát hiện plan gốc ghi sai "volume cao
+   nhất" (thực ra là thấp nhất) và đề xuất 1 bài lệch hẳn 10 pack sản phẩm đang
+   bán. User luôn đánh giá cao việc bị phản biện thay vì được chiều theo plan sai.
+2. **Pattern lặp lại nhiều lần trong dự án: code sửa xong ở local/sandbox nhưng
+   user quên/trễ `git push`, khiến site live tụt hậu hàng ngày/hàng tuần so với
+   code đã sửa.** Hệ quả từng xảy ra: 1 báo cáo SEO ngoài (OpenSEO) chấm điểm
+   website dựa trên bản CŨ dù đã fix xong từ trước. => Luôn nhắc rõ ràng, ở cuối
+   MỌI phiên có sửa code: "chưa push = chưa live", kèm y nguyên khối lệnh
+   PowerShell (add/commit/push, từng dòng riêng vì PS5 không hiểu `&&`). Trước
+   khi trả lời bất kỳ câu hỏi nào kiểu "sao vẫn thấy lỗi cũ trên site" — luôn
+   `device_bash` chạy `git log -1` / `git status --short` trên máy user để xác
+   nhận git đã push chưa, đừng giả định.
+3. **Khi user hỏi "liệt kê link để dán Google Search Console"** — trả lời thẳng
+   bằng danh sách URL đầy đủ (base `https://www.1000promptchuyengia.shop/bai-viet/
+   {slug}`), kèm cảnh báo nếu đợt thay đổi đó chưa được push (tránh user dán link
+   404 vào GSC rồi phải request lại).
+4. **Khi được hỏi "đánh giá chất lượng website"** — dùng lại khung 6 hạng mục đã
+   có sẵn trong CLAUDE.md (Kỹ thuật / Nội dung / GEO-AEO / Chuyển đổi / E-E-A-T /
+   Link building) làm baseline, nhưng chấm lại theo tình trạng MỚI NHẤT thay vì
+   lặp lại điểm số cũ nguyên văn — nhiều hạng mục đã cải thiện qua các đợt fix
+   (ảnh WebP, seoText.ts, 35 bài). E-E-A-T và link building luôn là 2 điểm yếu
+   nhất và không thể code hộ (cần ảnh/video thật, review có nguồn, Bing Webmaster
+   Tools verify) — nhắc lại 2 điểm này mỗi lần đánh giá.
+
 ## Content Plan 5 bài mới (2026-09-01 → 2026-09-05) — dựa trên keyword research CSV user gửi
 
 User gửi file `keywordresearch.csv` (95 từ khoá) kèm 1 bản kế hoạch phễu 3 tầng do

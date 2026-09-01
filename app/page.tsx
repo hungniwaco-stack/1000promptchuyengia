@@ -596,6 +596,7 @@ export default function Page() {
             <a href="/chinh-sach-giao-file">Chính sách giao file</a>
             <a href="/ho-tro">Hỗ trợ</a>
             <a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a>
+            <a href="https://www.facebook.com/huuhungai" target="_blank" rel="me noopener noreferrer">Facebook</a>
           </div>
         </div>
       </footer>
