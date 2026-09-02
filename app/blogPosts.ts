@@ -1869,6 +1869,49 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "chatgpt-prompt-tong-hop-tu-a-den-z",
+    title: "ChatGPT Prompt: Tổng Hợp Từ A Đến Z — Định Nghĩa, Cách Viết Và Prompt Dùng Ngay",
+    description:
+      "ChatGPT prompt là gì, cách viết đúng và những prompt hiệu quả nhất cho từng mục đích — tổng hợp đầy đủ kèm link chi tiết từng chủ đề để bạn tra cứu nhanh.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-09-06T06:45:00+07:00",
+    readingTime: "5 phút đọc",
+    keywords: ["chatgpt prompt", "prompt chatgpt", "chatgpt prompt là gì", "tổng hợp prompt chatgpt"],
+    intro:
+      "ChatGPT prompt là câu lệnh hoặc đoạn hướng dẫn bạn nhập vào ChatGPT để yêu cầu AI thực hiện một việc cụ thể — viết đúng thì ChatGPT trả lời chính xác và hữu ích hơn hẳn, viết sai thì dù hỏi lại nhiều lần vẫn lạc đề. Bài này tổng hợp mọi thứ cần biết về chatgpt prompt: định nghĩa, cách viết, phân loại theo mục đích và prompt mẫu dùng ngay.",
+    sections: [
+      {
+        heading: "ChatGPT prompt là gì?",
+        body: [
+          "Prompt là đầu vào bạn cung cấp cho ChatGPT — có thể chỉ là một câu hỏi ngắn, hoặc một đoạn hướng dẫn đầy đủ gồm vai trò, ngữ cảnh, nhiệm vụ và định dạng mong muốn. ChatGPT không tự đoán được điều bạn cần nếu prompt quá mơ hồ, vì vậy prompt càng rõ ràng, kết quả càng sát yêu cầu.",
+          "Đọc phân tích đầy đủ hơn tại Prompt Trong ChatGPT Là Gì? Giải Mã Bí Mật Giúp AI Trả Lời Thông Minh Hơn.",
+        ],
+      },
+      {
+        heading: "Cách viết chatgpt prompt đúng chuẩn",
+        body: [
+          "Một prompt hiệu quả thường có đủ 4 phần: vai trò (AI đóng vai gì), bối cảnh (bạn là ai, đang làm gì), nhiệm vụ (yêu cầu cụ thể) và định dạng (kết quả nên trình bày thế nào). Thiếu một trong bốn phần này, ChatGPT dễ trả lời chung chung.",
+          "Xem công thức 4 bước chi tiết kèm ví dụ tại Cách Viết Prompt AI Hiệu Quả Cho Người Mới Bắt Đầu, hoặc 7 lỗi thường gặp cần tránh tại 7 Lỗi Viết Prompt ChatGPT Người Mới Mắc Phải.",
+        ],
+      },
+      {
+        heading: "Prompt ChatGPT theo từng mục đích cụ thể",
+        body: [
+          "Muốn dùng ChatGPT cho công việc kinh doanh: xem Cách Tạo Prompt Cho ChatGPT Để Tối Ưu Hóa Công Việc Kinh Doanh.",
+          "Muốn dùng ChatGPT viết content marketing, bán hàng: xem Prompt ChatGPT Cho Marketing: Viết Content Bán Hàng Nhanh Hơn 5 Lần.",
+          "Muốn có sẵn prompt copy-paste dùng ngay không cần tự viết: xem 15 Prompt ChatGPT Hiệu Quả Nhất Đã Kiểm Chứng.",
+          "Muốn hiểu sâu hơn về kỹ thuật viết prompt (prompt engineering) để áp dụng vào công việc hằng ngày: xem Ứng Dụng Prompt Engineering Vào Công Việc Hằng Ngày.",
+        ],
+      },
+      {
+        heading: "Không có thời gian tự viết prompt mỗi lần?",
+        body: [
+          "Nếu bạn cần dùng ChatGPT thường xuyên cho công việc nhưng không muốn mất thời gian tự soạn prompt từ đầu mỗi lần, Bộ 1000 Prompt Chuyên Gia đã đóng gói sẵn 1000 prompt theo 10 lĩnh vực thực chiến — kinh doanh, marketing, bán hàng, tài chính, năng suất và nhiều lĩnh vực khác — chỉ cần copy và điền thông tin của bạn vào.",
+        ],
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string) {

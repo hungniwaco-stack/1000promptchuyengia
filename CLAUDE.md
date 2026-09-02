@@ -1,5 +1,24 @@
 # Project Memory — 1000 Prompt Website
 
+## Bài 36 — chatgpt-prompt-tong-hop-tu-a-den-z (2026-09-06)
+
+Cùng nguồn "Giám đốc Marketing" bot gửi lại **gần như nguyên plan cũ** (đã xử lý ngày
+2026-08-31/09-01), lần này đóng gói lại thành "3 nhóm hành vi mua hàng" (16 từ khoá).
+Đối chiếu với `blogPosts.ts` hiện có: 11/16 từ khoá ĐÃ được viết từ đợt trước (chính
+từ cùng file CSV), 4/16 là cụm "prompt tạo ảnh chatgpt" — lỗi cũ lặp lại y hệt (không
+pack sản phẩm nào về prompt tạo ảnh, KHÔNG viết). Chỉ 1 từ khoá thực sự mới và đáng
+làm: **"chatgpt prompt" (390 lượt/tháng, volume cao nhất bảng, chưa bài nào target
+trực diện)**. Đã viết bài `chatgpt-prompt-tong-hop-tu-a-den-z` (06/09) dạng **bài hub
+tổng hợp** — link ra 5-6 bài spoke đã có sẵn thay vì viết lại định nghĩa/nội dung
+trùng — để bắt được search volume lớn của từ khoá đầu ngành mà không cannibalize với
+`prompt-trong-chatgpt-la-gi-giai-ma-bi-mat`. File giờ có 36 bài. `llms.txt` đã cập
+nhật (36 bài, ngày 06/09). **CHƯA PUSH — user cần git add/commit/push.**
+
+**Bài học thêm:** Khi cùng 1 nguồn gửi lại content-plan nhiều lần dưới cách trình bày
+khác nhau (persona/nhóm khác), luôn grep `blogPosts.ts` (slug + keywords) đối chiếu
+TỪNG từ khoá trước, đừng tin số liệu "mới" ghi trong plan — rất có thể phần lớn đã
+được viết rồi từ chính CSV gốc mà bot đó từng gửi.
+
 ## Bài học quy trình (rút ra 31/8/2026 — áp dụng cho mọi phiên sau)
 
 1. **Khi user gửi 1 "content plan"/"kế hoạch SEO" do AI khác soạn (thường dán dạng
