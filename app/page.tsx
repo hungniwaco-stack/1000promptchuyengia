@@ -187,7 +187,7 @@ const faqs = [
   },
   {
     question: "1000 Prompt Chuyên Gia là gì?",
-    answer: "1000 Prompt Chuyên Gia là bộ 10 file Word gồm 1000 prompt AI được viết sẵn, chia theo 10 lĩnh vực thực chiến: kinh doanh, tài chính, marketing, bán hàng, năng suất, lãnh đạo, kiếm tiền online, AI trong kinh doanh, cuộc sống và đa lĩnh vực. Bạn chỉ cần chọn prompt phù hợp, điền thông tin vào phần trong ngoặc và dán vào ChatGPT, Gemini hoặc Claude.",
+    answer: "1000 Prompt Chuyên Gia là bộ 10 file Word gồm 1000 câu lệnh (prompt) AI được viết sẵn bằng tiếng Việt, do Hữu Hùng AI biên soạn và bán tại 1000promptchuyengia.shop. Bộ prompt chia theo 10 lĩnh vực thực chiến, mỗi lĩnh vực 100 prompt: kinh doanh và khởi nghiệp, quản lý tài chính cá nhân, marketing và xây dựng thương hiệu, bán hàng và đàm phán, phát triển bản thân và năng suất, lãnh đạo và quản lý đội nhóm, kiếm tiền online, ứng dụng AI và công nghệ trong kinh doanh, cuộc sống và hạnh phúc, và nhóm prompt đa lĩnh vực (fusion). Mỗi prompt đã được cấu trúc sẵn theo vai trò, bối cảnh, nhiệm vụ và định dạng đầu ra — người dùng chỉ cần điền thông tin cụ thể của mình vào phần gợi ý trong ngoặc rồi dán trực tiếp vào ChatGPT, Gemini hoặc Claude, không cần biết kỹ thuật lập trình. Giá 49.000đ nếu mua lẻ từng pack, hoặc 199.000đ cho combo trọn bộ 10 pack. Sau khi thanh toán qua VietQR, hệ thống xác nhận và gửi file tự động qua email trong vài phút.",
   },
   {
     question: "Bộ prompt này phù hợp với ai?",

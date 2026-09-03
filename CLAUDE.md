@@ -1,5 +1,87 @@
 # Project Memory — 1000 Prompt Website
 
+## Báo cáo "Kiểm toán GEO" từ "Hệ thống Hữu Hùng AI" (02/9/2026)
+
+User gửi thêm 1 báo cáo tự động khác (khác "OpenSEO", khác "Giám đốc Marketing" —
+nguồn thứ 3 cùng dạng). Nội dung: chấm "AI Citability Score 25.5/100", liệt kê các
+khối nội dung ngắn (mô tả pack, FAQ, "Giá trị cốt lõi") và gợi ý 3 TIP để tối ưu GEO.
+
+**Đã xác minh:** phần chẩn đoán VỊ TRÍ là đúng thật — đối chiếu code xác nhận mô tả
+10 pack trong `products.ts` chỉ ~30-35 từ/pack, FAQ "1000 Prompt Chuyên Gia là gì?"
+trong cả `page.tsx` và `SchemaMarkup.tsx` (2 nơi tách biệt: 1 hiển thị người dùng, 1
+là JSON-LD cho AI/Google) trước đó chỉ ~50 từ.
+
+**Đã LOẠI BỎ, không áp dụng:** 2 ví dụ số liệu báo cáo gợi ý chèn vào — "tăng 300%
+hiệu suất làm việc" và "huấn luyện hơn 5.000 cá nhân... tiết kiệm 30% chi phí" — đây
+là số liệu BỊA, không có nguồn, không được đưa vào bất kỳ đâu trên site (rủi ro uy
+tín nếu bị phát hiện lớn hơn nhiều lợi ích SEO ngắn hạn). Thang điểm "AI Citability
+Score" cũng không phải chỉ số ngành chính thức nào — chỉ xem là ước lượng tham khảo.
+
+**Đã sửa (dùng dữ kiện thật, không bịa số liệu):** Mở rộng câu trả lời FAQ "1000
+Prompt Chuyên Gia là gì?" từ ~50 từ lên ~150 từ ở CẢ 2 nơi (`page.tsx` phần `faqs`
+VÀ `SchemaMarkup.tsx` phần FAQPage) — thêm chi tiết thật đã có sẵn: tên đầy đủ 10
+lĩnh vực, cấu trúc prompt (vai trò/bối cảnh/nhiệm vụ/định dạng), giá 49k/199k, cách
+giao hàng. Đây là "khối mồi AI" hợp lệ vì dùng dữ kiện thật, không phải nội dung bịa.
+
+**Đã hỏi và user xác nhận KHÔNG có số liệu định lượng thật (số đơn đã bán, mốc thời
+gian cụ thể) để thêm vào phần "Về Hữu Hùng"** — giữ nguyên nội dung phần này, KHÔNG
+tự chế số liệu. Nếu sau này user cung cấp số liệu thật, quay lại mở rộng phần này
+(báo cáo chấm 37/100, self-containment đã tối đa 25/25, chỉ thiếu tín hiệu thống kê).
+
+**Chưa làm — cân nhắc sau:** mô tả 10 pack trong `products.ts` (field `desc`, hiển
+thị trực tiếp cho khách mua hàng, ngắn có chủ đích cho human-first/chốt sale) —
+KHÔNG sửa trực tiếp field này. Nếu muốn tăng GEO cho phần pack, nên tách riêng 1 khối
+mô tả dài hơn ở nơi khác (VD: JSON-LD Product description, hoặc 1 trang/section riêng
+"chi tiết từng pack") thay vì làm dài câu mô tả đang tối ưu cho người đọc lướt nhanh.
+
+**Bài học quy trình chung:** mọi báo cáo "kiểm toán"/"audit" từ nguồn AI bên ngoài gửi
+tới (dù tên gọi khác nhau mỗi lần) đều cần: (1) đối chiếu vị trí/con số với code thật
+trước khi tin, (2) tách riêng phần chẩn đoán hợp lý khỏi phần gợi ý số liệu/nội dung
+có khả năng bịa đặt, (3) không bao giờ tự chế số liệu định lượng về user/doanh nghiệp
+— luôn hỏi user xác nhận trước khi đưa con số cụ thể vào nội dung public.
+
+## Facebook Fanpage "Hữu Hùng - AI" (bắt đầu 02/9/2026)
+
+User mở rộng công việc sang Facebook — trước đó (22/8) từng nói chưa cần mạng xã hội,
+giờ đã chủ động đổi hướng. Fanpage: `facebook.com/huuhungai`.
+
+**Kiểm tra trực tiếp bằng Claude in Chrome (không đoán số liệu):** fanpage rất mới —
+29 followers, chỉ 2 bài đăng công khai xem được (12/6 và 28/6), CẢ HAI đều bị Facebook
+tự động gắn nhãn **"Nội dung do AI tạo"** ngay dưới tên trang (nhãn hệ thống, public,
+không phải hashtag tự viết). Ảnh minh hoạ trong bài dùng người mẫu AI-generated.
+Engagement gần như 0 (bài 28/6 sau ~2 tháng: 2 like, 1 comment, 1 share). Đây chính là
+điểm yếu E-E-A-T đã nói ở phần đánh giá website (thiếu ảnh/video thật) — lặp lại y hệt
+trên kênh Facebook.
+
+**Nguyên tắc đã thiết lập cho mọi việc Facebook sau này:** GỠ NHÃN AI VÀ XÂY UY TÍN
+TRƯỚC, viral/hook content SAU. Với fanpage <100 follower thật, chiến lược hook mạnh/
+viral gần như vô nghĩa vì chưa có ai xem. Đã giao lộ trình 8 tuần (file
+`Lo-trinh-Fanpage-Huu-Hung-AI.md`, đã gửi user):
+- Tuần 1-2: đổi ảnh đại diện/bìa sang ảnh thật, đăng 3 bài giọng văn thật (không copy
+  nguyên văn AI) kèm ảnh thật, để Facebook tự gỡ nhãn AI dần.
+- Tuần 3-4: thu thập minh chứng khách hàng thật (video phỏng vấn ngắn hoặc chat feedback
+  có xin phép) — nội dung này DÙNG LẠI ĐƯỢC cho trang "Về Hữu Hùng" trên website (đúng
+  phần E-E-A-T còn thiếu đã ghi ở dưới).
+- Tuần 5-6: tăng follower qua chia sẻ vào nhóm Facebook liên quan bằng tài khoản cá
+  nhân + mời người quen, KHÔNG chạy quảng cáo/viral lúc follower còn quá thấp.
+- Tuần 7-8: mới bắt đầu áp dụng các ý tưởng hook/nghịch lý bán hàng, 4 định dạng
+  (text dài/ảnh/Reels/bài dễ chia sẻ nhóm) đã thiết kế trong phiên 02/9.
+
+**Bộ nội dung Facebook đã thiết kế sẵn (phiên 02/9/2026), dùng dần theo lộ trình trên:**
+10 ý tưởng nội dung phá khuôn mẫu (ý tưởng #10 "Tôi sẽ không bán prompt này" là mạnh
+nhất — nghịch lý từ chối bán hàng), 15 hook chia 5 nhóm tâm lý (hook #7 xếp mạnh nhất:
+"Nếu bạn đang định mua... dừng lại, đọc bài này trước"), 4 định dạng đăng bài
+(text dài/ảnh/Reels/dễ chia sẻ trong nhóm), 1 bản viết lại tối ưu retention di động,
+3 phiên bản định vị thương hiệu (tối giản/kể chuyện/chuyên nghiệp — bản kể chuyện hợp
+nhất với đối tượng SME/freelancer hiện tại), 3 câu hỏi kết bài kích thích thảo luận.
+Tất cả đều xoay quanh câu chuyện "khách hỏi mua để viết code, bị từ chối" — **đây là
+tình huống ví dụ, chưa xác nhận có thật hay không** — nếu dùng nguyên văn cần thay
+bằng tình huống thật đã xảy ra, tránh mất uy tín nếu bị hỏi lại chi tiết trong comment.
+
+**Cần xác nhận thêm:** chưa rõ user tự đăng bài thủ công hay dùng công cụ tự động —
+nếu dùng công cụ tự động đăng bài AI, đó nhiều khả năng là nguyên nhân trực tiếp gây
+nhãn "Nội dung do AI tạo", cần điều chỉnh cách đăng trước khi bắt đầu Tuần 1.
+
 ## Bài 36 — chatgpt-prompt-tong-hop-tu-a-den-z (2026-09-06)
 
 Cùng nguồn "Giám đốc Marketing" bot gửi lại **gần như nguyên plan cũ** (đã xử lý ngày
