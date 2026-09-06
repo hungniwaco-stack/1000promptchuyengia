@@ -1,5 +1,51 @@
 # Project Memory — 1000 Prompt Website
 
+## Báo cáo Search Console "audit 6 tháng" + quyết định hủy tạm dừng dự án (06/9/2026)
+
+**Bối cảnh quan trọng:** Ngày 03/9/2026 user từng quyết định tạm dừng đầu tư vào dự án
+này 60 ngày để dồn lực bán sản phẩm khác (AI Agent Business Kit). Ngày 06/9, user gửi
+1 báo cáo "audit sâu 6 tháng" khác (nguồn tự động, giống pattern OpenSEO/Giám đốc
+Marketing/Kiểm toán GEO trước đó) đề xuất sửa ngay bài "7 lỗi viết Prompt ChatGPT".
+Đã hỏi lại user có muốn giữ lệnh tạm dừng không — **user chọn HỦY tạm dừng, quay lại
+đầu tư đều cho site này.** Đây là quyết định mới nhất, ghi đè quyết định 03/9.
+
+**Về độ tin cậy báo cáo:** số liệu Search Console cụ thể (impression, vị trí trung
+bình theo URL/truy vấn) KHÔNG tự xác minh được (không có quyền truy cập GSC của user)
+— khác các báo cáo trước đối chiếu được với code. Không có dấu hiệu bịa số liệu kiểu
+"tăng 300%" như báo cáo GEO trước, logic đề xuất hợp lý (bài giải quyết 1 intent cụ
+thể outperform bài dạng danh sách chung) nhưng con số cụ thể chỉ nên xem là "theo báo
+cáo user cung cấp", không phải đã tự kiểm chứng.
+
+**Đã sửa bài `7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai`** theo đúng 2 truy vấn
+Google thật báo cáo nêu ("lỗi thường gặp khi viết prompt" — 22 impression, "đâu là
+lỗi thường gặp khi viết prompt" — 12 impression, cả 2 đã vào top 10 vị trí ~7 nhưng
+0 click — vấn đề là snippet chưa khớp truy vấn):
+- Title cũ "7 Lỗi Viết Prompt ChatGPT Mà 90% Người Mới Mắc Phải" → mới "Lỗi Thường
+  Gặp Khi Viết Prompt: 7 Lỗi 90% Người Mới Mắc Phải" (chứa đúng cụm truy vấn ở đầu).
+- Description viết lại dạng câu hỏi-trả lời trực tiếp, mở đầu bằng "Đâu là lỗi thường
+  gặp khi viết prompt?".
+- Thêm 2 keyword chính xác vào mảng `keywords`.
+- Intro viết lại thành câu trả lời tự chứa nghĩa cho câu hỏi "lỗi thường gặp là gì".
+- Thêm 1 section MỚI ngay đầu "Đâu là lỗi thường gặp khi viết prompt?" — liệt kê tóm
+  tắt cả 7 lỗi trong 1 đoạn, đúng dạng nội dung AI Overview/Google hay trích dẫn cho
+  truy vấn dạng câu hỏi. KHÔNG viết lại nội dung 7 lỗi chi tiết đã có (giữ nguyên,
+  chỉ tối ưu phần đầu bài để khớp truy vấn).
+
+**Chưa làm — thuộc chiến lược dài hạn báo cáo đề xuất, cần bàn thêm với user trước
+khi triển khai:** mô hình nội dung "Prompt AI → Prompt là gì → Cách viết Prompt →
+Lỗi viết Prompt → Prompt ChatGPT → Prompt theo nghề/ngành → Bộ Prompt chuyên gia →
+Sản phẩm 1000 Prompt" thay cho việc viết nhiều bài "100 Prompt X". Đây là thay đổi
+định hướng content lớn, không nên tự ý áp dụng cho các bài mới mà chưa hỏi user.
+
+## Trạng thái cuối phiên 02/9/2026
+
+User đã chạy `git push` cho đợt sửa FAQ GEO (page.tsx + SchemaMarkup.tsx + CLAUDE.md)
+— xác nhận qua ảnh chụp GitHub Actions "pages build and deployment" chạy xanh ngay
+sau khi push. KHÔNG xác nhận lại được qua `device_bash` vì lúc đó workspace trên máy
+user đang khởi động lại ("Workspace still starting"). Nếu phiên sau cần biết trạng
+thái git mới nhất, chạy `git log -1 --stat` qua device_bash để xác nhận lại, đừng
+giả định dựa trên ảnh GitHub Actions cũ.
+
 ## Báo cáo "Kiểm toán GEO" từ "Hệ thống Hữu Hùng AI" (02/9/2026)
 
 User gửi thêm 1 báo cáo tự động khác (khác "OpenSEO", khác "Giám đốc Marketing" —

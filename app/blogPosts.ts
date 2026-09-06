@@ -1287,12 +1287,14 @@ export const blogPosts: BlogPost[] = [
 
   {
     slug: "7-loi-viet-prompt-chatgpt-nguoi-moi-mac-phai",
-    title: "7 Lỗi Viết Prompt ChatGPT Mà 90% Người Mới Mắc Phải (Và Cách Sửa Ngay)",
-    description: "Khám phá 7 lỗi viết prompt phổ biến nhất khiến ChatGPT trả lời không đúng ý — kèm cách sửa cụ thể và checklist prompt chuẩn để áp dụng ngay.",
+    title: "Lỗi Thường Gặp Khi Viết Prompt: 7 Lỗi 90% Người Mới Mắc Phải",
+    description: "Đâu là lỗi thường gặp khi viết prompt? Tổng hợp 7 lỗi phổ biến nhất khiến ChatGPT trả lời sai ý — kèm cách sửa cụ thể và checklist áp dụng ngay.",
     category: "Kiến thức AI",
     publishedAt: "2026-07-25T06:45:00+07:00",
     readingTime: "7 phút đọc",
     keywords: [
+      "lỗi thường gặp khi viết prompt",
+      "đâu là lỗi thường gặp khi viết prompt",
       "lỗi viết prompt",
       "lỗi prompt ChatGPT",
       "prompt ChatGPT người mới",
@@ -1301,8 +1303,14 @@ export const blogPosts: BlogPost[] = [
       "prompt AI hiệu quả",
       "mẹo viết prompt",
     ],
-    intro: "90% người mới dùng ChatGPT đều mắc ít nhất 3 trong 7 lỗi này — và không biết tại sao AI trả lời không như ý. Tin tốt là mỗi lỗi đều có cách sửa đơn giản, và khi hiểu ra, chất lượng câu trả lời của AI cải thiện ngay lập tức mà không cần học thêm bất cứ thứ gì phức tạp.",
+    intro: "Lỗi thường gặp khi viết prompt là gì? Đó là 7 lỗi lặp lại ở gần như mọi người mới dùng ChatGPT: viết prompt quá ngắn, không giao vai trò cho AI, hỏi nhiều việc cùng lúc, không nói rõ định dạng đầu ra, bỏ qua khi AI trả lời sai, mở chat mới liên tục, và không đưa ví dụ tham chiếu. Mỗi lỗi đều có cách sửa đơn giản, và khi hiểu ra, chất lượng câu trả lời của AI cải thiện ngay lập tức mà không cần học thêm bất cứ thứ gì phức tạp.",
     sections: [
+      {
+        heading: "Đâu là lỗi thường gặp khi viết prompt?",
+        body: [
+          "7 lỗi thường gặp nhất khi viết prompt cho ChatGPT là: (1) prompt quá ngắn, thiếu ngữ cảnh, (2) không chỉ định vai trò cho AI, (3) hỏi quá nhiều việc trong một prompt, (4) không nói rõ định dạng đầu ra mong muốn, (5) bỏ qua thay vì phản hồi khi AI trả lời sai, (6) mở cuộc trò chuyện mới liên tục khiến AI mất ngữ cảnh, và (7) không đưa ví dụ tham chiếu khi cần giọng văn cụ thể. Phần dưới đây phân tích từng lỗi kèm cách sửa cụ thể.",
+        ],
+      },
       {
         heading: "Lỗi 1: Prompt quá ngắn, thiếu ngữ cảnh — AI không có đủ thông tin để trả lời đúng",
         body: [
