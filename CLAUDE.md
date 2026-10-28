@@ -1,5 +1,46 @@
 # Project Memory — 1000 Prompt Website
 
+## Theo dõi lịch đăng bài qua Google Sheet + Dashboard Artifact (25-28/10/2026)
+
+**User giờ có connector Google Sheets + Google Drive kết nối trong Cowork** — dùng được trực
+tiếp mà không cần hỏi lại (trừ khi bị ngắt kết nối). Đã tạo 2 nơi theo dõi lịch đăng bài,
+**đây là nguồn theo dõi chính thức, lần sau cập nhật trực tiếp vào đây thay vì tạo bảng/sheet
+mới:**
+- Thư mục Drive **"1000PROMPT"** (id `1P33N6LwTPBzigD_SEM5bK7oEXlQsiW5h`), chứa Google Sheet
+  **"Lịch Đăng Bài AEO - 1000 Prompt Chuyên Gia"**
+  (`https://docs.google.com/spreadsheets/d/1Xnm-FcR30deDkxyl3VdCQRURzIjVXjKCxqOof4LlWLw/edit`).
+  ⚠️ Tên tab trong sheet này user đã tự đổi từ mặc định "Trang tính1" sang **"1000PROMPT"** —
+  LUÔN gọi `get_spreadsheet` lấy đúng tên sheet/tab hiện tại trước khi update_values, đừng giả
+  định tên cũ (range sai tên sẽ lỗi "Unable to parse range").
+- Cowork Dashboard Artifact **"Lịch Đăng Bài AEO"**
+  (`https://claude.ai/artifact/WAgdG9NuNKX3xXfSyzbQs9`) — dữ liệu lấy từ 1 file JSON đính kèm
+  (dataset `schedule`), mỗi lần đổi trạng thái bài phải: sửa JSON → upload lại qua
+  `Artifact action:"publish" asset:true` (ra `/_blob/<id>` mới) → `ArtifactData update` vào
+  `datasets/schedule` với `source.url` mới. Không sửa trực tiếp file HTML của dashboard trừ khi
+  đổi giao diện.
+
+**Giới hạn mạng đã xác nhận lại (27-28/10/2026) — áp dụng cho MỌI phiên sau:**
+- Sandbox cloud (nơi chạy `Bash`) **không ra được mạng tới domain `www.1000promptchuyengia.shop`
+  lẫn `api.indexnow.org`** — egress proxy chặn (403/ENOTFOUND), kể cả `curl` lẫn `node fetch`.
+  Muốn đọc nội dung site live (verify bài đã đăng, check sitemap...) phải dùng tool `WebFetch`
+  (tool này có đường ra riêng, không qua egress allowlist của Bash) — không dùng `curl`/Bash cho
+  việc này nữa, tiết kiệm thời gian thử sai.
+- `device_bash` (VM Linux chạy trên máy user qua remote-devices) **cũng không có mạng ra
+  ngoài** — chỉ dùng được để đọc/ghi file trong thư mục đã kết nối (`git log`, `git status`,
+  đọc file...). KHÔNG chạy được `node scripts/submit-indexnow.mjs` hay bất cứ lệnh cần mạng
+  thật nào qua đường này.
+- Lệnh cần mạng thật (submit IndexNow, yêu cầu lập chỉ mục GSC, `git push`) **chỉ chạy được khi
+  chính user tự gõ trong PowerShell thật trên máy họ** — không phải qua `device_bash`, không
+  phải qua sandbox. Đã hỏi user có muốn mình điều khiển máy (computer-use, mở PowerShell hộ)
+  không — **user chọn tự chạy, nhanh hơn** — mặc định từ nay cứ đưa sẵn lệnh để user tự chạy,
+  không cần hỏi lại trước, trừ khi user chủ động nhờ điều khiển máy.
+- Git clone trong sandbox cloud (`/home/claude/1000promptchuyengia`) **chỉ là bản nháp tạm của
+  phiên, không phải nguồn sự thật** — luôn `git fetch origin main` rồi so với `origin/main`
+  trước khi kết luận cái gì đã/chưa được push, đừng dựa vào `git log` cục bộ của sandbox.
+  Commit "local-only" từng tạo trong sandbox trước đó (`0e9d889`, `c2f5482`) sẽ không bao giờ
+  được push (nội dung đã lên production qua commit khác từ máy user) — nếu stop-hook cảnh báo
+  "Unverified commit" về 2 commit này thì bỏ qua, không cần sửa author/chữ ký.
+
 ## Báo cáo Search Console "audit 6 tháng" + quyết định hủy tạm dừng dự án (06/9/2026)
 
 **Bối cảnh quan trọng:** Ngày 03/9/2026 user từng quyết định tạm dừng đầu tư vào dự án
