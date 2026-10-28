@@ -1,0 +1,15 @@
+# Chuẩn hóa line ending về LF cho toàn bộ text file trong repo.
+# Tránh tình trạng git báo "modified" hàng loạt chỉ vì khác CRLF/LF
+# giữa Windows (PowerShell/Notepad) và các công cụ ghi file khác.
+* text=auto eol=lf
+
+# Ảnh/binary giữ nguyên, không áp dụng chuyển đổi line ending.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
