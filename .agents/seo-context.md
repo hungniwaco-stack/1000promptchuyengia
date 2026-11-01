@@ -1,0 +1,21 @@
+# Bối cảnh SEO: 1000 Prompt Chuyên Gia
+
+- Website / subdomain / công cụ liên quan: https://www.1000promptchuyengia.shop (KHÔNG phải .com). Deploy Vercel project "1000promptchuyengia-next", team "Hung's projects". Vercel MCP không dùng được cho project này (403/404).
+- Loại hình: thương mại điện tử sản phẩm số (bộ prompt AI theo 10 pack) + nhà xuất bản nội dung (blog AEO/GEO).
+- Thị trường & ngôn ngữ: Việt Nam, tiếng Việt 100%.
+- Đối tượng khách hàng: người kinh doanh nhỏ, freelancer, SME, nhân viên văn phòng dùng ChatGPT/AI hàng ngày, muốn mua bộ prompt soạn sẵn thay vì tự viết.
+- Mục tiêu 90 ngày (đo được): duy trì nhịp đăng bài đều 2 bài/tuần (thứ 2 + thứ 4, 20h VN) không đứt quãng (từng đứt 48 ngày trước 24/10/2026 — bài học: ưu tiên đều đặn hơn tần suất cao ngắn hạn); tăng index trên cả Google lẫn Bing; bắt đầu có backlink thật (hiện = 0).
+- Công nghệ (CMS/khung): Next.js 14 App Router, TypeScript, Tailwind CSS. Người được sửa code: chỉ Claude (qua sandbox/connected folder) đề xuất, CHỈ user tự `git push` từ PowerShell trên máy họ (sandbox/device_bash không có quyền push lẫn không có mạng ra ngoài). Ai duyệt triển khai: user tự duyệt từng lần trước khi push.
+- Công cụ dữ liệu đã nối:
+  - GSC: domain property `1000promptchuyengia.shop`, tài khoản hungniwaco@gmail.com. ⚠️ Property từng tự rớt khỏi danh sách dù DNS TXT còn nguyên — cách sửa nhanh: GSC → Thêm trang web → Miền → nhập lại, tự xác minh lại ngay.
+  - Bing Webmaster Tools: verified ổn định cho `www.1000promptchuyengia.shop`. IndexNow đã thiết lập (key `8d344dab18784178a1811fc50c45a76e`, script `scripts/submit-indexnow.mjs` — chỉ chạy được từ PowerShell thật của user, không chạy được từ sandbox/device_bash vì cả hai đều không có mạng ra ngoài tới domain này).
+  - GA4 (G-3PP4YXMFZR) + Facebook Pixel: cả hai qua GTM container GTM-NGTNH52L (nhúng trong app/layout.tsx). ⚠️ Pixel ID 1653031182438602 user hiện chưa xác minh được quyền truy cập trên tài khoản Facebook Ads Manager của mình — chưa giải quyết.
+  - Vercel Analytics: có sẵn.
+  - OpenSEO MCP: chưa kết nối trong phiên hiện tại (cần kiểm tra lại khi cần).
+- Quy tắc nội dung bắt buộc: mỗi bài AEO phải có intro tự chứa nghĩa (AI trích được), heading H2 dạng câu hỏi thật người dùng gõ, 1 section định nghĩa, nội dung nhạy cảm (tài chính/tâm lý-sức khoẻ) LUÔN có đoạn "AI không thay thế chuyên gia được cấp phép". Category "Kiến thức AI" dùng cho mọi spoke mới. Mỗi bài có 1 internal link về Pillar page `/bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien` + CTA về pack sản phẩm liên quan.
+- Ràng buộc: ngân sách không rõ/không bàn tới; kênh bị cấm — không mua backlink/PBN/spam, không bịa review/số liệu (từng gặp nhiều báo cáo "audit" tự động bên ngoài gửi số liệu bịa, đã có quy trình đối chiếu code thật trước khi tin).
+- Đường cơ sở (24/10/2026): 47 URL trong sitemap.xml, 41 bài trong `blogPosts.ts`, 0 backlink đo được qua Bing Webmaster Tools.
+- Bảng theo dõi bài viết / báo cáo gần nhất:
+  - Google Sheet "Lịch Đăng Bài AEO - 1000 Prompt Chuyên Gia": https://docs.google.com/spreadsheets/d/1Xnm-FcR30deDkxyl3VdCQRURzIjVXjKCxqOof4LlWLw/edit (tab tên "1000PROMPT")
+  - Cowork Dashboard Artifact "Lịch Đăng Bài AEO": https://claude.ai/artifact/WAgdG9NuNKX3xXfSyzbQs9
+  - Chi tiết kỹ thuật đầy đủ nằm trong `CLAUDE.md` ở gốc repo — đọc file đó trước khi hỏi lại bất cứ điều gì về quy trình git/deploy/tracker.
