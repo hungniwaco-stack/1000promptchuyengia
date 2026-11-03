@@ -17,6 +17,13 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: "ChatGPT-User",
         allow: "/",
       },
+      // OpenAI — bot tìm kiếm/trích dẫn cho tính năng ChatGPT Search (khác
+      // GPTBot, vốn chỉ phục vụ huấn luyện). Thiếu bot này làm giảm khả năng
+      // được ChatGPT Search trích dẫn trực tiếp trong câu trả lời.
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+      },
       // Anthropic — Claude training + web search
       {
         userAgent: "ClaudeBot",

@@ -8,6 +8,14 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// Bắt buộc render động: trang này phải tự kiểm tra lại "bây giờ" ở MỖI lượt
+// truy cập để chặn bài chưa tới giờ công bố (publishedAt tương lai). Nếu để
+// Next.js tĩnh hoá (SSG mặc định khi có generateStaticParams), điều kiện
+// notFound() bên dưới chỉ được tính MỘT LẦN lúc build — bài sẽ không tự
+// "mở khoá" đúng giờ cho tới lần deploy kế tiếp. Cùng cách app/bai-viet/page.tsx
+// (trang danh sách) đang dùng.
+export const dynamic = "force-dynamic";
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
@@ -70,6 +78,15 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const now = new Date();
+
+  // Bài chưa tới giờ công bố (publishedAt trong tương lai) không được truy
+  // cập trực tiếp qua URL — tránh lộ nội dung/crawler index trước lịch đăng.
+  // Trang danh sách (app/bai-viet/page.tsx) đã lọc tương tự; trang chi tiết
+  // này trước đây KHÔNG lọc, khiến URL luôn truy cập được bất kể publishedAt.
+  if (new Date(post.publishedAt) > now) {
+    notFound();
+  }
+
   const relatedPosts = blogPosts
     .filter((p) => p.slug !== slug && new Date(p.publishedAt) <= now)
     .slice(0, 3);

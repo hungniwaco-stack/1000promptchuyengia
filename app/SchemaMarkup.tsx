@@ -115,55 +115,13 @@ const comboProductSchema = {
       returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
     },
   },
-  // LƯU Ý QUAN TRỌNG: Google chỉ cho phép review/aggregateRating trong
-  // structured data khi review là thật và có thể xác minh (self-serving
-  // reviews policy). Nếu 3 review bên dưới không phải review thật từ khách
-  // (có ảnh chụp màn hình / link mạng xã hội xác minh), nên: (1) thay bằng
-  // review thật đã xin phép khách hàng, hoặc (2) xoá aggregateRating +
-  // review khỏi schema và chỉ hiển thị dạng testimonial thường trên trang,
-  // không đánh dấu JSON-LD, để tránh rủi ro Google gỡ rich snippet/phạt.
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5",
-    reviewCount: "3",
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      author: { "@type": "Person", name: "Lan N." },
-      reviewBody:
-        "Mình dùng prompt để viết lại bài bán hàng và kịch bản tư vấn. Chỉ cần thay thông tin sản phẩm là có bản nháp khá chắc để chỉnh tiếp.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      author: { "@type": "Person", name: "Minh T." },
-      reviewBody:
-        "Phần marketing và bán hàng giúp mình lên outline nhanh hơn. Có nhiều câu hỏi gợi ý rất tiện khi cần khai thác insight khách hàng.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: "5",
-        bestRating: "5",
-      },
-      author: { "@type": "Person", name: "Hà P." },
-      reviewBody:
-        "Các prompt về lập kế hoạch, ưu tiên công việc và viết email giúp mình tiết kiệm thời gian khi dùng ChatGPT hằng ngày.",
-    },
-  ],
+  // Đã gỡ aggregateRating + 3 review (audit 01/11/2026): review không hiển
+  // thị ở bất kỳ đâu trên trang (chỉ tồn tại trong JSON-LD) và không có bằng
+  // chứng xác minh (ảnh chụp màn hình/link mạng xã hội khách hàng) — vi phạm
+  // chính sách "self-serving reviews" của Google, rủi ro bị gỡ rich snippet.
+  // Khi có review thật đã xin phép khách hàng, thêm lại đúng khuôn
+  // aggregateRating/review ở đây, VÀ hiển thị cùng nội dung đó trên trang
+  // (không chỉ trong JSON-LD) để khớp với nội dung hiển thị thật.
 };
 
 const faqSchema = {

@@ -1,6 +1,8 @@
-# LLMs.txt — 1000 Prompt Chuyên Gia | Hữu Hùng AI
-# Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity)
-# Cập nhật: 2026-09-06
+# Hữu Hùng AI — 1000 Prompt Chuyên Gia
+
+> Bộ 1000+ prompt AI chuyên nghiệp bằng tiếng Việt, chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claude. Website: https://www.1000promptchuyengia.shop
+
+Cập nhật lần cuối: 2026-11-03. Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity) — cập nhật mục "Nội dung blog" mỗi khi có bài mới.
 
 ## Tổng quan thương hiệu
 
@@ -19,7 +21,7 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [Bài viết](https://www.1000promptchuyengia.shop/bai-viet/): Hướng dẫn prompt engineering và ứng dụng AI bằng tiếng Việt
 - [Tra cứu đơn hàng](https://www.1000promptchuyengia.shop/tra-cuu-don-hang/): Kiểm tra trạng thái thanh toán và giao file
 
-## Nội dung blog (36 bài, sắp xếp theo ngày đăng)
+## Nội dung blog (41 bài, sắp xếp theo ngày đăng)
 
 - [Cách viết prompt AI hiệu quả cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-hieu-qua)
 - [7 cách ứng dụng AI trong kinh doanh nhỏ](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-ai-trong-kinh-doanh-nho)
@@ -57,6 +59,12 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [Prompt ChatGPT Cho Marketing: Viết Content Bán Hàng Nhanh Hơn 5 Lần](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-cho-marketing-ban-hang-tang-doanh-so)
 - [Ứng Dụng Prompt Engineering Vào Công Việc Hằng Ngày](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-prompt-engineering-vao-cong-viec-hang-ngay)
 - [ChatGPT Prompt: Tổng Hợp Từ A Đến Z](https://www.1000promptchuyengia.shop/bai-viet/chatgpt-prompt-tong-hop-tu-a-den-z)
+
+- [Dùng ChatGPT Quản Lý Tài Chính Cá Nhân: 10 Prompt Dùng Ngay](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-quan-ly-tai-chinh-ca-nhan)
+- [AI Có Thể Giúp Bạn Kiếm Tiền Online Thế Nào? 7 Hướng Đi Thực Tế Với ChatGPT](https://www.1000promptchuyengia.shop/bai-viet/ai-kiem-tien-online-nhu-the-nao-voi-chatgpt)
+- [Prompt ChatGPT Cho Quản Lý: Xử Lý Xung Đột Nhân Viên Và Tình Huống Khó](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-cho-quan-ly-xu-ly-xung-dot-nhan-vien)
+- [Dùng ChatGPT Cân Bằng Cuộc Sống: 8 Prompt Chăm Sóc Bản Thân Mỗi Ngày](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-can-bang-cuoc-song-cham-soc-ban-than)
+- [Prompt ChatGPT Xử Lý Từ Chối Khi Bán Hàng: 10 Câu Trả Lời Mẫu Dùng Ngay](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-xu-ly-tu-choi-khi-ban-hang)
 
 ## Thông tin thực thể (Entity Information)
 
