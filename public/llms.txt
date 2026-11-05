@@ -2,7 +2,7 @@
 
 > Bộ 1000+ prompt AI chuyên nghiệp bằng tiếng Việt, chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claude. Website: https://www.1000promptchuyengia.shop
 
-Cập nhật lần cuối: 2026-11-03. Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity) — cập nhật mục "Nội dung blog" mỗi khi có bài mới.
+Cập nhật lần cuối: 2026-11-30. Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity) — cập nhật mục "Nội dung blog" mỗi khi có bài mới.
 
 ## Tổng quan thương hiệu
 
@@ -21,7 +21,7 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [Bài viết](https://www.1000promptchuyengia.shop/bai-viet/): Hướng dẫn prompt engineering và ứng dụng AI bằng tiếng Việt
 - [Tra cứu đơn hàng](https://www.1000promptchuyengia.shop/tra-cuu-don-hang/): Kiểm tra trạng thái thanh toán và giao file
 
-## Nội dung blog (41 bài, sắp xếp theo ngày đăng)
+## Nội dung blog (48 bài, sắp xếp theo ngày đăng)
 
 - [Cách viết prompt AI hiệu quả cho người mới bắt đầu](https://www.1000promptchuyengia.shop/bai-viet/cach-viet-prompt-ai-hieu-qua)
 - [7 cách ứng dụng AI trong kinh doanh nhỏ](https://www.1000promptchuyengia.shop/bai-viet/ung-dung-ai-trong-kinh-doanh-nho)
@@ -65,6 +65,14 @@ chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claud
 - [Prompt ChatGPT Cho Quản Lý: Xử Lý Xung Đột Nhân Viên Và Tình Huống Khó](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-cho-quan-ly-xu-ly-xung-dot-nhan-vien)
 - [Dùng ChatGPT Cân Bằng Cuộc Sống: 8 Prompt Chăm Sóc Bản Thân Mỗi Ngày](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-can-bang-cuoc-song-cham-soc-ban-than)
 - [Prompt ChatGPT Xử Lý Từ Chối Khi Bán Hàng: 10 Câu Trả Lời Mẫu Dùng Ngay](https://www.1000promptchuyengia.shop/bai-viet/prompt-chatgpt-xu-ly-tu-choi-khi-ban-hang)
+
+- [Dùng ChatGPT Để Bắt Đầu Kinh Doanh: 10 Prompt Cho Người Mới Khởi Nghiệp](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-de-bat-dau-kinh-doanh-prompt-nguoi-moi-khoi-nghiep)
+- [Dùng ChatGPT Tăng Năng Suất Làm Việc: 8 Prompt Hiệu Quả Hơn Mỗi Ngày](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-tang-nang-suat-lam-viec-8-prompt-hieu-qua)
+- [Dùng ChatGPT Tự Động Hóa Quy Trình Kinh Doanh Nhỏ: 7 Việc Làm Ngay](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-tu-dong-hoa-quy-trinh-kinh-doanh-nho)
+- [Perplexity vs ChatGPT: Công Cụ Nào Tốt Hơn Để Tìm Kiếm Thông Tin AI](https://www.1000promptchuyengia.shop/bai-viet/perplexity-vs-chatgpt-cong-cu-nao-tot-hon-tim-kiem-thong-tin)
+- [Dùng ChatGPT Chuẩn Bị Báo Cáo Tổng Kết Cuối Năm: 8 Prompt Dùng Ngay](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-chuan-bi-bao-cao-tong-ket-cuoi-nam)
+- [Dùng ChatGPT Lên Kế Hoạch Kinh Doanh Cho Năm Sau: Prompt Dùng Ngay](https://www.1000promptchuyengia.shop/bai-viet/dung-chatgpt-len-ke-hoach-kinh-doanh-cho-nam-sau)
+- [Prompt AI Viết Content Bán Hàng Mùa Mua Sắm Cuối Năm (Black Friday, 12/12)](https://www.1000promptchuyengia.shop/bai-viet/prompt-ai-viet-content-ban-hang-mua-mua-sam-cuoi-nam)
 
 ## Thông tin thực thể (Entity Information)
 

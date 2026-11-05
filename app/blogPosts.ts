@@ -2222,6 +2222,397 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "dung-chatgpt-de-bat-dau-kinh-doanh-prompt-nguoi-moi-khoi-nghiep",
+    title: "Dùng ChatGPT Để Bắt Đầu Kinh Doanh: 10 Prompt Cho Người Mới Khởi Nghiệp",
+    description: "10 prompt ChatGPT giúp người mới khởi nghiệp kiểm tra ý tưởng, vạch kế hoạch kinh doanh cơ bản và hiểu khách hàng mục tiêu — dùng ngay trong tuần đầu tiên bắt đầu kinh doanh.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-09T20:00:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "dùng chatgpt để bắt đầu kinh doanh",
+      "prompt cho người mới khởi nghiệp",
+      "AI khởi nghiệp",
+      "prompt kiểm tra ý tưởng kinh doanh",
+      "chatgpt kinh doanh",
+    ],
+    intro: "Dùng ChatGPT để bắt đầu kinh doanh là cách người mới khởi nghiệp rút ngắn thời gian từ ý tưởng đến hành động cụ thể — AI giúp bạn kiểm tra ý tưởng, phác thảo kế hoạch và hiểu khách hàng mục tiêu trong vài giờ thay vì vài tuần tự mò mẫm. Dưới đây là 10 prompt dùng được ngay trong tuần đầu tiên, theo đúng thứ tự các bước nên làm khi mới bắt đầu.",
+    sections: [
+      {
+        heading: "Vì sao nên dùng ChatGPT ngay từ ngày đầu khởi nghiệp?",
+        body: [
+          "Phần lớn người mới khởi nghiệp mất nhiều thời gian nhất ở giai đoạn chưa hành động được — chưa biết ý tưởng có khả thi không, chưa biết bắt đầu từ đâu. ChatGPT không thay được việc khảo sát thị trường thật, nhưng giúp bạn tổ chức suy nghĩ nhanh hơn, đặt câu hỏi đúng hơn, và có bản nháp đầu tiên để chỉnh sửa thay vì nhìn trang giấy trắng.",
+        ],
+      },
+      {
+        heading: "10 prompt ChatGPT cho tuần đầu khởi nghiệp",
+        body: [
+          "1. Kiểm tra ý tưởng: 'Tôi đang cân nhắc kinh doanh [mô tả ý tưởng]. Hãy liệt kê 5 câu hỏi quan trọng nhất tôi cần tự trả lời trước khi bắt đầu, và 3 rủi ro lớn nhất của mô hình này.'",
+          "2. Xác định khách hàng mục tiêu: 'Với sản phẩm/dịch vụ [mô tả], hãy mô tả chân dung khách hàng mục tiêu cụ thể: độ tuổi, nhu cầu, nỗi lo lớn nhất khiến họ chưa mua.'",
+          "3. Phân tích đối thủ nhanh: 'Liệt kê 3 kiểu đối thủ cạnh tranh phổ biến cho ngành [ngành của bạn] tại Việt Nam và điểm họ thường làm chưa tốt mà tôi có thể làm khác đi.'",
+          "4. Phác thảo mô hình doanh thu: 'Gợi ý 3 cách tính giá khác nhau cho [sản phẩm/dịch vụ], kèm ưu nhược điểm của mỗi cách với người mới bắt đầu, vốn ít.'",
+          "5. Ước tính chi phí khởi điểm: 'Liệt kê các khoản chi phí cơ bản cần chuẩn bị để bắt đầu kinh doanh [mô hình cụ thể] ở quy mô nhỏ tại Việt Nam, sắp xếp từ bắt buộc đến có thể làm sau.'",
+          "6. Viết mô tả ngắn giới thiệu bản thân/sản phẩm: 'Viết giúp tôi đoạn giới thiệu ngắn (3-4 câu) về [sản phẩm/dịch vụ] để dùng khi có người hỏi \"bạn đang làm gì\", nghe tự nhiên không như quảng cáo.'",
+          "7. Lên checklist tuần đầu: 'Dựa trên mô hình kinh doanh [mô tả], liệt kê 7 việc cụ thể nên làm trong tuần đầu tiên, sắp xếp theo thứ tự ưu tiên.'",
+          "8. Soạn câu hỏi phỏng vấn khách hàng tiềm năng: 'Soạn 5 câu hỏi để hỏi người quen/khách hàng tiềm năng nhằm kiểm tra xem họ có thực sự cần [sản phẩm/dịch vụ] không, tránh câu hỏi dẫn dắt khiến họ chỉ trả lời cho vui lòng tôi.'",
+          "9. Tìm kênh bán hàng phù hợp: 'Với ngân sách marketing gần như bằng 0 lúc mới bắt đầu, gợi ý 3 kênh tiếp cận khách hàng đầu tiên phù hợp với [mô hình kinh doanh], giải thích vì sao phù hợp.'",
+          "10. Soạn kế hoạch 30 ngày đầu: 'Dựa trên các câu trả lời ở trên, tổng hợp giúp tôi thành 1 kế hoạch hành động 30 ngày đầu, chia theo tuần, mỗi tuần 2-3 việc cụ thể.'",
+        ],
+      },
+      {
+        heading: "Giới hạn cần nhớ khi dùng AI cho giai đoạn khởi nghiệp",
+        body: [
+          "ChatGPT giúp bạn tổ chức suy nghĩ nhanh hơn, nhưng không thay được việc kiểm chứng thật với khách hàng, không biết chính xác luật/thuế áp dụng cho trường hợp riêng của bạn, và không chịu trách nhiệm nếu kế hoạch sai. Dùng AI để có bản nháp nhanh, sau đó luôn kiểm tra lại với người thật (khách hàng tiềm năng, người có kinh nghiệm, hoặc chuyên gia pháp lý/thuế nếu cần) trước khi đầu tư tiền thật vào ý tưởng.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt kinh doanh đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt Kinh Doanh & Startup (Pack 1) có thêm nhiều prompt cho các giai đoạn sau khi đã bắt đầu — từ lên kế hoạch chi tiết, phân tích đối thủ sâu hơn, đến thiết kế mô hình doanh thu. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "ChatGPT có thể thay thế việc nghiên cứu thị trường thật không? Không. ChatGPT giúp bạn tổ chức câu hỏi và có bản nháp ban đầu, nhưng câu trả lời thật cho \"ý tưởng có khả thi không\" chỉ đến từ việc hỏi khách hàng tiềm năng thật.",
+          "Tôi chưa biết rõ mình muốn kinh doanh gì, ChatGPT có giúp được không? Có, nhưng theo hướng khác — dùng ChatGPT để brainstorm theo thế mạnh/sở thích của bạn trước, sau đó áp 10 prompt trên cho ý tưởng cụ thể nhất bạn chọn.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "dung-chatgpt-tang-nang-suat-lam-viec-8-prompt-hieu-qua",
+    title: "Dùng ChatGPT Tăng Năng Suất Làm Việc: 8 Prompt Hiệu Quả Hơn Mỗi Ngày",
+    description: "8 prompt ChatGPT giúp bạn lên kế hoạch ngày làm việc, ưu tiên công việc đúng trọng tâm và giảm trì hoãn — áp dụng được ngay từ ngày mai, không cần công cụ gì thêm.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-11T20:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "dùng chatgpt tăng năng suất",
+      "prompt năng suất làm việc",
+      "AI quản lý thời gian",
+      "prompt lên kế hoạch ngày",
+      "chatgpt làm việc hiệu quả",
+    ],
+    intro: "Dùng ChatGPT tăng năng suất làm việc là cách biến AI thành một trợ lý sắp xếp công việc cá nhân miễn phí — thay vì chỉ ghi nhớ việc cần làm, bạn nhờ AI giúp sắp xếp thứ tự ưu tiên, bóc tách việc lớn thành bước nhỏ, và soạn sẵn những đoạn văn bản tốn thời gian như email hay tóm tắt họp. Dưới đây là 8 prompt dùng được ngay mỗi ngày.",
+    sections: [
+      {
+        heading: "Vì sao năng suất thấp thường không phải do lười",
+        body: [
+          "Phần lớn thời gian bị mất không phải vì làm việc chậm, mà vì mất thời gian quyết định nên làm gì trước, viết lại email nhiều lần, hoặc trì hoãn vì việc quá to không biết bắt đầu từ đâu. 8 prompt dưới đây nhắm đúng vào 3 điểm nghẽn này.",
+        ],
+      },
+      {
+        heading: "8 prompt ChatGPT cho một ngày làm việc hiệu quả hơn",
+        body: [
+          "1. Lên kế hoạch ngày: 'Tôi có các việc sau cần làm hôm nay: [liệt kê]. Sắp xếp giúp tôi theo thứ tự ưu tiên, giải thích ngắn gọn vì sao nên làm trước/sau.'",
+          "2. Bóc tách việc lớn thành bước nhỏ: 'Việc [mô tả việc lớn, ví dụ: hoàn thành báo cáo quý] đang khiến tôi trì hoãn vì thấy quá to. Chia nhỏ thành 5 bước cụ thể, bước đầu tiên chỉ mất dưới 15 phút để tôi dễ bắt đầu.'",
+          "3. Soạn email nhanh: 'Soạn giúp tôi email [mục đích, vd: xin gia hạn deadline] gửi cho [đối tượng], giọng điệu chuyên nghiệp nhưng không quá trang trọng, dài khoảng 4-5 câu.'",
+          "4. Tóm tắt cuộc họp: 'Đây là ghi chú họp của tôi: [dán ghi chú]. Tóm tắt thành 3 phần: quyết định đã chốt, việc cần làm kèm người phụ trách, vấn đề còn bỏ ngỏ.'",
+          "5. Lên lịch tập trung sâu: 'Tôi có 3 tiếng rảnh liên tục hôm nay và 4 việc cần làm: [liệt kê]. Gợi ý cách chia khối thời gian này hợp lý nhất, có nghỉ giữa các việc.'",
+          "6. Vượt qua trì hoãn: 'Tôi đang trì hoãn việc [mô tả] dù biết nên làm. Hỏi tôi 3 câu hỏi để tìm ra lý do thật sự tôi đang né tránh, không đưa lời khuyên chung chung.'",
+          "7. Tổng kết cuối ngày: 'Hôm nay tôi đã làm: [liệt kê]. Giúp tôi viết 2-3 câu tổng kết ngắn gọn và 1 việc ưu tiên nhất cho ngày mai.'",
+          "8. Soạn tin nhắn giao việc: 'Tôi cần nhờ [đồng nghiệp/cộng tác viên] làm [mô tả việc]. Soạn tin nhắn giao việc rõ ràng, có deadline, không nghe như ra lệnh.'",
+        ],
+      },
+      {
+        heading: "Mẹo dùng để không bị lệ thuộc vào AI",
+        body: [
+          "Dùng AI để giảm thời gian quyết định và soạn thảo, không dùng để AI quyết định thay hoàn toàn. Với việc quan trọng (giao việc, phản hồi khách hàng, quyết định ưu tiên), luôn đọc lại và điều chỉnh theo bối cảnh thật trước khi dùng — AI không biết hết các ràng buộc thực tế của công việc bạn.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt năng suất đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt Phát Triển Bản Thân & Năng Suất (Pack 5) có thêm nhiều prompt cho việc lập kế hoạch tuần/tháng, học tập hiệu quả và quản lý thời gian dài hạn. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "Dùng ChatGPT để lên kế hoạch mỗi ngày có tốn nhiều thời gian không? Ngược lại — mỗi prompt trên chỉ mất 1-2 phút để dán thông tin và nhận kết quả, nhanh hơn nhiều so với tự ngồi sắp xếp từ đầu.",
+          "Tôi có cần nhớ thuộc lòng 8 prompt này không? Không cần — lưu lại ở ghi chú hoặc ảnh chụp màn hình, dùng lại khi cần, chỉ thay phần thông tin cụ thể trong ngoặc vuông.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "dung-chatgpt-tu-dong-hoa-quy-trinh-kinh-doanh-nho",
+    title: "Dùng ChatGPT Tự Động Hóa Quy Trình Kinh Doanh Nhỏ: 7 Việc Làm Ngay",
+    description: "7 cách dùng ChatGPT để soạn sẵn mẫu tin nhắn, quy trình và tài liệu lặp lại cho kinh doanh nhỏ — giảm thời gian làm việc thủ công lặp đi lặp lại mỗi ngày.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-16T20:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "dùng chatgpt tự động hóa kinh doanh nhỏ",
+      "AI cho kinh doanh nhỏ",
+      "prompt tự động hóa",
+      "chatgpt cho chủ shop",
+      "soạn mẫu tin nhắn tự động",
+    ],
+    intro: "Dùng ChatGPT tự động hóa quy trình kinh doanh nhỏ không có nghĩa là AI tự vận hành thay bạn, mà là dùng AI soạn sẵn một lần các mẫu tin nhắn, quy trình và tài liệu lặp lại — để sau đó bạn hoặc nhân viên chỉ cần dùng lại thay vì soạn mới mỗi lần. Dưới đây là 7 việc cụ thể làm được ngay hôm nay.",
+    sections: [
+      {
+        heading: "Phân biệt rõ: AI soạn sẵn mẫu, không phải AI tự động vận hành",
+        body: [
+          "ChatGPT không tự gửi tin nhắn, không tự cập nhật tồn kho, không tự đăng bài — những việc đó cần công cụ tự động hóa riêng (phần mềm CRM, lịch đăng bài, webhook...). Việc ChatGPT làm tốt là giúp bạn soạn sẵn NỘI DUNG của các quy trình lặp lại một lần, để không phải tự tay viết lại mỗi lần phát sinh.",
+        ],
+      },
+      {
+        heading: "7 việc dùng ChatGPT soạn sẵn cho kinh doanh nhỏ",
+        body: [
+          "1. Mẫu tin nhắn tự động trả lời khách: 'Soạn giúp tôi 3 mẫu tin nhắn trả lời tự động khi khách nhắn ngoài giờ làm việc cho shop bán [sản phẩm/dịch vụ], giọng điệu thân thiện, có hẹn giờ phản hồi lại.'",
+          "2. Tài liệu FAQ cho khách hàng: 'Dựa trên 5 câu hỏi khách hay hỏi nhất về [sản phẩm/dịch vụ]: [liệt kê], soạn thành 1 tài liệu FAQ ngắn gọn để gửi khách hoặc đăng lên trang.'",
+          "3. Mẫu email xác nhận đơn hàng: 'Soạn mẫu email xác nhận đơn hàng cho [loại sản phẩm], có đủ thông tin: cảm ơn, chi tiết đơn, thời gian giao, cách liên hệ nếu có vấn đề.'",
+          "4. Lịch nhắc kiểm tra tồn kho: 'Soạn giúp tôi 1 checklist kiểm tra tồn kho hàng tuần cho shop bán [loại sản phẩm], gồm các mục cần kiểm tra theo thứ tự.'",
+          "5. Khung bài đăng mạng xã hội lặp lại: 'Soạn 3 khung (template) bài đăng có thể tái sử dụng hàng tuần cho [loại sản phẩm]: 1 khung giới thiệu sản phẩm, 1 khung feedback khách hàng, 1 khung ưu đãi — chỉ cần điền thông tin mới mỗi lần.'",
+          "6. Mẫu tin nhắn nhắc thanh toán: 'Soạn mẫu tin nhắn nhắc khách thanh toán đơn hàng còn thiếu, giọng điệu lịch sự, không gây khó chịu, có 2 phiên bản: nhắc lần đầu và nhắc lần 2 nếu chưa phản hồi.'",
+          "7. Quy trình xử lý (SOP) cho việc lặp lại: 'Viết giúp tôi 1 quy trình các bước (SOP) ngắn gọn cho việc [mô tả việc lặp lại, vd: đóng gói và gửi hàng] để tôi có thể hướng dẫn lại cho nhân viên mới.'",
+        ],
+      },
+      {
+        heading: "Sau khi có mẫu, nên làm gì tiếp?",
+        body: [
+          "Lưu các mẫu đã soạn vào 1 nơi cố định (ghi chú, Google Docs, hoặc file dùng chung với nhân viên) để dùng lại nhiều lần. Nếu muốn tiến thêm một bước tới tự động hóa thật (tự gửi tin nhắn, tự cập nhật đơn hàng), cần kết hợp thêm công cụ chuyên dụng — ChatGPT chỉ giúp phần nội dung, không thay được phần vận hành kỹ thuật đó.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt ứng dụng AI vào kinh doanh đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt AI & Công Nghệ Trong Kinh Doanh (Pack 8) có thêm nhiều prompt cho việc phân tích dữ liệu, chăm sóc khách hàng và tối ưu vận hành bằng AI. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "ChatGPT có tự động gửi tin nhắn cho khách được không? Không. ChatGPT chỉ soạn nội dung — việc gửi tự động cần công cụ riêng (phần mềm chat tự động, CRM...). Bạn copy nội dung ChatGPT soạn vào công cụ đó.",
+          "Tôi chỉ có 1 mình bán hàng, có cần làm hết 7 việc này không? Không cần làm hết cùng lúc — ưu tiên việc nào bạn đang mất thời gian lặp lại nhiều nhất (thường là trả lời khách hoặc xác nhận đơn hàng) và làm việc đó trước.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "perplexity-vs-chatgpt-cong-cu-nao-tot-hon-tim-kiem-thong-tin",
+    title: "Perplexity vs ChatGPT: Công Cụ Nào Tốt Hơn Để Tìm Kiếm Thông Tin AI",
+    description: "So sánh Perplexity và ChatGPT về cách tìm kiếm thông tin: Perplexity thiên về tra cứu có trích nguồn, ChatGPT thiên về trợ lý đa năng — gợi ý nên dùng công cụ nào cho nhu cầu cụ thể.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-18T20:00:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "perplexity vs chatgpt",
+      "công cụ tìm kiếm AI",
+      "perplexity là gì",
+      "so sánh AI tìm kiếm",
+      "chatgpt search",
+    ],
+    intro: "Perplexity và ChatGPT đều dùng được để tìm kiếm thông tin bằng AI, nhưng được thiết kế cho mục đích hơi khác nhau. Perplexity được xây dựng ngay từ đầu như một công cụ tra cứu — mỗi câu trả lời thường kèm trích dẫn nguồn cụ thể để bạn kiểm tra lại. ChatGPT là một trợ lý AI đa năng, tìm kiếm thông tin chỉ là một trong nhiều việc nó làm được, bên cạnh viết lách, lập trình, phân tích file và nhiều tác vụ khác.",
+    sections: [
+      {
+        heading: "Perplexity và ChatGPT khác nhau ở điểm nào?",
+        body: [
+          "Perplexity tập trung vào một việc: trả lời câu hỏi kèm nguồn trích dẫn rõ ràng, giống cách một công cụ tìm kiếm trả về kết quả nhưng được AI tổng hợp sẵn thành câu trả lời liền mạch thay vì danh sách link. Đây là điểm mạnh riêng biệt của Perplexity so với các AI tổng quát khác.",
+          "ChatGPT là trợ lý đa năng — ngoài tìm kiếm thông tin (qua tính năng duyệt web khi cần), ChatGPT còn viết nội dung, viết code, phân tích file đính kèm, tạo ảnh, và duy trì hội thoại dài xuyên nhiều chủ đề trong cùng 1 phiên làm việc. Tìm kiếm chỉ là một phần nhỏ trong những gì ChatGPT làm được.",
+        ],
+      },
+      {
+        heading: "Khi nào nên dùng Perplexity?",
+        body: [
+          "Dùng Perplexity khi bạn cần tra cứu một thông tin cụ thể và muốn kiểm tra lại nguồn ngay lập tức — ví dụ: số liệu, sự kiện gần đây, so sánh sản phẩm dựa trên bài review thật, hoặc nghiên cứu sơ bộ cho một chủ đề mới. Việc có nguồn trích dẫn đi kèm giúp bạn tự đánh giá độ tin cậy thay vì phải tin hoàn toàn vào câu trả lời của AI.",
+        ],
+      },
+      {
+        heading: "Khi nào nên dùng ChatGPT?",
+        body: [
+          "Dùng ChatGPT khi công việc không chỉ dừng ở tra cứu — ví dụ bạn cần tìm thông tin RỒI dùng thông tin đó để viết bài, soạn email, phân tích thêm, hoặc thảo luận qua lại nhiều vòng để đào sâu một ý tưởng. ChatGPT phù hợp hơn cho quy trình làm việc nhiều bước trong cùng một cuộc hội thoại.",
+        ],
+      },
+      {
+        heading: "Có thể dùng cả hai cùng lúc không?",
+        body: [
+          "Hoàn toàn có thể, và nhiều người đang làm vậy: dùng Perplexity để tra cứu nhanh thông tin có nguồn đáng tin, sau đó dán kết quả đó vào ChatGPT để viết lại thành nội dung, phân tích sâu hơn, hoặc kết hợp với các việc khác đang làm. Không cần chọn đứt một trong hai — mỗi công cụ giải quyết tốt một phần việc khác nhau.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "Perplexity có thay thế được Google Search không? Với nhiều nhu cầu tra cứu nhanh thì có, nhưng với các nhu cầu cần nhiều kết quả để tự so sánh (ví dụ mua sắm, tìm nhiều lựa chọn), công cụ tìm kiếm truyền thống vẫn hữu ích để xem toàn cảnh.",
+          "Thông tin Perplexity trả lời có luôn chính xác không? Không có AI nào đảm bảo chính xác 100% — điểm mạnh của Perplexity là cho bạn nguồn để tự kiểm tra, nhưng bạn vẫn nên click vào nguồn xem lại với thông tin quan trọng.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "dung-chatgpt-chuan-bi-bao-cao-tong-ket-cuoi-nam",
+    title: "Dùng ChatGPT Chuẩn Bị Báo Cáo Tổng Kết Cuối Năm: 8 Prompt Dùng Ngay",
+    description: "8 prompt ChatGPT giúp bạn tổng hợp số liệu, viết tóm tắt điều hành và trình bày báo cáo tổng kết cuối năm rõ ràng, mạch lạc hơn — tiết kiệm nhiều giờ soạn thảo thủ công.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-23T20:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "dùng chatgpt chuẩn bị báo cáo tổng kết cuối năm",
+      "prompt báo cáo cuối năm",
+      "AI viết báo cáo",
+      "tổng kết cuối năm",
+      "chatgpt cho công việc",
+    ],
+    intro: "Dùng ChatGPT chuẩn bị báo cáo tổng kết cuối năm giúp bạn rút ngắn phần tốn thời gian nhất: biến số liệu và ghi chú rời rạc thành một bản báo cáo mạch lạc, dễ đọc. Dưới đây là 8 prompt theo đúng thứ tự các bước làm báo cáo tổng kết, từ tổng hợp dữ liệu thô đến hoàn thiện bản trình bày.",
+    sections: [
+      {
+        heading: "Vì sao báo cáo tổng kết cuối năm hay bị trì hoãn",
+        body: [
+          "Không phải vì thiếu số liệu, mà vì không biết sắp xếp số liệu rời rạc đó thành câu chuyện mạch lạc. ChatGPT giúp đúng phần này — biến danh sách số liệu/ghi chú thành đoạn văn có cấu trúc, để bạn chỉ cần chỉnh sửa thay vì viết từ đầu.",
+        ],
+      },
+      {
+        heading: "8 prompt ChatGPT cho báo cáo tổng kết cuối năm",
+        body: [
+          "1. Tổng hợp thành tích: 'Đây là danh sách kết quả tôi đạt được năm nay: [liệt kê]. Viết thành đoạn tóm tắt thành tích mạch lạc, nhấn mạnh 3 điểm nổi bật nhất.'",
+          "2. Viết tóm tắt điều hành (executive summary): 'Dựa trên các số liệu sau: [dán số liệu], viết đoạn tóm tắt điều hành ngắn gọn (5-6 câu) cho phần đầu báo cáo.'",
+          "3. Phân tích điều chưa đạt một cách xây dựng: 'Năm nay có những mục tiêu chưa đạt: [liệt kê]. Giúp tôi viết lại phần này theo hướng xây dựng — nêu nguyên nhân khách quan và hướng khắc phục, không đổ lỗi hay nghe tiêu cực.'",
+          "4. Biến số liệu thô thành đoạn văn: 'Đây là bảng số liệu: [dán số liệu dạng danh sách]. Viết thành 1 đoạn văn mô tả xu hướng chính, không chỉ liệt kê lại số.'",
+          "5. Soạn mục tiêu năm sau dựa trên năm nay: 'Dựa trên kết quả năm nay: [tóm tắt], gợi ý 3-5 mục tiêu cụ thể, đo lường được cho năm sau.'",
+          "6. Tạo dàn ý slide trình bày: 'Từ nội dung báo cáo tổng kết trên, tạo dàn ý cho 8 slide trình bày, mỗi slide 1 tiêu đề và 2-3 gạch đầu dòng chính.'",
+          "7. Soạn lời cảm ơn đội nhóm/khách hàng: 'Viết đoạn lời cảm ơn ngắn (3-4 câu) gửi đội nhóm/khách hàng trong báo cáo tổng kết, giọng điệu chân thành, không sáo rỗng.'",
+          "8. Rút gọn bản dài thành bản tóm tắt 1 trang: 'Đây là bản báo cáo đầy đủ của tôi: [dán báo cáo]. Rút gọn thành bản tóm tắt 1 trang chỉ giữ lại thông tin quan trọng nhất.'",
+        ],
+      },
+      {
+        heading: "Lưu ý khi dùng AI viết báo cáo",
+        body: [
+          "Luôn tự kiểm tra lại số liệu AI viết vào báo cáo khớp với số liệu thật bạn cung cấp — AI có thể diễn đạt lại theo cách làm số liệu nghe khác đi ngoài ý muốn. Không dán thông tin tài chính/nội bộ nhạy cảm nếu công cụ AI bạn dùng không đảm bảo chính sách bảo mật dữ liệu phù hợp với công ty.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt cho công việc văn phòng đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt Phát Triển Bản Thân & Năng Suất (Pack 5) có thêm nhiều prompt cho việc lập kế hoạch, học tập và quản lý thời gian trong công việc văn phòng. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "ChatGPT có tự tổng hợp số liệu từ file Excel được không? Các bản có hỗ trợ tải file lên có thể đọc và tổng hợp sơ bộ, nhưng nên tự kiểm tra lại kết quả tính toán quan trọng thay vì tin tuyệt đối.",
+          "Tôi nên dán bao nhiêu số liệu vào 1 prompt? Không cần dán hết cùng lúc — chia theo từng phần nhỏ (vd: số liệu doanh thu riêng, số liệu nhân sự riêng) sẽ cho kết quả rõ ràng hơn là dán tất cả lẫn lộn.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "dung-chatgpt-len-ke-hoach-kinh-doanh-cho-nam-sau",
+    title: "Dùng ChatGPT Lên Kế Hoạch Kinh Doanh Cho Năm Sau: Prompt Dùng Ngay",
+    description: "Prompt ChatGPT giúp bạn phác thảo SWOT, đặt mục tiêu cụ thể và chia nhỏ kế hoạch kinh doanh năm sau thành các mốc theo quý — dùng được cho cá nhân kinh doanh nhỏ lẫn chủ shop.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-25T20:00:00+07:00",
+    readingTime: "7 phút đọc",
+    keywords: [
+      "dùng chatgpt lên kế hoạch kinh doanh",
+      "prompt kế hoạch năm sau",
+      "AI lập kế hoạch kinh doanh",
+      "mục tiêu kinh doanh năm sau",
+      "chatgpt cho chủ kinh doanh",
+    ],
+    intro: "Dùng ChatGPT lên kế hoạch kinh doanh cho năm sau giúp bạn có bản nháp kế hoạch rõ ràng chỉ trong một buổi, thay vì ngồi suy nghĩ rời rạc nhiều tuần. Các prompt dưới đây đi theo đúng trình tự lập kế hoạch cơ bản: nhìn lại năm cũ, đặt mục tiêu, rồi chia nhỏ thành hành động theo quý.",
+    sections: [
+      {
+        heading: "Vì sao nên lên kế hoạch bằng văn bản thay vì chỉ nghĩ trong đầu",
+        body: [
+          "Kế hoạch chỉ tồn tại trong đầu rất dễ bị quên hoặc thay đổi theo cảm xúc từng ngày. Viết ra thành văn bản cụ thể — dù chỉ 1 trang — giúp bạn có điểm tham chiếu để kiểm tra lại giữa năm xem có đang đi đúng hướng không.",
+        ],
+      },
+      {
+        heading: "Prompt ChatGPT cho kế hoạch kinh doanh năm sau",
+        body: [
+          "1. Nhìn lại năm cũ: 'Năm nay kết quả kinh doanh của tôi là: [mô tả/số liệu]. Giúp tôi tổng hợp 3 điều làm tốt và 3 điều cần cải thiện, dựa trên thông tin này.'",
+          "2. Phân tích SWOT nhanh: 'Với mô hình kinh doanh [mô tả], giúp tôi phác thảo SWOT (điểm mạnh, điểm yếu, cơ hội, thách thức) dựa trên bối cảnh: [mô tả thêm bối cảnh thị trường/đối thủ nếu có].'",
+          "3. Đặt mục tiêu theo công thức SMART: 'Tôi muốn [mục tiêu mong muốn, vd: tăng doanh thu, mở rộng khách hàng]. Giúp tôi viết lại thành mục tiêu SMART cụ thể, đo lường được, có deadline rõ ràng.'",
+          "4. Chia mục tiêu năm thành mốc theo quý: 'Với mục tiêu năm sau là [mục tiêu SMART ở trên], chia thành 4 mốc theo từng quý, mỗi quý nêu rõ việc cần hoàn thành.'",
+          "5. Phác thảo ngân sách dự kiến: 'Dựa trên kế hoạch trên, liệt kê các khoản cần dự trù ngân sách theo thứ tự ưu tiên, kèm lý do vì sao khoản đó quan trọng.'",
+          "6. Lên lịch nội dung/marketing theo mùa vụ: 'Với ngành [ngành của bạn], liệt kê các mốc thời gian trong năm nên có hoạt động marketing đặc biệt (lễ, mùa vụ, sự kiện ngành) và gợi ý ý tưởng ngắn cho mỗi mốc.'",
+          "7. Nhận diện rủi ro cần chuẩn bị trước: 'Với kế hoạch kinh doanh năm sau là [tóm tắt], liệt kê 3 rủi ro có khả năng xảy ra nhất và cách chuẩn bị trước cho mỗi rủi ro.'",
+        ],
+      },
+      {
+        heading: "Sau khi có bản nháp, nên làm gì tiếp theo?",
+        body: [
+          "In ra hoặc lưu lại bản kế hoạch ở nơi dễ xem lại (không chỉ nằm trong lịch sử chat), đặt lịch tự nhắc kiểm tra lại tiến độ mỗi quý — đúng theo các mốc đã chia ở bước 4. Kế hoạch có giá trị khi được xem lại định kỳ, không phải khi viết xong rồi để đó.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt kinh doanh đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt Kinh Doanh & Startup (Pack 1) có thêm nhiều prompt cho việc lập kế hoạch kinh doanh chi tiết và phân tích đối thủ cạnh tranh. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "Tôi kinh doanh một mình, có cần kế hoạch bài bản như doanh nghiệp lớn không? Không cần phức tạp — 1 trang với mục tiêu rõ ràng và chia theo quý là đủ cho cá nhân kinh doanh nhỏ, không cần làm dài dòng theo khuôn mẫu doanh nghiệp lớn.",
+          "Giữa năm kế hoạch không còn đúng nữa thì sao? Bình thường — quay lại dùng prompt số 1 và 3 để cập nhật lại dựa trên tình hình mới, kế hoạch nên được điều chỉnh chứ không phải cố giữ nguyên bằng mọi giá.",
+        ],
+      },
+    ],
+  },
+
+  {
+    slug: "prompt-ai-viet-content-ban-hang-mua-mua-sam-cuoi-nam",
+    title: "Prompt AI Viết Content Bán Hàng Mùa Mua Sắm Cuối Năm (Black Friday, 12/12)",
+    description: "Prompt ChatGPT giúp bạn soạn nhanh content bán hàng cho mùa mua sắm cuối năm — từ bài đếm ngược, thông báo giảm giá đến tin nhắn email — dùng ngay cho Black Friday và 12/12.",
+    category: "Kiến thức AI",
+    publishedAt: "2026-11-30T20:00:00+07:00",
+    readingTime: "6 phút đọc",
+    keywords: [
+      "prompt ai viết content bán hàng cuối năm",
+      "content black friday",
+      "content 12/12",
+      "AI viết content mùa sale",
+      "prompt content bán hàng",
+    ],
+    intro: "Prompt AI viết content bán hàng mùa mua sắm cuối năm giúp bạn chuẩn bị trước nội dung cho các mốc lớn như Black Friday và 12/12 — thời điểm khách mua nhiều nhưng cũng là lúc bạn bận rộn nhất, dễ không còn thời gian ngồi nghĩ content từ đầu. Dưới đây là prompt cho từng loại nội dung cần có trong mùa sale.",
+    sections: [
+      {
+        heading: "Vì sao nên chuẩn bị content mùa sale trước, không chờ đến sát ngày",
+        body: [
+          "Mùa mua sắm cuối năm có lịch cố định hàng năm (Black Friday, 12/12), nên hoàn toàn chuẩn bị trước được thay vì viết gấp gáp sát ngày. Content chuẩn bị trước thường chỉn chu hơn và cho bạn thời gian đăng theo đúng nhịp (đếm ngược → công bố → nhắc lại → giờ chót) thay vì chỉ đăng 1 lần duy nhất.",
+        ],
+      },
+      {
+        heading: "Prompt AI cho từng loại content mùa sale",
+        body: [
+          "1. Bài đếm ngược (trước sự kiện 3-5 ngày): 'Viết 1 caption đếm ngược còn [X] ngày đến [Black Friday/12.12] cho [sản phẩm/dịch vụ], tạo cảm giác mong chờ, không tiết lộ hết ưu đãi.'",
+          "2. Thông báo giảm giá chính thức: 'Viết caption công bố chương trình giảm giá [mô tả ưu đãi cụ thể] cho [sản phẩm], có lời kêu gọi hành động rõ ràng, giọng điệu hào hứng vừa phải không quá lố.'",
+          "3. Tạo cảm giác khan hiếm/giới hạn: 'Viết caption nhấn mạnh ưu đãi có giới hạn [số lượng/thời gian] cho [sản phẩm], tạo động lực mua ngay nhưng không nghe như đe dọa ép buộc.'",
+          "4. Email/tin nhắn gửi khách cũ: 'Soạn tin nhắn gửi khách hàng cũ thông báo ưu đãi [mô tả] dành riêng cho họ nhân dịp [Black Friday/12.12], giọng điệu như đang nói chuyện riêng với khách quen, không như gửi hàng loạt.'",
+          "5. Bài nhắc giờ chót (ngày cuối chương trình): 'Viết caption nhắc hôm nay là ngày cuối cùng của chương trình [mô tả ưu đãi], tạo cảm giác cấp bách tự nhiên, không dùng từ ngữ quá cường điệu.'",
+          "6. Bài tổng kết sau chương trình: 'Viết caption cảm ơn khách hàng đã ủng hộ trong chương trình [Black Friday/12.12] vừa kết thúc, kèm gợi ý nhẹ về ưu đãi/sản phẩm tiếp theo.'",
+        ],
+      },
+      {
+        heading: "Lưu ý khi dùng content mùa sale do AI soạn",
+        body: [
+          "Luôn kiểm tra lại số liệu cụ thể (% giảm giá, số lượng, ngày giờ) trước khi đăng — AI có thể viết chung chung hoặc đặt số ví dụ, cần thay đúng số thật của chương trình bạn đang chạy. Tránh dùng từ ngữ phóng đại dễ gây hiểu lầm về mức giảm giá thật.",
+        ],
+      },
+      {
+        heading: "Muốn có sẵn bộ prompt bán hàng đầy đủ hơn?",
+        body: [
+          "Bộ 100 Prompt Marketing & Xây Dựng Thương Hiệu (Pack 3) có thêm nhiều prompt cho chiến dịch quảng cáo và kịch bản video ngắn dùng quanh năm, không chỉ mùa sale. Xem chi tiết tại www.1000promptchuyengia.shop. Để viết prompt hiệu quả hơn cho mọi tình huống, xem thêm Prompt Engineering Cho Người Việt: Hướng Dẫn Toàn Diện tại /bai-viet/prompt-engineering-cho-nguoi-viet-huong-dan-toan-dien.",
+        ],
+      },
+      {
+        heading: "Câu hỏi thường gặp",
+        body: [
+          "Nên đăng content mùa sale trước bao lâu? Bài đếm ngược thường hiệu quả nhất trong 3-5 ngày trước sự kiện — đăng quá sớm khách dễ quên, quá sát ngày không đủ thời gian tạo mong chờ.",
+          "Có nên dùng đúng nguyên văn AI viết ra không? Nên chỉnh lại số liệu cụ thể và thêm 1-2 chi tiết thật về sản phẩm/thương hiệu của bạn để content không bị chung chung giống mọi shop khác đang dùng AI.",
+        ],
+      },
+    ],
+  },
+
 ];
 
 export function getBlogPostBySlug(slug: string) {
