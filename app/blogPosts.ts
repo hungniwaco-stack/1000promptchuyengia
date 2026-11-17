@@ -338,10 +338,17 @@ export const blogPosts: BlogPost[] = [
     category: "Kiếm tiền online",
     publishedAt: "2026-07-03T06:45:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: ["prompt kiếm tiền online", "AI affiliate", "thu nhập thụ động", "freelance AI", "kinh doanh online"],
+    keywords: ["prompt kiếm tiền online", "AI affiliate", "thu nhập thụ động", "freelance AI", "kinh doanh online", "cách kiếm tiền online", "kiếm tiền bằng AI", "affiliate marketing là gì"],
     intro:
       "100 Prompt Kiếm Tiền Online và Thu Nhập Thụ Động là bộ câu lệnh AI có sẵn, giúp bạn có ngay một hướng đi cụ thể để bắt đầu kiếm thêm thu nhập, không cần biết viết prompt từ đầu.",
     sections: [
+      {
+        heading: "Thu nhập thụ động là gì, và AI giúp bạn kiếm tiền online bằng cách nào",
+        body: [
+          "Thu nhập thụ động là khoản tiền bạn vẫn nhận được đều đặn mà không cần trực tiếp đổi thời gian lấy tiền mỗi ngày — ví dụ hoa hồng affiliate tự chạy, doanh thu sản phẩm số bán lặp lại, hay tiền bản quyền nội dung. Cách kiếm tiền online phổ biến nhất hiện nay xoay quanh vài nguồn thu nhập thụ động chính: affiliate marketing, bán sản phẩm số, nội dung trên YouTube/TikTok, và dịch vụ freelance có thể lặp lại cho nhiều khách.",
+          "AI không tạo ra thu nhập thụ động thay bạn, nhưng giúp rút ngắn phần tốn thời gian nhất: tìm hướng đi phù hợp, lên kế hoạch bắt đầu, và viết nội dung triển khai cho từng nguồn thu kể trên. Đó là lý do bộ 100 prompt kiếm tiền bằng AI trong bài này được chia theo đúng 10 nhóm nguồn thu phổ biến nhất, thay vì chỉ 1-2 hướng.",
+        ],
+      },
       {
         heading: "Vì sao bạn cần bộ 100 prompt AI kiếm tiền online này",
         body: [
@@ -352,7 +359,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Bộ tài liệu này dành cho ai",
         body: [
-          "Phù hợp với người muốn bắt đầu kiếm thêm thu nhập online, người làm freelance, và người đang tìm cách xây dựng một nguồn thu thụ động bên cạnh công việc chính.",
+          "Phù hợp với người muốn bắt đầu kiếm tiền online tại nhà, người đang tìm công việc freelance online, và người đang tìm cách xây dựng một nguồn thu thụ động bên cạnh công việc chính.",
         ],
       },
       {
@@ -364,6 +371,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: "Ví dụ prompt AI kiếm tiền online thực chiến",
         body: [
+          "Affiliate marketing là gì? Hiểu đơn giản, đây là hình thức bạn giới thiệu sản phẩm của người khác qua link riêng và nhận hoa hồng khi có người mua qua link đó — không cần tự sản xuất hay vận chuyển hàng.",
           "Đây là một prompt thuộc nhóm affiliate marketing: \"Đóng vai một chuyên gia affiliate marketing. Tôi đang có một kênh nội dung trong ngành làm đẹp, với lượng người theo dõi vừa phải. Hãy gợi ý ba loại sản phẩm affiliate phù hợp để tôi bắt đầu, và cách lồng ghép link giới thiệu vào nội dung một cách tự nhiên, không gây phản cảm.\"",
           "Một prompt như vậy giúp bạn có ngay một hướng đi cụ thể cho đúng tình huống của mình.",
         ],

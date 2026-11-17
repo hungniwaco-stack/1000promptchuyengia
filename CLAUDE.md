@@ -611,3 +611,60 @@ nhưng báo 3 điểm nghẽn. Đã điều tra & sửa cả 3 (chờ user push)
    `post.title`/`post.description`. Trang chủ: viết lại description ngắn 132 ký tự,
    có CTA "Tải ngay". **Không sửa từng bài trong `blogPosts.ts`** — giữ nguyên tiêu đề
    gốc cho H1/OG, chỉ cắt bản dùng riêng cho thẻ `<title>`.
+
+## Audit SEO+GEO 01/11 + bài học đồng bộ sandbox↔máy user (01-03/11/2026)
+
+**Skill `seo-geo-toan-nang` đã cài vào repo** (`.claude/skills/seo-geo-toan-nang/`) + context file
+`.agents/seo-context.md`. Audit đầu tiên theo skill này lưu tại `.agents/seo-geo-audit-2026-11-01.md`
+(SEO 55/100, GEO 50/100, Schema 66/100). Lỗi nghiêm trọng nhất tìm được: `app/bai-viet/[slug]/page.tsx`
+không chặn bài có `publishedAt` tương lai — URL truy cập công khai được trước giờ đăng chính thức.
+
+**5 lỗi "Tuần 1" đã sửa + deploy xong, xác nhận live 03/11/2026:**
+- `app/robots.ts` — thêm block `OAI-SearchBot` (bot tìm kiếm/trích dẫn cho ChatGPT Search, khác
+  `GPTBot` chỉ phục vụ huấn luyện).
+- `app/sitemap.ts` — `force-dynamic`, chỉ liệt kê bài đã tới giờ đăng (`publishedAt <= now`),
+  `lastModified` của trang tĩnh dùng hằng số cố định thay vì `new Date()` (tránh đổi theo mỗi lần deploy).
+- `app/bai-viet/[slug]/page.tsx` — `force-dynamic` + `notFound()` nếu `publishedAt` trong tương lai.
+  **Đây là pattern bắt buộc cho mọi trang lọc theo thời gian trong dự án này** — đã áp dụng ở
+  `app/bai-viet/page.tsx` (trang danh sách) từ trước, giờ thêm cả trang chi tiết.
+- `app/SchemaMarkup.tsx` — đã gỡ `aggregateRating` + 3 review mẫu chưa xác minh khỏi `comboProductSchema`
+  (vi phạm chính sách "self-serving reviews" của Google — review không hiển thị ở đâu trên trang, chỉ
+  tồn tại trong JSON-LD, không có bằng chứng xác minh). Nếu sau này có review thật đã xin phép khách
+  hàng, thêm lại đúng khuôn cũ VÀ hiển thị cùng nội dung đó trên trang (không chỉ trong JSON-LD).
+- `public/llms.txt` — **đổi format chuẩn, áp dụng cho mọi lần sửa sau này:**
+  ```
+  # Tên thương hiệu
+
+  > Tóm tắt 1 dòng dạng blockquote, có kèm URL website.
+
+  Cập nhật lần cuối: YYYY-MM-DD. Hướng dẫn cho AI Language Models...
+  ```
+  KHÔNG còn dùng format cũ 3 dòng `# ...` / `# ...` / `# Cập nhật: ...` nữa.
+
+**⚠️ Bài học quy trình quan trọng — tránh patch thất bại khi sửa code từ sandbox cloud:**
+Sinh `git diff` trong bản clone sandbox rồi `git apply` sang máy user **dễ vỡ nếu sandbox clone bị
+lệch baseline** so với `origin/main` thật (từng xảy ra: 1 lệnh `git checkout origin/main -- <vài path
+cụ thể>` trước đó chỉ sync 1 phần, khiến 1 file trong sandbox là bản stale/local-only; `git apply` thất
+bại là ATOMIC nên KHÔNG file nào trong patch được áp dụng, kể cả các file đúng — dù sandbox build đã
+pass). **Cách làm an toàn hơn, dùng mặc định từ giờ khi cần đưa code sandbox sang máy user:** đọc đúng
+nội dung file đã sửa trong sandbox → ghi thẳng TOÀN BỘ nội dung lên máy user qua `device_bash` với
+`cat > "<path>" << 'EOF' ... EOF` (delimiter có dấu nháy đơn để shell không expand `$`/backtick/
+template-literal trong code TSX) → verify lại bằng `git diff --stat` trên máy user. Không dùng patch/
+`git apply` nữa cho việc này.
+
+**⚠️ WebFetch có cache riêng theo URL (~15 phút):** verify site live ngay sau khi vừa deploy xong, nếu
+fetch lại đúng URL vừa fetch trong 15 phút gần nhất sẽ ăn cache của chính tool WebFetch (không phải
+cache CDN thật của site) → dễ hiểu lầm "deploy chưa xong". Thêm query string (vd `?v=2`) vào URL khi
+cần ép fetch mới ngay sau deploy.
+
+**device_bash (VM trên máy user) có thể tự rớt kết nối giữa phiên** ("device not connected to the
+bridge") rồi tự nối lại sau vài phút — không phải lỗi nghiêm trọng, báo ngắn cho user rồi làm tiếp
+phần không cần máy họ, quay lại khi kết nối phục hồi.
+
+**device_bash không xoá được file** trong thư mục đã kết nối (`rm` báo "Operation not permitted") trừ
+khi user cấp quyền riêng — với file rác nhỏ không quan trọng (vd file patch thừa từ 1 lần thất bại),
+bỏ qua không cần xin quyền, chỉ cần đảm bảo không bị `git add`.
+
+**IndexNow đã test thành công end-to-end (03/11/2026):** `node scripts/submit-indexnow.mjs` chạy từ
+PowerShell thật của user → HTTP 200, submit đúng toàn bộ URL hiện có trong sitemap. Script ổn định,
+cứ đưa lệnh cho user chạy mỗi khi có bài mới/sửa nội dung quan trọng, không cần kiểm tra lại script.
