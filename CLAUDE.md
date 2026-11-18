@@ -668,3 +668,21 @@ bỏ qua không cần xin quyền, chỉ cần đảm bảo không bị `git add
 **IndexNow đã test thành công end-to-end (03/11/2026):** `node scripts/submit-indexnow.mjs` chạy từ
 PowerShell thật của user → HTTP 200, submit đúng toàn bộ URL hiện có trong sitemap. Script ổn định,
 cứ đưa lệnh cho user chạy mỗi khi có bài mới/sửa nội dung quan trọng, không cần kiểm tra lại script.
+
+## Keyword-gap analysis + GSC indexing — bài học kỹ thuật (17/11/2026)
+
+**Phân tích "từ khoá có impression cao nhưng chưa có trong nội dung" cho 1 URL cụ thể:**
+- Nếu `get_search_console_performance` với `dimensions:["query"]` lọc theo đúng page trả về `rowCount: 0` dù page-level tổng impression > 0 — đây là Google tự ẩn truy vấn ít impression (privacy suppression), không phải lỗi, xảy ra ở mọi khoảng thời gian kể cả `last_16_months`.
+- `get_ranked_keywords` (DataForSEO, `scope: "exact_url"`) cũng trả rỗng nếu traffic trang quá thấp để có trong database bên thứ 3 — cũng là giới hạn dữ liệu thật.
+- Hướng thay thế đã dùng thành công: `research_keywords` với 3-5 seed quanh chủ đề bài, rồi đối chiếu thủ công với nội dung bài đọc trực tiếp từ `blogPosts.ts` (KHÔNG dùng bản WebFetch — WebFetch tóm tắt/dịch nội dung, không phải nguyên văn, dễ bỏ sót cụm từ đã có sẵn trong bài).
+- `research_keywords` với seed tiếng Việt rộng dễ lẫn kết quả không liên quan (vd seed "kiếm tiền online" kéo theo cả "GDP là gì", "vé số trúng giải") — luôn lọc thủ công theo độ liên quan chủ đề trước khi đề xuất.
+
+**GSC "Lập chỉ mục trang" (Page Indexing report) — dashboard tổng quan dễ hiểu lầm:**
+- Chart "X trang chưa lập chỉ mục / Y trang được lập chỉ mục" gộp chung nhiều trạng thái con khác nhau. Để biết CHÍNH XÁC 1 URL cụ thể đang ở trạng thái nào, dùng `mcp__OpenSEO__inspect_urls` (tốn 0 credit, tối đa 10 URL/lần) thay vì đoán — trả về `coverageState` rõ ràng: `"Submitted and indexed"` (đã xong), `"Discovered - currently not indexed"` (Google biết URL, chưa crawl/index), `"URL is unknown to Google"` (Google CHƯA HỀ biết URL dù đã có trong sitemap — nghiêm trọng hơn, ưu tiên xử lý trước).
+- Một URL có 0 impression trong `get_search_console_performance` KHÔNG đồng nghĩa "chưa lập chỉ mục" — có thể đã index nhưng chưa ai search ra.
+
+**Yêu cầu lập chỉ mục GSC qua giao diện có hạn ngạch/ngày thấp hơn nhiều IndexNow** (gặp "Đã vượt hạn ngạch" sau ~3 lần request thành công liên tiếp trong 1 phiên 17/11). Khi gặp lỗi này, dừng ngay không thử tiếp URL khác.
+
+**Có thể tự làm "Yêu cầu lập chỉ mục" trên GSC bằng Claude in Chrome** (trình duyệt user đã đăng nhập sẵn Google) thay vì chỉ đưa lệnh cho user tự làm: vào `https://search.google.com/search-console?resource_id=sc-domain:<domain>` (trang tổng quan) → click ô "Kiểm tra mọi URL" trên cùng → gõ nguyên URL đầy đủ → Enter → đợi vài giây → nếu chưa index thì bấm "YÊU CẦU LẬP CHỈ MỤC". **Deep-link trực tiếp `/search-console/inspect?resource_id=...&id=...` trả về lỗi 404** — không dùng, phải đi qua trang tổng quan rồi gõ vào ô tìm kiếm.
+
+**Khi 1 tác vụ nhiều bước bị chặn giữa chừng bởi giới hạn bên ngoài (quota), không phải lỗi kỹ thuật:** cập nhật tracker trung thực theo đúng tiến độ thật, rồi tạo scheduled task (`run_once_at`) để tự làm nốt phần còn lại vào hôm sau — prompt phải tự chứa đủ ngữ cảnh (phiên mới không nhớ gì): danh sách URL còn lại theo ưu tiên, các bước UI cần làm, chỉ dẫn dừng ngay nếu gặp lại lỗi hạn ngạch, và bước cập nhật lại tracker sau khi xong.

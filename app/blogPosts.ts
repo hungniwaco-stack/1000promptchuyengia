@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     category: "Kinh doanh & Startup",
     publishedAt: "2026-06-26T06:45:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: ["prompt kinh doanh", "AI cho startup", "ChatGPT kinh doanh", "prompt startup", "100 prompt AI"],
+    keywords: ["prompt kinh doanh", "AI cho startup", "ChatGPT kinh doanh", "prompt startup", "100 prompt AI", "dùng AI vào kinh doanh như thế nào"],
     intro:
       "100 Prompt Kinh Doanh và Startup là bộ câu lệnh AI có sẵn, giúp người kinh doanh nhỏ và người mới khởi nghiệp dùng ChatGPT hoặc Gemini hiệu quả ngay từ lần đầu, không cần biết viết prompt từ đầu.",
     sections: [
@@ -41,6 +41,12 @@ export const blogPosts: BlogPost[] = [
         heading: "Bộ tài liệu này dành cho ai",
         body: [
           "Phù hợp với ba nhóm người: người đang kinh doanh nhỏ cần một trợ lý AI hỗ trợ việc hàng ngày, người mới khởi nghiệp chưa có kinh nghiệm dùng AI vào công việc, và người làm marketing, bán hàng, quản lý muốn rút ngắn thời gian brainstorm.",
+        ],
+      },
+      {
+        heading: "Dùng AI vào kinh doanh như thế nào cho người mới bắt đầu",
+        body: [
+          "Người mới nên bắt đầu từ 1 việc cụ thể đang mất nhiều thời gian nhất — thường là viết nội dung bán hàng, trả lời khách hàng lặp lại, hoặc phân tích đối thủ — rồi dùng đúng 1 prompt cho việc đó trong vài ngày để quen cách AI trả lời, sau đó mới mở rộng sang việc khác. Sai lầm phổ biến nhất là hỏi AI một câu quá chung (\"giúp tôi kinh doanh tốt hơn\") rồi bỏ cuộc khi câu trả lời không dùng được — AI cần ngữ cảnh cụ thể (ngành hàng, đối tượng khách, ngân sách) mới trả lời đúng việc.",
         ],
       },
       {
@@ -84,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     category: "Tài chính & Đầu tư",
     publishedAt: "2026-06-30T19:15:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: ["prompt tài chính", "AI đầu tư", "quản lý tài chính", "prompt đầu tư", "ChatGPT tài chính"],
+    keywords: ["prompt tài chính", "AI đầu tư", "quản lý tài chính", "prompt đầu tư", "ChatGPT tài chính", "AI quản lý tài chính cá nhân có an toàn không"],
     intro:
       "100 Prompt Tài Chính và Đầu Tư là bộ câu lệnh AI có sẵn, giúp người quản lý tài chính cá nhân và nhà đầu tư dùng ChatGPT hoặc Gemini để có thêm góc nhìn rõ ràng trước mỗi quyết định, không cần biết viết prompt từ đầu.",
     sections: [
@@ -99,6 +105,12 @@ export const blogPosts: BlogPost[] = [
         heading: "Bộ tài liệu này dành cho ai",
         body: [
           "Phù hợp với người đang tự quản lý tài chính cá nhân, nhà đầu tư cá nhân ở các kênh như chứng khoán, bất động sản, vàng, tiền số, và người đang muốn xây dựng chiến lược tăng thu nhập hoặc giảm rủi ro tài chính.",
+        ],
+      },
+      {
+        heading: "Dùng AI quản lý tài chính cá nhân có an toàn không",
+        body: [
+          "An toàn nếu dùng đúng cách: AI chỉ nên đóng vai trò phân tích số liệu bạn tự cung cấp (chi tiêu, danh mục đầu tư) để nhìn rõ hơn hiện trạng, không phải nơi quyết định hộ bạn nên mua/bán gì. Không nhập thông tin nhạy cảm như số tài khoản ngân hàng hay mã OTP vào bất kỳ chatbot AI nào. Mọi gợi ý từ AI nên xem là góc nhìn tham khảo thêm, quyết định cuối cùng và trách nhiệm pháp lý vẫn thuộc về bạn — không thay thế tư vấn từ chuyên gia tài chính có giấy phép khi số tiền liên quan lớn.",
         ],
       },
       {
@@ -287,7 +299,7 @@ export const blogPosts: BlogPost[] = [
     category: "Lãnh đạo & Quản lý",
     publishedAt: "2026-07-02T19:15:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: ["prompt lãnh đạo", "AI quản lý", "quản lý đội nhóm", "xử lý xung đột nhân viên", "ChatGPT quản lý"],
+    keywords: ["prompt lãnh đạo", "AI quản lý", "quản lý đội nhóm", "xử lý xung đột nhân viên", "ChatGPT quản lý", "prompt xử lý nhân viên khó tính"],
     intro:
       "100 Prompt Lãnh Đạo và Quản Lý Đội Nhóm là bộ câu lệnh AI có sẵn, giúp quản lý và trưởng nhóm dùng ChatGPT hoặc Gemini để chuẩn bị trước mỗi tình huống khó với nhân viên, không cần biết viết prompt từ đầu.",
     sections: [
@@ -302,6 +314,12 @@ export const blogPosts: BlogPost[] = [
         heading: "Bộ tài liệu này dành cho ai",
         body: [
           "Phù hợp với quản lý, trưởng nhóm, chủ doanh nghiệp đang quản lý nhân sự, và người mới được giao vai trò lãnh đạo lần đầu.",
+        ],
+      },
+      {
+        heading: "Prompt AI có thể giúp gì khi xử lý nhân viên khó tính",
+        body: [
+          "AI không thay được người quản lý trực tiếp xử lý tình huống, nhưng có thể giúp bạn chuẩn bị trước: cho sẵn vài cách mở đầu cuộc nói chuyện khó, dự đoán phản ứng có thể gặp, và gợi ý cách giữ cuộc trò chuyện không đi vào tranh cãi cá nhân. Cách dùng hiệu quả nhất là mô tả đúng tình huống thật (vai trò của nhân viên, chuyện đã xảy ra, điều bạn lo ngại) thay vì hỏi chung \"làm sao để quản lý nhân viên khó tính\" — prompt cụ thể cho ra câu trả lời áp dụng được ngay, prompt mơ hồ chỉ cho lý thuyết chung.",
         ],
       },
       {
@@ -397,7 +415,7 @@ export const blogPosts: BlogPost[] = [
     category: "AI & Công nghệ",
     publishedAt: "2026-07-03T19:15:00+07:00",
     readingTime: "7 phút đọc",
-    keywords: ["ứng dụng AI kinh doanh", "tự động hóa doanh nghiệp", "AI cho doanh nghiệp nhỏ", "prompt công nghệ", "AI vận hành"],
+    keywords: ["ứng dụng AI kinh doanh", "tự động hóa doanh nghiệp", "AI cho doanh nghiệp nhỏ", "prompt công nghệ", "AI vận hành", "doanh nghiệp nhỏ nên bắt đầu ứng dụng AI từ đâu"],
     intro:
       "100 Prompt AI và Công Nghệ Trong Kinh Doanh là bộ câu lệnh AI có sẵn, giúp chủ doanh nghiệp tìm ra điểm bắt đầu ứng dụng AI cụ thể cho từng bộ phận, không cần biết viết prompt từ đầu.",
     sections: [
@@ -412,6 +430,12 @@ export const blogPosts: BlogPost[] = [
         heading: "Bộ tài liệu này dành cho ai",
         body: [
           "Phù hợp với chủ doanh nghiệp nhỏ, người quản lý vận hành, và người muốn tìm điểm khởi đầu rõ ràng để ứng dụng AI vào công ty của mình.",
+        ],
+      },
+      {
+        heading: "Doanh nghiệp nhỏ nên bắt đầu ứng dụng AI từ đâu",
+        body: [
+          "Nên bắt đầu từ bộ phận đang tốn nhiều thời gian lặp lại nhất — thường là chăm sóc khách hàng (trả lời câu hỏi giống nhau mỗi ngày) hoặc marketing (viết nội dung đăng bài) — vì đây là nơi AI cho kết quả nhìn thấy ngay trong 1-2 tuần, dễ đo lường hiệu quả để quyết định có đầu tư thêm không. Tránh sai lầm thường gặp: cố ứng dụng AI vào toàn bộ công ty cùng lúc khi chưa có ai trong nhóm quen dùng — nên chọn 1 quy trình nhỏ, chạy thử, rồi mới nhân rộng sang bộ phận khác.",
         ],
       },
       {
@@ -2230,6 +2254,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
   {
     slug: "dung-chatgpt-de-bat-dau-kinh-doanh-prompt-nguoi-moi-khoi-nghiep",
     title: "Dùng ChatGPT Để Bắt Đầu Kinh Doanh: 10 Prompt Cho Người Mới Khởi Nghiệp",
@@ -2620,7 +2645,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-
 ];
 
 export function getBlogPostBySlug(slug: string) {

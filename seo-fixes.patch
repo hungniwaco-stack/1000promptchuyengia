@@ -1,0 +1,215 @@
+diff --git a/app/SchemaMarkup.tsx b/app/SchemaMarkup.tsx
+index 700ccf0..c6c403a 100644
+--- a/app/SchemaMarkup.tsx
++++ b/app/SchemaMarkup.tsx
+@@ -115,55 +115,13 @@ const comboProductSchema = {
+       returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+     },
+   },
+-  // LƯU Ý QUAN TRỌNG: Google chỉ cho phép review/aggregateRating trong
+-  // structured data khi review là thật và có thể xác minh (self-serving
+-  // reviews policy). Nếu 3 review bên dưới không phải review thật từ khách
+-  // (có ảnh chụp màn hình / link mạng xã hội xác minh), nên: (1) thay bằng
+-  // review thật đã xin phép khách hàng, hoặc (2) xoá aggregateRating +
+-  // review khỏi schema và chỉ hiển thị dạng testimonial thường trên trang,
+-  // không đánh dấu JSON-LD, để tránh rủi ro Google gỡ rich snippet/phạt.
+-  aggregateRating: {
+-    "@type": "AggregateRating",
+-    ratingValue: "5",
+-    reviewCount: "3",
+-    bestRating: "5",
+-    worstRating: "1",
+-  },
+-  review: [
+-    {
+-      "@type": "Review",
+-      reviewRating: {
+-        "@type": "Rating",
+-        ratingValue: "5",
+-        bestRating: "5",
+-      },
+-      author: { "@type": "Person", name: "Lan N." },
+-      reviewBody:
+-        "Mình dùng prompt để viết lại bài bán hàng và kịch bản tư vấn. Chỉ cần thay thông tin sản phẩm là có bản nháp khá chắc để chỉnh tiếp.",
+-    },
+-    {
+-      "@type": "Review",
+-      reviewRating: {
+-        "@type": "Rating",
+-        ratingValue: "5",
+-        bestRating: "5",
+-      },
+-      author: { "@type": "Person", name: "Minh T." },
+-      reviewBody:
+-        "Phần marketing và bán hàng giúp mình lên outline nhanh hơn. Có nhiều câu hỏi gợi ý rất tiện khi cần khai thác insight khách hàng.",
+-    },
+-    {
+-      "@type": "Review",
+-      reviewRating: {
+-        "@type": "Rating",
+-        ratingValue: "5",
+-        bestRating: "5",
+-      },
+-      author: { "@type": "Person", name: "Hà P." },
+-      reviewBody:
+-        "Các prompt về lập kế hoạch, ưu tiên công việc và viết email giúp mình tiết kiệm thời gian khi dùng ChatGPT hằng ngày.",
+-    },
+-  ],
++  // Đã gỡ aggregateRating + 3 review (audit 01/11/2026): review không hiển
++  // thị ở bất kỳ đâu trên trang (chỉ tồn tại trong JSON-LD) và không có bằng
++  // chứng xác minh (ảnh chụp màn hình/link mạng xã hội khách hàng) — vi phạm
++  // chính sách "self-serving reviews" của Google, rủi ro bị gỡ rich snippet.
++  // Khi có review thật đã xin phép khách hàng, thêm lại đúng khuôn
++  // aggregateRating/review ở đây, VÀ hiển thị cùng nội dung đó trên trang
++  // (không chỉ trong JSON-LD) để khớp với nội dung hiển thị thật.
+ };
+ 
+ const faqSchema = {
+diff --git a/app/bai-viet/[slug]/page.tsx b/app/bai-viet/[slug]/page.tsx
+index 53ff065..8fdadff 100644
+--- a/app/bai-viet/[slug]/page.tsx
++++ b/app/bai-viet/[slug]/page.tsx
+@@ -8,6 +8,14 @@ type PageProps = {
+   params: Promise<{ slug: string }>;
+ };
+ 
++// Bắt buộc render động: trang này phải tự kiểm tra lại "bây giờ" ở MỖI lượt
++// truy cập để chặn bài chưa tới giờ công bố (publishedAt tương lai). Nếu để
++// Next.js tĩnh hoá (SSG mặc định khi có generateStaticParams), điều kiện
++// notFound() bên dưới chỉ được tính MỘT LẦN lúc build — bài sẽ không tự
++// "mở khoá" đúng giờ cho tới lần deploy kế tiếp. Cùng cách app/bai-viet/page.tsx
++// (trang danh sách) đang dùng.
++export const dynamic = "force-dynamic";
++
+ export function generateStaticParams() {
+   return blogPosts.map((post) => ({ slug: post.slug }));
+ }
+@@ -70,6 +78,15 @@ export default async function BlogPostPage({ params }: PageProps) {
+   }
+ 
+   const now = new Date();
++
++  // Bài chưa tới giờ công bố (publishedAt trong tương lai) không được truy
++  // cập trực tiếp qua URL — tránh lộ nội dung/crawler index trước lịch đăng.
++  // Trang danh sách (app/bai-viet/page.tsx) đã lọc tương tự; trang chi tiết
++  // này trước đây KHÔNG lọc, khiến URL luôn truy cập được bất kể publishedAt.
++  if (new Date(post.publishedAt) > now) {
++    notFound();
++  }
++
+   const relatedPosts = blogPosts
+     .filter((p) => p.slug !== slug && new Date(p.publishedAt) <= now)
+     .slice(0, 3);
+diff --git a/app/robots.ts b/app/robots.ts
+index ec77a7a..72058f6 100644
+--- a/app/robots.ts
++++ b/app/robots.ts
+@@ -17,6 +17,13 @@ export default function robots(): MetadataRoute.Robots {
+         userAgent: "ChatGPT-User",
+         allow: "/",
+       },
++      // OpenAI — bot tìm kiếm/trích dẫn cho tính năng ChatGPT Search (khác
++      // GPTBot, vốn chỉ phục vụ huấn luyện). Thiếu bot này làm giảm khả năng
++      // được ChatGPT Search trích dẫn trực tiếp trong câu trả lời.
++      {
++        userAgent: "OAI-SearchBot",
++        allow: "/",
++      },
+       // Anthropic — Claude training + web search
+       {
+         userAgent: "ClaudeBot",
+diff --git a/app/sitemap.ts b/app/sitemap.ts
+index d74e00d..8e5a886 100644
+--- a/app/sitemap.ts
++++ b/app/sitemap.ts
+@@ -3,45 +3,67 @@ import { blogPosts } from "./blogPosts";
+ 
+ const baseUrl = "https://www.1000promptchuyengia.shop";
+ 
++// Mốc thời gian cố định cho các trang tĩnh (trang chủ, danh sách bài, chính
++// sách...) — CHỈ sửa ngày này thủ công khi nội dung trang đó thực sự đổi.
++// Trước đây dùng `new Date()` (ngày build) khiến lastModified đổi theo mỗi
++// lần Vercel deploy dù nội dung không đổi, làm tín hiệu "mới" sai lệch.
++const STATIC_PAGES_LAST_MODIFIED = new Date("2026-11-01T00:00:00+07:00");
++
++// Tương tự trang chi tiết bài viết: sitemap phải tính lại danh sách
++// "publishedPosts" ở MỖI lần được yêu cầu (Google/Bing gọi sitemap.xml định
++// kỳ), không phải chỉ một lần lúc build — nếu không, bài mới tới giờ đăng
++// sẽ không tự xuất hiện trong sitemap cho tới lần deploy kế tiếp.
++export const dynamic = "force-dynamic";
++
+ export default function sitemap(): MetadataRoute.Sitemap {
++  const now = new Date();
++
++  // Chỉ liệt kê bài đã tới giờ công bố — khớp với trang chi tiết bài viết
++  // (app/bai-viet/[slug]/page.tsx, dynamic = "force-dynamic") đã chặn 404
++  // cho bài chưa tới hạn. Trước đây sitemap liệt kê TẤT CẢ bài kể cả bài
++  // chưa đăng, khiến crawler có thể phát hiện/index nội dung trước lịch.
++  const publishedPosts = blogPosts.filter(
++    (post) => new Date(post.publishedAt) <= now
++  );
++
+   return [
+     {
+       url: baseUrl,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "weekly",
+       priority: 1,
+     },
+     {
+       url: `${baseUrl}/bai-viet`,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "weekly",
+       priority: 0.8,
+     },
+     {
+       url: `${baseUrl}/tra-cuu-don-hang`,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "monthly",
+       priority: 0.6,
+     },
+     {
+       url: `${baseUrl}/chinh-sach-giao-file`,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "monthly",
+       priority: 0.5,
+     },
+     {
+       url: `${baseUrl}/ho-tro`,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "monthly",
+       priority: 0.5,
+     },
+     {
+       url: `${baseUrl}/dieu-khoan-su-dung`,
+-      lastModified: new Date(),
++      lastModified: STATIC_PAGES_LAST_MODIFIED,
+       changeFrequency: "monthly",
+       priority: 0.5,
+     },
+-    ...blogPosts.map((post) => ({
++    ...publishedPosts.map((post) => ({
+       url: `${baseUrl}/bai-viet/${post.slug}`,
+       lastModified: new Date(post.publishedAt),
+       changeFrequency: "monthly" as const,
+diff --git a/public/llms.txt b/public/llms.txt
+index 6f032d6..87105ff 100644
+--- a/public/llms.txt
++++ b/public/llms.txt
+@@ -1,6 +1,8 @@
+-# LLMs.txt — 1000 Prompt Chuyên Gia | Hữu Hùng AI
+-# Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity)
+-# Cập nhật: 2026-10-27
++# Hữu Hùng AI — 1000 Prompt Chuyên Gia
++
++> Bộ 1000+ prompt AI chuyên nghiệp bằng tiếng Việt, chia theo 10 lĩnh vực thực chiến, dùng ngay với ChatGPT, Gemini, Claude. Website: https://www.1000promptchuyengia.shop
++
++Cập nhật lần cuối: 2026-11-01. Hướng dẫn cho AI Language Models (ChatGPT, Claude, Gemini, Perplexity) — cập nhật mục "Nội dung blog nổi bật" mỗi khi có bài mới.
+ 
+ ## Tổng quan thương hiệu
+ 
